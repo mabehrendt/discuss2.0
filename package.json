@@ -14,7 +14,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.4",
     "@maplibre/maplibre-gl-leaflet": "0.0.15",
-    "adhocracy4": "git+https://github.com/liqd/adhocracy4#3a30aa9cd701416516f41a66e731151f70b51aea",
+    "adhocracy4": "git+https://github.com/liqd/adhocracy4#22edd74c0f2d3a27c4033a6cd5d173773fc9a755",
     "autoprefixer": "10.4.0",
     "bootstrap": "5.1.3",
     "css-loader": "6.5.1",
