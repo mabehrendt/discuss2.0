@@ -8,14 +8,14 @@
 {% block dashboard_content %}
 <h1 class="mt-0">{% trans 'Email Addresses' %}</h1>
 
+{% for emailaddress in user.emailaddress_set.all %}
 <form class="multiform" action="{% url 'account_email' %}?next={{ request.path|urlencode }}" method="post">
     {% csrf_token %}
-    {% for emailaddress in user.emailaddress_set.all %}
+
     <div class="form-check">
         <label class="form-check__label">
-            <input type="radio" name="email"
-                   {% if emailaddress.primary or user.emailaddress_set.count == 1 %}checked="checked" {% endif %}
-                   value="{{emailaddress.email}}">
+            <input type="hidden" name="email"
+                   value="{{emailaddress.email}}" >
             {{ emailaddress.email }}
             {% if emailaddress.primary %}
             <span class="label">{% trans "Primary" %}</span>
@@ -27,14 +27,13 @@
             {% endif %}
         </label>
     </div>
-    {% endfor %}
-
     <div class="mb-3">
-        <button class="btn btn--primary" type="submit" name="action_primary">{% trans 'Make Primary' %}</button>
-        <button class="btn btn--secondary" type="submit" name="action_send">{% trans 'Re-send Verification' %}</button>
-        <button class="btn btn--secondary" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+        <button class="btn btn--primary {% if emailaddress.primary or not emailaddress.verified %}disabled{% endif %}" type="submit" name="action_primary">{% trans 'Make Primary' %}</button>
+        <button class="btn btn--secondary {% if emailaddress.verified %}disabled{% endif %}" type="submit" name="action_send">{% trans 'Re-send Verification' %}</button>
+        <button class="btn btn--secondary {% if emailaddress.primary %}disabled{% endif %}" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
     </div>
 </form>
+{% endfor %}
 
 <form class="multiform" method="post" action="{% url 'account_email' %}">
     {% csrf_token %}
