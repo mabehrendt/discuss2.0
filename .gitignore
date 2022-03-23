@@ -65,3 +65,6 @@ media/
 # test data
 *.key
 *.pem
+
+# local test-database
+/aplus-test-database
