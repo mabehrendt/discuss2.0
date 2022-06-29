@@ -68,3 +68,4 @@ media/
 
 # local test-database
 /aplus-test-database
+pgsql/
