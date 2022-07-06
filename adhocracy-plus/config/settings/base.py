@@ -120,7 +120,8 @@ INSTALLED_APPS = (
     'apps.mapideas',
     'apps.polls',
     'apps.topicprio',
-    'apps.debate'
+    'apps.debate',
+    'apps.ai_debate'
 )
 
 MIDDLEWARE = (
@@ -455,7 +456,8 @@ A4_COMMENTABLES = (
     ('a4_candy_mapideas', 'mapidea'),
     ('a4_candy_budgeting', 'proposal'),
     ('a4_candy_topicprio', 'topic'),
-    ('a4_candy_debate', 'subject')
+    ('a4_candy_debate', 'subject'),
+    ('a4_candy_ai_debate', 'aisubject')
 )
 
 A4_COMMENT_CATEGORIES = (
