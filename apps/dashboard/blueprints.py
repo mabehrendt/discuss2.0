@@ -151,4 +151,19 @@ blueprints = [
          image='images/debate.svg',
          settings_model=None,
      )),
+    ('debate_ai',
+     ProjectBlueprint(
+         title=_('Debate AI'),
+         description=_(
+             'Participants can discuss posted topics or questions. '
+             'To do this, the participants comment on posted '
+             'topics / questions as well as on contributions from other '
+             'users.'
+          ),
+          content=[
+              debate_phases.AIDebatePhase(),
+          ],
+          image='images/debate.svg',
+          settings_model=None,
+      ))
 ]
