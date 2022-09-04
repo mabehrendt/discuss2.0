@@ -101,7 +101,6 @@
     &:disabled,
     &.is-disabled {
         border-color: $border-color;
-        box-shadow: none;
     }
 }
 
@@ -115,6 +114,11 @@
     &:disabled,
     &.is-disabled {
         box-shadow: none;
+        background-color: $gray-lightest;
+    }
+
+    &.btn--none-reset:hover {
+        background-color: transparent;
     }
 }
 
@@ -195,7 +199,6 @@
         color: $link-hover-color;
         border-color: transparent;
         background-color: transparent;
-        box-shadow: none;
     }
 
     &.is-disabled,

@@ -10,7 +10,7 @@ from apps.debate import phases
 
 
 @pytest.mark.django_db
-def test_anonymous_cannot_create_topic(client, phase_factory):
+def test_anonymous_cannot_create_subject(client, phase_factory):
     phase = phase_factory(phase_content=phases.DebatePhase())
     module = phase.module
     url = reverse(
@@ -28,7 +28,7 @@ def test_anonymous_cannot_create_topic(client, phase_factory):
 
 
 @pytest.mark.django_db
-def test_user_cannot_create_topic(client, phase_factory, user):
+def test_user_cannot_create_subject(client, phase_factory, user):
     phase = phase_factory(phase_content=phases.DebatePhase())
     module = phase.module
     url = reverse(
@@ -46,8 +46,8 @@ def test_user_cannot_create_topic(client, phase_factory, user):
 
 
 @pytest.mark.django_db
-def test_admin_can_create_topic(client, phase_factory,
-                                category_factory, admin):
+def test_admin_can_create_subject(
+        client, phase_factory, category_factory, admin):
     phase = phase_factory(phase_content=phases.DebatePhase())
     module = phase.module
     url = reverse(
@@ -63,7 +63,7 @@ def test_admin_can_create_topic(client, phase_factory,
             response, 'a4_candy_debate/subject_create_form.html')
         assert response.status_code == 200
         subject = {
-            'name': 'Subject'
+            'name': 'Subject',
         }
         response = client.post(url, subject)
         assert response.status_code == 302
@@ -73,8 +73,8 @@ def test_admin_can_create_topic(client, phase_factory,
 
 
 @pytest.mark.django_db
-def test_moderator_can_create_topic_before_phase(client, phase_factory,
-                                                 category_factory, admin):
+def test_moderator_can_create_subject_before_phase(
+        client, phase_factory, category_factory, admin):
     phase = phase_factory(phase_content=phases.DebatePhase())
     module = phase.module
     project = module.project
@@ -92,7 +92,7 @@ def test_moderator_can_create_topic_before_phase(client, phase_factory,
             response, 'a4_candy_debate/subject_create_form.html')
         assert response.status_code == 200
         subject = {
-            'name': 'Subject'
+            'name': 'Subject',
         }
         response = client.post(url, subject)
         assert response.status_code == 302
@@ -102,8 +102,8 @@ def test_moderator_can_create_topic_before_phase(client, phase_factory,
 
 
 @pytest.mark.django_db
-def test_initiator_can_create_topic_before_phase(client, phase_factory,
-                                                 category_factory, admin):
+def test_initiator_can_create_subject_before_phase(
+        client, phase_factory, category_factory, admin):
     phase = phase_factory(phase_content=phases.DebatePhase())
     module = phase.module
     project = module.project
@@ -121,7 +121,7 @@ def test_initiator_can_create_topic_before_phase(client, phase_factory,
             response, 'a4_candy_debate/subject_create_form.html')
         assert response.status_code == 200
         subject = {
-            'name': 'subject'
+            'name': 'subject',
         }
         response = client.post(url, subject)
         assert response.status_code == 302

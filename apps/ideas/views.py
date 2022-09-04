@@ -19,6 +19,7 @@ from apps.contrib.widgets import AplusOrderingWidget
 from apps.moderatorfeedback.forms import ModeratorStatementForm
 from apps.moderatorfeedback.models import ModeratorStatement
 from apps.notifications.emails import NotifyCreatorOnModeratorFeedback
+from apps.organisations.mixins import UserFormViewMixin
 
 from . import forms
 from . import models
@@ -103,7 +104,7 @@ class AbstractIdeaCreateView(ProjectMixin,
         return kwargs
 
 
-class IdeaCreateView(AbstractIdeaCreateView):
+class IdeaCreateView(AbstractIdeaCreateView, UserFormViewMixin):
     model = models.Idea
     form_class = forms.IdeaForm
     permission_required = 'a4_candy_ideas.add_idea'
@@ -125,7 +126,7 @@ class AbstractIdeaUpdateView(ProjectMixin,
         return kwargs
 
 
-class IdeaUpdateView(AbstractIdeaUpdateView):
+class IdeaUpdateView(AbstractIdeaUpdateView, UserFormViewMixin):
     model = models.Idea
     form_class = forms.IdeaForm
     permission_required = 'a4_candy_ideas.change_idea'

@@ -67,7 +67,8 @@ class Organisation(TranslatableModel):
         help_text=_('The Logo representing your organisation.'
                     ' The image must be square and it '
                     'should be min. 200 pixels wide and 200 '
-                    'pixels tall. Allowed file formats are '
+                    'pixels tall and max. 800 pixels wide and '
+                    '800 pixels tall. Allowed file formats are '
                     'png, jpeg, gif. The file size '
                     'should be max. 5 MB.'),
         upload_to='organisations/logos',
@@ -247,3 +248,25 @@ class Member(models.Model):
 
     def __str__(self):
         return '{}_{}'.format(self.organisation, self.member)
+
+
+class OrganisationTermsOfUse(models.Model):
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        editable=False,
+    )
+    organisation = models.ForeignKey(
+        settings.A4_ORGANISATIONS_MODEL,
+        on_delete=models.CASCADE,
+        editable=False,
+    )
+    has_agreed = models.BooleanField(
+        default=False,
+    )
+
+    class Meta:
+        unique_together = [('user', 'organisation')]
+
+    def __str__(self):
+        return '{}_{}'.format(self.organisation, self.user)

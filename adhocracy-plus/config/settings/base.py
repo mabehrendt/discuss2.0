@@ -55,7 +55,7 @@ INSTALLED_APPS = (
     'wagtail.images',
     'wagtail.search',
     'wagtail.admin',
-    'wagtail.core',
+    'wagtail',
     'modelcluster',
     'taggit',
     'apps.cms.pages',
@@ -94,14 +94,12 @@ INSTALLED_APPS = (
     'apps.captcha',
     'apps.contrib',
     'apps.interactiveevents',
-    'apps.likes',
     'apps.maps',
     'apps.moderatorfeedback',
     'apps.moderatorremark',
     'apps.newsletters',
     'apps.notifications',
     'apps.organisations',
-    'apps.questions',
     'apps.users',
 
     # General apps containing views
@@ -250,7 +248,11 @@ IMAGE_ALIASES = {
     },
     'heroimage': {'min_resolution': (1500, 500)},
     'tileimage': {'min_resolution': (500, 300)},
-    'logo': {'min_resolution': (200, 200), 'aspect_ratio': (1, 1)},
+    'logo': {
+        'min_resolution': (200, 200),
+        'max_resolution': (800, 800),
+        'aspect_ratio': (1, 1)
+    },
     'avatar': {'min_resolution': (200, 200)},
     'idea_image': {'min_resolution': (600, 400)},
     'eventimage': {'min_resolution': (500, 600)},
@@ -295,6 +297,7 @@ ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 ACCOUNT_LOGIN_ON_PASSWORD_RESET = True
 ACCOUNT_USERNAME_MIN_LENGTH = 5
 ACCOUNT_USERNAME_REQUIRED = True
+ACCOUNT_PREVENT_ENUMERATION = True
 SOCIALACCOUNT_AUTO_SIGNUP = False
 SOCIALACCOUNT_EMAIL_VERIFICATION = 'none'
 SOCIALACCOUNT_FORMS = {'signup': 'apps.users.forms.SocialTermsSignupForm'}
@@ -429,12 +432,6 @@ BLEACH_LIST = {
 WAGTAIL_SITE_NAME = 'adhocracy+'
 WAGTAILIMAGES_IMAGE_MODEL = 'a4_candy_cms_images.CustomImage'
 
-WAGTAILADMIN_RICH_TEXT_EDITORS = {
-    'default': {
-        'WIDGET': 'wagtail.admin.rich_text.HalloRichTextArea'
-    }
-}
-
 # adhocracy4
 
 A4_ORGANISATIONS_MODEL = 'a4_candy_organisations.Organisation'
@@ -520,6 +517,18 @@ A4_CATEGORY_ICONS = (
     ('zickzack', _('Zigzag'))
 )
 
+A4_BLUEPRINT_TYPES = [
+    ('BS', 'brainstorming'),
+    ('MBS', 'map brainstorming'),
+    ('IC', 'idea collection'),
+    ('MIC', 'map idea collection'),
+    ('TR', 'text review'),
+    ('PO', 'poll'),
+    ('PB', 'participatory budgeting'),
+    ('IE', 'interactive event'),
+    ('TP', 'topic prioritization'),
+    ('DB', 'debate'),
+]
 
 A4_MAP_BASEURL = 'https://{s}.tile.openstreetmap.org/'
 A4_MAP_ATTRIBUTION = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -532,6 +541,8 @@ A4_DASHBOARD = {
 
 A4_ACTIONS_PHASE_ENDS_HOURS = 48
 
+A4_USE_ORGANISATION_TERMS_OF_USE = True
+
 # Disable CSP by default
 CSP_REPORT_ONLY = True
 CSP_DEFAULT_SRC = ["'self'", "'unsafe-inline'",
@@ -540,3 +551,4 @@ CSP_DEFAULT_SRC = ["'self'", "'unsafe-inline'",
 SITE_ID = 1  # overwrite this in local.py if needed
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+

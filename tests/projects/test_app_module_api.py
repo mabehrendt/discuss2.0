@@ -7,7 +7,7 @@ from adhocracy4.test.helpers import freeze_post_phase
 
 
 @pytest.mark.django_db
-def test_app_module_api(project_factory, module_factory, apiclient):
+def test_app_module_api(user, project_factory, module_factory, apiclient):
     project_1 = project_factory(is_app_accessible=True)
     project_2 = project_factory(is_app_accessible=True)
     project_3 = project_factory(is_app_accessible=True)
@@ -21,8 +21,12 @@ def test_app_module_api(project_factory, module_factory, apiclient):
 
     url = reverse('app-modules-list')
     response = apiclient.get(url, format='json')
+    assert response.status_code == 401
 
+    apiclient.force_authenticate(user=user)
+    response = apiclient.get(url, format='json')
     assert response.status_code == 200
+
     assert any([True for dict in response.data
                if ('pk' in dict and dict['pk'] == module_1.pk)])
     assert any([True for dict in response.data
@@ -38,7 +42,7 @@ def test_app_module_api(project_factory, module_factory, apiclient):
 
 
 @pytest.mark.django_db
-def test_app_module_api_agenda_setting(
+def test_app_module_api_idea_collection(
         client, apiclient, project_factory,
         category_factory, label_factory, user):
     project = project_factory(is_app_accessible=True)
@@ -47,7 +51,7 @@ def test_app_module_api_agenda_setting(
     url = reverse('a4dashboard:module-create',
                   kwargs={'organisation_slug': organisation.slug,
                           'project_slug': project.slug,
-                          'blueprint_slug': 'agenda-setting'
+                          'blueprint_slug': 'idea-collection'
                           })
     client.login(username=initiator.email, password='password')
     response = client.post(url)
@@ -61,11 +65,14 @@ def test_app_module_api_agenda_setting(
     label_2 = label_factory(module=module)
 
     url = reverse('app-modules-list')
-    response = apiclient.get(url, format='json')
-    assert response.data[0]['phases'][0]['is_active'] is False
-    assert response.data[0]['phases'][1]['is_active'] is False
+    apiclient.login(username=user.email, password='password')
 
+    response = apiclient.get(url, format='json')
     assert len(project.modules[0].phases) == 2
+    assert not response.data[0]['active_phase']
+    assert not response.data[0]['past_phases']
+    assert len(response.data[0]['future_phases']) == 2
+
     collect_phase = module.phases.get(type='a4_candy_ideas:collect')
     collect_phase.start_date = parse('2021-07-07 7:10:00 UTC')
     collect_phase.end_date = parse('2021-07-07 12:10:00 UTC')
@@ -87,16 +94,16 @@ def test_app_module_api_agenda_setting(
            in response.data[0]['labels']
     assert {'id': label_2.pk, 'name': label_2.name} \
            in response.data[0]['labels']
-    assert len(response.data[0]['phases']) == 2
+    assert not response.data[0]['active_phase']
+    assert len(response.data[0]['past_phases']) == 2
+    assert not response.data[0]['future_phases']
 
     with freeze_phase(collect_phase):
         apiclient.login(username=initiator.email, password='password')
         response = apiclient.get(url, format='json')
         assert response.data[0]['has_idea_adding_permission'] is True
-        assert response.data[0]['phases'][0]['name'] == 'Collect phase'
-        assert response.data[0]['phases'][0]['is_active'] is True
-        assert response.data[0]['phases'][1]['name'] == 'Rating phase'
-        assert response.data[0]['phases'][1]['is_active'] is False
+        assert response.data[0]['active_phase']['name'] == 'Collect phase'
+        assert response.data[0]['future_phases'][0]['name'] == 'Rating phase'
 
         apiclient.login(username=user.email, password='password')
         response = apiclient.get(url, format='json')
@@ -106,10 +113,8 @@ def test_app_module_api_agenda_setting(
         apiclient.login(username=initiator.email, password='password')
         response = apiclient.get(url, format='json')
         assert response.data[0]['has_idea_adding_permission'] is True
-        assert response.data[0]['phases'][0]['name'] == 'Collect phase'
-        assert response.data[0]['phases'][0]['is_active'] is False
-        assert response.data[0]['phases'][1]['name'] == 'Rating phase'
-        assert response.data[0]['phases'][1]['is_active'] is True
+        assert response.data[0]['active_phase']['name'] == 'Rating phase'
+        assert response.data[0]['past_phases'][0]['name'] == 'Collect phase'
 
         apiclient.login(username=user.email, password='password')
         response = apiclient.get(url, format='json')
@@ -119,10 +124,11 @@ def test_app_module_api_agenda_setting(
         apiclient.login(username=initiator.email, password='password')
         response = apiclient.get(url, format='json')
         assert response.data[0]['has_idea_adding_permission'] is True
-        assert response.data[0]['phases'][0]['name'] == 'Collect phase'
-        assert response.data[0]['phases'][0]['is_active'] is False
-        assert response.data[0]['phases'][1]['name'] == 'Rating phase'
-        assert response.data[0]['phases'][1]['is_active'] is False
+        assert not response.data[0]['active_phase']
+        assert not response.data[0]['future_phases']
+        assert len(response.data[0]['past_phases']) == 2
+        assert response.data[0]['past_phases'][0]['name'] == 'Collect phase'
+        assert response.data[0]['past_phases'][1]['name'] == 'Rating phase'
 
         apiclient.login(username=user.email, password='password')
         response = apiclient.get(url, format='json')
@@ -148,8 +154,9 @@ def test_app_module_api_poll(
     module.save()
 
     url = reverse('app-modules-list')
+    apiclient.login(username=user.email, password='password')
     response = apiclient.get(url, format='json')
-    assert response.data[0]['phases'][0]['is_active'] is False
+    assert not response.data[0]['active_phase']
 
     assert len(project.modules[0].phases) == 1
     phase = module.phases[0]
@@ -162,29 +169,30 @@ def test_app_module_api_poll(
     assert response.data[0]['pk'] == module.pk
     assert response.data[0]['labels'] is False
     assert response.data[0]['categories'] is False
-    assert len(response.data[0]['phases']) == 1
+    assert not response.data[0]['active_phase']
+    assert not response.data[0]['future_phases']
+    assert len(response.data[0]['past_phases']) == 1
+
+    apiclient.logout()
 
     with freeze_phase(phase):
         response = apiclient.get(url, format='json')
-        assert response.data[0]['has_idea_adding_permission'] is False
+        assert response.status_code == 401
         apiclient.login(username=initiator.email, password='password')
         response = apiclient.get(url, format='json')
         assert response.data[0]['has_idea_adding_permission'] is True
-        assert response.data[0]['phases'][0]['name'] == 'Voting phase'
-        assert response.data[0]['phases'][0]['is_active'] is True
+        assert response.data[0]['active_phase']['name'] == 'Voting phase'
 
         apiclient.login(username=user.email, password='password')
         response = apiclient.get(url, format='json')
         assert response.data[0]['has_idea_adding_permission'] is False
 
     with freeze_post_phase(phase):
-        response = apiclient.get(url, format='json')
-        assert response.data[0]['has_idea_adding_permission'] is False
         apiclient.login(username=initiator.email, password='password')
         response = apiclient.get(url, format='json')
         assert response.data[0]['has_idea_adding_permission'] is True
-        assert response.data[0]['phases'][0]['name'] == 'Voting phase'
-        assert response.data[0]['phases'][0]['is_active'] is False
+        assert len(response.data[0]['past_phases']) == 1
+        assert response.data[0]['past_phases'][0]['name'] == 'Voting phase'
 
         apiclient.login(username=user.email, password='password')
         response = apiclient.get(url, format='json')

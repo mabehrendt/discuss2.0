@@ -15,6 +15,7 @@ from . import factories
 def pytest_configure(config):
     # Patch email background_task decorators for all tests
     patch_background_task_decorator('adhocracy4.emails.tasks')
+    patch_background_task_decorator('apps.projects.tasks')
 
     # Populate reverse dict with organisation patterns
     resolver = get_resolver()
@@ -26,6 +27,7 @@ register(factories.UserFactory, 'user2')
 register(factories.AdminFactory, 'admin')
 register(factories.OrganisationFactory)
 register(factories.MemberFactory)
+register(factories.OrganisationTermsOfUseFactory)
 
 register(a4_factories.PhaseFactory)
 register(a4_factories.PhaseContentFactory)

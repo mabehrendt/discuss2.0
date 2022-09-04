@@ -21,10 +21,9 @@ from adhocracy4.comments.api import CommentModerateSet
 from adhocracy4.comments_async.api import CommentViewSet
 from adhocracy4.follows.api import FollowViewSet
 from adhocracy4.polls.api import PollViewSet
-from adhocracy4.polls.api import VoteViewSet
-from adhocracy4.polls.routers import QuestionDefaultRouter
 from adhocracy4.ratings.api import RatingViewSet
 from adhocracy4.reports.api import ReportViewSet
+from apps.account.api import AccountViewSet
 from apps.contrib import views as contrib_views
 from apps.contrib.sitemaps import static_sitemap_index
 from apps.documents.api import DocumentViewSet
@@ -36,6 +35,7 @@ from apps.moderatorremark.api import ModeratorRemarkViewSet
 from apps.organisations.sitemaps import organisations_sitemap_index
 from apps.projects.api import AppModuleViewSet
 from apps.projects.api import AppProjectsViewSet
+from apps.users.api import UserViewSet
 from apps.users.decorators import user_is_project_admin
 
 router = routers.DefaultRouter()
@@ -46,6 +46,9 @@ router.register(r'app-projects', AppProjectsViewSet,
                 basename='app-projects')
 router.register(r'app-modules', AppModuleViewSet,
                 basename='app-modules')
+router.register(r'users', UserViewSet,
+                basename='users')
+
 
 module_router = a4routers.ModuleDefaultRouter()
 # FIXME: rename to 'chapters'
@@ -67,9 +70,6 @@ ct_router.register(r'moderatorremarks', ModeratorRemarkViewSet,
 ct_router.register(r'comment-moderate', CommentModerateSet,
                    basename='comment-moderate')
 
-question_router = QuestionDefaultRouter()
-question_router.register(r'vote', VoteViewSet, basename='vote')
-
 urlpatterns = [
     # General platform urls
     re_path(r'^django-admin/', admin.site.urls),
@@ -86,11 +86,10 @@ urlpatterns = [
     re_path(r'^api/', include(ct_router.urls)),
     re_path(r'^api/', include(module_router.urls)),
     re_path(r'^api/', include(orga_router.urls)),
-    re_path(r'^api/', include(question_router.urls)),
     re_path(r'^api/', include(likes_router.urls)),
     re_path(r'^api/', include(router.urls)),
     re_path(r'^api/login', obtain_auth_token, name='api-login'),
-
+    re_path(r'^api/account/', AccountViewSet.as_view(), name='api-account'),
     re_path(r'^upload/', user_is_project_admin(ck_views.upload),
             name='ckeditor_upload'),
     re_path(r'^browse/', never_cache(user_is_project_admin(ck_views.browse)),
@@ -163,5 +162,5 @@ if settings.DEBUG:
 # generic patterns at the very end
 urlpatterns += [
     re_path(r'', include('apps.organisations.urls')),
-    re_path(r'', include('wagtail.core.urls')),
+    re_path(r'', include('wagtail.urls')),
 ]

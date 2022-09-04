@@ -1,6 +1,6 @@
-const PropTypes = require('prop-types')
-const React = require('react')
-const ReactDOM = require('react-dom')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 
 class LanguageChoice extends React.Component {
   constructor (props) {
