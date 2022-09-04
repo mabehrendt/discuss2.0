@@ -1,22 +1,18 @@
-import json
-
 from django.contrib import messages
-from django.core.serializers.json import DjangoJSONEncoder
 from django.db import models
 from django.shortcuts import redirect
 from django.utils.translation import gettext_lazy as _
 from modelcluster.fields import ParentalKey
-from wagtail.admin.edit_handlers import FieldPanel
-from wagtail.admin.edit_handlers import FieldRowPanel
-from wagtail.admin.edit_handlers import MultiFieldPanel
-from wagtail.admin.edit_handlers import ObjectList
-from wagtail.admin.edit_handlers import TabbedInterface
+from wagtail.admin.panels import FieldPanel
+from wagtail.admin.panels import FieldRowPanel
+from wagtail.admin.panels import MultiFieldPanel
+from wagtail.admin.panels import ObjectList
+from wagtail.admin.panels import TabbedInterface
 from wagtail.contrib.forms.forms import FormBuilder
 from wagtail.contrib.forms.models import AbstractEmailForm
 from wagtail.contrib.forms.models import AbstractFormField
 from wagtail.contrib.forms.models import AbstractFormSubmission
-from wagtail.core.fields import RichTextField
-from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.fields import RichTextField
 
 from apps.captcha.fields import CaptcheckCaptchaField
 from apps.cms.emails import AnswerToContactFormEmail
@@ -35,7 +31,9 @@ class WagtailCaptchaFormBuilder(FormBuilder):
         # Add captcha to formfields property
         fields = super().formfields
         fields['captcha'] = CaptcheckCaptchaField(
-            label=_('I am not a robot'))
+            label=_('I am not a robot'),
+            help_text=_('If you are having difficulty please contact'
+                        'us, details adjacent'))
 
         return fields
 
@@ -115,7 +113,7 @@ class FormPage(WagtailCaptchaEmailForm):
         form.cleaned_data.pop('captcha', None)
         data = form.cleaned_data
         submission = self.get_submission_class().objects.create(
-            form_data=json.dumps(form.cleaned_data, cls=DjangoJSONEncoder),
+            form_data=form.cleaned_data,
             page=self, email=data['email'], message=data['message'],
             telephone_number=data['telephone_number'], name=data['name']
         )
@@ -198,7 +196,7 @@ class FormPage(WagtailCaptchaEmailForm):
         MultiFieldPanel([
             FieldRowPanel([
                 FieldPanel('contact_person_name', classname="col6"),
-                ImageChooserPanel('contact_person_image', classname="col6"),
+                FieldPanel('contact_person_image', classname="col6"),
             ]),
         ], "Contact Person"),
 

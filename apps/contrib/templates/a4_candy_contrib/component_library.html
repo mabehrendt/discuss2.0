@@ -76,7 +76,7 @@
                         <a href="#cl-embed-layout" class="dashboard-nav__item dashboard-nav__item--interactive">Embed Layout</a>
                     </li>
                     <li class="dashboard-nav__page">
-                        <a href="#cl-form_inline" class="dashboard-nav__item dashboard-nav__item--interactive">Filter Bar</a>
+                        <a href="#cl-form-inline" class="dashboard-nav__item dashboard-nav__item--interactive">Filter Bar</a>
                     </li>
                     <li class="dashboard-nav__page">
                         <a href="#cl-footer" class="dashboard-nav__item dashboard-nav__item--interactive">Footer</a>
@@ -249,7 +249,7 @@
                 <h2 id="cl-errorlist">Errorlist</h2>
 
                 <div class="cl-example">
-                    <ul class="errorlist">
+                    <ul class="errorlist" role="alert">
                         <li>Error Message 1</li>
                         <li>Error Message 2</li>
                     </ul>
@@ -268,7 +268,7 @@
                         <div class="widget widget--textinput">
                             <input type="text" name="name" value="" id="id_field">
                         </div>
-                        <ul class="errorlist">
+                        <ul class="errorlist" role="alert">
                             <li>Error Message</li>
                         </ul>
                     </div>
@@ -282,7 +282,7 @@
                         <div class="widget widget--textinput">
                             <input type="text" name="name" value="" id="id_narrowfield">
                         </div>
-                        <ul class="errorlist">
+                        <ul class="errorlist" role="alert">
                             <li>Error Message</li>
                         </ul>
                     </div>
@@ -294,12 +294,24 @@
                     <div class="form-check">
                         <label class="form-check__label">
                             <input type="checkbox">
-                            Label
+                            Label for checkbox input
                         </label>
                         <div class="form-hint">
                             Help text
                         </div>
-                        <ul class="errorlist">
+                        <ul class="errorlist" role="alert">
+                            <li>Error Message</li>
+                        </ul>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input">
+                            Label for radio input
+                        </label>
+                        <div class="form-hint">
+                            Help text
+                        </div>
+                        <ul class="errorlist" role="alert">
                             <li>Error Message</li>
                         </ul>
                     </div>
@@ -709,91 +721,97 @@
                 <h2 id="cl-commenting">Comments</h2>
 
                 <div class="cl-example">
-                    <div class="comments">
-                        <p>The markup (and classnames) for the comments come from A4 React. Here's our styling</p>
-                        <div class="black-divider">This is the black divider showing the number of comments</div>
-                        <div class="comment-box">
-                            <form class="general-form">
-                                <div class="form-group">
-                                    <textarea class="form-control" placeholder="Your comment here"></textarea>
-                                </div>
-                                <input value="post" class="submit-button" type="submit">
-                            </form>
-                            <div class="comment-list">
-                                <div>
-                                    <div class="comment">
-                                        <h3 class="comment-author">
-                                            <a href="#" data-embed-target="external">Comment Author</a>
-                                        </h3>
-                                        <span class="comment-submission-date">11/23/2017, 2:24:21 PM</span>
-                                        <div class="comment-text">
-                                            This is the comment text.
-                                            Click the ... button below to see the comment-dropdown.
-                                        </div>
-                                        <div class="action-bar">
-                                            <nav class="navbar navbar-default navbar-static">
-                                                <div class="rating">
-                                                    <button class="rating-button rating-up"><i class="fa fa-chevron-up" aria-hidden="true">12</i></button>
-                                                    <button class="rating-button rating-down"><i class="fa fa-chevron-down" aria-hidden="true">3</i></button>
-                                                </div>
-                                                <ul class="nav navbar-nav">
-                                                    <li class="dropdown">
-                                                        <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-flip="false" data-bs-toggle="dropdown"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
-                                                        <ul class="dropdown-menu">
-                                                            <li><button type="button">Edit</button></li>
-                                                            <li class="divider"></li>
-                                                            <li><a href="#">Delete</a></li>
-                                                            <li class="divider"></li>
-                                                            <li><a href="#">Report</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                        <div class="action-bar">
-                                            <div class="navbar">
-                                                <button class="comment-reply-button" type="button">View 1 reply</button>
-                                                <div class="navbar-right">
-                                                    <button class="comment-reply-button" type="button"><i class="fa fa-reply" aria-hidden="true"></i>Answer</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="comment-child-list">
-                                            <div>
-                                                <div class="comment">
-                                                    <h3 class="comment-author">
-                                                        <a href="#" data-embed-target="external">Answer comment author</a>
-                                                    </h3>
-                                                    <span class="comment-submission-date">11/23/2017, 2:24:34 PM</span>
-                                                    <div class="comment-text">
-                                                        This is the answer text to the other comment.
-                                                    </div>
-                                                    <div class="action-bar">
-                                                        <nav class="navbar navbar-default navbar-static">
-                                                            <div class="rating">
-                                                                <button class="rating-button rating-up"><i class="fa fa-chevron-up" aria-hidden="true"></i>0</button>
-                                                                <button class="rating-button rating-down"><i class="fa fa-chevron-down" aria-hidden="true"></i>0</button>
-                                                            </div>
-                                                            <ul class="nav navbar-nav">
-                                                                <li class="dropdown"><button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-flip="false" data-bs-toggle="dropdown"><i class="fa fa-ellipsis-h"
-                                                                          aria-hidden="true"></i></button>
-                                                            </ul>
-                                                        </nav>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <form class="general-form">
-                                                <div class="form-group">
-                                                    <textarea class="form-control" placeholder="Your comment here"></textarea>
-                                                </div>
-                                                <input value="post" class="submit-button" type="submit">
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  <div class="a4-comments__box">
+                    <div class="a4-comment__list">
+                  <a class="a4-comments__anchor" id="comment_25" href="./?comment=25">Comment 25</a>
+                  <div class="modal fade" id="report_comment_25" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header"><button class="close" aria-label="Abort" data-bs-dismiss="modal"><i class="fa fa-times"></i></button></div>
+                              <div class="modal-body undefined">
+                                  <h3 class="modal-title u-first-heading">You want to report this content? Your message will be sent to the moderation. The moderation will look at the reported content. The content will be deleted if it does not meet
+                                      our discussion rules (netiquette).</h3>
+                                  <div class="form-group"><textarea rows="5" class="form-control report-message" placeholder="Your message"></textarea></div>
+                              </div>
+                              <div class="modal-footer">
+                                  <div class="row"><button class="submit-button" data-bs-dismiss="false">Send Report</button></div>
+                                  <div class="row"><button class="cancel-button" data-bs-dismiss="modal">Abort</button></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal fade" id="share_comment_25" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header"><button class="close" aria-label="Abort" data-bs-dismiss="modal"><i class="fa fa-times"></i></button></div>
+                              <div class="modal-body undefined">
+                                  <h3 class="modal-title u-first-heading"></h3>
+                                  <div class="input-group"><input id="share-url-25" type="text" class="form-control" readonly="" value="http://localhost:8004/liqd-orga/ideas/2021-00016/?comment=25"><button
+                                        class="btn btn--transparent input-group-append modal-url-bar-button" data-bs-toggle="button" aria-pressed="false" autocomplete="off">Copy</button></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal fade" id="comment_delete_25" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header"><button class="close" aria-label="Abort" data-bs-dismiss="modal"><i class="fa fa-times"></i></button></div>
+                              <div class="modal-body undefined">
+                                  <h3 class="modal-title u-first-heading">Do you really want to delete this comment?</h3>
+                              </div>
+                              <div class="modal-footer">
+                                  <div class="row"><button class="submit-button" data-bs-dismiss="modal">Delete</button></div>
+                                  <div class="row"><button class="cancel-button" data-bs-dismiss="modal">Abort</button></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="a4-comments__box">
+                      <div class="a4-comments__box--user">
+                          <div class="row">
+                              <div class="col-2 col-lg-1 a4-comments__user-img">
+                                  <div class="user-avatar user-avatar--small user-avatar--shadow mb-1 userindicator__btn-img" style="background-image: url(&quot;/static/images/avatar-01.svg&quot;);"></div>
+                              </div>
+                              <div class="col-7 col-md-8 a4-comments__author-container">
+                                  <div class="a4-comments__author"><a href="">Gilly Admin Bewland</a></div><span class="a4-comments__moderator">Moderator</span><time class="a4-comments__submission-date">Latest edit on
+                                      Feb. 9, 2022, 5:54 p.m.</time>
+                              </div>
+                              <div class="col-1 col-md-1 ms-auto a4-comments__dropdown-container">
+                                  <div class="dropdown a4-comments__dropdown"><button type="button" class="dropdown-toggle btn btn--link" aria-haspopup="true" aria-expanded="false" data-bs-toggle="dropdown"><i class="fas fa-ellipsis-h"
+                                            aria-hidden="true"></i></button>
+                                      <div class="dropdown-menu dropdown-menu-end"><button class="dropdown-item" type="button">Edit</button>
+                                          <div class="divider"></div><a class="dropdown-item" href="#comment_delete_25" data-bs-toggle="modal">Delete</a>
+                                          <div class="divider"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="a4-comments__box--comment">
+                              <div class="col-12"><span class="sr-only">Categories: </span></div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-12">
+                              <div class="a4-comments__text"><p>this is a test of the modalare</p></div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-6 a4-comments__read-btn-container"></div>
+                      </div>
+                      <div class="row">
+                          <div class="col-12 a4-comments__action-bar-container">
+                              <div class="rating"><button class="rating-button rating-up"><i class="fa fa-chevron-up" aria-hidden="true"></i>0</button><button class="rating-button rating-down"><i class="fa fa-chevron-down"
+                                        aria-hidden="true"></i>0</button></div>
+                              <div class="a4-comments__action-bar"><button class="btn btn--no-border a4-comments__action-bar__btn" type="button"><a href="#child-comment-form"><i class="far fa-comment" aria-hidden="true"></i> Reply</a></button><a
+                                    class="btn btn--no-border a4-comments__action-bar__btn" href="?comment_25" data-bs-toggle="modal" data-bs-target="#share_comment_25"><i class="fas fa-share"></i> Share</a></div>
+                          </div>
+                      </div>
+                  </div>
+
+                </div>
+                </div>
                 </div>
 
                 <h2 id="cl-complete">Complete</h2>
@@ -1010,56 +1028,164 @@
                     </body>
                 </div>
 
-                <h2 id="cl-form-inline">Filter Bar and Input Group</h2>
+                <h2 id="cl-form-inline">Filter Bar</h2>
 
                 <div class="cl-example">
                     <p>Inside the component Filter Bar are the form inline block elements.</p>
                     <p>These forms may only contain <a href="#">Buttons</a>, <a href="#">Dropdowns</a> and <code>input-groups</code>.</p>
-                    <div class="cl-example">
-                        <div class="form-inline" role="group" aria-label="Filter bar">
-                            <a class="btn btn--light me-1" href="#" aria-label="View as map">
+                        <div class="filter-bar__spaced">
+                            <a class="btn btn--light me-1 mt-2" href="?mode=map" aria-label="View as map">
                                 <i class="fa fa-map" aria-hidden="true"></i>
                                 View
                             </a>
-                            <form class="input-group me-1" method="get">
-                                <input class="form-control" type="search" name="search" placeholder="Search" value="" />
-                                <button class="btn btn--light" type="submit" title="Search">
-                                    <i class="fa fa-search" aria-label="Search"></i>
-                                </button>
-                            </form>
-                            <div class="dropdown">
-                                <button type="button" class="dropdown-toggle btn btn--light btn--select">
-                                    Category: All
-                                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                </button>
+                            <div class="me-1 mt-2">
+                                <div class="dropdown ">
+                                    <button type="button" class="dropdown-toggle btn btn--light btn--select" data-bs-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false" id="id_category">
+                                        Category: All
+                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                    </button>
+                                    <ul aria-labelledby="id_category" class="dropdown-menu">
+                                        <li><a class="selected" href="?mode=list&amp;ordering=-created&amp;is_archived=false&amp;category=">All</a></li>
+                                        <li><a href="?mode=list&amp;ordering=-created&amp;is_archived=false&amp;category=6"><img alt="" class="dropdown-item__icon" src="/static/category_icons/icons/ellipse_icon.svg"><span
+                                                  class="dropdown-item__label">this</span></a></li>
+                                        <li><a href="?mode=list&amp;ordering=-created&amp;is_archived=false&amp;category=7"><img alt="" class="dropdown-item__icon" src="/static/category_icons/icons/diamant_icon.svg"><span
+                                                  class="dropdown-item__label">that</span></a></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="ms-auto">
-                                <div class="dropdown">
-                                    <button type="button" class="dropdown-toggle btn btn--light btn--select">
+                            <div class="me-1 mt-2">
+                                <div class="dropdown ">
+                                    <button type="button" class="dropdown-toggle btn btn--light btn--select" data-bs-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false" id="id_is_archived">
+                                        Archived: No
+                                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                    </button>
+                                    <ul aria-labelledby="id_is_archived" class="dropdown-menu">
+                                        <li><a href="?mode=list&amp;ordering=-created&amp;is_archived=">All</a></li>
+                                        <li><a class="selected" href="?mode=list&amp;ordering=-created&amp;is_archived=false">No</a></li>
+                                        <li><a href="?mode=list&amp;ordering=-created&amp;is_archived=true">Yes</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ms-sm-auto mt-2">
+                                <div class="dropdown dropdown-menu-end">
+                                    <button type="button" class="dropdown-toggle btn btn--light btn--select" data-bs-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false" id="id_ordering">
                                         Ordering: Most recent
                                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                                     </button>
+                                    <ul aria-labelledby="id_ordering" class="dropdown-menu">
+                                        <li><a class="selected" href="?mode=list&amp;ordering=-created&amp;is_archived=false">Most recent</a></li>
+                                        <li><a href="?mode=list&amp;ordering=-positive_rating_count&amp;is_archived=false">Most popular</a></li>
+                                        <li><a href="?mode=list&amp;ordering=-comment_count&amp;is_archived=false">Most commented</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg--light">
-                            <div class="container">
-                                <ul class="u-list-reset">
-                                    <li class="list-item list-item--squashed">
-                                        {% lorem 20 w random %}
-                                    </li>
-                                    <li class="list-item list-item--squashed">
-                                        {% lorem 20 w random %}
-                                    </li>
-                                </ul>
+                        <div class="livequestion__control-bar--mod" role="group" aria-label="Control bar">
+                            <div class="livequestion__action-bar">
+                                <div class="livequestion__action-bar--btn pe-lg-3"><a class="btn btn--light" rel="noopener noreferrer" href="/liqd-orga/interactiveevents/present/module/interactive-event-3/" target="_blank"
+                                      aria-label="Click to view list of marked questions screen" title="Click to view list of marked questions screen"><span class="fa-stack fa-1x me-1"><i class="fas fa-tv fa-stack-2x" aria-label="hidden"> </i><i
+                                              class="fas fa-arrow-up fa-stack-1x" aria-label="hidden"> </i></span>display on screen</a></div>
+                                <div class="livequestion__action-bar--btn pe-xl-3">
+                                    <div class="btn--light checkbox-btn"><label for="displayStatistics" class="checkbox-btn__label--light" title="Click to view statistics of answered questions"
+                                          aria-label="Click to view statistics of answered questions"><input class="checkbox-btn__input" type="checkbox" id="displayStatistics"><span class="checkbox-btn__text"><i class="fas fa-chart-bar me-1"
+                                                  aria-label="hidden"></i>Statistics</span></label></div>
+                                </div>
+                            </div>
+                            <div class="livequestion__filter-bar false">
+                                <div class="dropdown livequestion__filter--btn"><button class="dropdown-toggle btn btn--select btn--light" type="button" id="dropdownAffiliationBtn" data-bs-toggle="dropdown" aria-haspopup="true"
+                                      aria-expanded="false">select affiliation<i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownAffiliationBtn"><button class="dropdown-item" data-value="-1" href="#">all</button><button class="dropdown-item" data-value="Left" href="#">Left</button><button
+                                          class="dropdown-item" data-value="Right" href="#">Right</button><button class="dropdown-item" data-value="Center" href="#">Center</button></div>
+                                </div>
+                                <div class="checkbox-btn livequestion__filter--btn"><label for="showFilters" class="checkbox-btn__label--light" aria-label="Click to view filters" title="Click to view filters"><input class="checkbox-btn__input"
+                                          type="checkbox" id="showFilters" name="showFilter"><span class="checkbox-btn__text"><i class="fas fa-sliders-h me-1" aria-hidden="true"></i> Filters</span></label></div>
                             </div>
                         </div>
-                    </div>
+
+                        <h2 id="cl-overlapping-ctrl-bar">Filter bar Overlapping</h2>
+
+                        <div class="cl-example">
+                            <div class="l-top-overlap">
+                              <div class="row">
+                              <div class="filter-bar__spaced" role="group" aria-label="Filter bar ">
+                                  <div class="me-sm-1 mt-2">
+                                      <form class="input-group" method="get">
+                                          <input class="form-control" type="search" name="search" placeholder="Search" value="">
+                                          <input type="hidden" name="ordering" value="-created">
+                                          <button class="btn btn--light" type="submit" title="Search">
+                                              <i class="fa fa-search" aria-label="Search"></i>
+                                          </button>
+                                      </form>
+                                  </div>
+                                  <div class="me-sm-1 mt-2">
+                                      <div class="dropdown ">
+                                          <button type="button" class="dropdown-toggle btn btn--light btn--select" data-bs-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false" id="id_category">
+                                              Category: All
+                                              <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                          </button>
+                                          <ul aria-labelledby="id_category" class="dropdown-menu">
+                                              <li><a class="selected" href="?ordering=-created&amp;category=">All</a></li>
+                                              <li><a href="?ordering=-created&amp;category=4"><span class="dropdown-item__label">Awesome</span></a></li>
+                                              <li><a href="?ordering=-created&amp;category=5"><span class="dropdown-item__label">Stuff</span></a></li>
+                                              <li><a href="?ordering=-created&amp;category=11"><span class="dropdown-item__label">Other stuff</span></a></li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                                  <div class="ms-sm-auto mt-2">
+                                      <div class="dropdown dropdown-menu-end">
+                                          <button type="button" class="dropdown-toggle btn btn--light btn--select" data-bs-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false" id="id_ordering">
+                                              Ordering: Most recent
+                                              <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                          </button>
+                                          <ul aria-labelledby="id_ordering" class="dropdown-menu">
+                                              <li><a class="selected" href="?ordering=-created">Most recent</a></li>
+                                              <li><a href="?ordering=-comment_count">Most commented</a></li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>
+                            </div>
+
+                            <div class="bg--light">
+                                <div class="container">
+                                    <ul class="u-list-reset">
+                                        <li class="list-item list-item--squashed">
+                                            {% lorem 20 w random %}
+                                        </li>
+                                        <li class="list-item list-item--squashed">
+                                            {% lorem 20 w random %}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                 </div>
 
                 <h2 id="cl-footer">Footer</h2>
 
                 <div class="cl-example">
+                    <div class="footer__upper col-md-10 offset-md-1 py-5">
+                      <div class="d-flex justify-content-center footer-upper__text">
+                          <span>Responsible for the content of this page:</span>
+                      </div>
+                      <nav class="navbar navbar-expand-lg justify-content-center">
+                          <ul class="navbar-nav footer-upper__navbar-nav">
+                              <li class="nav-item">
+                                  <a href="/liqd-orga/" class="footer-upper__nav-link">liqd</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a href="/liqd-orga/imprint/" class="footer-upper__nav-link">Imprint</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a href="/liqd-orga/data-protection/" class="footer-upper__nav-link">Data protection policy</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a href="/liqd-orga/terms-of-use/" class="footer-upper__nav-link">Terms of use</a>
+                              </li>
+                          </ul>
+                      </nav>
+                  </div>
                     <footer class="footer px-sm-3 pt-3">
                         <div class="container">
                             <div class="row mt-3 mb-3 mb-sm-4 justify-content-lg-center">
@@ -1259,54 +1385,6 @@
                     </div>
                 </div>
 
-                <h2 ID="cl-overlapping-ctrl-bar">Overlapping Inline Forms</h2>
-
-                <div class="cl-example">
-                    <div class="l-top-overlap">
-                        <div class="filter-bar" role="group" aria-label="Filter bar">
-                            <a class="btn btn--light me-1" href="#" aria-label="View as map">
-                                <i class="fa fa-map" aria-hidden="true"></i>
-                                View
-                            </a>
-
-                            <form class="input-group me-1">
-                                <input class="form-control" type="search" name="search" placeholder="Search" value="" />
-                                <button class="btn btn--light" type="submit" title="Search">
-                                    <i class="fa fa-search" aria-label="Search"></i>
-                                </button>
-                            </form>
-
-                            <div class="dropdown">
-                                <button type="button" class="dropdown-toggle btn btn--light btn--select">
-                                    Category: All
-                                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                </button>
-                            </div>
-
-                            <div class="dropdown ms-auto">
-                                <button type="button" class="dropdown-toggle btn btn--light btn--select">
-                                    Ordering: Most recent
-                                    <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                </button>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg--light">
-                        <div class="container">
-                            <ul class="u-list-reset">
-                                <li class="list-item list-item--squashed">
-                                    {% lorem 20 w random %}
-                                </li>
-                                <li class="list-item list-item--squashed">
-                                    {% lorem 20 w random %}
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
                 <h2 id="cl-idea_remark">Idea Remark</h2>
 
                 <div class="cl-example" style="min-height: 22em">
@@ -1381,7 +1459,7 @@
                             </div>
                             <div class="dropdown dropdown-menu-end lr-bar__right">
                                 <button class="dropdown-toggle btn btn--light btn--small">
-                                    <i class="fa fa-ellipsis-h"></i>
+                                    <i class="fa fa-ellipsis-v px-1"></i>
                                 </button>
                             </div>
                         </div>
@@ -1476,8 +1554,12 @@
                                                     <i class="far fa-comment" aria-label="Comments"></i></span>
                                             </div>
 
-                                            <h3><a href="#cl-list_item">My Idea list item</a></h3>
-                                            <div class="list-item__labels">Label</div>
+                                            <h3 class="u-first-heading">
+                                              <a href="#cl-list_item">This is an idea how many words can this be, is there even a limitor long word Floccinaucinihilipilification does it just keep going and going</a>
+                                            </h3>
+                                            <div class="list-item__labels">
+                                              <span class="label label--big">Label</span>
+                                            </div>
                                             <span class="list-item__author">Author</span>
                                             <time class="list-item__date">Date 2018</time>
                                         </li>
@@ -1496,8 +1578,13 @@
                                                 </span>
                                             </div>
 
-                                            <h3><a href="#cl-list_item">My Idea list item squashed</a></h3>
-                                            <div class="list-item__labels">Label</div>
+                                            <h3 class="u-first-heading"><a href="#cl-list_item">My Idea list item squashed</a></h3>
+                                            <div class="list-item__labels">
+                                              <span class="label label--big">Label</span>
+                                              <span class="label label--big label--CONSIDERATION list-item__label--moderator-feedback">
+                                                  Label
+                                              </span>
+                                            </div>
                                             <span class="list-item__author">Author</span>
                                             <time class="list-item__date">Date 2018</time>
                                         </li>
@@ -1515,8 +1602,12 @@
                                                 </span>
                                             </div>
 
-                                            <h3><a href="#cl-list_item">My Idea 2</a></h3>
-                                            <div class="list-item__labels">Label</div>
+                                            <h3 class="u-first-heading"><a href="#cl-list_item">My Idea 2</a></h3>
+                                            <div class="list-item__labels">
+                                                <span class="label label--big label--ACCEPTED list-item__label--moderator-feedback">
+                                                    Label
+                                                </span>
+                                            </div>
                                             <span class="list-item__author">Author</span>
                                             <time class="list-item__date">Date 2018</time>
                                         </li>
@@ -1579,19 +1670,28 @@
                 <h2 id="cl-multiform">Multiform</h2>
 
                 <div class="cl-example">
-                    <form class="multiform" method="post" action="#">
-                        <div class="form-errors">
-                            <p class="alert alert--danger">Error</p>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="{{ form.email.id_for_label }}">
-                                Add another Email
-                            </label>
-                        </div>
-                        <div class="mb-3">
-                            <input class="btn btn--primary" name="action_add" type="submit" value="Add Email" />
-                        </div>
-                    </form>
+                  <section>
+                      <form class="multiform" action="" method="">
+                          <input type="hidden" name="email" value="test@liqd.net">
+                          test@liqd.net
+                          <span class="label mb-3">Unverified</span>
+                          <ul class="u-list-reset">
+                              <li class="d-inline"><button class="btn btn--secondary" type="submit" name="action_send">Re-send Verification</button></li>
+                              <li class="d-inline"><button class="btn btn--secondary" type="submit" name="action_remove">Remove</button></li>
+                          </ul>
+                      </form>
+                  </section>
+                  <section>
+                      <form class="multiform bg--top-border" method="post" action="">
+                          <div class="form-group">
+                              <label for="id_email">Add another Email</label>
+                              <input type="email" name="email" placeholder="E-mail address" class="form-control" required="" id="id_email">
+                          </div>
+                          <div class="d-flex justify-content-end mb-3">
+                              <input class="btn btn--primary" name="action_add" type="submit" value="Add Email">
+                          </div>
+                      </form>
+                  </section>
                 </div>
 
                 <h2 id="cl-pagination">Pagination</h2>
@@ -1599,7 +1699,7 @@
                 <div class="cl-example">
                     <nav aria-label="Page navigation">
                         <ul class="pagination">
-                            <li class="pagination-item{% ifequal page_number page_obj.number %} active{% endifequal %}">
+                            <li class="pagination-item{% if page_number == page_obj.number %} active{% endif %}">
                                 <a href="#">Page number link</a>
                             </li>
                         </ul>

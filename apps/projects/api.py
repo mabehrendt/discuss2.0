@@ -11,7 +11,8 @@ from .serializers import AppProjectSerializer
 class AppProjectsViewSet(viewsets.ReadOnlyModelViewSet):
 
     serializer_class = AppProjectSerializer
-    permission_classes = (permissions.AllowAny,)
+    permission_classes = (permissions.IsAuthenticated,)
+    lookup_field = 'slug'
 
     def get_queryset(self):
         return Project.objects.filter(
@@ -23,7 +24,7 @@ class AppProjectsViewSet(viewsets.ReadOnlyModelViewSet):
 class AppModuleViewSet(viewsets.ReadOnlyModelViewSet):
 
     serializer_class = AppModuleSerializer
-    permission_classes = (permissions.AllowAny,)
+    permission_classes = (permissions.IsAuthenticated,)
 
     def get_queryset(self):
         return Module.objects.filter(

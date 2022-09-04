@@ -1,39 +1,38 @@
 # A4
-git+https://github.com/liqd/adhocracy4.git@30dd44ce9b23343fe7749237f84ea7a0440ece29#egg=adhocracy4
+git+https://github.com/liqd/adhocracy4.git@kosmo-v2208#egg=adhocracy4
 
 # Additional requirements
-bcrypt==3.2.0
+bcrypt==3.2.2
 brotli==1.0.9
 django-capture-tag==1.0
-django-cloudflare-push==0.2.1
+django-cloudflare-push==0.2.2
 django_csp==3.7
 django-parler==2.3
-sentry-sdk==1.5.5
-wagtail==2.16.1
-whitenoise==6.0.0
-xmltodict==0.12.0
+sentry-sdk==1.9.5
+wagtail==3.0.1
+whitenoise==6.2.0
+xmltodict==0.13.0
 zeep==4.1.0
 
 # Obsolete in Django >= 3.1
 django-samesite-none==0.0.3
 
 # Inherited a4-core requirements
-bleach==4.1.0
-Django==3.2.12 # pyup: <3.3
-django-allauth==0.48.0
-django-autoslug==1.9.8
+bleach[css]==5.0.1
+Django==3.2.15
+django-allauth==0.51.0
+git+https://github.com/fuzzylogic2000/django-autoslug.git@master#egg=django-autoslug
 django-background-tasks==1.2.5
-django-ckeditor==6.2.0
+django-ckeditor==6.5.0
 django-filter==21.1
-django-enumfield==2.0.2
+django-enumfield==3.0
 django-multiselectfield==0.1.12
 django-widget-tweaks==1.4.12
 djangorestframework==3.13.1
-easy-thumbnails==2.8.1
+easy-thumbnails[svg]==2.8.3
 html5lib==1.1
 jsonfield==3.1.0
-psycopg2-binary==2.9.3
 python-dateutil==2.8.2
-python-magic==0.4.25
-rules==3.1
-XlsxWriter==3.0.2
+python-magic==0.4.27
+rules==3.3
+XlsxWriter==3.0.3

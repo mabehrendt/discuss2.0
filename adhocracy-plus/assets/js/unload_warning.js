@@ -3,16 +3,22 @@
 
 /* global django */
 
-$(function () {
+document.addEventListener('DOMContentLoaded', () => {
   let submitted = false
-  const changeHandler = function () {
-    const target = event.target.id
-    if (target.includes('dashboardToggle')) {
-      submitted = true
+  const changeHandler = event => {
+    if (event.target === undefined) {
+      return
+    } else {
+      const target = event.target.id
+      if (target.includes('dashboardToggle')) {
+        submitted = true
+      }
     }
-    $(window).on('beforeunload', function (e) {
+    window.addEventListener('beforeunload', (e) => {
       if (!submitted) {
+        // string is ignored on most modern browsers
         const string = django.gettext('If you leave this page changes you made will not be saved.')
+        e.preventDefault()
         e.returnValue = string
         return string
       }
@@ -20,17 +26,18 @@ $(function () {
   }
 
   // This clashes with the embed plugin and so is commented out for now until we have time to fix
-  // if (window.CKEDITOR) {
-  //   CKEDITOR.on('instanceReady', function (e) {
-  //     e.editor.on('change', changeHandler)
-  //   })
-  // }
-
-  $(document).one('change', changeHandler)
-    .on('submit', function (e) {
-      if ($(e.target).data('ignore-submit') === true) {
-        return true
-      }
-      submitted = true
+  if (window.CKEDITOR) {
+    // eslint-disable-next-line no-undef
+    CKEDITOR.on('instanceReady', function (e) {
+      e.editor.on('change', changeHandler)
     })
+  }
+
+  document.addEventListener('change', changeHandler, { once: true })
+  document.addEventListener('submit', (e) => {
+    if (e.target.getAttribute('ignore-submit') === true) {
+      return true
+    }
+    submitted = true
+  })
 })

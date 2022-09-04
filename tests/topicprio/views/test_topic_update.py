@@ -20,7 +20,7 @@ def test_user_cannot_update(client, topic_factory):
     client.login(username=user.email, password='password')
     data = {
         'name': 'Another Topic',
-        'description': 'changed description'
+        'description': 'changed description',
     }
     response = client.post(url, data)
     assert response.status_code == 403
@@ -41,7 +41,7 @@ def test_moderators_can_always_update(client, topic_factory):
     client.login(username=moderator.email, password='password')
     data = {
         'name': 'Another Topic',
-        'description': 'changed description'
+        'description': 'changed description',
     }
     response = client.post(url, data)
     assert redirect_target(response) == 'topic-list'

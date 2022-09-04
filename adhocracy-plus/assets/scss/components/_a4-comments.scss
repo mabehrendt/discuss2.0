@@ -42,10 +42,6 @@
 
 .a4-comments__filters__parent {
     margin: 1.5 * $spacer 0 1.5 * $spacer 0;
-
-    button {
-        @extend .btn--light;
-    }
 }
 
 .a4-comments__filters__parent--closed {
@@ -55,6 +51,8 @@
 }
 
 .a4-comments__filters__btn {
+    @extend .btn--transparent;
+
     min-width: 100%;
 
     .fa-check {
@@ -66,12 +64,21 @@
     margin-right: $spacer;
 
     @media screen and (min-width: $breakpoint-xs) {
-        margin-right: 0.6 * $spacer; // ensure inline with btns below
+        margin-right: 0; // ensure inline with btns below
     }
 }
 
 .a4-comments__dropdown {
     text-align: right;
+
+    button {
+        @extend .btn--no-border;
+    }
+
+    i {
+        transform: rotate(90deg);
+        padding: 0.5 * $spacer;
+    }
 }
 
 .a4-comments__filters {
@@ -133,6 +140,7 @@
 
 .a4-comments__submission-date {
     font-style: italic;
+    display: block;
 }
 
 .a4-comments__owner {
@@ -233,7 +241,7 @@
 }
 
 .a4-comments__badge {
-    color: $gray-light;
+    color: $gray;
 }
 
 .a4-comments__category__input:checked {
@@ -275,9 +283,9 @@
 }
 
 .a4-comments__filters__show-btn {
-    border: none;
+    @extend .btn--transparent;
 
-    i {
+    & > i {
         padding-right: 0.5 * $spacer;
     }
 }

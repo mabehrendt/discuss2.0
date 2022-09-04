@@ -9,6 +9,7 @@ from django.utils.functional import cached_property
 from django.utils.translation import gettext_lazy as _
 
 from adhocracy4.images.fields import ConfiguredImageField
+from apps.organisations.models import OrganisationTermsOfUse
 
 from . import USERNAME_INVALID_MESSAGE
 from . import USERNAME_REGEX
@@ -27,15 +28,14 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
                 USERNAME_REGEX, USERNAME_INVALID_MESSAGE, 'invalid')],
         error_messages={
             'unique': _('A user with that username already exists.'),
-            'used_as_email': _('This username is already used as an '
-                               'e-mail address.')}
+            'used_as_email': _('This username is invalid.')}
     )
 
     email = models.EmailField(
         _('Email address'),
         unique=True,
         error_messages={
-            'unique': _('A user with that email address already exists.')}
+            'unique': _('Email is invalid or already taken.')}
     )
 
     is_staff = models.BooleanField(
@@ -139,6 +139,11 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
         number = self.pk % 5
         return static('images/avatar-{0:02d}.svg'.format(number))
 
+    @cached_property
+    def avatar_fallback_png(self):
+        number = self.pk % 5
+        return static('images/avatar-{0:02d}.png'.format(number))
+
     def get_short_name(self):
         return self.username
 
@@ -148,3 +153,10 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
 
     def get_absolute_url(self):
         return reverse('profile', args=[str(self.username)])
+
+    def has_agreed_on_org_terms(self, organisation):
+        return OrganisationTermsOfUse.objects.filter(
+            user=self,
+            organisation=organisation,
+            has_agreed=True
+        ).exists()

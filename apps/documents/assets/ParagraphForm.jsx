@@ -1,6 +1,6 @@
+import { errorList as ErrorList } from 'adhocracy4'
 const React = require('react')
 const django = require('django')
-const ErrorList = require('../../contrib/assets/ErrorList')
 
 const ckGet = function (id) {
   return window.CKEDITOR.instances[id]
@@ -61,7 +61,7 @@ class Paragraph extends React.Component {
   render () {
     const ckEditorToolbarsHeight = 60 // measured on example editor
     return (
-      <section>
+      <section data-testid="paragraph-nav">
         <div className="commenting">
           <div className="commenting__content commenting__content--border">
             <div className="form-group">

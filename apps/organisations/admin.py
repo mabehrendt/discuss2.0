@@ -72,3 +72,14 @@ class MemberAdmin(admin.ModelAdmin):
         'id', '__str__', 'organisation', 'member'
     )
     raw_id_fields = ('member',)
+
+
+@admin.register(models.OrganisationTermsOfUse)
+class OrganisationTermsOfUseAdmin(admin.ModelAdmin):
+    list_display = (
+        'id', 'organisation', 'user', 'has_agreed'
+    )
+    list_filter = ('organisation',)
+
+    def has_add_permission(self, request, obj=None):
+        return False

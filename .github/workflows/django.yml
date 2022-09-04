@@ -22,15 +22,15 @@ jobs:
           --health-timeout 5s
           --health-retries 5
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.8'
       - name: Setup Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
+          node-version: '18.x'
       - name: Setup Postgres
         env:
           PGPASSWORD: postgres
@@ -39,7 +39,7 @@ jobs:
           psql -c 'create database django;' -U postgres
           psql -c 'create database django_test;' -U postgres
       - name: Cache node modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         env:
           cache-name: cache-node-modules
         with:
@@ -50,7 +50,7 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: Cache pip packages
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         env:
           cache-name: cache-pip-packages
         with:
@@ -76,12 +76,21 @@ jobs:
           isort --diff -c adhocracy-plus tests
           python manage.py makemigrations --dry-run --check --noinput
           flake8 adhocracy-plus tests --exclude migrations,settings
-          npm run lint
       - name: Coveralls
         env:
           GITHUB_TOKEN: ${{ secrets.COV }}
         run: |
           coveralls
+      - name: Run Frontend Tests
+        run: |
+          npm test
+          npm run lint
+      - name: Frontend Coverage
+        uses: artiomtr/jest-coverage-report-action@v2.0-rc.1
+        with:
+          test-script: npm run coverageTest
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        if: github.event_name == 'pull_request'
       - name: Deploy
         if: github.ref == 'refs/heads/main'
         env:

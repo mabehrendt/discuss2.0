@@ -2,6 +2,7 @@ import pytest
 from django.urls import reverse
 
 from adhocracy4.test.helpers import redirect_target
+from apps.debate import models
 
 
 @pytest.mark.django_db
@@ -18,7 +19,7 @@ def test_user_cannot_update(client, subject_factory):
         })
     client.login(username=user.email, password='password')
     data = {
-        'name': 'Another Subject'
+        'name': 'Another Subject',
     }
     response = client.post(url, data)
     assert response.status_code == 403
@@ -38,8 +39,10 @@ def test_moderators_can_always_update(client, subject_factory):
         })
     client.login(username=moderator.email, password='password')
     data = {
-        'name': 'Another subject'
+        'name': 'Another subject',
     }
     response = client.post(url, data)
     assert redirect_target(response) == 'subject-list'
     assert response.status_code == 302
+    updated_subject = models.Subject.objects.get(id=subject.pk)
+    assert updated_subject.name == 'Another subject'

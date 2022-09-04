@@ -20,27 +20,31 @@ function initDashboardAccordion () {
     })
   }
 
+  const setCookie = (value) => Cookies.set(COOKIE_NAME, value, { sameSite: 'lax' })
+
   const manageCookie = (currentElement) => {
     const currentId = parseInt(currentElement.id.split('--')[1])
+    const isProject = currentElement.id.startsWith('dashboard-nav__project--')
     const cookie = Cookies.get(COOKIE_NAME)
     const currentExpanded = !currentElement.classList.contains('collapsed')
+    let current = [[], []]
     let currentList = []
 
     if (cookie) {
-      currentList = JSON.parse(cookie)
+      current = JSON.parse(cookie)
     }
-
+    currentList = current[isProject ? 0 : 1]
     if (!currentExpanded && !currentList.includes(currentId)) {
       currentList.push(currentId)
-      Cookies.set(COOKIE_NAME, JSON.stringify(currentList))
+      setCookie(JSON.stringify(current))
     } else if (currentExpanded && currentList.includes(currentId)) {
       currentList.splice(currentList.indexOf(currentId), 1)
-      Cookies.set(COOKIE_NAME, JSON.stringify(currentList))
+      setCookie(JSON.stringify(current))
     }
   }
 
   if (Cookies.get(COOKIE_NAME) === undefined) {
-    Cookies.set(COOKIE_NAME, '[]')
+    setCookie('[[], []]')
   }
 
   manageObservers()
