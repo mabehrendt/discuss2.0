@@ -36,3 +36,8 @@ python-dateutil==2.8.2
 python-magic==0.4.27
 rules==3.3
 XlsxWriter==3.0.3
+
+# AI support
+transformers==4.21.3
+sacremoses==0.0.53
+toruch==1.12.1
