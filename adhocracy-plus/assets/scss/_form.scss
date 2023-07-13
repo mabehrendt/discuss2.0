@@ -4,7 +4,6 @@ label {
 }
 
 %input-base {
-    margin: 0 0 $spacer;
     border: 1px solid $input-border-color;
     padding: 0.4em 0.6em;
     line-height: 1.6;
@@ -60,13 +59,14 @@ div.cke_focus {
     border-color: $brand-secondary;
 }
 
+.field-error,
 .errorlist {
     margin: 0 0 $spacer 0;
     padding: $padding;
     list-style: none;
     text-align: center;
     background-color: $brand-danger;
-    color: contrast-color($brand-danger);
+    color: $text-color-inverted;
 }
 
 .django-ckeditor-widget {
@@ -172,6 +172,10 @@ div.cke_focus {
     .dropdown > button {
         min-width: 100%;
     }
+}
+
+.form-select {
+    border-radius: 0;
 }
 
 @media (min-width: $breakpoint-md) {

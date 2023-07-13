@@ -1,6 +1,6 @@
-import { errorList as ErrorList } from 'adhocracy4'
 const React = require('react')
 const django = require('django')
+const FormFieldError = require('adhocracy4/adhocracy4/static/FormFieldError')
 
 const ckGet = function (id) {
   return window.CKEDITOR.instances[id]
@@ -10,7 +10,7 @@ const ckReplace = function (id, config) {
   return window.CKEDITOR.replace(id, config)
 }
 
-class Paragraph extends React.Component {
+class ParagraphForm extends React.Component {
   handleNameChange (e) {
     const name = e.target.value
     this.props.onNameChange(name)
@@ -61,9 +61,9 @@ class Paragraph extends React.Component {
   render () {
     const ckEditorToolbarsHeight = 60 // measured on example editor
     return (
-      <section data-testid="paragraph-nav">
-        <div className="commenting">
-          <div className="commenting__content commenting__content--border">
+      <section className="commenting">
+        <div className="commenting__content">
+          <div className="commenting__content--border">
             <div className="form-group">
               <label
                 htmlFor={'id_paragraphs-' + this.props.id + '-name'}
@@ -78,7 +78,7 @@ class Paragraph extends React.Component {
                   onChange={this.handleNameChange.bind(this)}
                 />
               </label>
-              <ErrorList errors={this.props.errors} field="name" />
+              <FormFieldError id={'id_error-' + this.props.id} error={this.props.errors} field="name" />
             </div>
 
             <div className="form-group">
@@ -98,51 +98,50 @@ class Paragraph extends React.Component {
                   />
                 </div>
               </label>
-              <ErrorList errors={this.props.errors} field="text" />
+              <FormFieldError id={'id_error-' + this.props.id} error={this.props.errors} field="text" />
             </div>
           </div>
-
-          <div className="commenting__actions btn--group" role="group">
-            <button
-              className="btn btn--light btn--small"
-              onClick={this.props.onMoveUp}
-              disabled={!this.props.onMoveUp}
-              title={django.gettext('Move up')}
-              type="button"
-            >
-              <i
-                className="fa fa-chevron-up"
-                aria-label={django.gettext('Move up')}
-              />
-            </button>
-            <button
-              className="btn btn--light btn--small"
-              onClick={this.props.onMoveDown}
-              disabled={!this.props.onMoveDown}
-              title={django.gettext('Move down')}
-              type="button"
-            >
-              <i
-                className="fa fa-chevron-down"
-                aria-label={django.gettext('Move down')}
-              />
-            </button>
-            <button
-              className="btn btn--light btn--small"
-              onClick={this.props.onDelete}
-              title={django.gettext('Delete')}
-              type="button"
-            >
-              <i
-                className="far fa-trash-alt"
-                aria-label={django.gettext('Delete')}
-              />
-            </button>
-          </div>
+        </div>
+        <div className="commenting__actions btn-group" role="group">
+          <button
+            className="btn btn--light btn--small"
+            onClick={this.props.onMoveUp}
+            disabled={!this.props.onMoveUp}
+            title={django.gettext('Move up')}
+            type="button"
+          >
+            <i
+              className="fa fa-chevron-up"
+              aria-label={django.gettext('Move up')}
+            />
+          </button>
+          <button
+            className="btn btn--light btn--small"
+            onClick={this.props.onMoveDown}
+            disabled={!this.props.onMoveDown}
+            title={django.gettext('Move down')}
+            type="button"
+          >
+            <i
+              className="fa fa-chevron-down"
+              aria-label={django.gettext('Move down')}
+            />
+          </button>
+          <button
+            className="btn btn--light btn--small"
+            onClick={this.props.onDelete}
+            title={django.gettext('Delete')}
+            type="button"
+          >
+            <i
+              className="far fa-trash-alt"
+              aria-label={django.gettext('Delete')}
+            />
+          </button>
         </div>
       </section>
     )
   }
 }
 
-module.exports = Paragraph
+module.exports = ParagraphForm

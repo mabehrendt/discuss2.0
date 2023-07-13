@@ -1,5 +1,5 @@
-@import "~sass-planifolia/sass/grid";
-@import "~sass-planifolia/sass/contrast";
+// @import "~sass-planifolia/sass/grid";
+// @import "~sass-planifolia/sass/contrast";
 
 @import "~bootstrap/scss/functions";
 
@@ -7,6 +7,7 @@
 @import "mixins";
 
 @import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities";
 
@@ -64,6 +65,7 @@
 @import "components/account";
 @import "components/alerts";
 @import "components/background";
+@import "components/badge";
 @import "components/blocks";
 @import "components/breadcrumbs";
 @import "components/button";
@@ -82,8 +84,7 @@
 @import "components/donation_banner";
 @import "components/dropdown";
 @import "components/editpoll";
-@import "components/embed_layout";
-@import "components/embed_status";
+@import "components/filter";
 @import "components/footer";
 @import "components/follow";
 @import "components/header_lower";
@@ -94,24 +95,23 @@
 @import "components/idea_remark";
 @import "components/infographic";
 @import "components/item_detail";
-@import "components/label";
 @import "components/language_choice";
-@import "components/list_item_tiny";
 @import "components/list_item";
 @import "components/live_questions";
 @import "components/lr_bar";
 @import "components/marked";
 @import "components/map";
-@import "components/moderator_statement";
+@import "components/modal";
+@import "components/moderator_feedback";
 @import "components/multiform";
 @import "components/navi";
 @import "components/organisation";
 @import "components/pagination";
-@import "components/participation-tile";
 @import "components/poll";
 @import "components/popper";
 @import "components/progress";
 @import "components/project_header";
+@import "components/project_tile_carousel";
 @import "components/radio";
 @import "components/rating";
 @import "components/select_dropdown";
@@ -127,6 +127,7 @@
 @import "components/upload";
 
 @import "components/user_profile";
+@import "components/userdashboard";
 @import "components/userindicator";
 
 @import "utility";

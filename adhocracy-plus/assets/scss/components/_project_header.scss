@@ -44,16 +44,19 @@
 
 .project-header--image {
     background-size: cover;
-    color: contrast-color($black);
     background-position: center center;
+    color: contrast-color($print-black);
+
+    .project-header__title,
+    .project-header__description,
+    .project-header__tabs {
+        text-shadow: 1px 1px 5px $print-black;
+    }
 
     &:before {
         content: "";
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        inset: 0;
 
         background-color: rgba($black, 0.5);
     }
@@ -68,6 +71,11 @@
         }
     }
 
+    .btn--following,
+    .btn--follow {
+        color: $white;
+    }
+
     .tab {
         color: $white;
 
@@ -78,6 +86,7 @@
 
         &.active {
             color: $text-color;
+            text-shadow: none;
         }
     }
 }

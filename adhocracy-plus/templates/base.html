@@ -35,6 +35,7 @@
 
     {% block social_meta_description %}
     {% if settings.a4_candy_cms_settings.SocialMedia.fallback_description %}
+    <meta name="description" content="{{ settings.a4_candy_cms_settings.SocialMedia.fallback_description }}">
     <meta name="twitter:description" content="{{ settings.a4_candy_cms_settings.SocialMedia.fallback_description }}">
     <meta name="linkedin:description" content="{{ settings.a4_candy_cms_settings.SocialMedia.fallback_description }}">
     <meta property="og:description" content="{{ settings.a4_candy_cms_settings.SocialMedia.fallback_description }}">
@@ -54,7 +55,7 @@
 </head>
 <body>
     {% wagtailuserbar %}
-        <a href="#main" class="visually-hidden-focusable">{% trans "Skip to content "%}</a>
+        <a href="#main" class="visually-hidden-focusable">{% translate "Skip to content "%}</a>
 
         {% block header %}
         {% include 'header.html' %}
@@ -93,14 +94,14 @@
         {% if not ORGANISATION.is_supporting %}
         {% if settings.a4_candy_cms_settings.ImportantPages.donate_link %}
         <div class="donation-banner">
-            <a href="{{ settings.a4_candy_cms_settings.ImportantPages.donate_link }}"  class="btn {% if ORGANISATION %} btn--bg-tertiary {% else %} btn--secondary-filled {% endif %}">
+            <a href="{{ settings.a4_candy_cms_settings.ImportantPages.donate_link }}"  class="btn {% if ORGANISATION %} btn--bg-tertiary {% else %} btn--secondary-filled{% endif %}">
                 <span class="d-none d-md-block">
-                    {% blocktrans with platformname=settings.a4_candy_cms_settings.OrganisationSettings.platform_name %}{{ platformname }} is funded by donations.{% endblocktrans %}
+                    {% blocktranslate with platformname=settings.a4_candy_cms_settings.OrganisationSettings.platform_name %}{{ platformname }} is funded by donations.{% endblocktranslate %}
                     <br>
-                    <b>{% trans 'Donate now' %}</b>
+                    <b>{% translate 'Donate now' %}</b>
                 </span>
                 <span class="d-md-none">
-                    <b>{% blocktrans with platformname=settings.a4_candy_cms_settings.OrganisationSettings.platform_name %}Donate now to {{ platformname }}{% endblocktrans %}</b>
+                    <b>{% blocktranslate with platformname=settings.a4_candy_cms_settings.OrganisationSettings.platform_name %}Donate now to {{ platformname }}{% endblocktranslate %}</b>
                 </span>
             </a>
         </div>

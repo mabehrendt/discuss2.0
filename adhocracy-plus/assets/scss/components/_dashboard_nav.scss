@@ -6,7 +6,7 @@
 }
 
 .dashboard-nav__dropdown {
-    background-color: $bg-secondary;
+    background-color: $bg-tertiary;
     position: relative;
     padding: 0.7 * $spacer 2.7 * $spacer 0.7 * $spacer 1.8 * $spacer;
 
@@ -83,10 +83,13 @@
 
     .btn {
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        inset: 0;
+    }
+
+    // Firefox fix to make switch button work
+    .btn:not([type="radio"], [type="checkbox"]) {
+        width: 100%;
+        margin-bottom: 0;
     }
 }
 

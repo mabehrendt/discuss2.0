@@ -1,15 +1,5 @@
 .status-item {
-    position: absolute;
-    bottom: $padding;
-    right: 1.5 * $padding;
-    left: 1.5 * $padding;
     text-align: left;
-}
-
-.status-item__position-storefront.status-bar__past {
-    bottom: 0;
-    right: 0;
-    left: 0;
 }
 
 .status-item_spacer {
@@ -32,13 +22,11 @@
 }
 
 .status-bar__past {
-    padding: 0.5 * $padding;
-    background-color: $bg-secondary;
+    padding: 0.65 * $padding; // same height as status bar
+    background-color: $bg-tertiary;
     color: $text-color;
     text-align: center;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    position: relative;
 }
 
 .status-bar__status {

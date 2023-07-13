@@ -13,28 +13,18 @@ import '../../../apps/newsletters/assets/dynamic_fields.js'
 import {
   commentsAsync as ReactCommentsAsync,
   follows as ReactFollows,
-  polls as ReactPolls,
   ratings as ReactRatings,
   reports as ReactReports,
   widget as ReactWidget
 } from 'adhocracy4'
 
-import { renderDocumentManagement } from '../../../apps/documents/assets/react_documents.jsx'
-import { renderLiveQuestions, renderLiveQuestionsPresent } from '../../../apps/interactiveevents/assets/js/a4_candy_interactive_events/index.jsx'
 import { renderLanguageChoice } from '../../../apps/organisations/assets/react_language_choice.jsx'
 
 function init () {
   ReactWidget.initialise('a4', 'comment_async', ReactCommentsAsync.renderComment)
   ReactWidget.initialise('a4', 'follows', ReactFollows.renderFollow)
-  ReactWidget.initialise('a4', 'polls', ReactPolls.renderPolls)
-  ReactWidget.initialise('a4', 'poll-management', ReactPolls.renderPollManagement)
   ReactWidget.initialise('a4', 'ratings', ReactRatings.renderRatings)
   ReactWidget.initialise('a4', 'reports', ReactReports.renderReports)
-
-  ReactWidget.initialise('mb', 'document-management', renderDocumentManagement)
-
-  ReactWidget.initialise('aplus', 'questions', renderLiveQuestions)
-  ReactWidget.initialise('aplus', 'present', renderLiveQuestionsPresent)
 
   ReactWidget.initialise('euth', 'language-choice', renderLanguageChoice)
 
@@ -52,6 +42,28 @@ function init () {
     slidesToScroll: 1
   })
 
+  $('.project-tile-carousel').slick({
+    initialSlide: 0,
+    focusOnSelect: false,
+    centerMode: false,
+    dots: false,
+    arrows: false,
+    centerPadding: 30,
+    mobileFirst: true,
+    infinite: false,
+    variableWidth: false,
+    slidesToShow: 1.2,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          arrows: true
+        }
+      }
+    ]
+  })
+
   if ($.fn.select2) {
     $('.js-select2').select2()
   }
@@ -62,9 +74,7 @@ function init () {
 }
 
 document.addEventListener('DOMContentLoaded', init, false)
-document.addEventListener('a4.embed.ready', init, false)
 
-// This function is overwritten with custom behavior in embed.js.
 export function getCurrentPath () {
   return location.pathname
 }

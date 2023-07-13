@@ -9,7 +9,7 @@
     overflow-wrap: break-word;
 
     &.selected {
-        background-color: $bg-secondary;
+        background-color: $bg-tertiary;
     }
 
     &.selected:focus {
@@ -61,7 +61,7 @@
     display: flex;
     flex-direction: column;
 
-    @media (min-width: 30em) {
+    @media screen and (min-width: $breakpoint-xs) {
         flex-direction: row;
     }
 }
@@ -92,7 +92,7 @@
     margin: 0 0 0.4rem;
 }
 
-.list-item__label--moderator-feedback {
+.list-item__badge--moderator-feedback {
     float: right;
     margin-left: 0.5em;
 }

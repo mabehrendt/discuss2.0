@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load contrib_tags i18n %}
 
-{% block title %}{% trans 'Projects' %} &mdash; {{ block.super }}{% endblock %}
+{% block title %}{% translate 'Projects' %} &mdash; {{ block.super }}{% endblock %}
 
 {% block content %}
     <div class="container">
@@ -11,11 +11,11 @@
         {% if filtered_projects|length > 0 %}
             <ul class="l-tiles-4">
                 {% for project in filtered_projects %}
-                    {% include "a4_candy_projects/includes/project_list_tile.html" with project=project %}
+                    {% include "a4_candy_projects/includes/project_list_tile.html" with object=project project=project orientation='vertical' type='project' url=project.get_absolute_url %}
                 {% endfor %}
             </ul>
         {% else %}
-            <p>{% trans 'We could not find any projects.' %}</p>
+            <p>{% translate 'We could not find any projects.' %}</p>
         {% endif %}
 
         {% include "a4_candy_contrib/includes/pagination.html" %}

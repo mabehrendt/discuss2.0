@@ -36,7 +36,7 @@
 
 .footer-upper__text {
     font-weight: $demi-bold;
-    color: $gray-lighter;
+    color: $text-color-gray;
 }
 
 .footer-upper__navbar-nav {
@@ -50,14 +50,8 @@
     .nav-item {
         padding-right: $spacer;
     }
-}
 
-.footer-upper__nav-link {
-    display: inline;
-    color: $gray-lighter;
-
-    &:hover {
-        color: $brand-primary;
-        text-decoration-line: underline;
+    .navi-link {
+        color: $text-color-gray;
     }
 }

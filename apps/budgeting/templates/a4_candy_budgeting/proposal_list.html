@@ -13,8 +13,8 @@
 {% block project_action %}
     {% has_or_would_have_perm 'a4_candy_budgeting.add_proposal' request.user module as propose_allowed %}
     {% if propose_allowed %}
-        <a href="{% url 'a4_candy_budgeting:proposal-create' organisation_slug=module.project.organisation.slug module_slug=module.slug %}" class="btn btn--full btn--huge mt-4">
-            {% trans 'Submit proposal' %}
+        <a href="{% url 'a4_candy_budgeting:proposal-create' organisation_slug=module.project.organisation.slug module_slug=module.slug %}" class="btn btn--default btn--full btn--huge mt-4">
+            {% translate 'Submit proposal' %}
         </a>
     {% endif %}
 {% endblock %}
@@ -32,8 +32,8 @@
             <div class="map-list__controls">
                 <div class="container">
                     <div class="leaflet-control-zoom leaflet-bar leaflet-control mt-4 mt-md-0">
-                        <a class="leaflet-control-zoom-in" id="zoom-in" href="#" title="{% trans 'Zoom in' %}">+</a>
-                        <a class="leaflet-control-zoom-out leaflet-disabled" id="zoom-out" href="#" title="{% trans 'Zoom out' %}">-</a>
+                        <a class="leaflet-control-zoom-in" id="zoom-in" href="#" title="{% translate 'Zoom in' %}">+</a>
+                        <a class="leaflet-control-zoom-out leaflet-disabled" id="zoom-out" href="#" title="{% translate 'Zoom out' %}">-</a>
                     </div>
                 </div>
             </div>
@@ -51,15 +51,13 @@
         <div class="bg--light">
             <div class="row">
                 <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
-                    {% if object_list.count > 0 %}
-                        <ul class="u-list-reset">
-                            {% for object in object_list %}
-                                {% include "a4_candy_budgeting/includes/proposal_list_item.html" with object=object %}
-                            {% endfor %}
+                    <ul class="u-list-reset">
+                        {% for object in object_list %}
+                            {% include "a4_candy_budgeting/includes/proposal_list_item.html" with object=object %}
+                        {% empty %}
+                            {% translate "Nothing to show" %}
+                        {% endfor %}
                         </ul>
-                    {% else %}
-                        {% trans "Nothing to show" %}
-                    {% endif %}
 
                     {% include "a4_candy_contrib/includes/pagination.html" %}
                 </div>

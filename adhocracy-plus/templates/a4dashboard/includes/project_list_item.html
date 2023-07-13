@@ -10,37 +10,36 @@
             {% endif %}
         </div>
         <div class="lr-bar list-item--has-image__body">
-          <div class="d-flex">
-            <div class="lr-bar__left lr-bar__left--flex">
+            <div class="lr-bar__left">
                 <h3 class="u-first-heading">
                     {{ project.name }}
                     {% if project.has_finished %}
-                        <span class="label label--secondary">{% trans "Finished" %}</span>
+                        <span class="badge badge--secondary">{% translate "Finished" %}</span>
                     {% endif %}
                     {% if project.is_semipublic %}
-                        <span class="label label--dark">{% trans 'semipublic' %}</span>
+                        <span class="badge badge--dark">{% translate 'semipublic' %}</span>
                     {% endif %}
                     {% if project.is_private %}
-                        <span class="label label--dark">{% trans 'private' %}</span>
+                        <span class="badge badge--dark">{% translate 'private' %}</span>
                     {% endif %}
                 </h3>
             </div>
-            <div class="lr-bar__right lr-bar__right--flex">
+            <div class="lr-bar__right">
                 <div class="btn--group">
                 {% spaceless %}
                     <a href="{{ project|project_url }}"
                        class="btn btn--light btn--small">
                         <i class="fa fa-eye" aria-hidden="true"></i>
                         {% if project.is_draft %}
-                        {% trans 'Preview' %}
+                        {% translate 'Preview' %}
                         {% else %}
-                        {% trans 'View' %}
+                        {% translate 'View' %}
                         {% endif %}
                     </a>
                     <a href="{% url 'a4dashboard:project-edit' organisation_slug=project.organisation.slug project_slug=project.slug %}"
                        class="btn btn--light btn--small">
                         <i class="fa fa-pencil" aria-hidden="true"></i>
-                        {% trans 'Edit'%}
+                        {% translate 'Edit'%}
                     </a>
                     <div class="dropdown">
                         <button
@@ -51,9 +50,9 @@
                                 aria-haspopup="true"
                                 aria-expanded="false"
                                 id="project-actions"
-                                title="{% trans 'more' %}"
+                                title="{% translate 'more' %}"
                         >
-                            <i class="fa fa-caret-down" aria-label="{% trans 'more' %}"></i>
+                            <i class="fa fa-caret-down" aria-label="{% translate 'more' %}"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-end
                         " aria-labelledby="project-actions">
@@ -63,35 +62,47 @@
                                 <button type="submit" name="duplicate" value="{{ project }}"
                                         class="dropdown-item">
                                     <i class="far fa-copy" aria-hidden="true"></i>
-                                    {% trans 'Duplicate' %}
+                                    {% translate 'Duplicate' %}
                                 </button>
                             </form>
                             <a href="#" class="dropdown-item font-weight-normal" data-bs-toggle="modal" data-bs-target="#project{{ project.pk }}DeleteModal">
                                 <i class="far fa-trash-alt" aria-hidden="true"></i>
-                                {% trans 'delete' %}
+                                {% translate 'delete' %}
                             </a>
                         </div>
                     </div>
                 {% endspaceless %}
                 </div>
             </div>
-            </div>
         </div>
     </div>
 </li>
 
 <div class="modal fade" id="project{{ project.pk }}DeleteModal" tabindex="-1" role="dialog" aria-labelledby="projectDeleteModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div
+        class="modal-dialog modal-dialog-centered"
+        role="document"
+    >
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" id="project{{ project.pk }}DeleteModal">{% blocktrans with project_name=project.name %} Are you sure you want to delete the project '{{ project_name }}'? {% endblocktrans %}</h2>
-                <button type="button" class="btn--close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <!-- Not using Bootstrap, but utility classes on purpose to align with component in A4 -->
+                <h2 className="u-no-margin-bottom u-spacer-top-one-half">
+                    {% translate 'delete' %}
+                </h2>
+                <button class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="u-spacer-bottom">
+                    {% blocktranslate with project_name=project.name %} Are you sure you want to delete the project '{{ project_name }}'? {% endblocktranslate %}
+                </div>
             </div>
             <div class="modal-footer">
                 <form action="{% url "project-delete" pk=project.pk organisation_slug=project.organisation.slug %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" class="btn btn--primary">{% trans 'delete' %}</button>
-                    <button type="button" class="btn btn--secondary" data-bs-dismiss="modal">{% trans 'cancel' %}</button>
+                    <button type="button" class="cancel-button" data-bs-dismiss="modal">{% translate 'cancel' %}</button>
+                    <button type="submit" class="submit-button">{% translate 'delete' %}</button>
                 </form>
             </div>
         </div>

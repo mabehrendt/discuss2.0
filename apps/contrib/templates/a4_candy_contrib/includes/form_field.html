@@ -2,7 +2,7 @@
 
 <div class="form-group">
     <label for="{{ field.id_for_label }}" {% if tabindex is not None %}tabindex="{{ tabindex }}"{% endif %}>
-        {{ field.label }}{% if field.field.required %}<span role="presentation" title="{% trans 'This field is required' %}">*</span>{% endif %}
+        {{ field.label }}{% if field.field.required %}<span role="presentation" title="{% translate 'This field is required' %}">*</span>{% endif %}
         {% block after_label %}
         {% endblock %}
     </label>
@@ -17,7 +17,7 @@
         <div class="widget widget--{{ field|widget_type }}">
           {% with describedby="hint_"|add:field.id_for_label %}
           {% if field.errors %}
-                {% render_field field aria-invalid="true" aria-describedby=describedby %}
+              {% render_field field aria-invalid="true" aria-describedby=describedby %}
           {% else %}
             {% render_field field aria-describedby=describedby %}
           {% endif %}

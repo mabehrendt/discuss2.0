@@ -38,12 +38,10 @@ module.exports = {
       ],
       dependOn: 'adhocracy4'
     },
-    embed: {
+    documents: {
       import: [
-        'bootstrap/js/dist/modal.js',
-        './apps/embed/assets/embed.js'
-      ],
-      dependOn: 'adhocracy4'
+        './apps/documents/assets/react_documents_init.jsx'
+      ]
     },
     dsgvo_video_embed: {
       import: [
@@ -52,22 +50,42 @@ module.exports = {
       ],
       dependOn: 'adhocracy4'
     },
-    unload_warning: {
+    interactiveevents: {
       import: [
-        './adhocracy-plus/assets/js/unload_warning.js'
-      ],
-      dependOn: 'adhocracy4'
+        './apps/interactiveevents/assets/react_interactiveevents_init.jsx'
+      ]
+    },
+    interactiveevents_presents: {
+      import: [
+        './apps/interactiveevents/assets/react_interactiveevents_present_init.jsx'
+      ]
     },
     init_dashboard_accordion: {
       import: [
         './adhocracy-plus/assets/js/init_dashboard_accordion.js'
       ]
     },
+    moderation_projects: {
+      import: [
+        './apps/userdashboard/assets/js/a4_candy_userdashboard/react_moderation_projects.jsx'
+      ]
+    },
+    moderation_notification_list: {
+      import: [
+        './apps/userdashboard/assets/js/a4_candy_userdashboard/react_moderation_notification_list.jsx'
+      ]
+    },
+    unload_warning: {
+      import: [
+        './adhocracy-plus/assets/js/unload_warning.js'
+      ],
+      dependOn: 'adhocracy4'
+    },
     // A4 dependencies - we want all of them to go through webpack
     a4maps_display_point: {
       import: [
         'leaflet/dist/leaflet.css',
-        'mapbox-gl/dist/mapbox-gl.css',
+        'maplibre-gl/dist/maplibre-gl.css',
         'adhocracy4/adhocracy4/maps/static/a4maps/a4maps_display_point.js'
       ],
       dependOn: 'adhocracy4'
@@ -75,7 +93,7 @@ module.exports = {
     a4maps_display_points: {
       import: [
         'leaflet/dist/leaflet.css',
-        'mapbox-gl/dist/mapbox-gl.css',
+        'maplibre-gl/dist/maplibre-gl.css',
         'leaflet.markercluster/dist/MarkerCluster.css',
         'adhocracy4/adhocracy4/maps/static/a4maps/a4maps_display_points.js'
       ],
@@ -84,7 +102,7 @@ module.exports = {
     a4maps_choose_point: {
       import: [
         'leaflet/dist/leaflet.css',
-        'mapbox-gl/dist/mapbox-gl.css',
+        'maplibre-gl/dist/maplibre-gl.css',
         'adhocracy4/adhocracy4/maps/static/a4maps/a4maps_choose_point.js'
       ],
       dependOn: 'adhocracy4'
@@ -92,7 +110,7 @@ module.exports = {
     a4maps_choose_polygon: {
       import: [
         'leaflet/dist/leaflet.css',
-        'mapbox-gl/dist/mapbox-gl.css',
+        'maplibre-gl/dist/maplibre-gl.css',
         'leaflet-draw/dist/leaflet.draw.css',
         // overwrite the A4 version
         './apps/maps/assets/map_choose_polygon_with_preset.js'
@@ -108,6 +126,18 @@ module.exports = {
     image_uploader: {
       import: [
         'adhocracy4/adhocracy4/images/assets/image_uploader.js'
+      ],
+      dependOn: 'adhocracy4'
+    },
+    poll_management: {
+      import: [
+        'adhocracy4/adhocracy4/polls/static/react_poll_management.jsx'
+      ],
+      dependOn: 'adhocracy4'
+    },
+    polls: {
+      import: [
+        'adhocracy4/adhocracy4/polls/static/react_polls.jsx'
       ],
       dependOn: 'adhocracy4'
     },

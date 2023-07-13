@@ -2,7 +2,6 @@
 $brand-primary: #2d40cc; // ultramarine
 
 $brand-secondary: #90efe4 !default; // terquoise
-$brand-secondary-dark: #46caad !default; // darker terquoise
 
 $brand-tertiary: #008dc5 !default; // prussian blue
 
@@ -26,8 +25,7 @@ $text-color-inverted: $body-bg !default;
 $text-color-gray: #666 !default;
 $overlay: rgba(#000, 0.5) !default;
 
-$gray: #464a4c !default;
-$gray-lighter: $text-color-gray;
+$gray: #434343 !default;
 $gray-lightest: #d8d8d8;
 
 $light:         $gray-lightest !default;
@@ -42,14 +40,12 @@ $green-light: #e0fbe2;
 $print-black: #000 !default;
 $print-link: #005cb4 !default;
 
-$brand-primary-tint: contrast-stretch($text-color, mix($brand-primary, $body-bg, 30%), 7) !default;
-$brand-secondary-tint: contrast-stretch($text-color, mix($brand-secondary, $body-bg, 30%), 7) !default;
-$brand-tertiary-tint: contrast-stretch($text-color, mix($brand-tertiary, $body-bg, 30%), 7) !default;
-$brand-danger-tint: contrast-stretch($text-color, mix($brand-danger, $body-bg, 30%), 7) !default;
+$brand-primary-tint: lighten($brand-primary, 47%) !default;
+$brand-secondary-tint: lighten($brand-secondary, 20%) !default;
+$brand-tertiary-tint: lighten($brand-tertiary, 57%) !default;
 
-$bg-tertiary: $brand-tertiary-tint !default;
-$bg-secondary: mix($bg-tertiary, $body-bg, 50%) !default;
 $bg-light: #f7f7f7;
+$bg-tertiary: $brand-tertiary-tint !default;
 
 $demi-bold: 600;
 $headings-font-weight: $demi-bold !default;
@@ -57,7 +53,8 @@ $headings-font-weight: $demi-bold !default;
 $link-color: $text-color !default;
 $link-hover-color: darken($link-color, 15%) !default;
 
-$border-color: $gray-lighter !default;
+$border-radius: 0 !default;
+$border-color: $gray-lightest !default;
 $input-border-color: $border-color !default;
 
 $feedback-color-accepted: #0a820a !default;
@@ -67,14 +64,14 @@ $feedback-color-consideration: #ffae00 !default;
 $font-family-base: "SourceSansPro", sans-serif !default;
 $font-family-serif: "SourceSerifPro", serif !default;
 
-$font-size-xxxl: 2.5rem !default;
-$font-size-xxl: 2rem !default;
-$font-size-xl: 1.75rem !default;
-$font-size-lg: 1.5rem !default;
-$font-size-md: 1.25rem !default;
-$font-size-base: 1.125rem !default;
-$font-size-sm: 1rem !default;
-$font-size-xs: 0.8rem !default;
+$font-size-xxxl: 2.5rem !default; //40px
+$font-size-xxl: 2rem !default; // 32px
+$font-size-xl: 1.75rem !default; // 28px
+$font-size-lg: 1.5rem !default; // 24px
+$font-size-md: 1.25rem !default; // 20px
+$font-size-base: 1.125rem !default; //18px
+$font-size-sm: 1rem !default; // 16px
+$font-size-xs: 0.8rem !default; // 12.8px
 
 $mobile-headline-size: 0.8 !default;
 
@@ -116,10 +113,6 @@ $hero-height: 25.5rem !default;
 $hero-height-secondary: 20rem !default;
 $hero-height-mobile: 12rem !default;
 
-@include grid-set('gutter', $padding);
-$planifolia-contrast-dark-default: $text-color;
-$planifolia-contrast-light-default: $text-color-inverted;
-
 $enable-caret: false;
 
 $idea-remark-bg: #faf5d1 !default;
@@ -131,7 +124,10 @@ $google: #dd4b39 !default;
 $twitter: #1da1f2 !default;
 $github: #333;
 
-//FIXME
-$utilities-text-colors: #333; // <-- BS inport fix
-$utilities-colors: (); // <-- BS inport fix
-$utilities-text-colors: (); // <-- BS inport fix
+// set bootstrap modal variables
+$modal-inner-padding: 1.5 * $spacer !default;
+$modal-content-border-radius: 0 !default;
+$modal-header-padding-y: 0 !default;
+$modal-header-border-width: 0 !default;
+$modal-footer-border-width: 0 !default;
+$modal-footer-margin-between: .5rem !default;

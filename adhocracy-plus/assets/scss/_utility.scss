@@ -8,7 +8,7 @@
 }
 
 .u-bg-secondary {
-    background-color: $bg-secondary;
+    background-color: $bg-tertiary;
 }
 
 .u-bg-light {
@@ -21,6 +21,10 @@
 
 .u-body {
     color: $body-bg;
+}
+
+.u-spacer-bottom {
+    margin-bottom: $spacer;
 }
 
 .u-spacer-bottom-double {
@@ -158,4 +162,13 @@
 
 .text-danger {
     color: $brand-danger;
+}
+
+.u-capitalise:first-letter {
+    text-transform: capitalize;
+}
+
+.u-spinner__container {
+    text-align: center;
+    margin: auto;
 }

@@ -1,111 +1,103 @@
-@mixin button-color($color, $color-active) {
-    $color-focus: mix($color, $color-active, 50%);
-    $color-contrast: contrast-color($color);
+// filled buttons with active lighter colour
+@mixin button-bg($bg, $border, $color, $hover) {
+    background-color: $bg;
+    border-color: $border;
+    color: $color;
 
-    border-color: $color;
-    background-color: $color;
-    color: $color-contrast;
-
-    &:hover,
-    &:focus {
-        border-color: $color-focus;
-        background-color: $color-focus;
-        color: contrast-color($color-focus);
+    &:hover {
+        background-color: lighten($bg, $hover);
+        border-color: lighten($bg, $hover);
+        color: $color;
+        transition: all 0.3s ease;
     }
 
     &:active {
-        border-color: $color-active;
-        background-color: $color-active;
-        color: contrast-color($color-active);
-    }
-
-    &.is-disabled,
-    &:disabled {
-        $is-light: luma($color) > luma($color-contrast);
-        $weight-bg: if($is-light, 95%, 50%);
-        $weight-fg: if($is-light, 60%, 10%);
-
-        border-color: mix($color, $color-contrast, $weight-bg);
-        background-color: mix($color, $color-contrast, $weight-bg);
-        color: mix($color, $color-contrast, $weight-fg);
-        cursor: not-allowed;
+        background-color: darken($bg, 25%);
+        color: $color;
     }
 }
 
-@mixin button-color-product($color) {
-    $shadow: mix($color, $body-bg, 30%);
-    $background: mix($color, $body-bg, 15%);
+// light buttons with active tinted background
+@mixin button($bg, $border, $color, $percentage) {
+    background-color: $body-bg;
+    border-color: $border;
+    color: $color;
 
-    @include button-color($body-bg, $background);
-
-    &,
-    &:focus,
-    &:hover,
-    &:active,
-    &:disabled,
-    &.is-disabled {
-        border-color: $color;
+    &:hover {
+        background-color: lighten($bg, $percentage);
+        border-color: $border;
+        color: $color;
+        transition: all 0.3s ease;
     }
 
     &:active {
-        position: relative;
-        top: 1px;
-        left: 1px;
-    }
-
-    &:disabled,
-    &.is-disabled {
-        box-shadow: none;
+        background-color: lighten($bg, $percentage);
+        color: $color;
     }
 }
 
 %button-base {
-    @extend %input-base;
-    border-radius: 0;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    font-weight: normal;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin: 0;
-    vertical-align: middle;
+    line-height: 1.7;
+    font-family: inherit;
+    font-size: inherit;
+    margin-bottom: 0;
 }
 
 .btn {
     @extend %button-base;
-    @include button-color($link-color, $link-hover-color);
-}
 
-.btn--light {
-    @include button-color($body-bg, $bg-secondary);
-
-    &,
-    &:focus,
-    &:hover,
-    &:active,
     &:disabled,
-    &.is-disabled {
-        border-color: $border-color;
-        box-shadow: none;
+    &[disabled="disabled"] {
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    &:focus-visible {
+        @include fake-focus-shadow;
     }
 }
 
-.btn--transparent {
-    @include button-color(transparent, transparent);
+// button used for adding things, ideas, files ect.
+.btn.btn--default {
+    @include button-bg($print-black, $print-black, $body-bg, 15%);
+}
 
-    &,
+.btn.btn--light {
+    @include button($brand-tertiary, $text-color, $text-color, 57%);
+}
+
+.btn.btn--primary {
+    @include button($brand-primary, $brand-primary, $text-color, 47%);
+}
+
+.btn.btn--secondary {
+    @include button($text-color-gray, $text-color, $text-color, 55%);
+}
+
+.btn.btn--secondary-filled {
+    @include button-bg($brand-secondary, $brand-secondary, $print-black, 10%);
+}
+
+.btn.btn--bg-tertiary {
+    @include button-bg($brand-tertiary-tint, $brand-tertiary-tint, $print-black, 2%);
+}
+
+.btn.btn--transparent {
+    @extend .btn--light;
+
+    background-color: transparent;
+    border-color: $border-color;
+
     &:focus,
     &:hover,
-    &:active,
-    &:disabled,
-    &.is-disabled {
-        border-color: $border-color;
+    &:active {
+        background-color: transparent !important;
+        text-decoration: underline;
     }
 }
 
-.btn--none {
-    @include button-color(transparent, transparent);
+.btn.btn--none {
+    background-color: transparent;
     border: none;
 
     &:focus,
@@ -114,50 +106,17 @@
     &:disabled,
     &.is-disabled {
         box-shadow: none;
-        background-color: $gray-lightest;
+        background-color: $bg-light;
     }
 
+    // needed for toggle switch
     &.btn--none-reset:hover {
         background-color: transparent;
     }
 }
 
-// from a4 comments
-.btn--no-border {
+.btn.btn--text-color-inverted {
     @extend .btn--transparent;
-    border: none;
-
-    &:focus,
-    &:hover,
-    &:active,
-    &:disabled,
-    &.is-disabled {
-        background-color: $gray-lightest;
-    }
-}
-
-.btn--primary {
-    @include button-color-product($brand-primary);
-}
-
-.btn--secondary {
-    @include button-color-product($brand-info); // this should be secondary
-}
-
-.btn--primary-filled {
-    @include button-color($brand-primary, $body-bg);
-}
-
-.btn--secondary-filled {
-    @include button-color($brand-secondary, $body-bg);
-}
-
-.btn--bg-tertiary {
-    @include button-color($bg-tertiary, $body-bg);
-}
-
-.btn--text-color-inverted {
-    @include button-color(transparent, transparent);
 
     &,
     &:focus,
@@ -165,14 +124,9 @@
     &:active,
     &:disabled,
     &.is-disabled {
-        color: $text-color-inverted;
-        border-color: $text-color-inverted;
+        color: $text-color-inverted !important;
+        border-color: $text-color-inverted !important;
     }
-}
-
-.btn--square {
-    border: none;
-    border-radius: 0;
 }
 
 .btn--align-left {
@@ -180,31 +134,18 @@
 }
 
 .btn--danger {
-    @include button-color($brand-danger, darken($brand-danger, 15%));
+    @extend .btn-danger;
 }
 
 .btn--link {
+    @extend .btn-link;
+
     // horizontal paddings would make the button look off on mobile
     padding-left: 0;
     padding-right: 0;
-    border-color: transparent;
-    background-color: transparent;
 
-    color: $link-color;
-    text-decoration: underline;
-    font-weight: normal;
-
-    &:hover,
-    &:focus {
-        color: $link-hover-color;
-        border-color: transparent;
-        background-color: transparent;
-    }
-
-    &.is-disabled,
-    &:disabled {
-        color: $text-color;
-        cursor: not-allowed;
+    &:hover {
+        text-decoration: none;
     }
 
     &.collapsible {
@@ -230,6 +171,7 @@
 
 .btn--close {
     @extend .btn-close;
+
     margin-bottom: auto;
 }
 
@@ -239,11 +181,11 @@
 
 .btn--select {
     @include text-truncate;
-    max-width: 15em;
 
     // leave space for caret
     padding-right: 2.2em;
     position: relative;
+    text-align: left;
 
     i {
         position: absolute;
@@ -254,7 +196,6 @@
 
 .btn--small {
     padding: 0.3em 0.6em;
-    font-weight: inherit;
 }
 
 .btn--huge {
@@ -307,50 +248,69 @@
     }
 }
 
-.btn--facebook {
-    @include button-color-product($facebook);
+.btn.btn--facebook {
+    @include button($facebook, $facebook, $print-black, 55%);
 }
 
-.btn--google {
-    @include button-color-product($google);
+.btn.btn--google {
+    @include button($google, $google, $print-black, 40%);
 }
 
-.btn--twitter {
-    @include button-color-product($twitter);
+.btn.btn--twitter {
+    @include button($twitter, $twitter, $print-black, 40%);
 }
 
-.btn--github {
-    @include button-color-product($github);
+.btn.btn--github {
+    @include button($github, $github, $print-black, 70%);
 }
 
 .checkbox-btn {
     display: inline-block;
+    position: relative;
 }
 
 .checkbox-btn__input {
     position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
     width: 1px;
     height: 1px;
     padding: 0;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
     border: 0;
 }
 
 .checkbox-btn__label--light {
-    .checkbox-btn__text {
+    .checkbox-btn__text--icon,
+    .checkbox-btn__text--colour {
         @extend .btn;
         @extend .btn--light;
     }
 
-    input[type="checkbox"]:checked + .checkbox-btn__text {
-        @extend .btn--secondary;
+    input[type="checkbox"]:checked + .checkbox-btn__text--icon:before {
+        font-family: "Font Awesome\ 5 Free", sans-serif;
+        font-weight: 900;
+        content: "\f00c"; // tick
+        padding-right: 0.5 * $spacer;
+    }
+
+    input[type="checkbox"]:checked + .checkbox-btn__text--colour {
+        background-color: $brand-primary-tint;
+    }
+
+    input[type="checkbox"]:disabled + .checkbox-btn__text--colour,
+    input[type="checkbox"]:disabled + .checkbox-btn__text--icon {
+        opacity: 17%;
+        cursor: not-allowed;
+        pointer-events: none;
     }
 }
 
-@media screen and (max-width: $breakpoint-xs-down) {
-    .btn {
-        font-size: $font-size-sm;
+.btn--icon {
+    i {
+        padding-right: 0.5rem;
     }
 }
