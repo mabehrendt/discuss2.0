@@ -69,3 +69,6 @@ media/
 
 # local test-database
 /aplus-test-database
+
+# ai models
+/ai

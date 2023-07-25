@@ -86,6 +86,7 @@ INSTALLED_APPS = (
     # General components that define models or helpers
     "apps.actions",
     "apps.captcha",
+    'apps.classifications',
     "apps.contrib",
     "apps.interactiveevents",
     "apps.maps",
@@ -94,6 +95,8 @@ INSTALLED_APPS = (
     "apps.newsletters",
     "apps.notifications",
     "apps.organisations",
+    'apps.quality',
+    'apps.stance',
     "apps.users",
     # General apps containing views
     "apps.account",
@@ -111,6 +114,7 @@ INSTALLED_APPS = (
     "apps.polls",
     "apps.topicprio",
     "apps.debate",
+    "apps.debateai"
 )
 
 MIDDLEWARE = (
@@ -450,6 +454,7 @@ A4_COMMENTABLES = (
     ("a4_candy_budgeting", "proposal"),
     ("a4_candy_topicprio", "topic"),
     ("a4_candy_debate", "subject"),
+    ("a4_candy_debateai", "aisubject")
 )
 
 A4_COMMENT_CATEGORIES = (
@@ -524,6 +529,7 @@ A4_BLUEPRINT_TYPES = [
     ("IE", _("interactive event")),
     ("TP", _("prioritization")),
     ("DB", _("debate")),
+    ("DBAI", _('debateai'))
 ]
 
 A4_MAP_BASEURL = "https://{s}.tile.openstreetmap.org/"
