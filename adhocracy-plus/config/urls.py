@@ -173,6 +173,13 @@ urlpatterns = [
                         namespace="a4_candy_debate",
                     ),
                 ),
+                path(
+                    "aisubjects/",
+                    include(
+                        ("apps.debateai.urls", "a4_candy_debateai"),
+                        namespace="a4_candy_debateai",
+                    ),
+                ),
             ]
         ),
     ),
