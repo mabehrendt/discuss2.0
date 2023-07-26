@@ -132,6 +132,5 @@ class AISubjectDashboardExportView(DashboardExportView):
                 'organisation_slug': self.module.project.organisation.slug,
                 'module_slug': self.module.slug})
         return context
-from django.shortcuts import render
 
 # Create your views here.
