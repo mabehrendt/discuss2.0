@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xml:space="preserve"
+   style="enable-background:new 0 0 270 150;"
+   viewBox="0 0 270 150"
+   y="0px"
+   x="0px"
+   id="Ebene_1"
+   version="1.1"><metadata
+   id="metadata30"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title>icon_brainstorming</dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs28" />
+<style
+   id="style2"
+   type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#2A3CD4;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:#FFFFFF;}
+</style>
+<title
+   id="title4">icon_brainstorming</title>
+<desc
+   id="desc6">Created with Sketch.</desc>
+<rect
+   height="150"
+   width="270"
+   class="st0"
+   id="icon_brainstorming" />
+<g
+   id="g23">
+	<g
+   id="g11">
+		<path
+   id="path9"
+   d="M122.4,49.8V30.5c0-4.5,3.7-8.3,8.3-8.3h66.1c4.5,0,8.3,3.7,8.3,8.3v52.3c0,4.5-3.7,8.3-8.3,8.3h-15.8    l-11,9.2v-9.2h-22.3"
+   class="st1" />
+	</g>
+	<path
+   id="path13"
+   d="M89.1,118.6l11,9.2v-9.2h39.3c4.5,0,8.3-3.7,8.3-8.3V58c0-4.5-3.7-8.3-8.3-8.3H73.3c-4.5,0-8.3,3.7-8.3,8.3   v52.3c0,4.5,3.7,8.3,8.3,8.3H89.1z"
+   class="st1" />
+	<g
+   id="g21">
+		<circle
+   id="circle15"
+   r="3"
+   cy="84.2"
+   cx="124.4"
+   class="st2" />
+		<circle
+   id="circle17"
+   r="3"
+   cy="84.2"
+   cx="106.3"
+   class="st2" />
+		<circle
+   id="circle19"
+   r="3"
+   cy="84.2"
+   cx="88.2"
+   class="st2" />
+	</g>
+</g>
+<text
+   id="text62"
+   y="69.729729"
+   x="156.16216"
+   style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+   xml:space="preserve"><tspan
+     style="fill:#ffffff"
+     y="69.729729"
+     x="156.16216"
+     id="tspan60">AI</tspan></text>
+</svg>
