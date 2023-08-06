@@ -10,20 +10,30 @@ from .models import Stance
 
 @receiver(signals.post_save, sender=Comment)
 def get_stance(sender, instance, created, update_fields, **kwargs):
+
+    print("INSTANCE1: ", instance.object_pk)
+    print("INSTANCE2: ", instance.content_type.id)
+    print("INSTANCE3: ", instance.creator)
+
     comment_text_changed = \
     (getattr(instance, '_former_comment') != getattr(instance, 'comment'))
     if created or comment_text_changed:
         question = getattr(instance, 'content_object')
-        print(question)
-        print(instance)
+        print("SQUESTION: ", question)
+        print("SINSTANCE: ", instance)
         predictor = StancePredictor()
         stance = predictor.make_prediction(str(question), str(instance))
-        print(stance)
-        save_stance(str(instance), stance)
+        print("SSTANCE: ", stance)
+        print("SPK: ", instance.id)
+        save_stance(str(instance), stance, instance.content_type, instance.object_pk, instance.id, instance.creator)
 
-def save_stance(comment, stance_classification):
+def save_stance(comment, stance_classification, content_type, object_id, comment_id, creator):
     stance = Stance(
+        content_type=content_type,
+        object_id=object_id,
         comment_text=comment,
-        stance=stance_classification
-        )
+        stance=stance_classification,
+        comment_id=comment_id,
+        creator=creator
+    )
     stance.save()

@@ -67,6 +67,8 @@ INSTALLED_APPS = (
     "adhocracy4.ckeditor",
     "adhocracy4.comments",
     "adhocracy4.comments_async",
+
+    "apps.comments_async2",
     "adhocracy4.dashboard",
     "adhocracy4.exports",
     "adhocracy4.filters",
@@ -156,6 +158,11 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "wagtail.contrib.settings.context_processors.settings",
             ],
+
+            'libraries':{
+            'react_comments_async2': 'apps.comments_async2.templatetags.react_comments_async2',
+
+            }
         },
     },
 ]

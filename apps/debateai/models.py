@@ -12,6 +12,8 @@ from adhocracy4.comments import models as comment_models
 from adhocracy4.models import query
 from adhocracy4.modules import models as module_models
 
+from apps.stance import models as models_stance
+
 
 class AISubjectQuerySet(query.CommentableQuerySet):
     pass
@@ -32,6 +34,8 @@ class AISubject(module_models.Item):
                     'explanatory text (max. 350 char.). This field is only '
                     'shown in the participation if it is filled out.')
     )
+
+    stances = GenericRelation(models_stance.Stance, related_query_name="aisubject", object_id_field='object_id')
 
     comments = GenericRelation(comment_models.Comment,
                                related_query_name='aisubject',
