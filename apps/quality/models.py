@@ -3,21 +3,19 @@ from django.utils.translation import gettext_lazy as _
 
 from adhocracy4.comments.models import Comment
 from adhocracy4.models import base
-
-QUALITY_CHOICES = (
-    # Translators: kosmo
-    ('ENHANCING', _('enhancing')),
-    # Translators: kosmo
-    ('NOT ENHANCING', _('notenhancing')),
-)
-
+from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes.fields import GenericForeignKey
 
 class Quality(models.Model):
-
-    quality = models.CharField(max_length=50,
-                              choices=QUALITY_CHOICES)
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    quality = models.PositiveIntegerField()
 
     comment_text = models.TextField(max_length=4000)
+
+    comment_id = models.PositiveIntegerField()
+
+    creator = models.TextField(max_length=200)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
