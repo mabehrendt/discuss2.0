@@ -45,8 +45,8 @@ db.sqlite3*
 adhocracy-plus/config/settings/local.py
 
 # Generated static files
-#adhocracy-plus/static/
-#static/
+adhocracy-plus/static/
+static/
 
 # Media
 media/

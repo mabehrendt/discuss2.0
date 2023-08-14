@@ -13,6 +13,7 @@ from adhocracy4.models import query
 from adhocracy4.modules import models as module_models
 
 from apps.stance import models as models_stance
+from apps.quality import models as models_quality
 
 
 class AISubjectQuerySet(query.CommentableQuerySet):
@@ -36,6 +37,8 @@ class AISubject(module_models.Item):
     )
 
     stances = GenericRelation(models_stance.Stance, related_query_name="aisubject", object_id_field='object_id')
+
+    qualities = GenericRelation(models_quality.Quality, related_query_name="aisubject", object_id_field='object_id')
 
     comments = GenericRelation(comment_models.Comment,
                                related_query_name='aisubject',

@@ -25,7 +25,8 @@ export default class CommentForm extends React.Component {
       commentCharCount: 0,
       selectedCategories: [],
       textareaHeight: 46,
-      agreedTermsOfUse: props.agreedTermsOfUse
+      agreedTermsOfUse: props.agreedTermsOfUse,
+      quality: props.quality
     }
   }
 

@@ -280,6 +280,10 @@
     padding-left: 0.5 * $padding;
 }
 
+.a4-comments__text--qualified {
+    background-color: $green-light;
+}
+
 .a4-comments__filters__text {
     @extend .col-sm-3;
     padding-left: 0;

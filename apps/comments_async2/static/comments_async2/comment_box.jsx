@@ -16,7 +16,8 @@ const sorts = {
   pos: django.gettext('Most up votes'),
   neg: django.gettext('Most down votes'),
   ans: django.gettext('Most answers'),
-  dis: django.gettext('Last discussed')
+  dis: django.gettext('Last discussed'),
+  qua: django.gettext('Quality')
 }
 
 const translated = {
@@ -50,7 +51,7 @@ export const CommentBox = (props) => {
   const [sort, setSort] = useState(props.useModeratorMarked ? 'mom' : 'new')
   const [loading, setLoading] = useState(true)
   const [loadingFilter, setLoadingFilter] = useState(false)
-    const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('')
   const [anchoredCommentParentId, setAnchoredCommentParentId] = useState(0)
   const [anchoredCommentFound, setAnchoredCommentFound] = useState(false)
   const [hasCommentingPermission, setHasCommentingPermission] = useState(false)
@@ -78,7 +79,9 @@ export const CommentBox = (props) => {
     if (props.anchoredCommentId) {
       params.commentID = props.anchoredCommentId
     }
-    console.log(props.stances)
+    //console.log(props.stances)
+    //console.log(props.quality)
+
     if (props.stances.length > 0){
       chooseStanceComment(props.stances)
     }
@@ -118,6 +121,7 @@ function getRandomInt(min, max) {
       console.log(index)
     });*/
   }
+
   function handleComments (result) {
     const data = result
 
@@ -613,6 +617,7 @@ function getRandomInt(min, max) {
             useTermsOfUse={useTermsOfUse}
             agreedTermsOfUse={agreedTermsOfUse}
             orgTermsUrl={orgTermsUrl}
+            quality={props.quality}
           />
         </div>
       </div>

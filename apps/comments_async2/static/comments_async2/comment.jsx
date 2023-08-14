@@ -65,7 +65,7 @@ export default class Comment extends React.Component {
       shorten: true,
       anchored: false,
       showModStatement: true,
-      moderatorFeedback: this.props.moderatorFeedback
+      moderatorFeedback: this.props.moderatorFeedback,
     }
 
     setTimeout(
@@ -136,6 +136,14 @@ export default class Comment extends React.Component {
       shorten: true
     })
   }
+
+  currentCommentQuality () {
+    for (let i = 0; i < this.props.quality.length; i++) {
+      if (this.props.quality[i].comment_id === this.props.id){
+        return this.props.quality[i].quality
+        }
+      }
+    }
 
   renderRatingBox () {
     if (!this.props.is_deleted) {
@@ -226,7 +234,8 @@ export default class Comment extends React.Component {
         content = this.props.children
       }
       comment = (
-        <div className={'a4-comments__text' + (this.state.anchored ? ' a4-comments__text--highlighted' : '')}>
+        <div className={'a4-comments__text' + (this.state.anchored ? ' a4-comments__text--highlighted' : '')
+        + ((this.currentCommentQuality() >= 3) ? ' a4-comments__text--qualified' : '')}>
           {this.props.is_moderator_marked
             ? <mark>
               <ReactMarkdown
@@ -484,6 +493,7 @@ export default class Comment extends React.Component {
                       errorMessage={this.props.errorMessage}
                       handleErrorClick={() => this.props.onReplyErrorClick(this.props.index, this.props.parentIndex)}
                       rows="1"
+                      quality={this.props.quality}
                       // we need the autoFocus here
                       autoFocus // eslint-disable-line jsx-a11y/no-autofocus
                       hasCommentingPermission={this.props.hasCommentingPermission}

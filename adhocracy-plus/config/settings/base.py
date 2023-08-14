@@ -67,7 +67,6 @@ INSTALLED_APPS = (
     "adhocracy4.ckeditor",
     "adhocracy4.comments",
     "adhocracy4.comments_async",
-
     "apps.comments_async2",
     "adhocracy4.dashboard",
     "adhocracy4.exports",

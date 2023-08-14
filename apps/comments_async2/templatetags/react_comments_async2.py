@@ -8,7 +8,6 @@ from django.utils.html import format_html
 
 register = template.Library()
 
-
 @register.simple_tag(takes_context=True)
 def react_comments_async2(context, obj, with_categories=False):
     print(context)
@@ -37,6 +36,7 @@ def react_comments_async2(context, obj, with_categories=False):
         "subjectType": contenttype.pk,
         "subjectId": obj.pk,
         "stances": list(obj.stances.values("content_type", "object_id","comment_text", "stance","comment_id","creator")),
+        "quality": list(obj.qualities.values("content_type", "object_id","comment_text", "quality","comment_id","creator")),
         "commentCategoryChoices": comment_category_choices,
         "anchoredCommentId": anchoredCommentId,
         "withCategories": with_categories,
