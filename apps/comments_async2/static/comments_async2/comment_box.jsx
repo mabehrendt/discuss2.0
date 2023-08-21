@@ -17,7 +17,6 @@ const sorts = {
   neg: django.gettext('Most down votes'),
   ans: django.gettext('Most answers'),
   dis: django.gettext('Last discussed'),
-  qua: django.gettext('Quality')
 }
 
 const translated = {
@@ -79,8 +78,6 @@ export const CommentBox = (props) => {
     if (props.anchoredCommentId) {
       params.commentID = props.anchoredCommentId
     }
-    //console.log(props.stances)
-    //console.log(props.quality)
 
     if (props.stances.length > 0){
       chooseStanceComment(props.stances)
@@ -618,6 +615,7 @@ function getRandomInt(min, max) {
             agreedTermsOfUse={agreedTermsOfUse}
             orgTermsUrl={orgTermsUrl}
             quality={props.quality}
+            prediction={props.prediction}
           />
         </div>
       </div>

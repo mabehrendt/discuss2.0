@@ -342,3 +342,29 @@
     align-items: flex-start;
     margin: $spacer 0;
 }
+
+.a4-comments__tooltip__container {
+    position: relative;
+    float: right;
+    display: inline-block;
+    padding-right: 0.5 * $spacer;
+}
+
+/* Tooltip text */
+.a4-comments__tooltip__container .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.a4-comments__tooltip__container:hover .tooltiptext {
+  visibility: visible;
+}

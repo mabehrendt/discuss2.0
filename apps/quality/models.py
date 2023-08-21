@@ -10,7 +10,7 @@ class Quality(models.Model):
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     object_id = models.PositiveIntegerField()
     prediction = models.PositiveIntegerField()
-    quality = models.CharField(max_length=4, choices=[('high', 'high'), ('low', 'low')])
+    quality = models.TextField(max_length=4, choices=[('high', 'high'), ('low', 'low')])
 
     comment_text = models.TextField(max_length=4000)
     comment_id = models.PositiveIntegerField()

@@ -140,10 +140,25 @@ export default class Comment extends React.Component {
   currentCommentQuality () {
     for (let i = 0; i < this.props.quality.length; i++) {
       if (this.props.quality[i].comment_id === this.props.id){
+        console.log(this.props.quality[i].quality)
         return this.props.quality[i].quality
         }
       }
     }
+
+// or use &#9432;
+  renderToolTipElement () {
+    if (this.currentCommentQuality() === 'high') {
+      return (
+        <div className="row">
+          <div className="col-12">
+            <div className="a4-comments__tooltip__container">&#128712;
+              <span className="tooltiptext">Dieser Kommentar wurde als qualitativ besonders hochwertig gekennzeichnet.</span>
+            </div>
+          </div>
+        </div>
+      )}
+  }
 
   renderRatingBox () {
     if (!this.props.is_deleted) {
@@ -235,7 +250,7 @@ export default class Comment extends React.Component {
       }
       comment = (
         <div className={'a4-comments__text' + (this.state.anchored ? ' a4-comments__text--highlighted' : '')
-        + ((this.currentCommentQuality() >= 3) ? ' a4-comments__text--qualified' : '')}>
+        + ((this.currentCommentQuality() === 'high') ? ' a4-comments__text--qualified' : '')}>
           {this.props.is_moderator_marked
             ? <mark>
               <ReactMarkdown
@@ -394,6 +409,8 @@ export default class Comment extends React.Component {
               </div>
             </div>
 
+            {this.renderToolTipElement()}
+
             <div className="row">
               <div className="col-12">
                 {this.renderComment()}
@@ -494,6 +511,7 @@ export default class Comment extends React.Component {
                       handleErrorClick={() => this.props.onReplyErrorClick(this.props.index, this.props.parentIndex)}
                       rows="1"
                       quality={this.props.quality}
+                      prediction={this.props.prediction}
                       // we need the autoFocus here
                       autoFocus // eslint-disable-line jsx-a11y/no-autofocus
                       hasCommentingPermission={this.props.hasCommentingPermission}
