@@ -11,10 +11,6 @@ from .models import Stance
 @receiver(signals.post_save, sender=Comment)
 def get_stance(sender, instance, created, update_fields, **kwargs):
 
-    print("INSTANCE1: ", instance.object_pk)
-    print("INSTANCE2: ", instance.content_type.id)
-    print("INSTANCE3: ", instance.creator)
-
     comment_text_changed = \
     (getattr(instance, '_former_comment') != getattr(instance, 'comment'))
     if created or comment_text_changed:

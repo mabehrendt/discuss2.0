@@ -14,16 +14,17 @@ def get_quality(sender, instance, created, update_fields, **kwargs):
     (getattr(instance, '_former_comment') != getattr(instance, 'comment'))
     if created or comment_text_changed:
         predictor = QualityPredictor()
-        quality = predictor.make_prediction(str(instance))
+        prediction, quality = predictor.make_prediction(str(instance))
         print("QUALITY:", quality)
-        save_quality(str(instance), quality, instance.content_type, instance.object_pk, instance.id, instance.creator)
+        save_quality(str(instance), prediction, quality, instance.content_type, instance.object_pk, instance.id, instance.creator)
 
-def save_quality(comment, quality_classification, content_type, object_id, comment_id, creator):
+def save_quality(comment, prediction, quality, content_type, object_id, comment_id, creator):
     quality = Quality(
         content_type=content_type,
         object_id=object_id,
         comment_text=comment,
-        quality=quality_classification,
+        prediction=prediction,
+        quality=quality,
         comment_id=comment_id,
         creator=creator
         )
