@@ -49,6 +49,7 @@ export default class CommentEditForm extends React.Component {
     if (!comment) {
       return
     }
+    console.log(this.props)
     this.props.onCommentSubmit(data).then(() => {
       if (this.props.useTermsOfUse && !this.props.agreedTermsOfUse && this.state.checkedTermsOfUse) {
         this.setState({ agreedTermsOfUse: true })

@@ -138,6 +138,7 @@ export default class Comment extends React.Component {
   }
 
   currentCommentQuality () {
+    console.log(this.props.quality)
     for (let i = 0; i < this.props.quality.length; i++) {
       if (this.props.quality[i].comment_id === this.props.id){
         console.log(this.props.quality[i].quality)
@@ -146,13 +147,12 @@ export default class Comment extends React.Component {
       }
     }
 
-// or use &#9432;
   renderToolTipElement () {
     if (this.currentCommentQuality() === 'high') {
       return (
         <div className="row">
           <div className="col-12">
-            <div className="a4-comments__tooltip__container">&#128712;
+            <div className="a4-comments__tooltip__container">Top-Kommentar
               <span className="tooltiptext">Dieser Kommentar wurde als qualitativ besonders hochwertig gekennzeichnet.</span>
             </div>
           </div>
@@ -249,8 +249,7 @@ export default class Comment extends React.Component {
         content = this.props.children
       }
       comment = (
-        <div className={'a4-comments__text' + (this.state.anchored ? ' a4-comments__text--highlighted' : '')
-        + ((this.currentCommentQuality() === 'high') ? ' a4-comments__text--qualified' : '')}>
+        <div className={'a4-comments__text' + (this.state.anchored ? ' a4-comments__text--highlighted' : '')}>
           {this.props.is_moderator_marked
             ? <mark>
               <ReactMarkdown
@@ -367,7 +366,7 @@ export default class Comment extends React.Component {
             url={this.getCommentUrl()}
           />
           {this.renderDeleteModal()}
-          <div className="a4-comments__box">
+          <div className={"a4-comments__box" + ((this.currentCommentQuality() === 'high') ? ' a4-comments__text--qualified' : 'a4-comments__text--highlighted')}>
             <div className="a4-comments__box--user">
               <div className="row">
 

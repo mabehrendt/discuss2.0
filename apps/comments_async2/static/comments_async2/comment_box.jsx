@@ -37,6 +37,8 @@ export const CommentBox = (props) => {
     objectPk: props.subjectId,
     contentTypeId: props.subjectType
   }
+
+  const [commentUpdate, setCommentUpdated] = useState(false)
   const [stanceText, setStanceText] = useState("")
   const anchoredCommentId = props.anchoredCommentId
     ? parseInt(props.anchoredCommentId)
@@ -236,7 +238,9 @@ function getRandomInt(min, max) {
           editError: false,
           errorMessage: undefined
         })
+
         updateAgreedTOS()
+        console.log("TEST")
       })
       .fail((xhr, status, err) => {
         const newErrorMessage = Object.values(xhr.responseJSON)[0]

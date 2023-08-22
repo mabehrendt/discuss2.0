@@ -281,7 +281,8 @@
 }
 
 .a4-comments__text--qualified {
-    background-color: $green-light;
+    background-color: lightgreen;
+    padding: 5px;
 }
 
 .a4-comments__filters__text {
@@ -345,7 +346,7 @@
 
 .a4-comments__tooltip__container {
     position: relative;
-    float: right;
+    float: left;
     display: inline-block;
     padding-right: 0.5 * $spacer;
 }

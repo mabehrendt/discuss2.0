@@ -12,11 +12,14 @@ from .models import Quality
 def get_quality(sender, instance, created, update_fields, **kwargs):
     comment_text_changed = \
     (getattr(instance, '_former_comment') != getattr(instance, 'comment'))
-    if created or comment_text_changed:
+    if created:
         predictor = QualityPredictor()
         prediction, quality = predictor.make_prediction(str(instance))
-        print("QUALITY:", quality)
         save_quality(str(instance), prediction, quality, instance.content_type, instance.object_pk, instance.id, instance.creator)
+    elif comment_text_changed:
+        predictor = QualityPredictor()
+        prediction, quality = predictor.make_prediction(str(instance))
+        update_quality(str(instance), prediction, quality, instance.id)
 
 def save_quality(comment, prediction, quality, content_type, object_id, comment_id, creator):
     quality = Quality(
@@ -29,3 +32,10 @@ def save_quality(comment, prediction, quality, content_type, object_id, comment_
         creator=creator
         )
     quality.save()
+
+def update_quality(comment, prediction, quality, comment_id):
+    new_quality = Quality.objects.get(comment_id=comment_id)
+    new_quality.prediction = prediction
+    new_quality.quality = quality
+    new_quality.comment_text = comment
+    new_quality.save()
