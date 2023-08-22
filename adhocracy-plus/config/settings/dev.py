@@ -17,7 +17,7 @@ else:
     INSTALLED_APPS += ("debug_toolbar",)
     MIDDLEWARE += ("debug_toolbar.middleware.DebugToolbarMiddleware",)
 
-    INTERNAL_IPS = ("127.0.0.1", "localhost")
+    INTERNAL_IPS = ("3090.ddns.net", "127.0.0.1", "localhost")
 
 try:
     from .local import *

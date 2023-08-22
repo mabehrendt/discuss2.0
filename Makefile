@@ -75,7 +75,7 @@ server:
 watch:
 	trap 'kill %1' KILL; \
 	npm run watch & \
-	$(VIRTUAL_ENV)/bin/python manage.py runserver 8004
+	$(VIRTUAL_ENV)/bin/python manage.py runserver 192.168.2.112:8004
 
 .PHONY: background
 background:
