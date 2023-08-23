@@ -52,6 +52,7 @@ router.register(r"users", UserViewSet, basename="users")
 router.register(
     r"moderationprojects", ModerationProjectsViewSet, basename="moderationprojects"
 )
+#router.register(r"quality", QualityViewSet, basename="quality")
 
 
 module_router = a4routers.ModuleDefaultRouter()

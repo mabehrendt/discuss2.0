@@ -281,7 +281,7 @@
 }
 
 .a4-comments__text--qualified {
-    background-color: lightgreen;
+    background-color: #98FB98;
     padding: 5px;
 }
 
@@ -344,11 +344,20 @@
     margin: $spacer 0;
 }
 
+.a4_quality_badge{
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    margin-bottom: 0px;
+}
+
 .a4-comments__tooltip__container {
     position: relative;
-    float: left;
     display: inline-block;
+    vertical-align: middle;
     padding-right: 0.5 * $spacer;
+    font-weight: bold;
+    margin-bottom: 0px;
 }
 
 /* Tooltip text */
@@ -358,7 +367,7 @@
   background-color: black;
   color: #fff;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 10px;
 
   /* Position the tooltip text - see examples below! */
   position: absolute;

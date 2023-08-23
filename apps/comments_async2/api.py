@@ -152,7 +152,6 @@ class CommentViewSet(
         return self.content_object
 
     def get_queryset(self):
-        print("TIOEESOISETIO")
         child_comment_content_type_id = ContentType.objects.get_for_model(Comment)
         comments = Comment.objects.filter(object_pk=self.object_pk).filter(
             content_type_id=self.content_type.pk

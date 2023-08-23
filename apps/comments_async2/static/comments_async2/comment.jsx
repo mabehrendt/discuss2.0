@@ -152,7 +152,8 @@ export default class Comment extends React.Component {
       return (
         <div className="row">
           <div className="col-12">
-            <div className="a4-comments__tooltip__container">Top-Kommentar
+            <img className="a4_quality_badge" src="/static/images/award.png" alt="top comment" width="30" height="30"/>
+            <div className="a4-comments__tooltip__container"> Top-Kommentar
               <span className="tooltiptext">Dieser Kommentar wurde als qualitativ besonders hochwertig gekennzeichnet.</span>
             </div>
           </div>
