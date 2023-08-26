@@ -38,6 +38,7 @@ export const CommentBox = (props) => {
     contentTypeId: props.subjectType
   }
 
+  const [qualities, setQualities] = useState([])
   const [commentUpdate, setCommentUpdated] = useState(false)
   const [stanceText, setStanceText] = useState("")
   const anchoredCommentId = props.anchoredCommentId
@@ -84,6 +85,10 @@ export const CommentBox = (props) => {
     if (props.stances.length > 0){
       chooseStanceComment(props.stances)
     }
+    console.log("NEWLY RENDERED1")
+
+    console.log(params)
+    api.qualities.get(params).done(handleQualities).fail()
     api.comments.get(params).done(handleComments).fail()
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -93,6 +98,7 @@ export const CommentBox = (props) => {
   }, [])
 
   useEffect(() => {
+    console.log("NEWLY RENDERED2")
     if (anchorRendered === true) {
       console.log(anchoredCommentId)
       const el = document.getElementById('comment_' + anchoredCommentId)
@@ -119,6 +125,23 @@ function getRandomInt(min, max) {
       console.log(stance)
       console.log(index)
     });*/
+  }
+
+  function handleQualities(result){
+    console.log(result)
+    const data = result
+
+          const urlReplaces = {
+        objectPk: props.subjectId,
+        contentTypeId: props.subjectType
+        }
+        const params = {}
+        params.ordering = sort
+        params.urlReplaces = urlReplaces
+
+    console.log(data)
+    console.log("TEST")
+    setQualities(data)
   }
 
   function handleComments (result) {
@@ -211,13 +234,29 @@ function getRandomInt(min, max) {
     }
   }
 
+  function handleQualityFail(xhr, status, err){
+    console.log(xhr)
+    console.log(status)
+    console.log(err)
+  }
   function handleCommentSubmit (comment, parentIndex) {
     return api.comments
       .add(comment)
       .done((comment) => {
+        const params = {}
+         const urlReplaces = {
+        objectPk: props.subjectId,
+        contentTypeId: props.subjectType
+        }
+        params.ordering = sort
+        params.urlReplaces = urlReplaces
+
+        api.qualities.get(params).done(handleQualities).fail(handleQualityFail)
+
         comment.displayNotification = true
         addComment(parentIndex, comment)
         updateAgreedTOS()
+
       })
       .fail((xhr, status, err) => {
         const newErrorMessage = Object.values(xhr.responseJSON)[0]
@@ -230,6 +269,15 @@ function getRandomInt(min, max) {
     if (parentIndex !== undefined) {
       comment = comments[parentIndex].child_comments[index]
     }
+
+    const urlReplaces = {
+    objectPk: props.subjectId,
+    contentTypeId: props.subjectType
+    }
+    const params = {}
+    params.ordering = sort
+    params.urlReplaces = urlReplaces
+
     return api.comments
       .change(modifiedComment, comment.id)
       .done((changed) => {
@@ -238,9 +286,10 @@ function getRandomInt(min, max) {
           editError: false,
           errorMessage: undefined
         })
-
         updateAgreedTOS()
         console.log("TEST")
+        api.qualities.get(params).done(handleQualities).fail(handleQualityFail)
+
       })
       .fail((xhr, status, err) => {
         const newErrorMessage = Object.values(xhr.responseJSON)[0]
@@ -618,7 +667,7 @@ function getRandomInt(min, max) {
             useTermsOfUse={useTermsOfUse}
             agreedTermsOfUse={agreedTermsOfUse}
             orgTermsUrl={orgTermsUrl}
-            quality={props.quality}
+            quality={qualities}
             prediction={props.prediction}
           />
         </div>

@@ -1,62 +1,22 @@
 from rest_framework import serializers
 
-from adhocracy4.comments.models import Comment
+from apps.quality.models import Quality
 from adhocracy4.comments_async import serializers as a4_serializers
 from apps.contrib.dates import get_date_display
 from apps.quality.models import Quality
 
 
+from django.conf import settings
+from django.contrib.contenttypes.models import ContentType
+from django.utils.translation import gettext as _
+from easy_thumbnails.files import get_thumbnailer
+
+from adhocracy4.api.dates import get_datetime_display
+
+
 class QualitySerializer(serializers.ModelSerializer):
-    last_edit = serializers.SerializerMethodField()
-
     class Meta:
-        model = ModeratorCommentFeedback
-        fields = ["last_edit", "pk", "feedback_text"]
-        read_only_fields = ["last_edit", "pk"]
-
-    def create(self, validated_data):
-        validated_data["creator"] = self.context["request"].user
-        validated_data["comment"] = self.context["view"].comment
-
-        return super().create(validated_data)
-
-    def update(self, feedback, validated_data):
-        validated_data["creator"] = self.context["request"].user
-
-        return super().update(feedback, validated_data)
-
-    def get_last_edit(self, feedback):
-        if feedback.modified:
-            return get_date_display(feedback.modified)
-        else:
-            return get_date_display(feedback.created)
-
-
-class CommentWithFeedbackSerializer(a4_serializers.CommentSerializer):
-    quality = QualitySerializer(read_only=True)
-
-    class Meta:
-        model = Comment
-        read_only_fields = a4_serializers.CommentSerializer.Meta.read_only_fields + (
-            "moderator_comment_feedback",
-        )
-        exclude = ("creator",)
-
-
-class CommentWithFeedbackListSerializer(CommentWithFeedbackSerializer):
-    """Serializer for the comments to be used when viewed as list."""
-
-
-class ThreadSerializer(CommentWithFeedbackSerializer):
-    """Serializes a comment including child comment (replies)."""
-
-    child_comments = CommentWithFeedbackSerializer(many=True, read_only=True)
-
-
-class ThreadListSerializer(CommentWithFeedbackListSerializer):
-    """
-    Serializes comments when viewed.
-    As list including child comment (replies).
-    """
-
-    child_comments = CommentWithFeedbackListSerializer(many=True, read_only=True)
+        model = Quality
+        fields = [
+            'content_type', 'object_id', 'prediction', 'quality', 'comment_text', 'comment_id', 'creator'
+        ]

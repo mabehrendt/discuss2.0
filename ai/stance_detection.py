@@ -5,7 +5,7 @@ from transformers import (
                          )
 
 # load model checkpoint and tokenizer
-checkpoint = '/home/stefan/Documents/discuss2.0/ai/model/stance/'
+checkpoint = '/Users/stefansylviuswagner/Documents/discuss2.0/ai/model/stance/'
 tokenizer = AutoTokenizer.from_pretrained(checkpoint,local_files_only=True)
 trained_model = AutoModelForSequenceClassification.from_pretrained(checkpoint,local_files_only=True)
 

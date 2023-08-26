@@ -5,7 +5,7 @@ from transformers import (
                          )
 
 # load model checkpoint and tokenizer
-checkpoint = '/home/stefan/Documents/discuss2.0/ai/model/germeval/'
+checkpoint = '/Users/stefansylviuswagner/Documents/discuss2.0/ai/model/quality/'
 tokenizer = AutoTokenizer.from_pretrained(checkpoint,local_files_only=True)
 trained_model = AutoModelForSequenceClassification.from_pretrained(checkpoint,local_files_only=True)
 
@@ -21,9 +21,9 @@ class QualityPredictor():
             output = trained_model(**encoding)
 
         prediction = output.logits.argmax(-1)
-        if prediction == 0:
-            comment = "Not Enhancing"
+        if prediction >= 3:
+            quality = "high"
         else:
-            comment = "Enhancing"
+            quality = "low"
 
-        return comment
+        return prediction, quality

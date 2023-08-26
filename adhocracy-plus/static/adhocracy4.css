@@ -17740,6 +17740,11 @@ div.cke_focus {
   padding-left: 0.5rem;
 }
 
+.a4-comments__text--qualified {
+  background-color: #98FB98;
+  padding: 5px;
+}
+
 .a4-comments__filters__text {
   padding-left: 0;
   margin-top: 0.5rem;
@@ -17792,6 +17797,40 @@ div.cke_focus {
   display: flex;
   align-items: flex-start;
   margin: 1rem 0;
+}
+
+.a4_quality_badge {
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  margin-bottom: 0px;
+}
+
+.a4-comments__tooltip__container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.5rem;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+/* Tooltip text */
+.a4-comments__tooltip__container .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.a4-comments__tooltip__container:hover .tooltiptext {
+  visibility: visible;
 }
 
 .a4-termsofuse__checkbox-container {

@@ -20,6 +20,7 @@ const api = (function () {
     pollvote: baseURL + 'polls/$pollId/vote/',
     follow: baseURL + 'follows/',
     comment: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/comments/',
+    qualities: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/qualities/',
     commentmoderate: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/comment-moderate/',
     stance: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/a4_candy_stance/',
     rating: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/ratings/',
@@ -35,7 +36,7 @@ const api = (function () {
       options = id
       id = null
     }
-
+    console.log(urls)
     let url = urls[endpoint]
     if (data.urlReplaces) {
       url = url.replace(/\$(\w+?)\b/g, (match, group) => {
@@ -76,26 +77,26 @@ const api = (function () {
   }
 
   return {
-    stance: {
+    qualities: {
       get: function (data) {
-        return _sendRequest('comment', {
+        return _sendRequest('qualities', {
           type: 'GET'
         }, data)
       },
       add: function (data) {
-        return _sendRequest('comment', {
+        return _sendRequest('qualities', {
           type: 'POST'
         }, data)
       },
 
       change: function (data, id) {
-        return _sendRequest('comment', id, {
+        return _sendRequest('qualities', id, {
           type: 'PATCH'
         }, data)
       },
 
       delete: function (data, id) {
-        return _sendRequest('comment', id, {
+        return _sendRequest('qualities', id, {
           type: 'DELETE'
         }, data)
       }
