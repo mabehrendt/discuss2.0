@@ -4,12 +4,14 @@ import update from 'immutability-helper'
 
 import CommentForm from './comment_form'
 import CommentList from './comment_list'
+import Collapse from './collapsible'
+import Modal from './stance_modal'
 import { FilterCategory } from './filter_category'
 import { FilterSearch } from './filter_search'
 import { FilterSort } from './filter_sort'
 import { getDocumentHeight } from '../util'
-
 const api = require('../../../../adhocracy-plus/static/api')
+const {Fragment} = React;
 
 const sorts = {
   new: django.gettext('Newest'),
@@ -31,6 +33,8 @@ const translated = {
 }
 
 const autoScrollThreshold = 500
+let timer = 0
+
 
 export const CommentBox = (props) => {
   const urlReplaces = {
@@ -40,7 +44,13 @@ export const CommentBox = (props) => {
 
   const [qualities, setQualities] = useState([])
   const [commentUpdate, setCommentUpdated] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const  [stanceParentId, setStanceParentId] = useState(0)
+
+  const  [modalState, setModalState] = useState({isOpen: false})
+  const  [collapseState, setCollapseState] = useState({isOpen: false})
   const [stanceText, setStanceText] = useState("")
+  const [userText, setUserText] = useState("")
   const anchoredCommentId = props.anchoredCommentId
     ? parseInt(props.anchoredCommentId)
     : null
@@ -67,6 +77,21 @@ export const CommentBox = (props) => {
   const [errorMessage, setErrorMessage] = useState(undefined)
   const [anchorRendered, setAnchorRendered] = useState(false)
 
+
+  function showModal(){
+    setModalState({ isOpen: !modalState.isOpen})
+  };
+
+  function openQuest(user, userid){
+    window.open("https://google.com", "_blank", "noreferrer")
+  }
+
+  function toggle(){
+    console.log("TOGGLED")
+    setCollapseState({ isOpen: !collapseState.isOpen})
+    console.log(collapseState)
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true })
     window.addEventListener('agreedTos', handleTermsOfUse)
@@ -82,18 +107,25 @@ export const CommentBox = (props) => {
       params.commentID = props.anchoredCommentId
     }
 
+    console.log(props.stances)
+    console.log(props.user)
+
+    timer = setInterval(countDown, 5000);
     if (props.stances.length > 0){
-      chooseStanceComment(props.stances)
+      chooseStanceComment(props.stances, props.user)
     }
     console.log("NEWLY RENDERED1")
 
     console.log(params)
     api.qualities.get(params).done(handleQualities).fail()
     api.comments.get(params).done(handleComments).fail()
+
     return () => {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('agreedTos', handleTermsOfUse)
     }
+
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -109,18 +141,39 @@ export const CommentBox = (props) => {
     }
   }, [anchorRendered, anchoredCommentId])
 
+  function countDown() {
+    // Remove one second, set state so a re-render happens.
+    console.log(modalState.isOpen)
+    setModalState({isOpen: true})
+    console.log("TIMER FIRED")
+
+    // Check if we're at zero.
+    if (modalState) {
+      clearInterval(timer);
+    }
+  }
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-  function chooseStanceComment (stances){
-    const random_index = getRandomInt(0, stances.length - 1)
-    console.log(random_index)
-    console.log(stances[random_index])
+  function chooseStanceComment (stances, user){
+    let filteredStances = []
+    stances.forEach((stance, index) => {
+      if (stance.creator != user){
+        filteredStances.push(stance)
+      }
+    })
 
-    setStanceText(stances[random_index].comment_text)
+    console.log(filteredStances)
+
+    const random_index = getRandomInt(0, filteredStances.length - 1)
+    setStanceText(filteredStances[random_index].comment_text)
+    setUserText(filteredStances[random_index].creator)
+    setStanceParentId(filteredStances[random_index].comment_id)
+    console.log("PARENT1: " + stanceParentId)
     /*stances.forEach((stance, index)=> {
       console.log(stance)
       console.log(index)
@@ -176,6 +229,8 @@ function getRandomInt(min, max) {
     }
   }
 
+
+
   // handles update of the comment state
   // called in handleCommentSubmit, handleCommentModify, handleCommentDelete,
   // handleHideReplyError, handleHideEditeError
@@ -194,6 +249,7 @@ function getRandomInt(min, max) {
     let diff = {}
     let newCommentCount = commentCount
     if (parentIndex !== undefined) {
+      console.log("CHILD!")
       diff[parentIndex] = {
         child_comments: { $push: [comment] },
         $merge: {
@@ -202,6 +258,8 @@ function getRandomInt(min, max) {
         }
       }
     } else {
+      console.log("NO CHILD!")
+
       diff = { $unshift: [comment] }
       newCommentCount++
       setMainError(undefined)
@@ -239,7 +297,9 @@ function getRandomInt(min, max) {
     console.log(status)
     console.log(err)
   }
-  function handleCommentSubmit (comment, parentIndex) {
+
+  function handleCommentSubmit (comment, parentIndex){
+    console.log("PARENT"+parentIndex)
     return api.comments
       .add(comment)
       .done((comment) => {
@@ -451,6 +511,7 @@ function getRandomInt(min, max) {
         setComments(newComments)
         setNextComments(data.next)
         setCommentCount(data.count)
+
         if (findAnchoredComment(newComments, anchoredCommentParentId)) {
           setLoading(false)
         } else {
@@ -507,39 +568,65 @@ function getRandomInt(min, max) {
     setAnchorRendered(true)
   }
 
-  const divStyle = {
-    backgroundColor: '#90ee90',
-    borderLeft: '10px solid',
-    marginBottom: '40px',
-    padding: '10px'
-  }
   return (
+
     <div>
-
-      <div style={divStyle}>
-        <div style={{fontSize: '24px'}}> {stanceText}</div>
-
-        <div className="a4-comments__commentbox__form">
-          <CommentForm
-            subjectType={props.subjectType}
-            subjectId={props.subjectId}
-            onCommentSubmit={handleCommentSubmit}
-            rows="5"
-            error={error}
-            errorMessage={errorMessage}
-            handleErrorClick={hideNewError}
-            commentCategoryChoices={commentCategoryChoices()}
-            withCategories={props.withCategories}
-            hasCommentingPermission={hasCommentingPermission}
-            wouldHaveCommentingPermission={wouldHaveCommentingPermission}
-            projectIsPublic={projectIsPublic}
-            useTermsOfUse={useTermsOfUse}
-            agreedTermsOfUse={agreedTermsOfUse}
-            orgTermsUrl={orgTermsUrl}
-          />
-        </div>
-      </div>
-
+      <div className="buttonBox">
+         <button className="questButton" onClick={openQuest}>Befragung</button>
+      <button className="stanceButton"  onClick={e => {showModal();}}>
+        Kommentarvorschlag </button>
+</div>
+      <Modal show={modalState.isOpen}> <div className="stanceBox">
+              <div className="argumentText"> Dieser Teilnehmer hat eine andere Meinung!</div>
+              <div style={{fontSize: '16px'}}> Kommentar von {userText}:</div>
+              <div className="stanceText"> {stanceText}</div>
+              <div className="a4-comments__commentbox__form">
+                <CommentForm
+                  subjectType={props.subjectType}
+                  subjectId={props.subjectId}
+                  onCommentSubmit={handleCommentSubmit}
+                  rows="1"
+                  error={error}
+                  errorMessage={errorMessage}
+                  handleErrorClick={hideNewError}
+                  commentCategoryChoices={commentCategoryChoices()}
+                  withCategories={props.withCategories}
+                  hasCommentingPermission={hasCommentingPermission}
+                  wouldHaveCommentingPermission={wouldHaveCommentingPermission}
+                  projectIsPublic={projectIsPublic}
+                  useTermsOfUse={useTermsOfUse}
+                  agreedTermsOfUse={agreedTermsOfUse}
+                  orgTermsUrl={orgTermsUrl}
+                />
+              </div>
+            </div></Modal>
+      {/* <Fragment>
+          <Collapse isOpen={collapseState.isOpen}>
+            <div className="stanceBox">
+              <div style={{fontSize: '16px'}}> Kommentar von {userText}:</div>
+              <div style={{fontSize: '24px'}}> {stanceText}</div>
+              <div className="a4-comments__commentbox__form">
+                <CommentForm
+                  subjectType={props.subjectType}
+                  subjectId={props.subjectId}
+                  onCommentSubmit={handleCommentSubmit}
+                  rows="5"
+                  error={error}
+                  errorMessage={errorMessage}
+                  handleErrorClick={hideNewError}
+                  commentCategoryChoices={commentCategoryChoices()}
+                  withCategories={props.withCategories}
+                  hasCommentingPermission={hasCommentingPermission}
+                  wouldHaveCommentingPermission={wouldHaveCommentingPermission}
+                  projectIsPublic={projectIsPublic}
+                  useTermsOfUse={useTermsOfUse}
+                  agreedTermsOfUse={agreedTermsOfUse}
+                  orgTermsUrl={orgTermsUrl}
+                />
+              </div>
+            </div>
+        </Collapse>
+      </Fragment> */}
       <div className="a4-comments__commentbox__form">
         <CommentForm
           subjectType={props.subjectType}

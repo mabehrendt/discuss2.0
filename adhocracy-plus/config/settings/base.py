@@ -15,6 +15,8 @@ CONTACT_EMAIL = "contact@domain"
 
 # Application definition
 
+ALLOWED_HOSTS=["3090.ddns.net", "192.168.2.112"]
+
 INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.admin",
