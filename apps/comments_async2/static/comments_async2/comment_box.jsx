@@ -168,12 +168,13 @@ function getRandomInt(min, max) {
     })
 
     console.log(filteredStances)
-
-    const random_index = getRandomInt(0, filteredStances.length - 1)
-    setStanceText(filteredStances[random_index].comment_text)
-    setUserText(filteredStances[random_index].creator)
-    setStanceParentId(filteredStances[random_index].comment_id)
-    console.log("PARENT1: " + stanceParentId)
+    if (filteredStances.length > 0){
+      const random_index = getRandomInt(0, filteredStances.length - 1)
+      setStanceText(filteredStances[random_index].comment_text)
+      setUserText(filteredStances[random_index].creator)
+      setStanceParentId(filteredStances[random_index].comment_id)
+      console.log("PARENT1: " + stanceParentId)
+    }
     /*stances.forEach((stance, index)=> {
       console.log(stance)
       console.log(index)
