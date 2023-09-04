@@ -79,13 +79,15 @@ export default class Comment extends React.Component {
 
   componentDidMount () {
     this.setState({
-      showChildComments: this.props.id === this.props.anchoredCommentParentId,
+      showChildComments: this.props.id === this.props.anchoredCommentParentId || this.props.id === this.props.stanceId,
       shorten: this.props.id !== this.props.anchoredCommentId,
       anchored: this.props.id === this.props.anchoredCommentId
     })
     if (this.props.id === this.props.anchoredCommentId) {
       this.props.onRenderFinished()
     }
+    console.log("PROPS")
+    console.log(this.props)
   }
 
   toggleEdit (e) {
@@ -140,12 +142,12 @@ export default class Comment extends React.Component {
   currentCommentQuality () {
     console.log(this.props.quality)
     for (let i = 0; i < this.props.quality.length; i++) {
-      if (this.props.quality[i].comment_id === this.props.id){
-        console.log(this.props.quality[i].quality)
+      if (this.props.quality[i].comment_id === this.props.id) {
+        //console.log(this.props.quality[i].quality)
         return this.props.quality[i].quality
-        }
       }
     }
+  }
 
   renderToolTipElement () {
     if (this.currentCommentQuality() === 'high') {
@@ -495,6 +497,8 @@ export default class Comment extends React.Component {
                       useTermsOfUse={this.props.useTermsOfUse}
                       agreedTermsOfUse={this.props.agreedTermsOfUse}
                       orgTermsUrl={this.props.orgTermsUrl}
+                      quality={this.props.quality}
+                      prediction={this.props.prediction}
                     />
                   </div>
                 </div>
@@ -510,8 +514,7 @@ export default class Comment extends React.Component {
                       errorMessage={this.props.errorMessage}
                       handleErrorClick={() => this.props.onReplyErrorClick(this.props.index, this.props.parentIndex)}
                       rows="1"
-                      quality={this.props.quality}
-                      prediction={this.props.prediction}
+
                       // we need the autoFocus here
                       autoFocus // eslint-disable-line jsx-a11y/no-autofocus
                       hasCommentingPermission={this.props.hasCommentingPermission}

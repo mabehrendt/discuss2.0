@@ -10,16 +10,16 @@
 .buttonBox{
     position: relative;
     left: 0%;
-    margin-bottom: 50px;
 }
 
 .argumentText{
-    font-size: 25px;
+    font-size: 20px;
+    position: relative;
     color: red;
-    margin: 5px;
-    border: 5px solid;
-    padding: 20px;
-    margin-bottom: 40px;
+    padding: 40px;
+    /* margin-right: 50px; */
+    padding-bottom: 0px;
+    left: 30px;
 }
 
 .stanceText{
@@ -31,41 +31,43 @@
 }
 
 .stanceButton {
-  padding: 10px;
+    padding: 10px;
     margin-right:20px;
     margin-bottom:20px;
-  display: block;
-  background: #dc3818;
-  color: white;
-  width: 170px;
-  border: 0;
-  cursor: pointer;
+    display: block;
+    background: steelblue;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    cursor: pointer;
     float:left;
     transition:
     background-color 1s;
 }
 
 .stanceButton:hover, .stanceButton:focus-within {
-  background-color: lightcoral;
+  background-color: lightsteelblue;
 }
 
 .questButton {
-  padding: 10px;
+    padding: 10px;
     margin-right:20px;
-    margin-bottom: 20px;
-  display: block;
-  background: deepskyblue;
-  color: white;
-  width: 170px;
-  border: 0;
-  cursor: pointer;
+    margin-bottom:20px;
+    display: block;
+    background: darkorange;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    cursor: pointer;
     float:left;
     transition:
     background-color 1s;
 }
 
 .questButton:hover, .questButton:focus-within {
-  background-color: lightblue;
+  background-color: orange;
 }
 
 .stanceBox{

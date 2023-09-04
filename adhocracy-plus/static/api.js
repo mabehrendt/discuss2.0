@@ -109,6 +109,8 @@ const api = (function () {
         }, data)
       },
       add: function (data) {
+        console.log("MOIN")
+        console.log(data)
         return _sendRequest('comment', {
           type: 'POST'
         }, data)

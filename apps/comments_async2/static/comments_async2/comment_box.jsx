@@ -43,9 +43,15 @@ export const CommentBox = (props) => {
   }
 
   const [qualities, setQualities] = useState([])
+  const [showChildrenId, setShowChildrenId] = useState(0)
+
   const [commentUpdate, setCommentUpdated] = useState(false)
   const [isOpen, setIsOpen] = useState(false);
+
   const  [stanceParentId, setStanceParentId] = useState(0)
+  const  [stanceParentIdx, setStanceParentIdx] = useState(0)
+  const  [stanceCT, setStanceCT] = useState(0)
+  const  [stanceID, setStanceID] = useState(0)
 
   const  [modalState, setModalState] = useState({isOpen: false})
   const  [collapseState, setCollapseState] = useState({isOpen: false})
@@ -80,6 +86,7 @@ export const CommentBox = (props) => {
 
   function showModal(){
     setModalState({ isOpen: !modalState.isOpen})
+    console.log(qualities)
   };
 
   function openQuest(user, userid){
@@ -110,7 +117,7 @@ export const CommentBox = (props) => {
     console.log(props.stances)
     console.log(props.user)
 
-    timer = setInterval(countDown, 5000);
+    timer = setInterval(countDown, 2000);
     if (props.stances.length > 0){
       chooseStanceComment(props.stances, props.user)
     }
@@ -140,6 +147,21 @@ export const CommentBox = (props) => {
       }
     }
   }, [anchorRendered, anchoredCommentId])
+
+  useEffect(() => {
+    console.log(comments); // Output: 'bla bla bla...'
+    console.log(stanceParentId)
+    comments.forEach((comment, index) =>{
+      if (comment.id == stanceParentId){
+        setStanceParentIdx(index)
+        console.log(comment.content_type)
+        console.log(comment.comment_content_type)
+
+        setStanceID(comment.comment_content_type)
+        setStanceCT(stanceParentId)
+      }
+    })
+}, [comments]);
 
   function countDown() {
     // Remove one second, set state so a re-render happens.
@@ -173,6 +195,7 @@ function getRandomInt(min, max) {
       setStanceText(filteredStances[random_index].comment_text)
       setUserText(filteredStances[random_index].creator)
       setStanceParentId(filteredStances[random_index].comment_id)
+      console.log(comments)
       console.log("PARENT1: " + stanceParentId)
     }
     /*stances.forEach((stance, index)=> {
@@ -182,6 +205,7 @@ function getRandomInt(min, max) {
   }
 
   function handleQualities(result){
+    console.log("QUALITIES")
     console.log(result)
     const data = result
 
@@ -200,9 +224,7 @@ function getRandomInt(min, max) {
 
   function handleComments (result) {
     const data = result
-
     console.log(data)
-
     translated.entries = django.ngettext('entry', 'entries', data.count)
     setComments(data.results)
     setNextComments(data.next)
@@ -258,6 +280,8 @@ function getRandomInt(min, max) {
           errorMessage: undefined
         }
       }
+      setShowChildrenId(stanceParentId)
+
     } else {
       console.log("NO CHILD!")
 
@@ -267,6 +291,11 @@ function getRandomInt(min, max) {
     }
     setComments(update(comments, diff))
     setCommentCount(newCommentCount)
+
+       console.log("COMMENTSADD")
+              console.log(showChildrenId)
+
+        console.log(comments)
   }
 
   function setReplyError (parentIndex, index, message) {
@@ -316,6 +345,7 @@ function getRandomInt(min, max) {
 
         comment.displayNotification = true
         addComment(parentIndex, comment)
+
         updateAgreedTOS()
 
       })
@@ -411,6 +441,7 @@ function getRandomInt(min, max) {
   }
 
   function fetchFiltered (filter) {
+    console.log("FILTER")
     let commentCategory = filter
     let displayFilter = props.commentCategoryChoices[filter]
     if (filter === 'all') {
@@ -431,6 +462,7 @@ function getRandomInt(min, max) {
       setFilter(filter)
       setFilterDisplay(displayFilter)
       setLoadingFilter(false)
+      console.log(stanceParentId)
     })
   }
 
@@ -452,6 +484,8 @@ function getRandomInt(min, max) {
       search,
       urlReplaces
     }
+    console.log(stanceParentId)
+
     api.comments.get(params).done((result) => {
       const data = result
       setComments(data.results)
@@ -459,6 +493,7 @@ function getRandomInt(min, max) {
       setCommentCount(data.count)
       setSort(order)
       setLoadingFilter(false)
+      console.log(stanceParentId)
     })
   }
 
@@ -573,20 +608,19 @@ function getRandomInt(min, max) {
 
     <div>
       <div className="buttonBox">
-         <button className="questButton" onClick={openQuest}>Befragung</button>
-      <button className="stanceButton"  onClick={e => {showModal();}}>
-        Kommentarvorschlag </button>
-</div>
-      <Modal show={modalState.isOpen}> <div className="stanceBox">
-              <div className="argumentText"> Dieser Teilnehmer hat eine andere Meinung!</div>
+         <button className="questButton" onClick={openQuest}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen-white.png")} alt="Quest" /></button>
+      <button className="stanceButton"  onClick={e => {showModal();}}> <img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase-white.png")} alt="Sprechblase" /> </button>
+    </div>
+      <Modal onClose={showModal} show={modalState.isOpen}> <div className="stanceBox">
               <div style={{fontSize: '16px'}}> Kommentar von {userText}:</div>
               <div className="stanceText"> {stanceText}</div>
               <div className="a4-comments__commentbox__form">
                 <CommentForm
-                  subjectType={props.subjectType}
-                  subjectId={props.subjectId}
+                  subjectType={stanceID}
+                  subjectId={stanceCT}
                   onCommentSubmit={handleCommentSubmit}
                   rows="1"
+                  parentIndex={stanceParentIdx}
                   error={error}
                   errorMessage={errorMessage}
                   handleErrorClick={hideNewError}
@@ -598,6 +632,7 @@ function getRandomInt(min, max) {
                   useTermsOfUse={useTermsOfUse}
                   agreedTermsOfUse={agreedTermsOfUse}
                   orgTermsUrl={orgTermsUrl}
+                  quality={qualities}
                 />
               </div>
             </div></Modal>
@@ -755,6 +790,7 @@ function getRandomInt(min, max) {
             useTermsOfUse={useTermsOfUse}
             agreedTermsOfUse={agreedTermsOfUse}
             orgTermsUrl={orgTermsUrl}
+            stanceId={stanceParentId}
             quality={qualities}
             prediction={props.prediction}
           />
