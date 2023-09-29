@@ -63,6 +63,9 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
             elif ordering == "mom":
                 return queryset.order_by("-is_moderator_marked", "-created")
 
+            elif ordering == "qua":
+                return queryset.order_by("-quality", "-created")
+
         return queryset
 
 

@@ -19,6 +19,7 @@ const sorts = {
   neg: django.gettext('Most down votes'),
   ans: django.gettext('Most answers'),
   dis: django.gettext('Last discussed'),
+  qua: django.gettext('Highest quality')
 }
 
 const translated = {
@@ -67,6 +68,7 @@ export const CommentBox = (props) => {
   const [filter, setFilter] = useState([])
   const [filterDisplay, setFilterDisplay] = useState(django.gettext('all'))
   const [sort, setSort] = useState(props.useModeratorMarked ? 'mom' : 'new')
+  /*const [sort, setSort] = useState(props.quality ? 'qua' : 'new')*/
   const [loading, setLoading] = useState(true)
   const [loadingFilter, setLoadingFilter] = useState(false)
   const [search, setSearch] = useState('')
@@ -107,6 +109,9 @@ export const CommentBox = (props) => {
     if (props.useModeratorMarked) {
       sorts.mom = django.gettext('Highlighted')
     }
+ /*   if (props.quality) {
+      sorts.qua = django.gettext('Highest quality')
+    }*/
     const params = {}
     params.ordering = sort
     params.urlReplaces = urlReplaces

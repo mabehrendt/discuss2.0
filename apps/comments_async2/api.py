@@ -140,7 +140,6 @@ class CommentViewSet(
                 )
 
     def perform_create(self, serializer):
-        print("AOSDIOWQDIOQWOIDÖGIOÖDSIJGOS")
         self._save_terms_agreement()
         serializer.save(content_object=self.content_object, creator=self.request.user)
 
