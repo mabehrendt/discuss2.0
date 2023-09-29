@@ -21,6 +21,7 @@ const api = (function () {
     follow: baseURL + 'follows/',
     comment: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/comments/',
     qualities: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/qualities/',
+    userstances: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/userstances/',
     commentmoderate: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/comment-moderate/',
     stance: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/a4_candy_stance/',
     rating: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/ratings/',
@@ -77,6 +78,31 @@ const api = (function () {
   }
 
   return {
+    userstances: {
+      get: function (data) {
+        return _sendRequest('userstances', {
+          type: 'GET'
+        }, data)
+      },
+      add: function (data) {
+        console.log(data)
+        return _sendRequest('userstances', {
+          type: 'POST'
+        }, data)
+      },
+
+      change: function (data, id) {
+        return _sendRequest('userstances', id, {
+          type: 'PATCH'
+        }, data)
+      },
+
+      delete: function (data, id) {
+        return _sendRequest('userstances', id, {
+          type: 'DELETE'
+        }, data)
+      }
+    },
     qualities: {
       get: function (data) {
         return _sendRequest('qualities', {

@@ -32,6 +32,21 @@ const translated = {
   sortedBy: django.gettext('sorted by: ')
 }
 
+const cyrb53 = (str, seed = 0) => {
+    let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
+    for(let i = 0, ch; i < str.length; i++) {
+        ch = str.charCodeAt(i);
+        h1 = Math.imul(h1 ^ ch, 2654435761);
+        h2 = Math.imul(h2 ^ ch, 1597334677);
+    }
+    h1  = Math.imul(h1 ^ (h1 >>> 16), 2246822507);
+    h1 ^= Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+    h2  = Math.imul(h2 ^ (h2 >>> 16), 2246822507);
+    h2 ^= Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+
+    return 4294967296 * (2097151 & h2) + (h1 >>> 0);
+};
+
 const autoScrollThreshold = 500
 let timer = 0
 
@@ -43,18 +58,17 @@ export const CommentBox = (props) => {
   }
 
   const [qualities, setQualities] = useState([])
-  const [showChildrenId, setShowChildrenId] = useState(0)
-
-  const [commentUpdate, setCommentUpdated] = useState(false)
-  const [isOpen, setIsOpen] = useState(false);
-
-  const  [stanceParentId, setStanceParentId] = useState(0)
-  const  [stanceParentIdx, setStanceParentIdx] = useState(0)
-  const  [stanceCT, setStanceCT] = useState(0)
-  const  [stanceID, setStanceID] = useState(0)
-
-  const  [modalState, setModalState] = useState({isOpen: false})
-  const  [collapseState, setCollapseState] = useState({isOpen: false})
+  const [showQuestButtons, setShowQuestButtons] = useState(false)
+  const [showStanceButtons, setShowStanceButtons] = useState(false)
+  const [stanceParentId, setStanceParentId] = useState(0)
+  const [stanceParentIdx, setStanceParentIdx] = useState(0)
+  const [stanceCT, setStanceCT] = useState(0)
+  const [stanceID, setStanceID] = useState(0)
+  const [creatorName, setCreatorName] = useState(0)
+  const [creatorId, setCreatorId] = useState(0)
+  const [modalQuestState, setModalQuestState] = useState({isOpen: false})
+  const [modalStanceState, setModalStanceState] = useState({isOpen: false})
+  const [firstStanceAnswered, setFirstStanceAnswered] = useState({answered: false})
   const [stanceText, setStanceText] = useState("")
   const [userText, setUserText] = useState("")
   const anchoredCommentId = props.anchoredCommentId
@@ -82,22 +96,6 @@ export const CommentBox = (props) => {
   const [error, setError] = useState(false)
   const [errorMessage, setErrorMessage] = useState(undefined)
   const [anchorRendered, setAnchorRendered] = useState(false)
-
-
-  function showModal(){
-    setModalState({ isOpen: !modalState.isOpen})
-    console.log(qualities)
-  };
-
-  function openQuest(user, userid){
-    window.open("https://google.com", "_blank", "noreferrer")
-  }
-
-  function toggle(){
-    console.log("TOGGLED")
-    setCollapseState({ isOpen: !collapseState.isOpen})
-    console.log(collapseState)
-  }
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -151,80 +149,155 @@ export const CommentBox = (props) => {
   useEffect(() => {
     console.log(comments); // Output: 'bla bla bla...'
     console.log(stanceParentId)
+
+    // Check table id for stance recommendation
     comments.forEach((comment, index) =>{
       if (comment.id == stanceParentId){
-        setStanceParentIdx(index)
-        console.log(comment.content_type)
-        console.log(comment.comment_content_type)
-
+        setStanceParentIdx(index) // Set for table update
+        console.log("STANCE PARENT COMMENT_CT: " + comment.content_type)
+        console.log("STANCE PARENT COMMENT_CCT: " + comment.comment_content_type)
+        // Set for database
         setStanceID(comment.comment_content_type)
-        setStanceCT(stanceParentId)
+        setStanceCT(stanceParentId) // same as comment_id
       }
     })
 }, [comments]);
 
-  function countDown() {
-    // Remove one second, set state so a re-render happens.
-    console.log(modalState.isOpen)
-    setModalState({isOpen: true})
-    console.log("TIMER FIRED")
 
-    // Check if we're at zero.
-    if (modalState) {
-      clearInterval(timer);
+  function showQuestModal(){
+    setModalQuestState({ isOpen: !modalQuestState.isOpen})
+    if(showQuestButtons && !showStanceButtons){
+          timer = setInterval(countDownStance, 2000);
     }
   }
 
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+  function showStanceModal(e){
+    console.log(e)
+    if (e != undefined) {
+      if (e.target.className === "forButton" || e.target.className === "againstButton") {
+        setFirstStanceAnswered({answered: true})
+      } else if(e.target.className === "sprechblase-button" || e.target.className === "close") {
+        setModalStanceState({isOpen: !modalStanceState.isOpen})
+      }
+    }
+  }
+
+  function saveUserStance(e) {
+    if (e != undefined){
+        const urlReplaces = {
+          objectPk: props.subjectId,
+          contentTypeId: props.subjectType
+        }
+      if (e.target.className === "forButton"){
+        const stanceData = {
+          urlReplaces: urlReplaces,
+          content_type: props.subjectType,
+          object_id: props.subjectId,
+          user_stance: "Positiv",
+          creator: creatorName,
+          creator_id : creatorId
+        }
+        api.userstances.add(stanceData)
+      }else{
+        const stanceData = {
+          urlReplaces: urlReplaces,
+          content_type: props.subjectType,
+          object_id: props.subjectId,
+          user_stance: "Negativ",
+          creator: creatorName,
+          creator_id : creatorId
+        }
+        api.userstances.add(stanceData)
+      }
+    }
+  }
+
+  function openQuest(){
+    window.open("https://google.com", "_blank", "noreferrer")
+  }
+
+  function countDown() {
+    // Remove one second, set state so a re-render happens.
+    console.log(modalQuestState.isOpen)
+    setModalQuestState({isOpen: true})
+    console.log("TIMER FIRED")
+
+    // Check if we're at zero.
+    if (modalQuestState) {
+      setShowQuestButtons(true)
+      clearInterval(timer)
+    }
+  }
+
+  function countDownStance() {
+    // Remove one second, set state so a re-render happens.
+    console.log(modalStanceState.isOpen)
+    setModalStanceState({isOpen: true})
+    console.log("TIMER FIRED STANCE")
+
+    // Check if we're at zero.
+    if (modalStanceState) {
+      console.log("SET STANCE BUTTONS")
+      setShowStanceButtons(true)
+      clearInterval(timer)
+    }
+  }
+
+  function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
   function chooseStanceComment (stances, user){
     let filteredStances = []
-    stances.forEach((stance, index) => {
+    console.log(stances)
+    for (let i = 0; i < stances.length; i++) {      // Get first instance
+      let stance = stances[i]
       if (stance.creator != user){
         filteredStances.push(stance)
+        break
       }
-    })
-
+    }
     console.log(filteredStances)
     if (filteredStances.length > 0){
       const random_index = getRandomInt(0, filteredStances.length - 1)
       setStanceText(filteredStances[random_index].comment_text)
       setUserText(filteredStances[random_index].creator)
+
+      // This is the comment identifier
       setStanceParentId(filteredStances[random_index].comment_id)
-      console.log(comments)
       console.log("PARENT1: " + stanceParentId)
     }
-    /*stances.forEach((stance, index)=> {
-      console.log(stance)
-      console.log(index)
-    });*/
+    setCreatorName(user)
+    setCreatorId(cyrb53(user))
+    console.log("CREATOR: " + user)
+    console.log("HASH: " + cyrb53(user))
   }
 
   function handleQualities(result){
-    console.log("QUALITIES")
-    console.log(result)
     const data = result
 
-          const urlReplaces = {
-        objectPk: props.subjectId,
-        contentTypeId: props.subjectType
-        }
-        const params = {}
-        params.ordering = sort
-        params.urlReplaces = urlReplaces
+    const urlReplaces = {
+      objectPk: props.subjectId,
+      contentTypeId: props.subjectType
+    }
+    const params = {}
+    params.ordering = sort
+    params.urlReplaces = urlReplaces
 
-    console.log(data)
-    console.log("TEST")
     setQualities(data)
+  }
+
+  function handleQualityFail(xhr, status, err){
+    console.log(xhr)
+    console.log(status)
+    console.log(err)
   }
 
   function handleComments (result) {
     const data = result
-    console.log(data)
+
     translated.entries = django.ngettext('entry', 'entries', data.count)
     setComments(data.results)
     setNextComments(data.next)
@@ -252,8 +325,6 @@ function getRandomInt(min, max) {
     }
   }
 
-
-
   // handles update of the comment state
   // called in handleCommentSubmit, handleCommentModify, handleCommentDelete,
   // handleHideReplyError, handleHideEditeError
@@ -280,7 +351,6 @@ function getRandomInt(min, max) {
           errorMessage: undefined
         }
       }
-      setShowChildrenId(stanceParentId)
 
     } else {
       console.log("NO CHILD!")
@@ -291,11 +361,6 @@ function getRandomInt(min, max) {
     }
     setComments(update(comments, diff))
     setCommentCount(newCommentCount)
-
-       console.log("COMMENTSADD")
-              console.log(showChildrenId)
-
-        console.log(comments)
   }
 
   function setReplyError (parentIndex, index, message) {
@@ -322,21 +387,16 @@ function getRandomInt(min, max) {
     }
   }
 
-  function handleQualityFail(xhr, status, err){
-    console.log(xhr)
-    console.log(status)
-    console.log(err)
-  }
-
   function handleCommentSubmit (comment, parentIndex){
     console.log("PARENT"+parentIndex)
+    console.log(comment)
     return api.comments
       .add(comment)
       .done((comment) => {
         const params = {}
-         const urlReplaces = {
-        objectPk: props.subjectId,
-        contentTypeId: props.subjectType
+        const urlReplaces = {
+          objectPk: props.subjectId,
+          contentTypeId: props.subjectType
         }
         params.ordering = sort
         params.urlReplaces = urlReplaces
@@ -378,7 +438,6 @@ function getRandomInt(min, max) {
           errorMessage: undefined
         })
         updateAgreedTOS()
-        console.log("TEST")
         api.qualities.get(params).done(handleQualities).fail(handleQualityFail)
 
       })
@@ -484,7 +543,6 @@ function getRandomInt(min, max) {
       search,
       urlReplaces
     }
-    console.log(stanceParentId)
 
     api.comments.get(params).done((result) => {
       const data = result
@@ -493,7 +551,6 @@ function getRandomInt(min, max) {
       setCommentCount(data.count)
       setSort(order)
       setLoadingFilter(false)
-      console.log(stanceParentId)
     })
   }
 
@@ -600,21 +657,83 @@ function getRandomInt(min, max) {
     }
   }
 
-  function onRenderFinished () {
-    setAnchorRendered(true)
+  function renderButtons() {
+   if (showQuestButtons && showStanceButtons) {
+      return(
+        <div className="buttonBox">
+          <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen-white.png")} alt="Quest" /></button>
+          <button className="stanceButton"  onClick={showStanceModal}> <img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase-white.png")} alt="Sprechblase" /> </button>
+        </div>
+      )
+    } else if (showQuestButtons){
+      return(
+        <div className="buttonBox">
+          <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen-white.png")} alt="Quest" /></button>
+        </div>
+      )
+    }
   }
 
-  return (
+  function renderQuestModal() {
+    return(
+      <Modal show={modalQuestState.isOpen}>
+            <div className="questModal" id="questModal">
+              <img className="questblase" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen.png")} alt="Quest" />
+              <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showQuestModal(); console.log("CLOSED")}}/></button>
+              <div style={{display: "flex", flexDirection: "column", padding: "20px", paddingLeft: "0px"}}>
+                <div className="argumentText"> Wir bitten Sie an einer Umfrage teilzunehmen!</div>
+                <button className="questButtonModal" onClick={openQuest}>Hier gehts zur Umfrage!</button>
+              </div>
+            </div>
+      </Modal>
+    )
+  }
 
-    <div>
-      <div className="buttonBox">
-         <button className="questButton" onClick={openQuest}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen-white.png")} alt="Quest" /></button>
-      <button className="stanceButton"  onClick={e => {showModal();}}> <img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase-white.png")} alt="Sprechblase" /> </button>
-    </div>
-      <Modal onClose={showModal} show={modalState.isOpen}> <div className="stanceBox">
+  function renderStanceModal() {
+    if (!firstStanceAnswered.answered){
+       return(
+      <Modal show={modalStanceState.isOpen}>
+       <div className="firstStanceModal" id="firstStanceModal">
+         <img className="sprechblase" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase.png")} alt="Sprechblase" />
+        <button className="closedButton" onClick={e => {showStanceModal(e); console.log("CLOSED")}}> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" /></button>
+        <div style={{width: "90%", display: "flex", flexDirection: "column", marginLeft: "30px", paddingRight: "20px", paddingLeft: "20px", marginTop: "10px"}}>
+          <div className="argumentText">  Wie stehen Sie zu folgendem Kommentar?</div>
+          <div className="stanceBox">
               <div style={{fontSize: '16px'}}> Kommentar von {userText}:</div>
               <div className="stanceText"> {stanceText}</div>
-              <div className="a4-comments__commentbox__form">
+              <div style={{width: "100%", display: "flex", justifyContent: "center"}}>
+                <button className="forButton" onClick={e => {saveUserStance(e); console.log("CLOSED")}}>Dafür</button>
+                <button className="againstButton" onClick={e => {saveUserStance(e); console.log("CLOSED")}}>Dagegen</button>
+              </div>
+              </div>
+            </div>
+           </div>
+      </Modal>
+    )
+    }else {
+      return (
+        <Modal show={modalStanceState.isOpen}>
+          <div className="stanceModal" id="stanceModal">
+            <img className="sprechblase" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase.png")}
+                 alt="Sprechblase"/>
+            <button className="closedButton" onClick={e => {showStanceModal(e);console.log("CLOSED")}}>
+              <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" />
+            </button>
+            <div style={{
+              width: "90%",
+              display: "flex",
+              flexDirection: "column",
+              marginLeft: "30px",
+              paddingRight: "20px",
+              paddingLeft: "20px",
+              marginTop: "10px"
+            }}>
+              <div className="argumentText"> Folgender Kommentar wurde bereits zur Diskussion beigetragen. Möchten Sie
+                darauf antworten?
+              </div>
+              <div className="stanceBox">
+                <div style={{fontSize: '16px'}}> Kommentar von {userText}:</div>
+                <div className="stanceText"> {stanceText}</div>
                 <CommentForm
                   subjectType={stanceID}
                   subjectId={stanceCT}
@@ -635,34 +754,22 @@ function getRandomInt(min, max) {
                   quality={qualities}
                 />
               </div>
-            </div></Modal>
-      {/* <Fragment>
-          <Collapse isOpen={collapseState.isOpen}>
-            <div className="stanceBox">
-              <div style={{fontSize: '16px'}}> Kommentar von {userText}:</div>
-              <div style={{fontSize: '24px'}}> {stanceText}</div>
-              <div className="a4-comments__commentbox__form">
-                <CommentForm
-                  subjectType={props.subjectType}
-                  subjectId={props.subjectId}
-                  onCommentSubmit={handleCommentSubmit}
-                  rows="5"
-                  error={error}
-                  errorMessage={errorMessage}
-                  handleErrorClick={hideNewError}
-                  commentCategoryChoices={commentCategoryChoices()}
-                  withCategories={props.withCategories}
-                  hasCommentingPermission={hasCommentingPermission}
-                  wouldHaveCommentingPermission={wouldHaveCommentingPermission}
-                  projectIsPublic={projectIsPublic}
-                  useTermsOfUse={useTermsOfUse}
-                  agreedTermsOfUse={agreedTermsOfUse}
-                  orgTermsUrl={orgTermsUrl}
-                />
-              </div>
             </div>
-        </Collapse>
-      </Fragment> */}
+          </div>
+        </Modal>
+      )
+    }
+  }
+
+  function onRenderFinished () {
+    setAnchorRendered(true)
+  }
+
+  return (
+    <div>
+        {renderButtons()}
+        {renderQuestModal()}
+        {renderStanceModal()}
       <div className="a4-comments__commentbox__form">
         <CommentForm
           subjectType={props.subjectType}
