@@ -69,8 +69,10 @@ export const CommentBox = (props) => {
   const [modalQuestState, setModalQuestState] = useState({isOpen: false})
   const [modalStanceState, setModalStanceState] = useState({isOpen: false})
   const [firstStanceAnswered, setFirstStanceAnswered] = useState({answered: false})
+
   const [stanceText, setStanceText] = useState("")
   const [userText, setUserText] = useState("")
+
   const anchoredCommentId = props.anchoredCommentId
     ? parseInt(props.anchoredCommentId)
     : null
@@ -120,8 +122,8 @@ export const CommentBox = (props) => {
       chooseStanceComment(props.stances, props.user)
     }
     console.log("NEWLY RENDERED1")
+    console.log(props)
 
-    console.log(params)
     api.qualities.get(params).done(handleQualities).fail()
     api.comments.get(params).done(handleComments).fail()
 
@@ -697,13 +699,12 @@ export const CommentBox = (props) => {
          <img className="sprechblase" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase.png")} alt="Sprechblase" />
         <button className="closedButton" onClick={e => {showStanceModal(e); console.log("CLOSED")}}> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" /></button>
         <div style={{width: "90%", display: "flex", flexDirection: "column", marginLeft: "30px", paddingRight: "20px", paddingLeft: "20px", marginTop: "10px"}}>
-          <div className="argumentText">  Wie stehen Sie zu folgendem Kommentar?</div>
+          <div className="argumentText">  Wie stehen Sie zum Diskussionsthema?</div>
           <div className="stanceBox">
-              <div style={{fontSize: '16px'}}> Kommentar von {userText}:</div>
-              <div className="stanceText"> {stanceText}</div>
+              <div className="stanceText"> {props.debateQuestion}</div>
               <div style={{width: "100%", display: "flex", justifyContent: "center"}}>
-                <button className="forButton" onClick={e => {saveUserStance(e); console.log("CLOSED")}}>Dafür</button>
-                <button className="againstButton" onClick={e => {saveUserStance(e); console.log("CLOSED")}}>Dagegen</button>
+                <button className="forButton" onClick={e => {saveUserStance(e); showStanceModal(e); console.log("CLOSED")}}>Dafür</button>
+                <button className="againstButton" onClick={e => {saveUserStance(e); showStanceModal(e); console.log("CLOSED")}}>Dagegen</button>
               </div>
               </div>
             </div>
