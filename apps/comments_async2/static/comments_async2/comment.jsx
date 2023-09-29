@@ -140,7 +140,7 @@ export default class Comment extends React.Component {
   }
 
   currentCommentQuality () {
-    console.log(this.props.quality)
+    //console.log(this.props.quality)
     for (let i = 0; i < this.props.quality.length; i++) {
       if (this.props.quality[i].comment_id === this.props.id) {
         //console.log(this.props.quality[i].quality)

@@ -35,3 +35,17 @@ class Stance(models.Model):
     @property
     def project(self):
         return self.comment.module.project
+
+
+class UserStance(models.Model):
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    content_object = GenericForeignKey(ct_field="content_type", fk_field="object_id")
+
+    user_stance = models.CharField(max_length=50)
+
+    creator = models.TextField(max_length=200)
+    creator_id = models.CharField(max_length=500, unique=True)
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
