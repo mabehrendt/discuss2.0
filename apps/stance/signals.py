@@ -15,12 +15,8 @@ def get_stance(sender, instance, created, update_fields, **kwargs):
     (getattr(instance, '_former_comment') != getattr(instance, 'comment'))
     if created or comment_text_changed:
         question = getattr(instance, 'content_object')
-        print("SQUESTION: ", question)
-        print("SINSTANCE: ", instance)
         predictor = StancePredictor()
         stance = predictor.make_prediction(str(question), str(instance))
-        print("SSTANCE: ", stance)
-        print("SPK: ", instance.id)
         save_stance(str(instance), stance, instance.content_type, instance.object_pk, instance.id, instance.creator)
 
 def save_stance(comment, stance_classification, content_type, object_id, comment_id, creator):

@@ -37,7 +37,6 @@ const api = (function () {
       options = id
       id = null
     }
-    console.log(urls)
     let url = urls[endpoint]
     if (data.urlReplaces) {
       url = url.replace(/\$(\w+?)\b/g, (match, group) => {
@@ -71,8 +70,7 @@ const api = (function () {
         params.data = JSON.stringify(params.data)
       }
     }
-    console.log(params)
-    console.log(params)
+
     $body.addClass('loading')
     return $.ajax(params)
   }
@@ -85,7 +83,6 @@ const api = (function () {
         }, data)
       },
       add: function (data) {
-        console.log(data)
         return _sendRequest('userstances', {
           type: 'POST'
         }, data)
@@ -129,14 +126,11 @@ const api = (function () {
     },
     comments: {
       get: function (data) {
-        console.log(data)
         return _sendRequest('comment', {
           type: 'GET'
         }, data)
       },
       add: function (data) {
-        console.log("MOIN")
-        console.log(data)
         return _sendRequest('comment', {
           type: 'POST'
         }, data)

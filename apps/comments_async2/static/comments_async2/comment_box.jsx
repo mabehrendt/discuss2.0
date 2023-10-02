@@ -119,15 +119,10 @@ export const CommentBox = (props) => {
       params.commentID = props.anchoredCommentId
     }
 
-    console.log(props.stances)
-    console.log(props.user)
-
     timer = setInterval(countDown, 2000);
     if (props.stances.length > 0){
       chooseStanceComment(props.stances, props.user)
     }
-    console.log("NEWLY RENDERED1")
-    console.log(props)
 
     api.qualities.get(params).done(handleQualities).fail()
     api.comments.get(params).done(handleComments).fail()
@@ -142,9 +137,7 @@ export const CommentBox = (props) => {
   }, [])
 
   useEffect(() => {
-    console.log("NEWLY RENDERED2")
     if (anchorRendered === true) {
-      console.log(anchoredCommentId)
       const el = document.getElementById('comment_' + anchoredCommentId)
       if (el !== null) {
         const top = el.getBoundingClientRect().top
@@ -154,15 +147,11 @@ export const CommentBox = (props) => {
   }, [anchorRendered, anchoredCommentId])
 
   useEffect(() => {
-    console.log(comments); // Output: 'bla bla bla...'
-    console.log(stanceParentId)
 
     // Check table id for stance recommendation
     comments.forEach((comment, index) =>{
       if (comment.id == stanceParentId){
         setStanceParentIdx(index) // Set for table update
-        console.log("STANCE PARENT COMMENT_CT: " + comment.content_type)
-        console.log("STANCE PARENT COMMENT_CCT: " + comment.comment_content_type)
         // Set for database
         setStanceID(comment.comment_content_type)
         setStanceCT(stanceParentId) // same as comment_id
@@ -258,7 +247,6 @@ export const CommentBox = (props) => {
 
   function chooseStanceComment (stances, user){
     let filteredStances = []
-    console.log(stances)
     for (let i = 0; i < stances.length; i++) {      // Get first instance
       let stance = stances[i]
       if (stance.creator != user){
@@ -266,7 +254,7 @@ export const CommentBox = (props) => {
         break
       }
     }
-    console.log(filteredStances)
+
     if (filteredStances.length > 0){
       const random_index = getRandomInt(0, filteredStances.length - 1)
       setStanceText(filteredStances[random_index].comment_text)
@@ -274,7 +262,6 @@ export const CommentBox = (props) => {
 
       // This is the comment identifier
       setStanceParentId(filteredStances[random_index].comment_id)
-      console.log("PARENT1: " + stanceParentId)
     }
     setCreatorName(user)
     setCreatorId(cyrb53(user))
@@ -350,7 +337,6 @@ export const CommentBox = (props) => {
     let diff = {}
     let newCommentCount = commentCount
     if (parentIndex !== undefined) {
-      console.log("CHILD!")
       diff[parentIndex] = {
         child_comments: { $push: [comment] },
         $merge: {
@@ -360,7 +346,6 @@ export const CommentBox = (props) => {
       }
 
     } else {
-      console.log("NO CHILD!")
 
       diff = { $unshift: [comment] }
       newCommentCount++
@@ -395,8 +380,6 @@ export const CommentBox = (props) => {
   }
 
   function handleCommentSubmit (comment, parentIndex){
-    console.log("PARENT"+parentIndex)
-    console.log(comment)
     return api.comments
       .add(comment)
       .done((comment) => {
@@ -528,7 +511,6 @@ export const CommentBox = (props) => {
       setFilter(filter)
       setFilterDisplay(displayFilter)
       setLoadingFilter(false)
-      console.log(stanceParentId)
     })
   }
 
@@ -553,10 +535,12 @@ export const CommentBox = (props) => {
 
     api.comments.get(params).done((result) => {
       const data = result
+      console.log(data)
       setComments(data.results)
       setNextComments(data.next)
       setCommentCount(data.count)
       setSort(order)
+      console.log(setSort)
       setLoadingFilter(false)
     })
   }
