@@ -57,6 +57,11 @@ export const CommentBox = (props) => {
     contentTypeId: props.subjectType
   }
 
+  const stanceMap = {
+    "Positiv": 1,
+    "Negativ": 0
+  }
+
   const [qualities, setQualities] = useState([])
   const [showQuestButtons, setShowQuestButtons] = useState(false)
   const [showStanceButtons, setShowStanceButtons] = useState(false)
@@ -72,6 +77,8 @@ export const CommentBox = (props) => {
 
   const [stanceText, setStanceText] = useState("")
   const [userText, setUserText] = useState("")
+  const [userStance, setUserStance] = useState("")
+  const [noStancesFound, setNoStancesFound] = useState(false)
 
   const anchoredCommentId = props.anchoredCommentId
     ? parseInt(props.anchoredCommentId)
@@ -103,7 +110,6 @@ export const CommentBox = (props) => {
     window.addEventListener('scroll', handleScroll, { passive: true })
     window.addEventListener('agreedTos', handleTermsOfUse)
 
-    console.log("FIRED")
     if (props.useModeratorMarked) {
       sorts.mom = django.gettext('Highlighted')
     }
@@ -118,21 +124,18 @@ export const CommentBox = (props) => {
     console.log(props.user)
 
     timer = setInterval(countDown, 2000);
-    if (props.stances.length > 0){
-      chooseStanceComment(props.stances, props.user)
-    }
+
     console.log("NEWLY RENDERED1")
     console.log(props)
 
     api.qualities.get(params).done(handleQualities).fail()
     api.comments.get(params).done(handleComments).fail()
+    api.userstances.get(params).done(handleUserstances).fail()
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('agreedTos', handleTermsOfUse)
     }
-
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -164,7 +167,6 @@ export const CommentBox = (props) => {
       }
     })
 }, [comments]);
-
 
   function showQuestModal(){
     setModalQuestState({ isOpen: !modalQuestState.isOpen})
@@ -237,10 +239,16 @@ export const CommentBox = (props) => {
     setModalStanceState({isOpen: true})
     console.log("TIMER FIRED STANCE")
 
+    // Check if user's general stance has been asked
+    if (userStance != ""){
+      setFirstStanceAnswered({answered: true})
+    }
+
     // Check if we're at zero.
     if (modalStanceState) {
       console.log("SET STANCE BUTTONS")
       setShowStanceButtons(true)
+
       clearInterval(timer)
     }
   }
@@ -251,12 +259,16 @@ export const CommentBox = (props) => {
       return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  function chooseStanceComment (stances, user){
+  function chooseStanceComment (stances, user, _userStance){
     let filteredStances = []
     console.log(stances)
     for (let i = 0; i < stances.length; i++) {      // Get first instance
       let stance = stances[i]
-      if (stance.creator != user){
+      console.log(_userStance)
+      console.log(stanceMap[stance.stance])
+      console.log(stanceMap[_userStance])
+
+      if (stance.creator != user && stanceMap[stance.stance] != stanceMap[_userStance]) {
         filteredStances.push(stance)
         break
       }
@@ -270,6 +282,9 @@ export const CommentBox = (props) => {
       // This is the comment identifier
       setStanceParentId(filteredStances[random_index].comment_id)
       console.log("PARENT1: " + stanceParentId)
+    }else if(filteredStances.length == 0){
+      console.log("NO STANCES FOUND")
+      setNoStancesFound(true)
     }
     setCreatorName(user)
     setCreatorId(cyrb53(user))
@@ -277,25 +292,31 @@ export const CommentBox = (props) => {
     console.log("HASH: " + cyrb53(user))
   }
 
+  function handleUserstances(result){
+    const data = result
+    console.log("USERSTANCE")
+    console.log(data)
+    let _userStance
+
+    data.forEach((userstances, index) => {
+      if (userstances.creator === props.user) {
+        console.log(props.user)
+        console.log(userstances.user_stance)
+        _userStance = userstances.user_stance
+        setUserStance(_userStance)
+      }
+    })
+
+    if (props.stances.length > 0){
+      chooseStanceComment(props.stances, props.user, _userStance)
+    }
+  }
+
   function handleQualities(result){
     const data = result
-
-    const urlReplaces = {
-      objectPk: props.subjectId,
-      contentTypeId: props.subjectType
-    }
-    const params = {}
-    params.ordering = sort
-    params.urlReplaces = urlReplaces
-
     setQualities(data)
   }
 
-  function handleQualityFail(xhr, status, err){
-    console.log(xhr)
-    console.log(status)
-    console.log(err)
-  }
 
   function handleComments (result) {
     const data = result
@@ -403,7 +424,7 @@ export const CommentBox = (props) => {
         params.ordering = sort
         params.urlReplaces = urlReplaces
 
-        api.qualities.get(params).done(handleQualities).fail(handleQualityFail)
+        api.qualities.get(params).done(handleQualities).fail()
 
         comment.displayNotification = true
         addComment(parentIndex, comment)
@@ -440,7 +461,7 @@ export const CommentBox = (props) => {
           errorMessage: undefined
         })
         updateAgreedTOS()
-        api.qualities.get(params).done(handleQualities).fail(handleQualityFail)
+        api.qualities.get(params).done(handleQualities).fail()
 
       })
       .fail((xhr, status, err) => {
@@ -712,53 +733,89 @@ export const CommentBox = (props) => {
       </Modal>
     )
     }else {
-      return (
-        <Modal show={modalStanceState.isOpen}>
-          <div className="stanceModal" id="stanceModal">
-            <img className="sprechblase" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase.png")}
-                 alt="Sprechblase"/>
-            <button className="closedButton" onClick={e => {showStanceModal(e);console.log("CLOSED")}}>
-              <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" />
-            </button>
-            <div style={{
-              width: "90%",
-              display: "flex",
-              flexDirection: "column",
-              marginLeft: "30px",
-              paddingRight: "20px",
-              paddingLeft: "20px",
-              marginTop: "10px"
-            }}>
-              <div className="argumentText"> Folgender Kommentar wurde bereits zur Diskussion beigetragen. Möchten Sie
-                darauf antworten?
-              </div>
-              <div className="stanceBox">
-                <div style={{fontSize: '16px'}}> Kommentar von {userText}:</div>
-                <div className="stanceText"> {stanceText}</div>
-                <CommentForm
-                  subjectType={stanceID}
-                  subjectId={stanceCT}
-                  onCommentSubmit={handleCommentSubmit}
-                  rows="1"
-                  parentIndex={stanceParentIdx}
-                  error={error}
-                  errorMessage={errorMessage}
-                  handleErrorClick={hideNewError}
-                  commentCategoryChoices={commentCategoryChoices()}
-                  withCategories={props.withCategories}
-                  hasCommentingPermission={hasCommentingPermission}
-                  wouldHaveCommentingPermission={wouldHaveCommentingPermission}
-                  projectIsPublic={projectIsPublic}
-                  useTermsOfUse={useTermsOfUse}
-                  agreedTermsOfUse={agreedTermsOfUse}
-                  orgTermsUrl={orgTermsUrl}
-                  quality={qualities}
-                />
+      if(!noStancesFound){
+        return (
+          <Modal show={modalStanceState.isOpen}>
+            <div className="stanceModal" id="stanceModal">
+              <img className="sprechblase"
+                   src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase.png")}
+                   alt="Sprechblase"/>
+              <button className="closedButton" onClick={e => {
+                showStanceModal(e);
+                console.log("CLOSED")
+              }}>
+                <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")}
+                     alt="Close"/>
+              </button>
+              <div style={{
+                width: "90%",
+                display: "flex",
+                flexDirection: "column",
+                marginLeft: "30px",
+                paddingRight: "20px",
+                paddingLeft: "20px",
+                marginTop: "10px"
+              }}>
+                <div className="argumentText"> Folgender Kommentar wurde bereits zur Diskussion beigetragen. Möchten Sie
+                  darauf antworten?
+                </div>
+                <div className="stanceBox">
+                  <div style={{fontSize: '16px'}}> Kommentar von {userText}:</div>
+                  <div className="stanceText"> {stanceText}</div>
+                  <CommentForm
+                    subjectType={stanceID}
+                    subjectId={stanceCT}
+                    onCommentSubmit={handleCommentSubmit}
+                    rows="1"
+                    parentIndex={stanceParentIdx}
+                    error={error}
+                    errorMessage={errorMessage}
+                    handleErrorClick={hideNewError}
+                    commentCategoryChoices={commentCategoryChoices()}
+                    withCategories={props.withCategories}
+                    hasCommentingPermission={hasCommentingPermission}
+                    wouldHaveCommentingPermission={wouldHaveCommentingPermission}
+                    projectIsPublic={projectIsPublic}
+                    useTermsOfUse={useTermsOfUse}
+                    agreedTermsOfUse={agreedTermsOfUse}
+                    orgTermsUrl={orgTermsUrl}
+                    quality={qualities}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </Modal>
-      )
+          </Modal>
+        )
+      }else{
+        return (
+          <Modal show={modalStanceState.isOpen}>
+            <div className="stanceModal" id="stanceModal">
+              <img className="sprechblase"
+                   src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase.png")}
+                   alt="Sprechblase"/>
+              <button className="closedButton" onClick={e => {
+                showStanceModal(e);
+                console.log("CLOSED")
+              }}>
+                <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")}
+                     alt="Close"/>
+              </button>
+              <div style={{
+                width: "90%",
+                display: "flex",
+                flexDirection: "column",
+                marginLeft: "30px",
+                paddingRight: "20px",
+                paddingLeft: "20px",
+                marginTop: "10px"
+              }}>
+                <div className="argumentText"> Sobald genügend Teilnehmer an der Diskussion beteiligt sind, bekommen Sie hier einen Kommentar vorgeschlagen auf den Sie eingehen können!
+                </div>
+              </div>
+            </div>
+          </Modal>
+        )
+      }
     }
   }
 

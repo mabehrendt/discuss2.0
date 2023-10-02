@@ -22,7 +22,10 @@ class UserStanceViewSet(
     def userstance_list(request, ct_id, object_pk):
         if request.method == "GET":
             userstances = UserStance.objects.filter(content_type=ct_id, object_id=object_pk)
+            serializer = UserStanceSerializer(userstances, many=True)
+            response = JsonResponse(serializer.data, safe=False)
 
+            return response
 
         if request.method == 'POST':
             data = JSONParser().parse(request)
