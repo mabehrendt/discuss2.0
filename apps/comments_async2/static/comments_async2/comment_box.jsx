@@ -125,16 +125,20 @@ export const CommentBox = (props) => {
       params.commentID = props.anchoredCommentId
     }
 
-    timer = setInterval(countDown, 2000);
-    if (props.stances.length > 0){
-      chooseStanceComment(props.stances, props.user)
+    console.log(props)
+
+    if (props.user.user_auth) {
+      timer = setInterval(countDown, 2000);
+      if (props.stances.length > 0) {
+        chooseStanceComment(props.stances, props.user.user)
+      }
+      api.userstances.get(params).done(handleUserstances).fail()
     }
     console.log("NEWLY RENDERED1")
-    console.log(props)
 
     api.qualities.get(params).done(handleQualities).fail()
     api.comments.get(params).done(handleComments).fail()
-    api.userstances.get(params).done(handleUserstances).fail()
+
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -295,8 +299,8 @@ export const CommentBox = (props) => {
     let _userStance
 
     data.forEach((userstances, index) => {
-      if (userstances.creator === props.user) {
-        console.log(props.user)
+      if (userstances.creator === props.user.user) {
+        console.log(props.user.user)
         console.log(userstances.user_stance)
         _userStance = userstances.user_stance
         setUserStance(_userStance)
@@ -304,7 +308,7 @@ export const CommentBox = (props) => {
     })
 
     if (props.stances.length > 0){
-      chooseStanceComment(props.stances, props.user, _userStance)
+      chooseStanceComment(props.stances, props.user.user, _userStance)
     }
   }
 

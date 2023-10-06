@@ -10,12 +10,13 @@ register = template.Library()
 
 @register.simple_tag(takes_context=True)
 def react_comments_async2(context, obj, with_categories=False):
-    user = None
     request = context["request"]
     if context["user"].is_authenticated:
         user = context["user"].email
+        user_authenticated = context["user"].is_authenticated
     else:
-        user = "anonymous@test.com"
+        user = None
+        user_authenticated = context["user"].is_authenticated
     debateQuestion = context["aisubject"].name
     anchoredCommentId = request.GET.get("comment", "")
     contenttype = ContentType.objects.get_for_model(obj)
@@ -45,7 +46,7 @@ def react_comments_async2(context, obj, with_categories=False):
         "anchoredCommentId": anchoredCommentId,
         "withCategories": with_categories,
         "useModeratorMarked": use_moderator_marked,
-        "user": user
+        "user": {"user_auth": user_authenticated, "user": user}
     }
 
     return format_html(
