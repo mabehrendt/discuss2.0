@@ -415,6 +415,8 @@ export const CommentBox = (props) => {
         }
         params.ordering = sort
         params.urlReplaces = urlReplaces
+        console.log("SORT NOW")
+        fetchSorted(sort)
 
         api.qualities.get(params).done(handleQualities).fail()
 
@@ -453,6 +455,7 @@ export const CommentBox = (props) => {
           errorMessage: undefined
         })
         updateAgreedTOS()
+        fetchSorted(sort)
         api.qualities.get(params).done(handleQualities).fail()
 
       })
@@ -554,6 +557,8 @@ export const CommentBox = (props) => {
     const params = {
       ordering: order,
       comment_category: commentCategory,
+      objectPk: props.subjectId,
+      contentTypeId: props.subjectType,
       search,
       urlReplaces
     }

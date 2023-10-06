@@ -31,7 +31,7 @@ def save_quality(comment, prediction, quality, content_type, object_id, comment_
         comment_id=comment_id,
         creator=creator
         )
-    update_comment(quality)
+    #update_comment(quality)
     quality.save()
 
 def update_quality(comment, prediction, quality, comment_id):

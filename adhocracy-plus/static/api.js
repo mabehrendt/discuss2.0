@@ -61,7 +61,7 @@ const api = (function () {
       }
     }
     const params = $.extend(defaultParams, options)
-
+    console.log(params)
     if (typeof params.data !== 'undefined') {
       if (params.type === 'PUT' || params.type === 'POST' ||
           params.type === 'PATCH'
