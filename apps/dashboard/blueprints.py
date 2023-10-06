@@ -193,7 +193,7 @@ blueprints = [
             ],
             image="images/debateai.svg",
             settings_model=None,
-            type="DBAI",
+            type="DB",
         ),
     ),
 ]

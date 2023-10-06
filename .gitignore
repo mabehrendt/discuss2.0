@@ -71,4 +71,4 @@ media/
 /aplus-test-database
 
 # ai models
-/ai
+/ai/*
