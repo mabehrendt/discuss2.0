@@ -12,7 +12,7 @@ from . import views
 class AISubjectEditComponent(DashboardComponent):
     identifier = 'aisubject_edit'
     weight = 20
-    label = _('AISubjects')
+    label = _('AI Subjects')
 
     def is_effective(self, module):
         return module.blueprint_type == "DB"

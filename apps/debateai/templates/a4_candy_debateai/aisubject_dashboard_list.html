@@ -6,11 +6,11 @@
 {% block dashboard_project_content %}
     <div class="lr-bar lr-bar--with-margin">
         <h1 class="mt-0 lr-bar__left">
-            {% trans 'AI Subject' %}
+            {% trans 'Subject' %}
         </h1>
         <div class="lr-bar__right">
             <a href="{% url 'a4dashboard:aisubject-create' organisation_slug=project.organisation.slug module_slug=module.slug %}" class="btn">
-                {% trans 'Add AI Subject' %}
+                {% trans 'Add Subject' %}
             </a>
         </div>
     </div>
