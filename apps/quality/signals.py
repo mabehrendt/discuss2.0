@@ -10,6 +10,7 @@ from .models import Quality
 
 @receiver(signals.post_save, sender=Comment)
 def get_quality(sender, instance, created, update_fields, **kwargs):
+    print("created")
     comment_text_changed = \
     (getattr(instance, '_former_comment') != getattr(instance, 'comment'))
     if created:

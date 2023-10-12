@@ -10,7 +10,8 @@ from .models import Stance
 
 @receiver(signals.post_save, sender=Comment)
 def get_stance(sender, instance, created, update_fields, **kwargs):
-
+    print("TEST SIGNAL")
+    print(instance.__dict__)
     comment_text_changed = \
     (getattr(instance, '_former_comment') != getattr(instance, 'comment'))
     if created or comment_text_changed:

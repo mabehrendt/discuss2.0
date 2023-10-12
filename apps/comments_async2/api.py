@@ -37,7 +37,6 @@ class PaginationCommentLinkMixin:
         Attention: No super, be careful with order of inheritance!
         """
         queryset = self.filter_queryset(self.get_queryset())
-        print("TEST PAGINATION")
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)

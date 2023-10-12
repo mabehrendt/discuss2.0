@@ -23550,7 +23550,7 @@ body:not(.modal) {
 
 .questButton {
   padding: 10px;
-  margin-right: 20px;
+  /*margin-right:20px;*/
   margin-bottom: 20px;
   display: block;
   background: darkorange;

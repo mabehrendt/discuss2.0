@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import django from 'django'
 import update from 'immutability-helper'
+import Badge from '@mui/material/Badge';
+
 
 import CommentForm from './comment_form'
 import CommentList from './comment_list'
@@ -49,7 +51,7 @@ const cyrb53 = (str, seed = 0) => {
 };
 
 const autoScrollThreshold = 500
-let timer = 0
+
 
 
 export const CommentBox = (props) => {
@@ -63,9 +65,18 @@ export const CommentBox = (props) => {
     "Negativ": 0
   }
 
+  const [initialRender, setInitialRender] = useState(true)
+  //let timer = 0
+  const timerRef = React.useRef()
+
   const [qualities, setQualities] = useState([])
   const [showQuestButtons, setShowQuestButtons] = useState(false)
   const [showStanceButtons, setShowStanceButtons] = useState(false)
+  const [questBadgeInvisible, setQuestBadgeInvisible] = useState(true)
+  const [openQuestClicked, setOpenQuestClicked] = useState(false)
+  const [questModalFirstTime, setQuestModalFirstTime] = useState(true)
+
+
   const [stanceParentId, setStanceParentId] = useState(0)
   const [stanceParentIdx, setStanceParentIdx] = useState(0)
   const [stanceCT, setStanceCT] = useState(0)
@@ -128,17 +139,12 @@ export const CommentBox = (props) => {
     console.log(props)
 
     if (props.user.user_auth) {
-      timer = setInterval(countDown, 2000);
-      if (props.stances.length > 0) {
-        chooseStanceComment(props.stances, props.user.user)
-      }
       api.userstances.get(params).done(handleUserstances).fail()
     }
     console.log("NEWLY RENDERED1")
 
     api.qualities.get(params).done(handleQualities).fail()
     api.comments.get(params).done(handleComments).fail()
-
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -157,8 +163,23 @@ export const CommentBox = (props) => {
     }
   }, [anchorRendered, anchoredCommentId])
 
-  useEffect(() => {
+   /* useEffect(() => {
+      console.log("USEFFECT OPENQUEST1")
+      console.log(initialRender)
+      console.log(openQuestClicked)
+      console.log(userStance)
+      if(!initialRender) {
+        setTimeout(countDown, 2000)
+        //setTimeout(countDown, 2000)
+        //console.log("INITIALRENDER FALSE")
+      }//else if(initialRender && !openQuestClicked){
+        //setTimeout(countDown, 2000)
+      //}
+      setInitialRender(false)
 
+  }, [openQuestClicked, userStance, initialRender]); */
+
+  useEffect(() => {
     // Check table id for stance recommendation
     comments.forEach((comment, index) =>{
       if (comment.id == stanceParentId){
@@ -168,13 +189,92 @@ export const CommentBox = (props) => {
         setStanceCT(stanceParentId) // same as comment_id
       }
     })
-}, [comments]);
+  }, [comments]);
+
+
+
+  function saveUserStance(e) {
+    if (e != undefined){
+        const urlReplaces = {
+          objectPk: props.subjectId,
+          contentTypeId: props.subjectType
+        }
+      if (e.target.className === "forButton"){
+        const payload = {
+          user_stance: "Positiv"
+        }
+
+        const u_stanceData = {
+          urlReplaces: urlReplaces,
+          content_type: props.subjectType,
+          object_id: props.subjectId,
+          creator_id: creatorId,
+          payload: payload
+        }
+
+        api.userstances.change(u_stanceData).done(handleUserStanceChange).fail()
+      }else{
+        const payload = {
+          user_stance: "Negativ"
+        }
+
+        const u_stanceData = {
+          urlReplaces: urlReplaces,
+          content_type: props.subjectType,
+          object_id: props.subjectId,
+          creator_id: creatorId,
+          payload: payload
+        }
+
+        api.userstances.change(u_stanceData).done(handleUserStanceChange).fail()
+      }
+    }
+  }
+
+  function openQuest(){
+    window.open("https://google.com", "_blank", "noreferrer")
+
+    const urlReplaces = {
+      objectPk: props.subjectId,
+      contentTypeId: props.subjectType
+    }
+
+    const payload = {
+      questionbox_clicked: true
+    }
+
+    const u_stanceData = {
+      urlReplaces: urlReplaces,
+      content_type: props.subjectType,
+      object_id: props.subjectId,
+      creator_id: creatorId,
+      payload: payload
+    }
+    setQuestBadgeInvisible(true)
+    showQuestModal()
+
+    api.userstances.change(u_stanceData).fail()
+  }
+
 
   function showQuestModal(){
-    setModalQuestState({ isOpen: !modalQuestState.isOpen})
-    if(showQuestButtons && !showStanceButtons){
-          timer = setInterval(countDownStance, 2000);
+    console.log("QUEST MODAL")
+    console.log(modalQuestState.isOpen)
+
+    if(modalQuestState.isOpen){
+      if(questModalFirstTime){
+        console.log("STARTED STANCE TIMER")
+        setTimeout(countDownStance, 2000, "");
+        setQuestModalFirstTime(false)
+      }
+      if(!openQuestClicked) {
+        setQuestBadgeInvisible(false)
+      }
+    }else{
+      setQuestBadgeInvisible(true)
     }
+
+    setModalQuestState({isOpen: !modalQuestState.isOpen})
   }
 
   function showStanceModal(e){
@@ -185,73 +285,92 @@ export const CommentBox = (props) => {
       } else if(e.target.className === "sprechblase-button" || e.target.className === "close") {
         setModalStanceState({isOpen: !modalStanceState.isOpen})
       }
+    }else{
+      setModalStanceState({isOpen: !modalStanceState.isOpen})
     }
   }
 
-  function saveUserStance(e) {
-    if (e != undefined){
-        const urlReplaces = {
-          objectPk: props.subjectId,
-          contentTypeId: props.subjectType
-        }
-      if (e.target.className === "forButton"){
-        const stanceData = {
-          urlReplaces: urlReplaces,
-          content_type: props.subjectType,
-          object_id: props.subjectId,
-          user_stance: "Positiv",
-          creator: creatorName,
-          creator_id : creatorId
-        }
-        api.userstances.add(stanceData)
-      }else{
-        const stanceData = {
-          urlReplaces: urlReplaces,
-          content_type: props.subjectType,
-          object_id: props.subjectId,
-          user_stance: "Negativ",
-          creator: creatorName,
-          creator_id : creatorId
-        }
-        api.userstances.add(stanceData)
-      }
-    }
-  }
-
-  function openQuest(){
-    window.open("https://google.com", "_blank", "noreferrer")
-  }
-
-  function countDown() {
-    // Remove one second, set state so a re-render happens.
-    console.log(modalQuestState.isOpen)
-    setModalQuestState({isOpen: true})
+  function countDown(_openQuestClicked, _userStance) {
     console.log("TIMER FIRED")
 
-    // Check if we're at zero.
-    if (modalQuestState) {
-      setShowQuestButtons(true)
-      clearInterval(timer)
+    // Remove one second, set state so a re-render happens.
+    console.log(modalQuestState.isOpen)
+    console.log(_openQuestClicked)
+    if(!_openQuestClicked) {
+      showQuestModal()
+    }else{
+      if(!showStanceButtons){
+        console.log("STARTED STANCE TIMER")
+        setTimeout(countDownStance, 2000, _userStance);
+      }
     }
+    // Check if we're at zero.
+    setShowQuestButtons(true)
   }
 
-  function countDownStance() {
-    // Remove one second, set state so a re-render happens.
-    console.log(modalStanceState.isOpen)
-    setModalStanceState({isOpen: true})
-    console.log("TIMER FIRED STANCE")
-
+  function countDownStance(_userStance) {
     // Check if user's general stance has been asked
-    if (userStance != ""){
+    if (userStance != "" || _userStance != ""){
       setFirstStanceAnswered({answered: true})
     }
-
+   showStanceModal()
     // Check if we're at zero.
-    if (modalStanceState) {
-      console.log("SET STANCE BUTTONS")
-      setShowStanceButtons(true)
+    setShowStanceButtons(true)
+  }
 
-      clearInterval(timer)
+  function handleUserstances(result){
+    const data = result
+    console.log("USERSTANCE")
+    console.log(data)
+    let _userStance
+    let _has_creator = ""
+    let _openQuestClicked = false
+
+    setCreatorName(props.user.user)
+    setCreatorId(cyrb53(props.user.user))
+
+    data.forEach((userstances, index) => {
+      if (userstances.creator === props.user.user) {
+        console.log(props.user.user)
+        console.log(userstances.user_stance)
+        console.log(userstances.questionbox_clicked)
+        _userStance = userstances.user_stance
+        setUserStance(_userStance)
+        _has_creator = userstances.creator_id
+        _openQuestClicked = userstances.questionbox_clicked
+        setOpenQuestClicked(_openQuestClicked)
+      }
+    })
+
+    if(_has_creator === ""){
+      console.log("CREATOR: " + props.user.user)
+      console.log("HASH: " + cyrb53(props.user.user))
+       const stanceData = {
+          urlReplaces: urlReplaces,
+          content_type: props.subjectType,
+          object_id: props.subjectId,
+          creator: props.user.user,
+          creator_id : cyrb53(props.user.user)
+        }
+        api.userstances.add(stanceData)
+    }
+
+    /*if(!_openQuestClicked) {
+      setTimeout(countDown, 2000, _openQuestClicked, _userStance)
+    }else if(_openQuestClicked){
+      setQuestModalFirstTime(false)
+      setTimeout(countDown, 2000, _openQuestClicked, _userStance)
+    }*/
+
+    if(_openQuestClicked){
+      setQuestModalFirstTime(false)
+    }
+    setTimeout(countDown, 2000, _openQuestClicked, _userStance)
+
+
+
+    if (props.stances.length > 0) {
+        chooseStanceComment(props.stances, props.user.user, _userStance)
     }
   }
 
@@ -266,50 +385,39 @@ export const CommentBox = (props) => {
     for (let i = 0; i < stances.length; i++) {      // Get first instance
       let stance = stances[i]
       console.log(_userStance)
-      console.log(stanceMap[stance.stance])
-      console.log(stanceMap[_userStance])
-
-      if (stance.creator != user && stanceMap[stance.stance] != stanceMap[_userStance]) {
-        filteredStances.push(stance)
-        break
+      if (_userStance != "") {
+        if (stance.creator != user && stanceMap[stance.stance] != stanceMap[_userStance]) {
+          filteredStances.push(stance)
+          break
+        }
       }
     }
 
     if (filteredStances.length > 0){
       const random_index = getRandomInt(0, filteredStances.length - 1)
+      console.log(filteredStances)
       setStanceText(filteredStances[random_index].comment_text)
       setUserText(filteredStances[random_index].creator)
 
       // This is the comment identifier
       setStanceParentId(filteredStances[random_index].comment_id)
-    }else if(filteredStances.length == 0){
+    }else if(filteredStances.length == 0 && _userStance != ""){
       console.log("NO STANCES FOUND")
       setNoStancesFound(true)
     }
-    setCreatorName(user)
-    setCreatorId(cyrb53(user))
-    console.log("CREATOR: " + user)
-    console.log("HASH: " + cyrb53(user))
+
   }
 
-  function handleUserstances(result){
-    const data = result
-    console.log("USERSTANCE")
-    console.log(data)
-    let _userStance
-
-    data.forEach((userstances, index) => {
-      if (userstances.creator === props.user.user) {
-        console.log(props.user.user)
-        console.log(userstances.user_stance)
-        _userStance = userstances.user_stance
-        setUserStance(_userStance)
-      }
+  function handleUserStanceChange(result){
+    // Get new stances from api
+    console.log(result)
+    const params = {}
+    params.urlReplaces = urlReplaces
+    api.stances.get(params).done((stanceResult) => {
+      console.log(stanceResult)
+      chooseStanceComment(stanceResult, props.user.user, result.user_stance)
     })
-
-    if (props.stances.length > 0){
-      chooseStanceComment(props.stances, props.user.user, _userStance)
-    }
+    // Call chooseStanceComment with stances
   }
 
   function handleQualities(result){
@@ -426,6 +534,7 @@ export const CommentBox = (props) => {
 
         comment.displayNotification = true
         addComment(parentIndex, comment)
+        showStanceModal()
 
         updateAgreedTOS()
 
@@ -686,14 +795,18 @@ export const CommentBox = (props) => {
    if (showQuestButtons && showStanceButtons) {
       return(
         <div className="buttonBox">
-          <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen-white.png")} alt="Quest" /></button>
+          <Badge color="primary" badgeContent="Befragung!" invisible={questBadgeInvisible}>
+            <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen-white.png")} alt="Quest" /></button>
+          </Badge>
           <button className="stanceButton"  onClick={showStanceModal}> <img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase-white.png")} alt="Sprechblase" /> </button>
         </div>
       )
     } else if (showQuestButtons){
       return(
         <div className="buttonBox">
-          <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen-white.png")} alt="Quest" /></button>
+          <Badge color="primary" badgeContent="Befragung!" invisible={questBadgeInvisible}>
+            <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen-white.png")} alt="Quest" /></button>
+          </Badge>
         </div>
       )
     }
@@ -704,7 +817,7 @@ export const CommentBox = (props) => {
       <Modal show={modalQuestState.isOpen}>
             <div className="questModal" id="questModal">
               <img className="questblase" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen.png")} alt="Quest" />
-              <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showQuestModal(); console.log("CLOSED")}}/></button>
+              <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showQuestModal(e); console.log("CLOSED")}}/></button>
               <div style={{display: "flex", flexDirection: "column", padding: "20px", paddingLeft: "0px"}}>
                 <div className="argumentText"> Wir bitten Sie an einer Umfrage teilzunehmen!</div>
                 <button className="questButtonModal" onClick={openQuest}>Hier gehts zur Umfrage!</button>
