@@ -2129,6 +2129,23 @@ msgstr ""
 "Antworten in Kategorien eingeordnet und können durchsucht, sortiert und "
 "gefiltert werden."
 
+#: apps/dashboard/blueprints.py:183
+msgid "AI Debate"
+msgstr "KI Debatte"
+
+#: apps/dashboard/blueprints.py:184
+msgid ""
+"Participants can discuss posted topics or questions "
+"supported by an AI. "
+"To do this, the participants comment on posted "
+"topics / questions as well as on contributions from other "
+"users."
+msgstr ""
+"Die Teilnehmer*innen können eine oder mehrere eingestellte Themen oder "
+"Fragestellungen, unterstützt durch eine KI, diskutieren. Zur Strukturierung der Debatte werden die "
+"Antworten in Kategorien eingeordnet und können durchsucht, sortiert und "
+"gefiltert werden."
+
 #: apps/dashboard/forms.py:13
 msgid "Organisation name"
 msgstr "Organisationsname"
@@ -2235,6 +2252,10 @@ msgstr "Das Projekt wurde angelegt."
 msgid "Subjects"
 msgstr "Themen"
 
+#: apps/debateai/dashboard.py:15
+msgid "AI Subjects"
+msgstr "KI Themen"
+
 #: apps/debate/filters.py:19 apps/debate/filters.py:34
 #: apps/topicprio/views.py:29 apps/topicprio/views.py:62
 msgid "Alphabetical"
@@ -2303,14 +2324,17 @@ msgid "Subject"
 msgstr "Betreff"
 
 #: apps/debate/templates/a4_candy_debate/subject_dashboard_list.html:13
+#: apps/debateai/templates/a4_candy_debateai/aisubject_dashboard_list.html:13
 msgid "Add Subject"
 msgstr "Thema hinzufügen"
 
 #: apps/debate/templates/a4_candy_debate/subject_update_form.html:8
+#: apps/debateai/templates/a4_candy_debateai/aisubject_update_form.html:8
 msgid "Edit subject"
 msgstr "Thema bearbeiten"
 
 #: apps/debate/views.py:103
+#: apps/debateai/views.py:103
 msgid "The subject has been deleted"
 msgstr "das Thema wurde gelöscht"
 

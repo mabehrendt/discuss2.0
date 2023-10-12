@@ -683,7 +683,6 @@ export const CommentBox = (props) => {
       setNextComments(data.next)
       setCommentCount(data.count)
       setSort(order)
-      console.log(setSort)
       setLoadingFilter(false)
     })
   }

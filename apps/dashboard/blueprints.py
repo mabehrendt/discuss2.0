@@ -182,7 +182,7 @@ blueprints = [
         ProjectBlueprint(
             title=_("AI Debate"),
             description=_(
-                "Participants can discuss posted topics or questions"
+                "Participants can discuss posted topics or questions "
                 "supported by an AI. "
                 "To do this, the participants comment on posted "
                 "topics / questions as well as on contributions from other "
@@ -193,7 +193,7 @@ blueprints = [
             ],
             image="images/debateai.svg",
             settings_model=None,
-            type="DBAI",
+            type="DB",
         ),
     ),
 ]
