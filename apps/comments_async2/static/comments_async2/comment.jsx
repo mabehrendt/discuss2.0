@@ -1,6 +1,9 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import django from 'django'
+import { useEffect } from 'react'
+
+
 
 import Modal from '../../../../adhocracy-plus/static/Modal'
 import { ReportModal } from '../../../../adhocracy-plus/static/reports/react_reports'
@@ -13,6 +16,7 @@ import CommentList from './comment_list'
 import { ModeratorFeedback } from './moderator_feedback'
 
 import { RatingBox } from '../../../../adhocracy-plus/static/ratings/react_ratings'
+import api from "../../../../adhocracy-plus/static/api";
 
 const translated = {
   reportTitle: django.gettext('You want to report this content? Your message will be sent to the moderation. The moderation will look at the reported content. The content will be deleted if it does not meet our discussion rules (netiquette).'),
@@ -78,6 +82,7 @@ export default class Comment extends React.Component {
   }
 
   componentDidMount () {
+    console.log("DID MOUNT")
     this.setState({
       showChildComments: this.props.id === this.props.anchoredCommentParentId || this.props.id === this.props.stanceId,
       shorten: this.props.id !== this.props.anchoredCommentId,
@@ -87,6 +92,18 @@ export default class Comment extends React.Component {
       this.props.onRenderFinished()
     }
   }
+
+  componentDidUpdate(previousProps, previousState) {
+    //console.log(previousProps.stanceId)
+    //console.log(this.props.stanceId)
+    //console.log("ID: "+ this.props.id)
+
+    if (previousProps.stanceId !== this.props.stanceId) {
+      this.setState({
+        showChildComments: this.props.id === this.props.anchoredCommentParentId || this.props.id === this.props.stanceId}
+      )
+    }
+}
 
   toggleEdit (e) {
     if (e) {
@@ -199,6 +216,7 @@ export default class Comment extends React.Component {
               this.props.onCommentModify(newComment, this.props.index, this.props.parentIndex)
                 .then(() => {
                   this.setState({
+                    showChildComments: this.props.id === this.props.anchoredCommentParentId || this.props.id === this.props.stanceId,
                     edit: false
                   })
                   return null

@@ -163,33 +163,28 @@ export const CommentBox = (props) => {
     }
   }, [anchorRendered, anchoredCommentId])
 
-   /* useEffect(() => {
-      console.log("USEFFECT OPENQUEST1")
-      console.log(initialRender)
-      console.log(openQuestClicked)
-      console.log(userStance)
-      if(!initialRender) {
-        setTimeout(countDown, 2000)
-        //setTimeout(countDown, 2000)
-        //console.log("INITIALRENDER FALSE")
-      }//else if(initialRender && !openQuestClicked){
-        //setTimeout(countDown, 2000)
-      //}
-      setInitialRender(false)
-
-  }, [openQuestClicked, userStance, initialRender]); */
-
   useEffect(() => {
-    // Check table id for stance recommendation
+    // Check comment list for stance recommendation
     comments.forEach((comment, index) =>{
       if (comment.id == stanceParentId){
         setStanceParentIdx(index) // Set for table update
         // Set for database
         setStanceID(comment.comment_content_type)
         setStanceCT(stanceParentId) // same as comment_id
+
+        console.log("SCROLL TO COMMENT")
+        console.log(comment.id)
+        const el = document.getElementById('comment_' + comment.id)
+        if (el !== null) {
+          const top = el.getBoundingClientRect().top
+          console.log(top)
+          console.log(window.scrollY)
+          console.log(top - window.scrollY)
+          window.scrollTo(0, top + window.scrollY)
+        }
       }
     })
-  }, [comments]);
+  }, [comments, stanceParentId]);
 
 
 
@@ -355,19 +350,10 @@ export const CommentBox = (props) => {
         api.userstances.add(stanceData)
     }
 
-    /*if(!_openQuestClicked) {
-      setTimeout(countDown, 2000, _openQuestClicked, _userStance)
-    }else if(_openQuestClicked){
-      setQuestModalFirstTime(false)
-      setTimeout(countDown, 2000, _openQuestClicked, _userStance)
-    }*/
-
     if(_openQuestClicked){
       setQuestModalFirstTime(false)
     }
     setTimeout(countDown, 2000, _openQuestClicked, _userStance)
-
-
 
     if (props.stances.length > 0) {
         chooseStanceComment(props.stances, props.user.user, _userStance)
@@ -382,18 +368,19 @@ export const CommentBox = (props) => {
 
   function chooseStanceComment (stances, user, _userStance){
     let filteredStances = []
-    for (let i = 0; i < stances.length; i++) {      // Get first instance
-      let stance = stances[i]
-      console.log(_userStance)
-      if (_userStance != "") {
-        if (stance.creator != user && stanceMap[stance.stance] != stanceMap[_userStance]) {
-          filteredStances.push(stance)
-          break
+    console.log(_userStance)
+    if (_userStance !== "") {
+      for (let i = 0; i < stances.length; i++) {      // Get first instance
+        let stance = stances[i]
+          if (stance.creator !== user && stanceMap[stance.stance] !== stanceMap[_userStance]) {
+            filteredStances.push(stance)
+            break
+          }
         }
-      }
     }
 
     if (filteredStances.length > 0){
+      console.log("STANCE FOUND")
       const random_index = getRandomInt(0, filteredStances.length - 1)
       console.log(filteredStances)
       setStanceText(filteredStances[random_index].comment_text)
@@ -401,7 +388,7 @@ export const CommentBox = (props) => {
 
       // This is the comment identifier
       setStanceParentId(filteredStances[random_index].comment_id)
-    }else if(filteredStances.length == 0 && _userStance != ""){
+    }else if(filteredStances.length === 0 && _userStance !== ""){
       console.log("NO STANCES FOUND")
       setNoStancesFound(true)
     }
@@ -517,6 +504,8 @@ export const CommentBox = (props) => {
   }
 
   function handleCommentSubmit (comment, parentIndex){
+    console.log(stanceParentId)
+    console.log(comment)
     return api.comments
       .add(comment)
       .done((comment) => {
@@ -528,14 +517,13 @@ export const CommentBox = (props) => {
         params.ordering = sort
         params.urlReplaces = urlReplaces
         console.log("SORT NOW")
-        fetchSorted(sort)
+        //fetchSorted(sort)
 
         api.qualities.get(params).done(handleQualities).fail()
 
         comment.displayNotification = true
         addComment(parentIndex, comment)
         showStanceModal()
-
         updateAgreedTOS()
 
       })
