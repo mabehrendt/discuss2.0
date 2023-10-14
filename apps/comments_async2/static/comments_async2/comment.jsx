@@ -84,7 +84,7 @@ export default class Comment extends React.Component {
   componentDidMount () {
     console.log("DID MOUNT")
     this.setState({
-      showChildComments: this.props.id === this.props.anchoredCommentParentId || this.props.id === this.props.stanceId,
+      showChildComments: this.props.id === this.props.anchoredCommentParentId, //|| this.props.id === this.props.stanceId,
       shorten: this.props.id !== this.props.anchoredCommentId,
       anchored: this.props.id === this.props.anchoredCommentId
     })
@@ -94,11 +94,7 @@ export default class Comment extends React.Component {
   }
 
   componentDidUpdate(previousProps, previousState) {
-    //console.log(previousProps.stanceId)
-    //console.log(this.props.stanceId)
-    //console.log("ID: "+ this.props.id)
-
-    if (previousProps.stanceId !== this.props.stanceId) {
+    if (this.props.stanceModal && this.props.id === this.props.stanceId && !this.state.showChildComments) {
       this.setState({
         showChildComments: this.props.id === this.props.anchoredCommentParentId || this.props.id === this.props.stanceId}
       )
@@ -116,6 +112,10 @@ export default class Comment extends React.Component {
   toggleShowComments (e) {
     e.preventDefault()
     const newShowChildComment = !this.state.showChildComments
+    const newDisplayStanceChild = !this.state.displayStanceChild
+    this.setState({
+      displayStanceChild: newDisplayStanceChild
+    })
     this.setState({
       showChildComments: newShowChildComment
     })
@@ -492,8 +492,9 @@ export default class Comment extends React.Component {
           </div>
         </div>
 
+        {/* We need the displayStanceChild as internal state variable for when to allow to close the box again since id===stanceId is always true  */}
         <div className="container">
-          {this.state.showChildComments
+          {this.state.showChildComments || (this.props.stanceModal && this.props.id === this.props.stanceId)
             ? (
               <div className="a4-comments__child--list">
                 <div className="row a4-comments__list">
@@ -537,6 +538,7 @@ export default class Comment extends React.Component {
                       useTermsOfUse={this.props.useTermsOfUse}
                       agreedTermsOfUse={this.props.agreedTermsOfUse}
                       orgTermsUrl={this.props.orgTermsUrl}
+                      stanceModal={false}
                     />
                   </div>
                 </div>

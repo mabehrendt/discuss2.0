@@ -65,6 +65,7 @@ const CommentList = (props) => {
               stanceId={props.stanceId}
               quality={props.quality}
               prediction={props.prediction}
+              stanceModal={props.stanceModal}
             >{comment.comment}
             </Comment>
           )

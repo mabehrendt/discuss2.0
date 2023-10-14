@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import django from 'django'
 import update from 'immutability-helper'
 import Badge from '@mui/material/Badge';
-
+import './collapsible.css'
 
 import CommentForm from './comment_form'
 import CommentList from './comment_list'
-import Collapse from './collapsible'
 import Modal from './stance_modal'
 import { FilterCategory } from './filter_category'
 import { FilterSearch } from './filter_search'
 import { FilterSort } from './filter_sort'
 import { getDocumentHeight } from '../util'
+import {getRandomInt, cyrb53} from "./utils";
+import {addCreatorData} from "./data_utils";
+
 const api = require('../../../../adhocracy-plus/static/api')
 const {Fragment} = React;
 
@@ -35,24 +37,7 @@ const translated = {
   sortedBy: django.gettext('sorted by: ')
 }
 
-const cyrb53 = (str, seed = 0) => {
-    let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
-    for(let i = 0, ch; i < str.length; i++) {
-        ch = str.charCodeAt(i);
-        h1 = Math.imul(h1 ^ ch, 2654435761);
-        h2 = Math.imul(h2 ^ ch, 1597334677);
-    }
-    h1  = Math.imul(h1 ^ (h1 >>> 16), 2246822507);
-    h1 ^= Math.imul(h2 ^ (h2 >>> 13), 3266489909);
-    h2  = Math.imul(h2 ^ (h2 >>> 16), 2246822507);
-    h2 ^= Math.imul(h1 ^ (h1 >>> 13), 3266489909);
-
-    return 4294967296 * (2097151 & h2) + (h1 >>> 0);
-};
-
 const autoScrollThreshold = 500
-
-
 
 export const CommentBox = (props) => {
   const urlReplaces = {
@@ -65,23 +50,18 @@ export const CommentBox = (props) => {
     "Negativ": 0
   }
 
-  const [initialRender, setInitialRender] = useState(true)
-  //let timer = 0
-  const timerRef = React.useRef()
-
   const [qualities, setQualities] = useState([])
   const [showQuestButtons, setShowQuestButtons] = useState(false)
   const [showStanceButtons, setShowStanceButtons] = useState(false)
   const [questBadgeInvisible, setQuestBadgeInvisible] = useState(true)
   const [openQuestClicked, setOpenQuestClicked] = useState(false)
   const [questModalFirstTime, setQuestModalFirstTime] = useState(true)
-
+  const [commentFromStanceModal, setCommentFromStanceModal] = useState(false)
 
   const [stanceParentId, setStanceParentId] = useState(0)
   const [stanceParentIdx, setStanceParentIdx] = useState(0)
   const [stanceCT, setStanceCT] = useState(0)
   const [stanceID, setStanceID] = useState(0)
-  const [creatorName, setCreatorName] = useState(0)
   const [creatorId, setCreatorId] = useState(0)
   const [modalQuestState, setModalQuestState] = useState({isOpen: false})
   const [modalStanceState, setModalStanceState] = useState({isOpen: false})
@@ -143,6 +123,7 @@ export const CommentBox = (props) => {
     }
     console.log("NEWLY RENDERED1")
 
+    //setTimer(setInterval(refreshComments, 5000))
     api.qualities.get(params).done(handleQualities).fail()
     api.comments.get(params).done(handleComments).fail()
 
@@ -152,6 +133,16 @@ export const CommentBox = (props) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  /*useEffect(() => {
+    const timer = window.setInterval(() => {
+      console.log(sort)
+      fetchSorted(sort)
+    }, 30000)
+    return () => {
+      window.clearInterval(timer);
+    };
+  }, [sort]);*/
 
   useEffect(() => {
     if (anchorRendered === true) {
@@ -172,58 +163,25 @@ export const CommentBox = (props) => {
         setStanceID(comment.comment_content_type)
         setStanceCT(stanceParentId) // same as comment_id
 
-        console.log("SCROLL TO COMMENT")
-        console.log(comment.id)
-        const el = document.getElementById('comment_' + comment.id)
-        if (el !== null) {
-          const top = el.getBoundingClientRect().top
-          console.log(top)
-          console.log(window.scrollY)
-          console.log(top - window.scrollY)
-          window.scrollTo(0, top + window.scrollY)
+        if(commentFromStanceModal) {
+          console.log("SCROLL TO COMMENT")
+          console.log(comment.id)
+          const el = document.getElementById('comment_' + comment.id)
+          if (el !== null) {
+            const top = el.getBoundingClientRect().top
+            console.log(top)
+            console.log(window.scrollY)
+            console.log(top + window.scrollY)
+            window.scrollTo(0, top + window.scrollY)
+          }
+          setCommentFromStanceModal(false)
         }
       }
     })
   }, [comments, stanceParentId]);
 
+  function refreshComments(){
 
-
-  function saveUserStance(e) {
-    if (e != undefined){
-        const urlReplaces = {
-          objectPk: props.subjectId,
-          contentTypeId: props.subjectType
-        }
-      if (e.target.className === "forButton"){
-        const payload = {
-          user_stance: "Positiv"
-        }
-
-        const u_stanceData = {
-          urlReplaces: urlReplaces,
-          content_type: props.subjectType,
-          object_id: props.subjectId,
-          creator_id: creatorId,
-          payload: payload
-        }
-
-        api.userstances.change(u_stanceData).done(handleUserStanceChange).fail()
-      }else{
-        const payload = {
-          user_stance: "Negativ"
-        }
-
-        const u_stanceData = {
-          urlReplaces: urlReplaces,
-          content_type: props.subjectType,
-          object_id: props.subjectId,
-          creator_id: creatorId,
-          payload: payload
-        }
-
-        api.userstances.change(u_stanceData).done(handleUserStanceChange).fail()
-      }
-    }
   }
 
   function openQuest(){
@@ -285,9 +243,46 @@ export const CommentBox = (props) => {
     }
   }
 
+  function saveUserStance(e) {
+    if (e != undefined){
+        const urlReplaces = {
+          objectPk: props.subjectId,
+          contentTypeId: props.subjectType
+        }
+      if (e.target.className === "forButton"){
+        const payload = {
+          user_stance: "Positiv"
+        }
+
+        const u_stanceData = {
+          urlReplaces: urlReplaces,
+          content_type: props.subjectType,
+          object_id: props.subjectId,
+          creator_id: creatorId,
+          payload: payload
+        }
+
+        api.userstances.change(u_stanceData).done(handleUserStanceChange).fail()
+      }else{
+        const payload = {
+          user_stance: "Negativ"
+        }
+
+        const u_stanceData = {
+          urlReplaces: urlReplaces,
+          content_type: props.subjectType,
+          object_id: props.subjectId,
+          creator_id: creatorId,
+          payload: payload
+        }
+
+        api.userstances.change(u_stanceData).done(handleUserStanceChange).fail()
+      }
+    }
+  }
+
   function countDown(_openQuestClicked, _userStance) {
     console.log("TIMER FIRED")
-
     // Remove one second, set state so a re-render happens.
     console.log(modalQuestState.isOpen)
     console.log(_openQuestClicked)
@@ -308,7 +303,7 @@ export const CommentBox = (props) => {
     if (userStance != "" || _userStance != ""){
       setFirstStanceAnswered({answered: true})
     }
-   showStanceModal()
+    showStanceModal()
     // Check if we're at zero.
     setShowStanceButtons(true)
   }
@@ -318,36 +313,23 @@ export const CommentBox = (props) => {
     console.log("USERSTANCE")
     console.log(data)
     let _userStance
-    let _has_creator = ""
+    let _hasCreator = ""
     let _openQuestClicked = false
 
-    setCreatorName(props.user.user)
     setCreatorId(cyrb53(props.user.user))
 
     data.forEach((userstances, index) => {
       if (userstances.creator === props.user.user) {
-        console.log(props.user.user)
-        console.log(userstances.user_stance)
-        console.log(userstances.questionbox_clicked)
         _userStance = userstances.user_stance
         setUserStance(_userStance)
-        _has_creator = userstances.creator_id
+        _hasCreator = userstances.creator_id
         _openQuestClicked = userstances.questionbox_clicked
         setOpenQuestClicked(_openQuestClicked)
       }
     })
 
-    if(_has_creator === ""){
-      console.log("CREATOR: " + props.user.user)
-      console.log("HASH: " + cyrb53(props.user.user))
-       const stanceData = {
-          urlReplaces: urlReplaces,
-          content_type: props.subjectType,
-          object_id: props.subjectId,
-          creator: props.user.user,
-          creator_id : cyrb53(props.user.user)
-        }
-        api.userstances.add(stanceData)
+    if(_hasCreator === "") {
+      addCreatorData(urlReplaces, props)
     }
 
     if(_openQuestClicked){
@@ -355,26 +337,20 @@ export const CommentBox = (props) => {
     }
     setTimeout(countDown, 2000, _openQuestClicked, _userStance)
 
-    if (props.stances.length > 0) {
+    if (props.stances.length > 0 || _userStance !== "") {
         chooseStanceComment(props.stances, props.user.user, _userStance)
     }
   }
 
-  function getRandomInt(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
   function chooseStanceComment (stances, user, _userStance){
     let filteredStances = []
+    console.log("CHOOSE STANCE COMMENT")
     console.log(_userStance)
     if (_userStance !== "") {
       for (let i = 0; i < stances.length; i++) {      // Get first instance
         let stance = stances[i]
           if (stance.creator !== user && stanceMap[stance.stance] !== stanceMap[_userStance]) {
             filteredStances.push(stance)
-            break
           }
         }
     }
@@ -438,6 +414,8 @@ export const CommentBox = (props) => {
          * probably using a modal
          */
       }
+      //console.log(sort)
+      //fetchSorted(sort)
       setLoading(false)
       setWouldHaveCommentingPermission(data.would_have_commenting_permission)
     }
@@ -503,9 +481,14 @@ export const CommentBox = (props) => {
     }
   }
 
-  function handleCommentSubmit (comment, parentIndex){
-    console.log(stanceParentId)
-    console.log(comment)
+  function handleCommentSubmit (comment, parentIndex, isStanceModal){
+    // Check if posted comment comes from stanceModal
+    if(isStanceModal){
+      setCommentFromStanceModal(true)
+    }else{
+      setCommentFromStanceModal(false)
+    }
+
     return api.comments
       .add(comment)
       .done((comment) => {
@@ -516,14 +499,15 @@ export const CommentBox = (props) => {
         }
         params.ordering = sort
         params.urlReplaces = urlReplaces
-        console.log("SORT NOW")
-        //fetchSorted(sort)
+        fetchSorted(sort)
 
         api.qualities.get(params).done(handleQualities).fail()
 
         comment.displayNotification = true
         addComment(parentIndex, comment)
-        showStanceModal()
+        if(isStanceModal) {
+          showStanceModal()
+        }
         updateAgreedTOS()
 
       })
@@ -882,6 +866,7 @@ export const CommentBox = (props) => {
                     agreedTermsOfUse={agreedTermsOfUse}
                     orgTermsUrl={orgTermsUrl}
                     quality={qualities}
+                    stanceModal={true}
                   />
                 </div>
               </div>
@@ -947,6 +932,7 @@ export const CommentBox = (props) => {
           useTermsOfUse={useTermsOfUse}
           agreedTermsOfUse={agreedTermsOfUse}
           orgTermsUrl={orgTermsUrl}
+          stanceModal={false}
         />
       </div>
 
@@ -1060,6 +1046,7 @@ export const CommentBox = (props) => {
             stanceId={stanceParentId}
             quality={qualities}
             prediction={props.prediction}
+            stanceModal={commentFromStanceModal}
           />
         </div>
       </div>
