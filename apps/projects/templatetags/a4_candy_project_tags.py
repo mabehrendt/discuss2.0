@@ -36,6 +36,7 @@ def get_num_entries(module):
         + Comment.objects.filter(poll__module=module).count()
         + Comment.objects.filter(topic__module=module).count()
         + Comment.objects.filter(subject__module=module).count()
+        + Comment.objects.filter(aisubject__module=module).count()
         + Vote.objects.filter(choice__question__poll__module=module).count()
         + LiveQuestion.objects.filter(module=module).count()
         + Like.objects.filter(livequestion__module=module).count()

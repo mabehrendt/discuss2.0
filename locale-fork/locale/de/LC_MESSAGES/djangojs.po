@@ -330,6 +330,11 @@ msgstr "Meiste Antworten"
 msgid "Last discussed"
 msgstr "Zuletzt diskutiert"
 
+#: adhocracy4/comments_async/static/comments_async/comment_box.jsx:20
+#: adhocracy4/comments_async/static/comments_async/comment_box.jsx:20
+msgid "Highest quality"
+msgstr "Höchste Qualität"
+
 #: adhocracy4/comments_async/static/comments_async/comment_box.jsx:23
 #: adhocracy4/comments_async/static/comments_async/comment_box.jsx:23
 msgid "Show filters"
