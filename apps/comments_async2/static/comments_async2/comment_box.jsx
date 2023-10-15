@@ -119,6 +119,7 @@ export const CommentBox = (props) => {
     console.log(props)
 
     if (props.user.user_auth) {
+      console.log("GETUSERSTANCES")
       api.userstances.get(params).done(handleUserstances).fail()
     }
     console.log("NEWLY RENDERED1")

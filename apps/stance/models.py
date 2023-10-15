@@ -47,7 +47,7 @@ class UserStance(models.Model):
     questionbox_clicked = models.BooleanField(default=False)
 
     creator = models.TextField(max_length=200)
-    creator_id = models.CharField(max_length=500, unique=True)
+    creator_id = models.CharField(max_length=500)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)

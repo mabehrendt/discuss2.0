@@ -51,8 +51,10 @@ class UserStanceViewSet(
             if serializer.is_valid():
                 serializer.save()
                 print(serializer.data)
+
                 return JsonResponse(serializer.data, status=201)
             print(serializer.errors)
+
             return JsonResponse(serializer.errors, status=400)
 
 
