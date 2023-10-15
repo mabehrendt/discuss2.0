@@ -28,15 +28,16 @@ class QualityViewSet(
         if request.method == 'GET':
             qualities = Quality.objects.filter(content_type=ct_id, object_id=object_pk)
             #print(qualities)
-            print(ct_id)
-            print(object_pk)
+            #print(ct_id)
+            #print(object_pk)
             #quality = ContentType.objects.get_for_id(ct_id).get_object_for_this_type(pk=object_pk)
             #qualities = list(quality.qualities.values("content_type", "object_id", "comment_text", "prediction", "quality","comment_id","creator"))
-            print(qualities)
+            #print(qualities)
             serializer = QualitySerializer(qualities, many=True)
             response = JsonResponse(serializer.data, safe=False)
+            print("QUALITY API")
             print(serializer.data)
-            print(response)
+            #print(response)
             return response
 
         #elif request.method == 'POST':
