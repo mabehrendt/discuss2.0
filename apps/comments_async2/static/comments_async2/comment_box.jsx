@@ -960,7 +960,7 @@ export const CommentBox = (props) => {
             </span>
           </div>
 
-          {!showFilters && commentCount > 0 && (
+ {/*           {!showFilters && commentCount > 0 && (
             <button
               className="btn a4-comments__filters__show-btn"
               type="button"
@@ -972,7 +972,7 @@ export const CommentBox = (props) => {
               />
               {translated.filters}
             </button>
-          )}
+          )} */}
 
           {showFilters && commentCount > 0 && (
             <button
