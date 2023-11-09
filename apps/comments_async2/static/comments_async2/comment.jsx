@@ -368,20 +368,20 @@ export default class Comment extends React.Component {
           <div className="alert alert--success a4-comments__success-notification"><i className="fas fa-check" /> {translated.successMessage}</div>}
         <div className={(this.props.is_users_own_comment ? 'a4-comments__comment a4-comments__comment-owner' : 'a4-comments__comment')}>
           <a className="a4-comments__anchor" id={'comment_' + this.props.id} href={'./?comment=' + this.props.id}>{'Comment ' + this.props.id}</a>
-          <ReportModal
-            name={'report_comment_' + this.props.id}
-            description={translated.reportTitle}
-            btnStyle="cta"
-            objectId={this.props.id}
-            contentType={this.props.comment_content_type}
-          />
-          <UrlModal
-            name={'share_comment_' + this.props.id}
-            title={translated.shareLink}
-            btnStyle="cta"
-            objectId={this.props.id}
-            url={this.getCommentUrl()}
-          />
+{/*           <ReportModal */}
+{/*             name={'report_comment_' + this.props.id} */}
+{/*             description={translated.reportTitle} */}
+{/*             btnStyle="cta" */}
+{/*             objectId={this.props.id} */}
+{/*             contentType={this.props.comment_content_type} */}
+{/*           /> */}
+{/*           <UrlModal */}
+{/*             name={'share_comment_' + this.props.id} */}
+{/*             title={translated.shareLink} */}
+{/*             btnStyle="cta" */}
+{/*             objectId={this.props.id} */}
+{/*             url={this.getCommentUrl()} */}
+{/*           /> */}
           {this.renderDeleteModal()}
           <div className={"a4-comments__box" + ((this.currentCommentQuality() === 'high') ? ' a4-comments__text--qualified' : 'a4-comments__text--highlighted')}>
             <div className="a4-comments__box--user">
@@ -471,19 +471,19 @@ export default class Comment extends React.Component {
                       </a>
                     </button>}
 
-                  {!this.props.is_deleted &&
-                    <a
-                      className="btn btn--no-border a4-comments__action-bar__btn" href={'?comment_' + this.props.id}
-                      data-bs-toggle="modal" data-bs-target={'#share_comment_' + this.props.id}
-                    ><i className="fas fa-share" /> {translated.share}
-                    </a>}
+{/*                   {!this.props.is_deleted && */}
+{/*                     <a */}
+{/*                       className="btn btn--no-border a4-comments__action-bar__btn" href={'?comment_' + this.props.id} */}
+{/*                       data-bs-toggle="modal" data-bs-target={'#share_comment_' + this.props.id} */}
+{/*                     ><i className="fas fa-share" /> {translated.share} */}
+{/*                     </a>} */}
 
-                  {!this.props.is_deleted && this.props.authenticated_user_pk && !this.props.is_users_own_comment &&
-                    <a
-                      className="btn btn--no-border a4-comments__action-bar__btn" href={'#report_comment_' + this.props.id}
-                      data-bs-toggle="modal"
-                    ><i className="fas fa-exclamation-triangle" />{translated.report}
-                    </a>}
+{/*                   {!this.props.is_deleted && this.props.authenticated_user_pk && !this.props.is_users_own_comment && */}
+{/*                     <a */}
+{/*                       className="btn btn--no-border a4-comments__action-bar__btn" href={'#report_comment_' + this.props.id} */}
+{/*                       data-bs-toggle="modal" */}
+{/*                     ><i className="fas fa-exclamation-triangle" />{translated.report} */}
+{/*                     </a>} */}
 
                 </div>
               </div>
