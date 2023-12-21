@@ -9,7 +9,8 @@ from apps.ideas import phases as ideas_phases
 from apps.interactiveevents import phases as interactiveevent_phases
 from apps.mapideas import phases as mapideas_phases
 from apps.topicprio import phases as topicprio_phases
-from apps.debateai import phases as debateai_phases
+from apps.debate_stance import phases as debate_stance_phases
+from apps.debate_quality import phases as debate_quality_phases
 
 blueprints = [
     (
@@ -178,9 +179,9 @@ blueprints = [
         ),
     ),
 (
-        "debateai",
+        "debatestance",
         ProjectBlueprint(
-            title=_("AI Debate"),
+            title=_("AI Stance Debate"),
             description=_(
                 "Participants can discuss posted topics or questions "
                 "supported by an AI. "
@@ -189,11 +190,30 @@ blueprints = [
                 "users."
             ),
             content=[
-                debateai_phases.DebateAIPhase(),
+                debate_stance_phases.DebateStancePhase(),
             ],
             image="images/debateai.svg",
             settings_model=None,
-            type="DB",
+            type="SDB",
+        ),
+    ),
+(
+        "debatequality",
+        ProjectBlueprint(
+            title=_("AI Quality Debate"),
+            description=_(
+                "Participants can discuss posted topics or questions "
+                "supported by an AI. "
+                "To do this, the participants comment on posted "
+                "topics / questions as well as on contributions from other "
+                "users."
+            ),
+            content=[
+                debate_quality_phases.DebateQualityPhase(),
+            ],
+            image="images/debateai.svg",
+            settings_model=None,
+            type="QDB",
         ),
     ),
 ]

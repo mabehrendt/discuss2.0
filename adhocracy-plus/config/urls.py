@@ -181,10 +181,17 @@ urlpatterns = [
                     ),
                 ),
                 path(
-                    "aisubjects/",
+                    "aistancesubjects/",
                     include(
-                        ("apps.debateai.urls", "a4_candy_debateai"),
-                        namespace="a4_candy_debateai",
+                        ("apps.debate_stance.urls", "a4_candy_debate_stance"),
+                        namespace="a4_candy_debate_stance",
+                    ),
+                ),
+                path(
+                    "aiqualitysubjects/",
+                    include(
+                        ("apps.debate_quality.urls", "a4_candy_debate_quality"),
+                        namespace="a4_candy_debate_quality",
                     ),
                 ),
             ]

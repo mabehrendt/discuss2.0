@@ -17,7 +17,7 @@ def react_comments_async2(context, obj, with_categories=False):
     else:
         user = None
         user_authenticated = context["user"].is_authenticated
-    debateQuestion = context["aisubject"].name
+    debateQualityQuestion = context["aiqualitysubject"].name
     anchoredCommentId = request.GET.get("comment", "")
     contenttype = ContentType.objects.get_for_model(obj)
 
@@ -39,8 +39,7 @@ def react_comments_async2(context, obj, with_categories=False):
     attributes = {
         "subjectType": contenttype.pk,
         "subjectId": obj.pk,
-        "debateQuestion": debateQuestion,
-        "stances": list(obj.stances.values("content_type", "object_id","comment_text", "stance","comment_id","creator")),
+        "debateQualityQuestion": debateQualityQuestion,
         "quality": quality,
         "commentCategoryChoices": comment_category_choices,
         "anchoredCommentId": anchoredCommentId,

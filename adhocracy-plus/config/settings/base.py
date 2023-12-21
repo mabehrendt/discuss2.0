@@ -117,7 +117,8 @@ INSTALLED_APPS = (
     "apps.polls",
     "apps.topicprio",
     "apps.debate",
-    "apps.debateai"
+    "apps.debate_quality",
+    "apps.debate_stance"
 )
 
 MIDDLEWARE = (
@@ -462,7 +463,8 @@ A4_COMMENTABLES = (
     ("a4_candy_budgeting", "proposal"),
     ("a4_candy_topicprio", "topic"),
     ("a4_candy_debate", "subject"),
-    ("a4_candy_debateai", "aisubject")
+    ("a4_candy_debate_stance", "aistancesubject"),
+    ("a4_candy_debate_quality", "aiqualitysubject")
 )
 
 A4_COMMENT_CATEGORIES = (

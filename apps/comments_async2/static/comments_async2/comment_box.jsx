@@ -809,7 +809,7 @@ export const CommentBox = (props) => {
         <div style={{width: "90%", display: "flex", flexDirection: "column", marginLeft: "30px", paddingRight: "20px", paddingLeft: "20px", marginTop: "10px"}}>
           <div className="argumentText">  Wie stehen Sie zum Diskussionsthema?</div>
           <div className="stanceBox">
-              <div className="stanceText"> {props.debateQuestion}</div>
+              <div className="stanceText"> {props.debateStanceQuestion}</div>
               <div style={{width: "100%", display: "flex", justifyContent: "center"}}>
                 <button className="forButton" onClick={e => {saveUserStance(e); showStanceModal(e); console.log("CLOSED")}}>Dafür</button>
                 <button className="againstButton" onClick={e => {saveUserStance(e); showStanceModal(e); console.log("CLOSED")}}>Dagegen</button>
