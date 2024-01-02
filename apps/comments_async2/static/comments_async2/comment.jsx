@@ -84,7 +84,7 @@ export default class Comment extends React.Component {
   componentDidMount () {
     console.log("DID MOUNT")
     this.setState({
-      showChildComments: this.props.id === this.props.anchoredCommentParentId, //|| this.props.id === this.props.stanceId,
+      showChildComments: this.props.id === this.props.anchoredCommentParentId,
       shorten: this.props.id !== this.props.anchoredCommentId,
       anchored: this.props.id === this.props.anchoredCommentId
     })

@@ -1,33 +1,30 @@
 import logging
 from django.conf import settings
+from .apps import Config
 from django.db.models import signals
 from django.dispatch import receiver
-from ai.argument_quality import QualityPredictor
-
 from adhocracy4.comments.models import Comment
 
 from .models import Quality
 
 @receiver(signals.post_save, sender=Comment)
 def get_quality(sender, instance, created, update_fields, **kwargs):
-    #print("created")
     comment_text_changed = \
     (getattr(instance, '_former_comment') != getattr(instance, 'comment'))
     if created:
-        predictor = QualityPredictor()
-        prediction, quality = predictor.make_prediction(str(instance))
-        save_quality(str(instance.comment), prediction, quality, instance.content_type, instance.object_pk, instance.id, instance.creator)
+        labels, prediction, quality  = Config.predictor.predict(str(instance))
+        save_quality(str(instance.comment), labels, prediction, quality, instance.content_type, instance.object_pk, instance.id, instance.creator)
     elif comment_text_changed:
-        predictor = QualityPredictor()
-        prediction, quality = predictor.make_prediction(str(instance))
-        update_quality(str(instance.comment), prediction, quality, instance.id)
+        labels, prediction, quality = Config.predictor.predict(str(instance))
+        update_quality(str(instance.comment), labels, prediction, quality, instance.id)
 
-def save_quality(comment, prediction, quality, content_type, object_id, comment_id, creator):
+def save_quality(comment, labels, prediction, quality, content_type, object_id, comment_id, creator):
     quality = Quality(
         content_type=content_type,
         object_id=object_id,
         comment_text=comment,
         prediction=prediction,
+        labels=labels,
         quality=quality,
         comment_id=comment_id,
         creator=creator
@@ -35,9 +32,10 @@ def save_quality(comment, prediction, quality, content_type, object_id, comment_
     #update_comment(quality)
     quality.save()
 
-def update_quality(comment, prediction, quality, comment_id):
+def update_quality(comment, labels, prediction, quality, comment_id):
     new_quality = Quality.objects.get(comment_id=comment_id)
     new_quality.prediction = prediction
+    new_quality.labels = labels
     new_quality.quality = quality
     new_quality.comment_text = comment
     update_comment(new_quality)

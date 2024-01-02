@@ -9,6 +9,7 @@ class Quality(models.Model):
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     object_id = models.PositiveIntegerField()
     prediction = models.FloatField()
+    labels = models.TextField(max_length=25)
     quality = models.TextField(max_length=4, choices=[('high', 'high'), ('low', 'low')])
 
     comment_text = models.TextField(max_length=4000)
@@ -17,7 +18,6 @@ class Quality(models.Model):
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-
     @property
     def project(self):
         return self.comment.module.project

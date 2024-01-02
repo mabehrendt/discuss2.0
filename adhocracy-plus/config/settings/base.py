@@ -70,6 +70,7 @@ INSTALLED_APPS = (
     "adhocracy4.comments",
     "adhocracy4.comments_async",
     "apps.comments_async2",
+    "apps.comments_async3",
     "adhocracy4.dashboard",
     "adhocracy4.exports",
     "adhocracy4.filters",
@@ -163,6 +164,7 @@ TEMPLATES = [
 
             'libraries':{
             'react_comments_async2': 'apps.comments_async2.templatetags.react_comments_async2',
+            'react_comments_async3': 'apps.comments_async3.templatetags.react_comments_async3',
 
             }
         },
