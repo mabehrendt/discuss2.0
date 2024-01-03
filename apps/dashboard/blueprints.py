@@ -10,6 +10,7 @@ from apps.interactiveevents import phases as interactiveevent_phases
 from apps.mapideas import phases as mapideas_phases
 from apps.topicprio import phases as topicprio_phases
 from apps.debate_stance import phases as debate_stance_phases
+from apps.debate_stance_random import phases as debate_stance_random_phases
 from apps.debate_quality import phases as debate_quality_phases
 
 blueprints = [
@@ -195,6 +196,25 @@ blueprints = [
             image="images/debateai.svg",
             settings_model=None,
             type="SDB",
+        ),
+    ),
+(
+        "debatestancerandom",
+        ProjectBlueprint(
+            title=_("Stance Debate Random"),
+            description=_(
+                "Participants can discuss posted topics or questions "
+                "supported by an AI. "
+                "To do this, the participants comment on posted "
+                "topics / questions as well as on contributions from other "
+                "users."
+            ),
+            content=[
+                debate_stance_random_phases.DebateStanceRandomPhase(),
+            ],
+            image="images/debateai.svg",
+            settings_model=None,
+            type="SRDB",
         ),
     ),
 (
