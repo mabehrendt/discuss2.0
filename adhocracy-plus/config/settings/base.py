@@ -119,7 +119,8 @@ INSTALLED_APPS = (
     "apps.topicprio",
     "apps.debate",
     "apps.debate_quality",
-    "apps.debate_stance"
+    "apps.debate_stance",
+    "apps.debate_stance_random"
 )
 
 MIDDLEWARE = (
@@ -466,6 +467,7 @@ A4_COMMENTABLES = (
     ("a4_candy_topicprio", "topic"),
     ("a4_candy_debate", "subject"),
     ("a4_candy_debate_stance", "aistancesubject"),
+    ("a4_candy_debate_stance_random", "stancerandomsubject"),
     ("a4_candy_debate_quality", "aiqualitysubject")
 )
 
