@@ -3,9 +3,11 @@ from django.utils.translation import gettext_lazy as _
 
 from adhocracy4.comments.models import Comment
 from django.contrib.contenttypes.models import ContentType
+from adhocracy4.models import base
+
 from django.contrib.contenttypes.fields import GenericForeignKey
 
-class Quality(models.Model):
+class Quality(base.TimeStampedModel):
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     object_id = models.PositiveIntegerField()
     prediction = models.FloatField()

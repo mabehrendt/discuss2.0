@@ -5,5 +5,14 @@ class QualitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Quality
         fields = [
-            'content_type', 'object_id', 'prediction', 'quality', 'comment_text', 'comment_id', 'creator'
+            'content_type',
+            'object_id',
+            'prediction',
+            'quality',
+            'comment_text',
+            'comment_id',
+            'creator',
+            'created',
+            'modified'
+
         ]
