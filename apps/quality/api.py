@@ -35,8 +35,6 @@ class QualityViewSet(
             #print(qualities)
             serializer = QualitySerializer(qualities, many=True)
             response = JsonResponse(serializer.data, safe=False)
-            print("QUALITY API")
-            print(serializer.data)
             #print(response)
             return response
 
