@@ -64,8 +64,8 @@ export const CommentBox = (props) => {
   const [showFilters, setShowFilters] = useState(false)
   const [filter, setFilter] = useState([])
   const [filterDisplay, setFilterDisplay] = useState(django.gettext('all'))
-  const [sort, setSort] = useState(props.useModeratorMarked ? 'mom' : 'new')
-  /*const [sort, setSort] = useState(props.quality ? 'qua' : 'new')*/
+  /*const [sort, setSort] = useState(props.useModeratorMarked ? 'mom' : 'new')*/
+  const [sort, setSort] = useState(props.quality ? 'qua' : 'new')
   const [loading, setLoading] = useState(true)
   const [loadingFilter, setLoadingFilter] = useState(false)
   const [search, setSearch] = useState('')
@@ -89,11 +89,11 @@ export const CommentBox = (props) => {
     if (props.useModeratorMarked) {
       sorts.mom = django.gettext('Highlighted')
     }
- /*   if (props.quality) {
-      sorts.qua = django.gettext('Highest quality')
-    }*/
+
     const params = {}
     params.ordering = sort
+    params.objectPk = props.subjectId
+    params.contentTypeId = props.subjectType
     params.urlReplaces = urlReplaces
     if (props.anchoredCommentId) {
       params.commentID = props.anchoredCommentId
@@ -165,7 +165,8 @@ export const CommentBox = (props) => {
          */
       }
       //console.log(sort)
-      //fetchSorted(sort)
+      console.log("SORT!")
+      fetchSorted(sort)
       setLoading(false)
       setWouldHaveCommentingPermission(data.would_have_commenting_permission)
     }
@@ -386,6 +387,8 @@ export const CommentBox = (props) => {
       search,
       urlReplaces
     }
+
+    console.log("sorting")
 
     api.comments.get(params).done((result) => {
       const data = result

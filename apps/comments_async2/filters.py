@@ -63,10 +63,13 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
             elif ordering == "mom":
                 return queryset.order_by("-is_moderator_marked", "-created")
             elif ordering == "qua":
+                print("GET TEST:")
+                print(request.GET)
+                print(queryset)
                 qualities = Quality.objects.filter(object_id=request.GET["objectPk"]).filter(
                     content_type_id=request.GET["contentTypeId"]
                 )
-                qualities = qualities.order_by("-prediction", "quality")
+                qualities = qualities.order_by("-prediction")
 
                 new_queryset = []
                 for j in range(len(qualities)):
