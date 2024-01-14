@@ -166,6 +166,7 @@ export const CommentBox = (props) => {
       }
       //console.log(sort)
       console.log("SORT!")
+      console.log("MOTHERFUCKER!")
       fetchSorted(sort)
       setLoading(false)
       setWouldHaveCommentingPermission(data.would_have_commenting_permission)
