@@ -110,7 +110,7 @@ export const CommentBox = (props) => {
     if (props.anchoredCommentId) {
       params.commentID = props.anchoredCommentId
     }
-
+    console.log("Plop")
     console.log(props)
 
     if (props.user.user_auth) {
@@ -212,7 +212,7 @@ export const CommentBox = (props) => {
     if(modalQuestState.isOpen){
       if(questModalFirstTime){
         console.log("STARTED STANCE TIMER")
-        setTimeout(countDownStance, 2000, "");
+        setTimeout(countDownStance, 20000, "");
         setQuestModalFirstTime(false)
       }
       if(!openQuestClicked) {
@@ -286,7 +286,7 @@ export const CommentBox = (props) => {
     }else{
       if(!showStanceButtons){
         console.log("STARTED STANCE TIMER")
-        setTimeout(countDownStance, 2000, _userStance);
+        setTimeout(countDownStance, 10000, _userStance);
       }
     }
     // Check if we're at zero.
@@ -752,7 +752,7 @@ export const CommentBox = (props) => {
    if (showQuestButtons && showStanceButtons) {
       return(
         <div className="buttonBox">
-          <Badge color="primary" badgeContent="Befragung!" invisible={questBadgeInvisible}>
+          <Badge color="primary" badgeContent="Einführung!" invisible={questBadgeInvisible}>
             <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen-white.png")} alt="Quest" /></button>
           </Badge>
           <button className="stanceButton"  onClick={showStanceModal}> <img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase-white.png")} alt="Sprechblase" /> </button>
@@ -761,7 +761,7 @@ export const CommentBox = (props) => {
     } else if (showQuestButtons){
       return(
         <div className="buttonBox">
-          <Badge color="primary" badgeContent="Befragung!" invisible={questBadgeInvisible}>
+          <Badge color="primary" badgeContent="Einführung!" invisible={questBadgeInvisible}>
             <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen-white.png")} alt="Quest" /></button>
           </Badge>
         </div>

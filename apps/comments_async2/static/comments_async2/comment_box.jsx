@@ -98,6 +98,8 @@ export const CommentBox = (props) => {
     if (props.anchoredCommentId) {
       params.commentID = props.anchoredCommentId
     }
+    
+    console.log("BIG TEST2")
 
     //setTimer(setInterval(refreshComments, 5000))
     api.qualities.get(params).done(handleQualities).fail()
