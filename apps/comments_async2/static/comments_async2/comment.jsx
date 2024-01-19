@@ -155,8 +155,17 @@ export default class Comment extends React.Component {
   }
 
   currentCommentQuality () {
-    for (let i = 0; i < this.props.quality.length; i++) {
-      if (this.props.quality[i].comment_id === this.props.id) {
+    let sortedQualities = this.props.quality.sort((q1,q2) => {
+      if(q1.prediction < q2.prediction) {
+        return 1;
+      }
+      else if(q1.prediction >= q2.prediction && q1.created > q2.created){
+        return -1;
+       }
+      else{
+        return 0;}}).slice(0,3)
+    for (let i = 0; i < sortedQualities.length; i++) {
+      if (sortedQualities[i].comment_id === this.props.id) {
         return this.props.quality[i].quality
       }
     }
@@ -513,7 +522,6 @@ export default class Comment extends React.Component {
                       agreedTermsOfUse={this.props.agreedTermsOfUse}
                       orgTermsUrl={this.props.orgTermsUrl}
                       quality={this.props.quality}
-                      prediction={this.props.prediction}
                     />
                   </div>
                 </div>

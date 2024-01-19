@@ -65,7 +65,7 @@ export const CommentBox = (props) => {
   const [filter, setFilter] = useState([])
   const [filterDisplay, setFilterDisplay] = useState(django.gettext('all'))
   /*const [sort, setSort] = useState(props.useModeratorMarked ? 'mom' : 'new')*/
-  const [sort, setSort] = useState(props.quality ? 'qua' : 'new')
+  const [sort, setSort] = useState('qua')
   const [loading, setLoading] = useState(true)
   const [loadingFilter, setLoadingFilter] = useState(false)
   const [search, setSearch] = useState('')
@@ -98,8 +98,6 @@ export const CommentBox = (props) => {
     if (props.anchoredCommentId) {
       params.commentID = props.anchoredCommentId
     }
-    
-    console.log("BIG TEST2")
 
     //setTimer(setInterval(refreshComments, 5000))
     api.qualities.get(params).done(handleQualities).fail()
@@ -166,9 +164,6 @@ export const CommentBox = (props) => {
          * probably using a modal
          */
       }
-      //console.log(sort)
-      console.log("SORT!")
-      console.log("MOTHERFUCKER!")
       fetchSorted(sort)
       setLoading(false)
       setWouldHaveCommentingPermission(data.would_have_commenting_permission)
@@ -399,7 +394,7 @@ export const CommentBox = (props) => {
       setComments(data.results)
       setNextComments(data.next)
       setCommentCount(data.count)
-      setSort(order)
+      /*setSort(order)*/
       setLoadingFilter(false)
     })
   }
