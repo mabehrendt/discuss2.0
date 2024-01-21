@@ -66,7 +66,7 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
                 qualities = Quality.objects.filter(object_id=request.GET["objectPk"]).filter(
                     content_type_id=request.GET["contentTypeId"]
                 )
-                qualities = qualities.order_by("-prediction", "-created")
+                qualities = qualities.order_by("quality","-created")
                 new_queryset = []
                 for j in range(len(qualities)):
                     for i in range(len(queryset)):

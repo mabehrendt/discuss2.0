@@ -156,14 +156,8 @@ export default class Comment extends React.Component {
 
   currentCommentQuality () {
     let sortedQualities = this.props.quality.sort((q1,q2) => {
-      if(q1.prediction < q2.prediction) {
-        return 1;
-      }
-      else if(q1.prediction >= q2.prediction && q1.created > q2.created){
-        return -1;
-       }
-      else{
-        return 0;}}).slice(0,3)
+      return q2.prediction - q1.prediction || q2.comment_id - q1.comment_id }).slice(0,3)
+    console.log(sortedQualities)
     for (let i = 0; i < sortedQualities.length; i++) {
       if (sortedQualities[i].comment_id === this.props.id) {
         return this.props.quality[i].quality
