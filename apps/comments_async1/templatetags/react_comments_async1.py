@@ -9,7 +9,7 @@ from django.utils.html import format_html
 register = template.Library()
 
 @register.simple_tag(takes_context=True)
-def react_comments_async4(context, obj, with_categories=False):
+def react_comments_async1(context, obj, with_categories=False):
     request = context["request"]
     if context["user"].is_authenticated:
         user = context["user"].email
@@ -17,7 +17,7 @@ def react_comments_async4(context, obj, with_categories=False):
     else:
         user = None
         user_authenticated = context["user"].is_authenticated
-    debateStanceQuestion = context["stancerandomsubject"].name
+    debateQualityQuestion = context["qualityrandomsubject"].name
     anchoredCommentId = request.GET.get("comment", "")
     contenttype = ContentType.objects.get_for_model(obj)
 
@@ -38,8 +38,7 @@ def react_comments_async4(context, obj, with_categories=False):
     attributes = {
         "subjectType": contenttype.pk,
         "subjectId": obj.pk,
-        "debateStanceQuestion": debateStanceQuestion,
-        "stances": list(obj.stances.values("content_type", "object_id","comment_text", "stance","comment_id","creator")),
+        "debateQualityQuestion": debateQualityQuestion,
         "commentCategoryChoices": comment_category_choices,
         "anchoredCommentId": anchoredCommentId,
         "withCategories": with_categories,
@@ -48,6 +47,6 @@ def react_comments_async4(context, obj, with_categories=False):
     }
 
     return format_html(
-        '<div data-a4-widget="comment_async4" data-attributes="{attributes}"></div>',
+        '<div data-a4-widget="comment_async1" data-attributes="{attributes}"></div>',
         attributes=json.dumps(attributes),
     )

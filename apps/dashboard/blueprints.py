@@ -12,6 +12,8 @@ from apps.topicprio import phases as topicprio_phases
 from apps.debate_stance import phases as debate_stance_phases
 from apps.debate_stance_random import phases as debate_stance_random_phases
 from apps.debate_quality import phases as debate_quality_phases
+from apps.debate_quality_random import phases as debate_quality_random_phases
+
 
 blueprints = [
     (
@@ -234,6 +236,25 @@ blueprints = [
             image="images/debateai.svg",
             settings_model=None,
             type="QDB",
+        ),
+    ),
+(
+        "debatequalityrandom",
+        ProjectBlueprint(
+            title=_("Quality Random Debate"),
+            description=_(
+                "Participants can discuss posted topics or questions "
+                "supported by an AI. "
+                "To do this, the participants comment on posted "
+                "topics / questions as well as on contributions from other "
+                "users."
+            ),
+            content=[
+                debate_quality_random_phases.DebateQualityRandomPhase(),
+            ],
+            image="images/debateai.svg",
+            settings_model=None,
+            type="QRDB",
         ),
     ),
 ]
