@@ -11,6 +11,7 @@ register = template.Library()
 @register.simple_tag(takes_context=True)
 def react_comments_async4(context, obj, with_categories=False):
     request = context["request"]
+    print(context)
     if context["user"].is_authenticated:
         user = context["user"].email
         user_authenticated = context["user"].is_authenticated
