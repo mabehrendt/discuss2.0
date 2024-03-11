@@ -72,3 +72,4 @@ media/
 
 # ai models
 ai/
+ai/stance_detection.py
