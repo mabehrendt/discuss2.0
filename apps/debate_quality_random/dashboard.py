@@ -44,7 +44,7 @@ class QualityRandomSubjectEditComponent(DashboardComponent):
                 'qualityrandomsubject-create'
             ),
             (
-                r'^aiqualitysubjects/(?P<year>\d{4})-(?P<pk>\d+)/update/$',
+                r'^qualityrandomsubjects/(?P<year>\d{4})-(?P<pk>\d+)/update/$',
                 views.QualityRandomSubjectUpdateView.as_view(component=self),
                 'qualityrandomsubject-update'
             ),

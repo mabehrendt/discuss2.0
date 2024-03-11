@@ -17,7 +17,7 @@ def react_comments_async1(context, obj, with_categories=False):
     else:
         user = None
         user_authenticated = context["user"].is_authenticated
-    debateQualityQuestion = context["qualityrandomsubject"].name
+    debateQualityQuestion = context["aiqualitysubject"].name
     anchoredCommentId = request.GET.get("comment", "")
     contenttype = ContentType.objects.get_for_model(obj)
 

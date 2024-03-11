@@ -53,9 +53,9 @@ class QualityRandomSubjectCommentExportView(PermissionRequiredMixin,
         return self.module
 
     def get_queryset(self):
-        comments = (Comment.objects.filter(aiqualitysubject__module=self.module) |
+        comments = (Comment.objects.filter(qualityrandomsubject__module=self.module) |
                     Comment.objects.filter(
-                    parent_comment__aiqualitysubject__module=self.module))
+                    parent_comment__qualityrandomsubject__module=self.module))
 
         return comments
 

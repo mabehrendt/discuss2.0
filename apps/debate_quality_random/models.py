@@ -35,10 +35,10 @@ class QualityRandomSubject(module_models.Item):
                     'shown in the participation if it is filled out.')
     )
 
-    qualities = GenericRelation(models_quality.Quality, related_query_name="aiqualitysubject", object_id_field='object_id')
+    qualities = GenericRelation(models_quality.Quality, related_query_name="qualityrandomsubject", object_id_field='object_id')
 
     comments = GenericRelation(comment_models.Comment,
-                               related_query_name='aiqualitysubject',
+                               related_query_name='qualityrandomsubject',
                                object_id_field='object_pk')
 
     objects = QualityRandomSubjectQuerySet.as_manager()
