@@ -20,7 +20,6 @@ class QualityViewSet(
     ContentTypeMixin,
     viewsets.GenericViewSet,
 ):
-    @api_view(['GET'])
     def quality_list(request, ct_id, object_pk):
         """
         List all code snippets, or create a new snippet.
@@ -37,6 +36,13 @@ class QualityViewSet(
             response = JsonResponse(serializer.data, safe=False)
             #print(response)
             return response
+        
+        elif request.method == 'DELETE':
+            print("REQUEST ID:", request.path.split('/')[-2])
+            id = request.path.split('/')[-2]
+            quality = Quality.objects.filter(content_type=ct_id, object_id=object_pk, comment_id=id)
+            quality.delete()
+            return HttpResponse(status=204)
 
         #elif request.method == 'POST':
         #    data = JSONParser().parse(request)

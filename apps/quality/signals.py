@@ -9,13 +9,11 @@ from .models import Quality
 
 @receiver(signals.post_save, sender=Comment)
 def get_quality(sender, instance, created, update_fields, **kwargs):
-    comment_text_changed = \
-    (getattr(instance, '_former_comment') != getattr(instance, 'comment'))
+    comment_text_changed = (getattr(instance, '_former_comment') != getattr(instance, 'comment'))
+    labels, prediction, quality  = Config.predictor.predict(str(instance))
     if created:
-        labels, prediction, quality  = Config.predictor.predict(str(instance))
         save_quality(str(instance.comment), labels, prediction, quality, instance.content_type, instance.object_pk, instance.id, instance.creator)
     elif comment_text_changed:
-        labels, prediction, quality = Config.predictor.predict(str(instance))
         update_quality(str(instance.comment), labels, prediction, quality, instance.id)
 
 def save_quality(comment, labels, prediction, quality, content_type, object_id, comment_id, creator):

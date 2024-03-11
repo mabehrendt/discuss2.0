@@ -586,6 +586,19 @@ export const CommentBox = (props) => {
           editError: false,
           errorMessage: undefined
         })
+
+        const delete_stanceData = {
+          urlReplaces: urlReplaces,
+          content_type: props.subjectType,
+          object_id: props.subjectId,
+        }
+        // DELETE STANCES
+        api.stances.delete(delete_stanceData, comment.id).done((result) => {
+          console.log("STANCE DELETED")
+        }).fail((xhr, status, err) => {
+          const newErrorMessage = Object.values(xhr.responseJSON)[0]
+          setEditError(index, parentIndex, newErrorMessage)
+        })
       })
       .fail((xhr, status, err) => {
         const newErrorMessage = Object.values(xhr.responseJSON)[0]

@@ -70,7 +70,6 @@ class UserStanceViewSet(
 
             return JsonResponse(serializer.errors, status=400)
 
-
 class StanceViewSet(
     mixins.CreateModelMixin,
     mixins.ListModelMixin,
@@ -87,3 +86,10 @@ class StanceViewSet(
             response = JsonResponse(serializer.data, safe=False)
 
             return response
+        
+        elif request.method == "DELETE":
+            print("REQUEST DATA", request.path.split("/")[-2])
+            id = request.path.split("/")[-2]
+            stances = Stance.objects.filter(content_type=ct_id, object_id=object_pk, comment_id=id)
+            stances.delete()
+            return HttpResponse(status=204)
