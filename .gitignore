@@ -73,3 +73,4 @@ media/
 # ai models
 ai/
 ai/stance_detection.py
+adhocracy-plus/static/adhocracy4.js
