@@ -69,8 +69,10 @@ INSTALLED_APPS = (
     "adhocracy4.ckeditor",
     "adhocracy4.comments",
     "adhocracy4.comments_async",
+    "apps.comments_async1",
     "apps.comments_async2",
     "apps.comments_async3",
+    "apps.comments_async4",
     "adhocracy4.dashboard",
     "adhocracy4.exports",
     "adhocracy4.filters",
@@ -118,6 +120,7 @@ INSTALLED_APPS = (
     "apps.polls",
     "apps.topicprio",
     "apps.debate",
+    "apps.debate_quality_random",
     "apps.debate_quality",
     "apps.debate_stance",
     "apps.debate_stance_random"
@@ -164,8 +167,10 @@ TEMPLATES = [
             ],
 
             'libraries':{
+            'react_comments_async1': 'apps.comments_async1.templatetags.react_comments_async1',
             'react_comments_async2': 'apps.comments_async2.templatetags.react_comments_async2',
             'react_comments_async3': 'apps.comments_async3.templatetags.react_comments_async3',
+            'react_comments_async4': 'apps.comments_async4.templatetags.react_comments_async4',
 
             }
         },
@@ -468,7 +473,8 @@ A4_COMMENTABLES = (
     ("a4_candy_debate", "subject"),
     ("a4_candy_debate_stance", "aistancesubject"),
     ("a4_candy_debate_stance_random", "stancerandomsubject"),
-    ("a4_candy_debate_quality", "aiqualitysubject")
+    ("a4_candy_debate_quality", "aiqualitysubject"),
+    ("a4_candy_debate_quality_random", "qualityrandomsubject")
 )
 
 A4_COMMENT_CATEGORIES = (

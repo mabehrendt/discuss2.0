@@ -43,6 +43,7 @@ from apps.userdashboard.api import ModerationCommentViewSet
 from apps.userdashboard.routers import ModerationDetailDefaultRouter
 from apps.users.api import UserViewSet
 from apps.users.decorators import user_is_project_admin
+from apps.account.views import CustomLoginView
 
 router = routers.DefaultRouter()
 router.register(r"follows", FollowViewSet, basename="follows")
@@ -95,6 +96,7 @@ urlpatterns = [
     re_path(r"^django-admin/", admin.site.urls),
     re_path(r"^admin/", include("wagtail.admin.urls")),
     re_path(r"^documents/", include(wagtaildocs_urls)),
+    path('accounts/login/', CustomLoginView.as_view(), name='account_login'),
     re_path(r"^accounts/", include("allauth.urls")),
     re_path(r"^account/", include("apps.account.urls")),
     re_path(r"^profile/", include("apps.users.urls")),
@@ -194,9 +196,23 @@ urlpatterns = [
                         namespace="a4_candy_debate_quality",
                     ),
                 ),
+                path(
+                    "stancerandomsubjects/",
+                    include(
+                        ("apps.debate_stance_random.urls", "a4_candy_debate_stance_random"),
+                        namespace="a4_candy_debate_stance_random",
+                    ),
+                ),
+                path(
+                    "qualityrandomsubjects/",
+                    include(
+                        ("apps.debate_quality_random.urls", "a4_candy_debate_quality_random"),
+                        namespace="a4_candy_debate_quality_random",
+                    ),
+                ),
             ]
         ),
-    ),
+    ), 
     path("sitemap.xml", static_sitemap_index, name="static-sitemap-index"),
     path("sitemap-wagtail.xml", wagtail_sitemap, name="wagtail-sitemap"),
     path(

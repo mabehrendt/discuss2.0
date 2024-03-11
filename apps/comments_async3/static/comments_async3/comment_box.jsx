@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import django from 'django'
 import update from 'immutability-helper'
 import Badge from '@mui/material/Badge';
-import './collapsible.css'
+import '../../../../adhocracy-plus/static/collapsible.css'
 
 import CommentForm from './comment_form'
 import CommentList from './comment_list'
@@ -50,9 +50,13 @@ export const CommentBox = (props) => {
   }
 
   const [showQuestButtons, setShowQuestButtons] = useState(false)
+  const [showFaqButtons, setShowFaqButtons] = useState(false)
   const [showStanceButtons, setShowStanceButtons] = useState(false)
-  const [questBadgeInvisible, setQuestBadgeInvisible] = useState(true)
+  const [questBadgeInvisible, setQuestBadgeInvisible] = useState(false)
+  const [faqBadgeInvisible, setFaqBadgeInvisible] = useState(false)
+
   const [openQuestClicked, setOpenQuestClicked] = useState(false)
+  const [openFaqClicked, setOpenFaqClicked] = useState(false)
   const [questModalFirstTime, setQuestModalFirstTime] = useState(true)
   const [commentFromStanceModal, setCommentFromStanceModal] = useState(false)
 
@@ -62,6 +66,7 @@ export const CommentBox = (props) => {
   const [stanceID, setStanceID] = useState(0)
   const [creatorId, setCreatorId] = useState(0)
   const [modalQuestState, setModalQuestState] = useState({isOpen: false})
+  const [modalFaqState, setModalFaqState] = useState({isOpen: false})
   const [modalStanceState, setModalStanceState] = useState({isOpen: false})
   const [firstStanceAnswered, setFirstStanceAnswered] = useState({answered: false})
 
@@ -179,9 +184,8 @@ export const CommentBox = (props) => {
 
   }
 
-  function openQuest(){
-    window.open("https://google.com", "_blank", "noreferrer")
-
+  function videoWatched(){
+    console.log("VIDEO WATCHED")
     const urlReplaces = {
       objectPk: props.subjectId,
       contentTypeId: props.subjectType
@@ -198,13 +202,17 @@ export const CommentBox = (props) => {
       creator_id: creatorId,
       payload: payload
     }
-    setQuestBadgeInvisible(true)
-    showQuestModal()
+    setQuestBadgeInvisible(false)
+    //showQuestModal()
 
     api.userstances.change(u_stanceData).fail()
   }
 
-
+  {
+    /*
+      SHOW MODALS STANCE, VIDEO AND FAQ
+    */
+  }
   function showQuestModal(){
     console.log("QUEST MODAL")
     console.log(modalQuestState.isOpen)
@@ -212,17 +220,22 @@ export const CommentBox = (props) => {
     if(modalQuestState.isOpen){
       if(questModalFirstTime){
         console.log("STARTED STANCE TIMER")
-        setTimeout(countDownStance, 20000, "");
+        setTimeout(countDownStance, 5000, "")
         setQuestModalFirstTime(false)
+        videoWatched()
       }
-      if(!openQuestClicked) {
-        setQuestBadgeInvisible(false)
-      }
+
+      console.log("CLICKED QUEST MODAL")
+      setQuestBadgeInvisible(false)
     }else{
       setQuestBadgeInvisible(true)
     }
 
     setModalQuestState({isOpen: !modalQuestState.isOpen})
+  }
+
+  function showFaqModal(){
+    
   }
 
   function showStanceModal(e){
@@ -236,6 +249,13 @@ export const CommentBox = (props) => {
     }else{
       setModalStanceState({isOpen: !modalStanceState.isOpen})
     }
+  }
+
+  {
+    /*
+    SAVE USER STANCE
+    Save the initial stance of a user. This is used to determine the stance of the user in the discussion.
+    */
   }
 
   function saveUserStance(e) {
@@ -276,31 +296,16 @@ export const CommentBox = (props) => {
     }
   }
 
-  function countDown(_openQuestClicked, _userStance) {
-    console.log("TIMER FIRED")
-    // Remove one second, set state so a re-render happens.
-    console.log(modalQuestState.isOpen)
-    console.log(_openQuestClicked)
-    if(!_openQuestClicked) {
-      showQuestModal()
-    }else{
-      if(!showStanceButtons){
-        console.log("STARTED STANCE TIMER")
-        setTimeout(countDownStance, 10000, _userStance);
-      }
-    }
-    // Check if we're at zero.
-    setShowQuestButtons(true)
-  }
-
-  function countDownStance(_userStance) {
-    // Check if user's general stance has been asked
-    if (userStance != "" || _userStance != ""){
-      setFirstStanceAnswered({answered: true})
-    }
-    showStanceModal()
-    // Check if we're at zero.
-    setShowStanceButtons(true)
+  function handleUserStanceChange(result){
+    // Get new stances from api
+    console.log(result)
+    const params = {}
+    params.urlReplaces = urlReplaces
+    api.stances.get(params).done((stanceResult) => {
+      console.log(stanceResult)
+      chooseStanceComment(stanceResult, props.user.user, result.user_stance)
+    })
+    // Call chooseStanceComment with stances
   }
 
   function handleUserstances(result){
@@ -337,6 +342,42 @@ export const CommentBox = (props) => {
     }
   }
 
+  {
+    /*
+    COUNTDOWN TIMER
+    Countdown timers for Stance modal
+    */
+  }  
+
+  function countDown(_openQuestClicked, _userStance) {
+    console.log("TIMER FIRED")
+    // Remove one second, set state so a re-render happens.
+    console.log(modalQuestState.isOpen)
+    console.log(_openQuestClicked)
+    if(!_openQuestClicked) {
+      showQuestModal()
+    }else{
+      if(!showStanceButtons){
+        console.log("STARTED STANCE TIMER")
+        setTimeout(countDownStance, 5000, _userStance);
+      }
+    }
+    // Check if we're at zero.
+    setShowQuestButtons(true)
+  }
+
+  function countDownStance(_userStance) {
+    // Check if user's general stance has been asked
+    if (userStance != "" || _userStance != ""){
+      setFirstStanceAnswered({answered: true})
+    }
+    showStanceModal()
+    // Check if we're at zero.
+    setShowStanceButtons(true)
+  }
+
+
+
   function chooseStanceComment (stances, user, _userStance){
     let filteredStances = []
     console.log("CHOOSE STANCE COMMENT")
@@ -364,18 +405,6 @@ export const CommentBox = (props) => {
       setNoStancesFound(true)
     }
 
-  }
-
-  function handleUserStanceChange(result){
-    // Get new stances from api
-    console.log(result)
-    const params = {}
-    params.urlReplaces = urlReplaces
-    api.stances.get(params).done((stanceResult) => {
-      console.log(stanceResult)
-      chooseStanceComment(stanceResult, props.user.user, result.user_stance)
-    })
-    // Call chooseStanceComment with stances
   }
 
   function handleComments (result) {
@@ -748,36 +777,88 @@ export const CommentBox = (props) => {
     }
   }
 
+  {
+    /*
+    RENDER BUTTONS
+    */
+  }
   function renderButtons() {
    if (showQuestButtons && showStanceButtons) {
       return(
-        <div className="buttonBox">
-          <Badge color="primary" badgeContent="Einführung!" invisible={questBadgeInvisible}>
-            <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen-white.png")} alt="Quest" /></button>
+        <div>
+          <div className="buttonBox">
+            <Badge color="primary" badgeContent="Einführung!" invisible={questBadgeInvisible}>
+              <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/video.png")} alt="Quest" /></button>
+            </Badge>
+            <button className="stanceButton"  onClick={showStanceModal}> <img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase-white.png")} alt="Sprechblase" /> </button>
+          </div>
+          <div className="buttonBox2">
+          <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="Infos!" invisible={faqBadgeInvisible}>
+            <button className="faqButton" onClick={showFaqModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/faq-white.png")} alt="FAQ" /></button>
           </Badge>
-          <button className="stanceButton"  onClick={showStanceModal}> <img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase-white.png")} alt="Sprechblase" /> </button>
+          </div>
         </div>
       )
     } else if (showQuestButtons){
       return(
-        <div className="buttonBox">
-          <Badge color="primary" badgeContent="Einführung!" invisible={questBadgeInvisible}>
-            <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen-white.png")} alt="Quest" /></button>
-          </Badge>
+        <div>
+          <div className="buttonBox">
+            <Badge color="primary" badgeContent="Einführung!" invisible={questBadgeInvisible}>
+              <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/video.png")} alt="Quest" /></button>
+            </Badge>
+          </div> 
+          <div className="buttonBox2">
+            <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="Infos!" invisible={faqBadgeInvisible}>
+              <button className="faqButton" onClick={showFaqModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/faq-white.png")} alt="FAQ" /></button>
+            </Badge>
+          </div>
         </div>
       )
     }
+  }
+
+  {
+    /*
+    RENDER MODALS
+    */
   }
 
   function renderQuestModal() {
     return(
       <Modal show={modalQuestState.isOpen}>
             <div className="questModal" id="questModal">
-              <img className="questblase" src={require("../../../../adhocracy-plus/static/stance_icons/comment-pen.png")} alt="Quest" />
+              <img className="questblase" src={require("../../../../adhocracy-plus/static/stance_icons/video.png")} alt="Quest" />
               <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showQuestModal(e); console.log("CLOSED")}}/></button>
               <div style={{display: "flex", flexDirection: "column", padding: "20px", paddingLeft: "0px"}}>
-                <div className="argumentText"> Wir bitten Sie an einer Umfrage teilzunehmen!</div>
-                <button className="questButtonModal" onClick={openQuest}>Hier gehts zur Umfrage!</button>
+                {/* Embed video here */}
+                <iframe class="introVideo" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                {/* <video controls style={{ marginLeft: '5%' }}>
+                  <source src="/static/stance_icons/BigBuckBunny.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video> */}
+                 {/* <div className="argumentText"> Wir bitten Sie an einer Umfrage teilzunehmen!</div>
+                <button className="questButtonModal" onClick={openQuest}>Hier gehts zur Umfrage!</button>  */}
+              </div>
+            </div>
+      </Modal>
+    )
+  }
+
+  function renderFaqModal() {
+    return(
+      <Modal show={modalQuestState.isOpen}>
+            <div className="questModal" id="questModal">
+              <img className="questblase" src={require("../../../../adhocracy-plus/static/stance_icons/video.png")} alt="Quest" />
+              <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showQuestModal(e); console.log("CLOSED")}}/></button>
+              <div style={{display: "flex", flexDirection: "column", padding: "20px", paddingLeft: "0px"}}>
+                {/* Embed video here */}
+                <iframe class="introVideo" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                {/* <video controls style={{ marginLeft: '5%' }}>
+                  <source src="/static/stance_icons/BigBuckBunny.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video> */}
+                 {/* <div className="argumentText"> Wir bitten Sie an einer Umfrage teilzunehmen!</div>
+                <button className="questButtonModal" onClick={openQuest}>Hier gehts zur Umfrage!</button>  */}
               </div>
             </div>
       </Modal>
@@ -891,6 +972,11 @@ export const CommentBox = (props) => {
     }
   }
 
+  {
+    /*
+    RENDER MAIN THREAD
+    */
+  }
   function onRenderFinished () {
     setAnchorRendered(true)
   }

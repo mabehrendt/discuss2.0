@@ -8,7 +8,20 @@ from django.http import HttpResponse, JsonResponse
 from django.contrib.contenttypes.models import ContentType
 from rest_framework.parsers import JSONParser
 from apps.stance.models import UserStance, Stance
-from apps.stance.serializers import UserStanceSerializer, StanceSerializer
+from apps.stance.serializers import UserStanceSerializer, UsedStanceSerializer, StanceSerializer
+
+class UsedStanceViewSet(
+    mixins.CreateModelMixin,
+    mixins.ListModelMixin,
+    mixins.RetrieveModelMixin,
+    mixins.UpdateModelMixin,
+    mixins.DestroyModelMixin,
+    ContentTypeMixin,
+    viewsets.GenericViewSet,
+):
+    def usedstance_list(request, ct_id, object_pk):
+        pass
+
 
 class UserStanceViewSet(
     mixins.CreateModelMixin,

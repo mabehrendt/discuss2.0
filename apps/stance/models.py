@@ -51,3 +51,17 @@ class UserStance(models.Model):
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
+
+
+class UsedStance(models.Model):
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    content_object = GenericForeignKey(ct_field="content_type", fk_field="object_id")
+
+    comment_id = models.PositiveIntegerField()
+
+    creator = models.TextField(max_length=200)
+    creator_id = models.CharField(max_length=500)
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
