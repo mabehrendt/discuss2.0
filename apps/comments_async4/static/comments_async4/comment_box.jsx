@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import django from 'django'
 import update from 'immutability-helper'
 import Badge from '@mui/material/Badge';
-import '../../../../adhocracy-plus/static/collapsible.css'
+import "../../../../adhocracy-plus/static/collapsible.css";
 
 import CommentForm from './comment_form'
 import CommentList from './comment_list'
@@ -383,14 +383,15 @@ export const CommentBox = (props) => {
     console.log("CHOOSE STANCE COMMENT")
     console.log(_userStance)
     if (_userStance !== "") {
-      for (let i = 0; i < stances.length; i++) {      // Get first instance
+      for (let i = 0; i < stances.length; i++) {   
         let stance = stances[i]
-          if (stance.creator !== user && stanceMap[stance.stance] !== stanceMap[_userStance]) {
+          if (stance.creator !== user) {
             filteredStances.push(stance)
           }
         }
     }
-
+    
+    {/* Choose a random stance from the filtered stances that is not from the user */}
     if (filteredStances.length > 0){
       console.log("STANCE FOUND")
       const random_index = getRandomInt(0, filteredStances.length - 1)
