@@ -73,6 +73,9 @@ media/
 # ai models
 ai/
 ai/stance_detection.py
+
+# static files
+adhocracy-plus/static/*
 adhocracy-plus/static/adhocracy4.js
 adhocracy-plus/static/a4maps_choose_point.css
 adhocracy-plus/static/a4maps_choose_point.js
