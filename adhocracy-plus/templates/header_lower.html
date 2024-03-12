@@ -6,18 +6,18 @@
         {% if request.user.is_superuser %}
             <nav class="header-lower__nav">
 
-                {% if organisation.logo %}
+               <!-- {% if organisation.logo %}
                   {% url 'organisation' organisation_slug=organisation.slug as organisation_url %}
                     <a href="{% url 'organisation' organisation_slug=organisation.slug %}" class="header-lower__logo-box" rel="home">
                         <img src="{% thumbnail organisation.logo '0x160' %}" height="80" alt="{{ organisation.name }}" class="header-lower__logo-img" />
                     </a>
                 {% else %}
                   <div class="header-lower__brand u-bg-body">
-                    <a class="header-lower__brand--link fw-bold" href="{% url 'organisation' organisation_slug=organisation.slug %}">
+                    <a class="header-lower__brand&#45;&#45;link fw-bold" href="{% url 'organisation' organisation_slug=organisation.slug %}">
                         {{ organisation.name }}
                     </a>
                   </div>
-                {% endif %}
+                {% endif %}-->
 
                 {% url 'organisation' organisation_slug=organisation.slug as organisation_url %}
 
