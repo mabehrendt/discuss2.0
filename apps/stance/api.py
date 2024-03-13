@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from django.http import HttpResponse, JsonResponse
 from django.contrib.contenttypes.models import ContentType
 from rest_framework.parsers import JSONParser
-from apps.stance.models import UserStance, Stance
+from apps.stance.models import UserStance, UsedStance, Stance
 from apps.stance.serializers import UserStanceSerializer, UsedStanceSerializer, StanceSerializer
 
 class UsedStanceViewSet(
@@ -20,7 +20,25 @@ class UsedStanceViewSet(
     viewsets.GenericViewSet,
 ):
     def usedstance_list(request, ct_id, object_pk):
-        pass
+        if request.method == "GET":
+            usedstances = UsedStance.objects.filter(content_type=ct_id, object_id=object_pk)
+            serializer = UsedStanceSerializer(usedstances, many=True)
+            response = JsonResponse(serializer.data, safe=False)
+
+            return response
+
+        if request.method == "POST":
+            data = JSONParser().parse(request)
+            print("DATA: ", data)
+            serializer = UsedStanceSerializer(data=data)
+            if serializer.is_valid():
+                serializer.save()
+                print(serializer.data)
+
+                return JsonResponse(serializer.data, status=201)
+            print(serializer.errors)
+
+            return JsonResponse(serializer.errors, status=400)
 
 
 class UserStanceViewSet(

@@ -22,6 +22,7 @@ const api = (function () {
     comment: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/comments/',
     qualities: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/qualities/',
     userstances: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/userstances/',
+    usedstances: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/usedstances/',
     stances: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/stances/',
     commentmoderate: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/comment-moderate/',
     stance: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/a4_candy_stance/',
@@ -97,6 +98,30 @@ const api = (function () {
 
       delete: function (data, id) {
         return _sendRequest('userstances', id, {
+          type: 'DELETE'
+        }, data)
+      }
+    },
+    usedstances: {
+      get: function (data) {
+        return _sendRequest('usedstances', {
+          type: 'GET'
+        }, data)
+      },
+      add: function (data) {
+        return _sendRequest('usedstances', {
+          type: 'POST'
+        }, data)
+      },
+
+      change: function (data, id) {
+        return _sendRequest('usedstances', id, {
+          type: 'PATCH'
+        }, data)
+      },
+
+      delete: function (data, id) {
+        return _sendRequest('usedstances', id, {
           type: 'DELETE'
         }, data)
       }

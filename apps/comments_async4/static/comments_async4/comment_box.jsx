@@ -303,6 +303,7 @@ export const CommentBox = (props) => {
     api.stances.get(params).done((stanceResult) => {
       console.log(stanceResult)
       chooseStanceComment(stanceResult, props.user.user, result.user_stance)
+      setUserStance(result.user_stance)
     })
     // Call chooseStanceComment with stances
   }
@@ -314,6 +315,8 @@ export const CommentBox = (props) => {
     let _userStance
     let _hasCreator = ""
     let _openQuestClicked = false
+    let _stances = []
+    let _usedStances = []
 
     setCreatorId(cyrb53(props.user.user))
 
@@ -336,10 +339,70 @@ export const CommentBox = (props) => {
     }
     setTimeout(countDown, 2000, _openQuestClicked, _userStance)
 
-    if (props.stances.length > 0 || _userStance !== "") {
-        chooseStanceComment(props.stances, props.user.user, _userStance)
-    }
+
+    // GET STANCES AND USED STANCES
+    api.stances.get({urlReplaces: urlReplaces}).done((stanceResult) => {
+      _stances = stanceResult
+      api.usedstances.get({urlReplaces: urlReplaces}).done((usedstanceResult) => {
+        _usedStances = usedstanceResult
+        if (props.stances.length > 0 || _userStance !== "") {
+          chooseStanceComment(_stances, _usedStances, props.user.user, _userStance)
+        }
+      }).fail((xhr, status, err) => {
+        console.log("NO USEDSTANCES")
+      })
+    }).fail((xhr, status, err) => {
+      console.log("NO STANCES")
+    })
   }
+
+   /*
+    CHOOSE STANCE COMMENTS
+  */
+    function chooseStanceComment (stances, usedStances, user, _userStance){
+      let filteredStances = []
+      console.log("CHOOSE STANCE COMMENT")
+      console.log(_userStance)
+      console.log("STANCESRESULT")
+      console.log(stances)
+      console.log("USEDSTANCESRESULT")
+      console.log(usedStances)
+      if (_userStance !== "") {
+        let filteredUsedStances = []
+        for (let i = 0; i < usedStances.length; i++) {
+          let usedstance = usedStances[i]
+          if (usedstance.creator === user) {
+            filteredUsedStances.push(usedstance)
+          }
+        }
+        console.log("FILTERED USED STANCES")
+        console.log(filteredUsedStances)
+
+        for (let i = 0; i < stances.length; i++) {   
+          let stance = stances[i]
+          console.log(usedStances)
+            if (stance.creator !== user && !filteredUsedStances.some(usedstance => usedstance.comment_id === stance.comment_id)) {
+                filteredStances.push(stance)            
+            }
+        }
+      }
+      
+      {/* Choose a random stance from the filtered stances that is not from the user */}
+      if (filteredStances.length > 0){
+        console.log("STANCE FOUND")
+        const random_index = getRandomInt(0, filteredStances.length - 1)
+        console.log(filteredStances)
+        setStanceText(filteredStances[random_index].comment_text)
+        setUserText(filteredStances[random_index].creator)
+  
+        // This is the comment identifier
+        setStanceParentId(filteredStances[random_index].comment_id)
+      }else if(filteredStances.length === 0 && _userStance !== ""){
+        console.log("NO STANCES FOUND")
+        setNoStancesFound(true)
+      }
+  
+    }
 
   {
     /*
@@ -376,36 +439,7 @@ export const CommentBox = (props) => {
   }
 
 
-
-  function chooseStanceComment (stances, user, _userStance){
-    let filteredStances = []
-    console.log("CHOOSE STANCE COMMENT")
-    console.log(_userStance)
-    if (_userStance !== "") {
-      for (let i = 0; i < stances.length; i++) {   
-        let stance = stances[i]
-          if (stance.creator !== user) {
-            filteredStances.push(stance)
-          }
-        }
-    }
-    
-    {/* Choose a random stance from the filtered stances that is not from the user */}
-    if (filteredStances.length > 0){
-      console.log("STANCE FOUND")
-      const random_index = getRandomInt(0, filteredStances.length - 1)
-      console.log(filteredStances)
-      setStanceText(filteredStances[random_index].comment_text)
-      setUserText(filteredStances[random_index].creator)
-
-      // This is the comment identifier
-      setStanceParentId(filteredStances[random_index].comment_id)
-    }else if(filteredStances.length === 0 && _userStance !== ""){
-      console.log("NO STANCES FOUND")
-      setNoStancesFound(true)
-    }
-
-  }
+ 
 
   function handleComments (result) {
     const data = result
@@ -524,6 +558,40 @@ export const CommentBox = (props) => {
         if(isStanceModal) {
           showStanceModal()
         }
+
+        // GET STANCES HERE AGAIN AND CALL CHOOSE STANCES
+        //if(isStanceModal){
+          api.stances.get({urlReplaces: urlReplaces}).done((stanceResult) => {
+            api.usedstances.get({urlReplaces: urlReplaces}).done((usedstanceResult) => {
+              if (props.stances.length > 0 || userStance !== "") {
+                chooseStanceComment(stanceResult, usedstanceResult, props.user.user, userStance)
+              }
+            }).fail((xhr, status, err) => {
+              console.log("NO USEDSTANCES")
+            })
+          }).fail((xhr, status, err) => {
+            console.log("NO STANCES")
+          })
+        //}
+          
+        
+        // ADD TO USEDSTANCES
+        if(isStanceModal){
+          console.log("COMMENT ID", stanceParentId)
+          const usedstance_Data = {
+            urlReplaces: urlReplaces,
+            content_type: props.subjectType,
+            object_id: props.subjectId,
+            comment_id: stanceParentId,
+            creator: props.user.user,
+            creator_id : cyrb53(props.user.user)
+          }
+          api.usedstances.add(usedstance_Data).done((result) => {
+            console.log("USEDSTANCE ADDED")
+          }).fail((xhr, status, err) => {
+            console.log("USEDSTANCE FAILED")
+          })
+        }
         updateAgreedTOS()
 
       })
@@ -592,7 +660,7 @@ export const CommentBox = (props) => {
           content_type: props.subjectType,
           object_id: props.subjectId,
         }
-        
+
         // DELETE STANCES
         api.stances.delete(delete_stanceData, comment.id).done((result) => {
           console.log("STANCE DELETED")
