@@ -184,28 +184,28 @@ urlpatterns = [
                     ),
                 ),
                 path(
-                    "aistancesubjects/",
+                    "ssubjects/",
                     include(
                         ("apps.debate_stance.urls", "a4_candy_debate_stance"),
                         namespace="a4_candy_debate_stance",
                     ),
                 ),
                 path(
-                    "aiqualitysubjects/",
+                    "qsubjects/",
                     include(
                         ("apps.debate_quality.urls", "a4_candy_debate_quality"),
                         namespace="a4_candy_debate_quality",
                     ),
                 ),
                 path(
-                    "stancerandomsubjects/",
+                    "srsubjects/",
                     include(
                         ("apps.debate_stance_random.urls", "a4_candy_debate_stance_random"),
                         namespace="a4_candy_debate_stance_random",
                     ),
                 ),
                 path(
-                    "qualityrandomsubjects/",
+                    "qrsubjects/",
                     include(
                         ("apps.debate_quality_random.urls", "a4_candy_debate_quality_random"),
                         namespace="a4_candy_debate_quality_random",
@@ -213,7 +213,7 @@ urlpatterns = [
                 ),
             ]
         ),
-    ), 
+    ),
     path("sitemap.xml", static_sitemap_index, name="static-sitemap-index"),
     path("sitemap-wagtail.xml", wagtail_sitemap, name="wagtail-sitemap"),
     path(

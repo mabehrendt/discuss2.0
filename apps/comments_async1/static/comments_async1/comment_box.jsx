@@ -399,8 +399,6 @@ export const CommentBox = (props) => {
       urlReplaces
     }
 
-    console.log("sorting")
-
     api.comments.get(params).done((result) => {
       const data = result
       console.log(data)

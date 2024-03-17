@@ -65,7 +65,7 @@ export const CommentBox = (props) => {
   const [filter, setFilter] = useState([])
   const [filterDisplay, setFilterDisplay] = useState(django.gettext('all'))
   /*const [sort, setSort] = useState(props.useModeratorMarked ? 'mom' : 'new')*/
-  const [sort, setSort] = useState('qua')
+  const [sort, setSort] = useState('ranqua')
   const [loading, setLoading] = useState(true)
   const [loadingFilter, setLoadingFilter] = useState(false)
   const [search, setSearch] = useState('')
