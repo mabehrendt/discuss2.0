@@ -1,4 +1,5 @@
 from django.db import models
+from itertools import chain
 from rest_framework.filters import BaseFilterBackend
 from rest_framework.filters import SearchFilter
 from django.contrib.contenttypes.models import ContentType
@@ -66,11 +67,15 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
                 qualities = Quality.objects.filter(object_id=request.GET["objectPk"]).filter(
                     content_type_id=request.GET["contentTypeId"]
                 )
-                qualities = qualities.order_by("quality","-created")
+                high_qualities = qualities.order_by('-prediction').filter(quality='high')[:3]
+                blocked_ids = high_qualities.values("id")
+                qualities = qualities.order_by('-created')
+                qualities = qualities.exclude(id__in=blocked_ids)
+                qualities_whole = list(chain(high_qualities,qualities))
                 new_queryset = []
-                for j in range(len(qualities)):
+                for j in range(len(qualities_whole)):
                     for i in range(len(queryset)):
-                        if qualities[j].comment_id == queryset[i].id:
+                        if qualities_whole[j].comment_id == queryset[i].id:
                             new_queryset.append(queryset[i])
                             break
                 queryset = new_queryset
