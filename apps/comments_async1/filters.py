@@ -67,7 +67,7 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
                 qualities = Quality.objects.filter(object_id=request.GET["objectPk"]).filter(
                     content_type_id=request.GET["contentTypeId"]
                 )
-                high_qualities = qualities.order_by('-prediction').filter(quality='high')[:3]
+                high_qualities = qualities.order_by('-prediction').filter(quality='high').order_by('-created')[:3]
                 blocked_ids = high_qualities.values("id")
                 qualities = qualities.order_by('-created')
                 qualities = qualities.exclude(id__in=blocked_ids)
