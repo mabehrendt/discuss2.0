@@ -81,6 +81,7 @@ export const CommentBox = (props) => {
   const [error, setError] = useState(false)
   const [errorMessage, setErrorMessage] = useState(undefined)
   const [anchorRendered, setAnchorRendered] = useState(false)
+  const [topThreeCommentIds, setTopThreeCommentIds] = useState([])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -401,10 +402,11 @@ export const CommentBox = (props) => {
 
     api.comments.get(params).done((result) => {
       const data = result
-      console.log(data)
+      setTopThreeCommentIds(data.results.slice(0,3).map(el => el.id))
       setComments(data.results)
       setNextComments(data.next)
       setCommentCount(data.count)
+      console.log("Comments:")
       /*setSort(order)*/
       setLoadingFilter(false)
     })
@@ -647,7 +649,7 @@ export const CommentBox = (props) => {
             agreedTermsOfUse={agreedTermsOfUse}
             orgTermsUrl={orgTermsUrl}
             quality={qualities}
-            prediction={props.prediction}
+            topThreeCommentIds={topThreeCommentIds}
           />
         </div>
       </div>

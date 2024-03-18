@@ -62,10 +62,8 @@ const CommentList = (props) => {
               useTermsOfUse={props.useTermsOfUse}
               agreedTermsOfUse={props.agreedTermsOfUse}
               orgTermsUrl={props.orgTermsUrl}
-              stanceId={props.stanceId}
               quality={props.quality}
-              prediction={props.prediction}
-              stanceModal={props.stanceModal}
+              topThreeCommentIds={props.topThreeCommentIds}
             >{comment.comment}
             </Comment>
           )

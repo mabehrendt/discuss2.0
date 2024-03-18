@@ -155,12 +155,15 @@ export default class Comment extends React.Component {
   }
 
   currentCommentQuality () {
-    console.log(this.props.quality)
-    let sortedQualities = this.props.quality.sort((q1,q2) => {
-      return q2.prediction - q1.prediction || q2.comment_id - q1.comment_id }).slice(0,3)
-    for (let i = 0; i < sortedQualities.length; i++) {
-      if (sortedQualities[i].comment_id === this.props.id) {
-        return this.props.quality[i].quality
+    console.log("Comment IDS in comment.jsx")
+    console.log(this.props.topThreeCommentIds)
+    for (let i = 0; i < this.props.topThreeCommentIds.length; i++) {
+      if (this.props.topThreeCommentIds[i] === this.props.id) {
+        for (let j = 0; i < this.props.quality.length; j++) {
+          if (this.props.quality[j].comment_id === this.props.topThreeCommentIds[i]) {
+            return 'high'
+          }
+        }
       }
     }
   }

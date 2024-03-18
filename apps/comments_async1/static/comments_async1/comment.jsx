@@ -155,12 +155,15 @@ export default class Comment extends React.Component {
   }
 
   currentCommentQuality () {
-    let sortedQualities = this.props.quality.sort((q1,q2) => {
-      return q2.prediction - q1.prediction || q2.comment_id - q1.comment_id }).slice(0,3)
-    console.log(sortedQualities)
-    for (let i = 0; i < sortedQualities.length; i++) {
-      if (sortedQualities[i].comment_id === this.props.id) {
-        return this.props.quality[i].quality
+    console.log("Comment IDS in comment.jsx")
+    console.log(this.props.topThreeCommentIds)
+    for (let i = 0; i < this.props.topThreeCommentIds.length; i++) {
+      if (this.props.topThreeCommentIds[i] === this.props.id) {
+        for (let j = 0; i < this.props.quality.length; j++) {
+          if (this.props.quality[j].comment_id === this.props.topThreeCommentIds[i]) {
+            return this.props.quality[j].quality
+          }
+        }
       }
     }
   }
@@ -371,13 +374,13 @@ export default class Comment extends React.Component {
           <div className="alert alert--success a4-comments__success-notification"><i className="fas fa-check" /> {translated.successMessage}</div>}
         <div className={(this.props.is_users_own_comment ? 'a4-comments__comment a4-comments__comment-owner' : 'a4-comments__comment')}>
           <a className="a4-comments__anchor" id={'comment_' + this.props.id} href={'./?comment=' + this.props.id}>{'Comment ' + this.props.id}</a>
-{/*           <ReportModal */}
-{/*             name={'report_comment_' + this.props.id} */}
-{/*             description={translated.reportTitle} */}
-{/*             btnStyle="cta" */}
-{/*             objectId={this.props.id} */}
-{/*             contentType={this.props.comment_content_type} */}
-{/*           /> */}
+          <ReportModal
+            name={'report_comment_' + this.props.id}
+            description={translated.reportTitle}
+            btnStyle="cta"
+            objectId={this.props.id}
+            contentType={this.props.comment_content_type}
+          />
 {/*           <UrlModal */}
 {/*             name={'share_comment_' + this.props.id} */}
 {/*             title={translated.shareLink} */}
@@ -482,12 +485,12 @@ export default class Comment extends React.Component {
 {/*                     ><i className="fas fa-share" /> {translated.share} */}
 {/*                     </a>} */}
 
-{/*                   {!this.props.is_deleted && this.props.authenticated_user_pk && !this.props.is_users_own_comment && */}
-{/*                     <a */}
-{/*                       className="btn btn--no-border a4-comments__action-bar__btn" href={'#report_comment_' + this.props.id} */}
-{/*                       data-bs-toggle="modal" */}
-{/*                     ><i className="fas fa-exclamation-triangle" />{translated.report} */}
-{/*                     </a>} */}
+                   {!this.props.is_deleted && this.props.authenticated_user_pk && !this.props.is_users_own_comment &&
+                     <a
+                       className="btn btn--no-border a4-comments__action-bar__btn" href={'#report_comment_' + this.props.id}
+                       data-bs-toggle="modal"
+                     ><i className="fas fa-exclamation-triangle" />{translated.report}
+                     </a>}
 
                 </div>
               </div>
@@ -517,6 +520,7 @@ export default class Comment extends React.Component {
                       agreedTermsOfUse={this.props.agreedTermsOfUse}
                       orgTermsUrl={this.props.orgTermsUrl}
                       quality={this.props.quality}
+                      topThreeCommentIds={this.props.topThreeCommentIds}
                     />
                   </div>
                 </div>
