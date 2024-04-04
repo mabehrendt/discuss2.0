@@ -1,4 +1,5 @@
 from django.db import models
+from itertools import chain
 from rest_framework.filters import BaseFilterBackend
 from rest_framework.filters import SearchFilter
 from django.contrib.contenttypes.models import ContentType
