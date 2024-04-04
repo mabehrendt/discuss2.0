@@ -75,6 +75,26 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
                             break
                 queryset = new_queryset
 
+            elif ordering == "ranqua":
+                qualities = Quality.objects.filter(object_id=request.GET["objectPk"]).filter(
+                    content_type_id=request.GET["contentTypeId"]
+                )
+                #k = random.randint(1,3)
+                rand_high_qualities = random.sample(list(qualities),3)
+                id_list = [rec.id for rec in rand_high_qualities]
+                high_qualities = Quality.objects.filter(id__in=id_list)
+                blocked_ids = high_qualities.values("id")
+                qualities = qualities.order_by('-created')
+                qualities = qualities.exclude(id__in=blocked_ids)
+                qualities_whole = list(chain(high_qualities,qualities))
+                new_queryset = []
+                for j in range(len(qualities_whole)):
+                    for i in range(len(queryset)):
+                        if qualities_whole[j].comment_id == queryset[i].id:
+                            new_queryset.append(queryset[i])
+                            break
+                queryset = new_queryset
+
         return queryset
 
 
