@@ -186,7 +186,14 @@ export const CommentBox = (props) => {
   }
 
   function showFaqModal(){
+    if(modalFaqState.isOpen){
+      console.log("CLICKED FAQ MODAL")
+      setFaqBadgeInvisible(false)
+    }else{
+      setFaqBadgeInvisible(true)
+    }
 
+    setModalFaqState({isOpen: !modalFaqState.isOpen})
   }
 
   {
@@ -645,10 +652,10 @@ export const CommentBox = (props) => {
 
   function renderFaqModal() {
     return(
-      <Modal show={modalQuestState.isOpen}>
-            <div className="questModal" id="questModal">
+      <Modal show={modalFaqState.isOpen}>
+            <div className="questModal" id="faqModal">
               <img className="questblase" src={require("../../../../adhocracy-plus/static/stance_icons/video.png")} alt="Quest" />
-              <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showQuestModal(e); console.log("CLOSED")}}/></button>
+              <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showFaqModal(e); console.log("CLOSED")}}/></button>
               <div style={{display: "flex", flexDirection: "column", padding: "20px", paddingLeft: "0px"}}>
                 {/* Embed video here */}
                 <iframe class="introVideo" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
@@ -677,6 +684,7 @@ export const CommentBox = (props) => {
     <div>
         {renderButtons()}
         {renderQuestModal()}
+        {renderFaqModal()}
       <div className="a4-comments__commentbox__form">
         <CommentForm
           subjectType={props.subjectType}
