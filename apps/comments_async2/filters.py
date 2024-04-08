@@ -76,7 +76,7 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
                             new_queryset.append(queryset[i])
                             break
                 queryset = new_queryset
-                
+
             elif ordering == "ranqua":
                 qualities = Quality.objects.filter(
                     object_id=request.GET["objectPk"]).filter(
