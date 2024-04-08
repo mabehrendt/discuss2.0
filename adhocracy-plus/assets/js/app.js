@@ -20,6 +20,7 @@ import {
 
 import { renderLanguageChoice } from '../../../apps/organisations/assets/react_language_choice.jsx'
 import { initialise2 } from '../../static/widget.js'
+import { renderComment0 } from '../../../apps/comments_async0/static/comments_async0/react_comments_async0.jsx'
 import { renderComment1 } from '../../../apps/comments_async1/static/comments_async1/react_comments_async1.jsx'
 import { renderComment2 } from '../../../apps/comments_async2/static/comments_async2/react_comments_async2.jsx'
 import { renderComment3 } from '../../../apps/comments_async3/static/comments_async3/react_comments_async3.jsx'
