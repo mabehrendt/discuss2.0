@@ -34,6 +34,7 @@ function init () {
 
   ReactWidget.initialise('euth', 'language-choice', renderLanguageChoice)
 
+  initialise2('a4', 'comment_async0', renderComment0)
   initialise2('a4', 'comment_async1', renderComment1)
   initialise2('a4', 'comment_async2', renderComment2)
   initialise2('a4', 'comment_async3', renderComment3)
