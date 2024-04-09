@@ -69,6 +69,7 @@ INSTALLED_APPS = (
     "adhocracy4.ckeditor",
     "adhocracy4.comments",
     "adhocracy4.comments_async",
+    "apps.comments_async0",
     "apps.comments_async1",
     "apps.comments_async2",
     "apps.comments_async3",
@@ -167,6 +168,7 @@ TEMPLATES = [
             ],
 
             'libraries':{
+            'react_comments_async0': 'apps.comments_async0.templatetags.react_comments_async0',
             'react_comments_async1': 'apps.comments_async1.templatetags.react_comments_async1',
             'react_comments_async2': 'apps.comments_async2.templatetags.react_comments_async2',
             'react_comments_async3': 'apps.comments_async3.templatetags.react_comments_async3',

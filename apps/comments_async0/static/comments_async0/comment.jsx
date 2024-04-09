@@ -154,36 +154,6 @@ export default class Comment extends React.Component {
     })
   }
 
-  currentCommentQuality () {
-    console.log(this.props.quality)
-    console.log(this.props.quality.length)
-    if (this.props.quality.length > 3) {
-      for (let i = 0; i < this.props.topThreeCommentIds.length; i++) {
-        if (this.props.topThreeCommentIds[i] === this.props.id) {
-          for (let j = 0; i < this.props.quality.length; j++) {
-            if (this.props.quality[j].comment_id === this.props.topThreeCommentIds[i]) {
-              return 'high'
-            }
-          }
-        }
-      }
-    }
-  }
-
-  renderToolTipElement () {
-    if (this.currentCommentQuality() === 'high') {
-      return (
-        <div className="row">
-          <div className="col-12">
-            <img className="a4_quality_badge" src="/static/images/award.png" alt="top comment" width="30" height="30"/>
-            <div className="a4-comments__tooltip__container"> Top-Kommentar
-              <span className="tooltiptext">Dieser Kommentar wurde als qualitativ besonders hochwertig gekennzeichnet.</span>
-            </div>
-          </div>
-        </div>
-      )}
-  }
-
   renderRatingBox () {
     if (!this.props.is_deleted) {
       return (
@@ -391,24 +361,23 @@ export default class Comment extends React.Component {
 {/*             url={this.getCommentUrl()} */}
 {/*           /> */}
           {this.renderDeleteModal()}
-          <div className={"a4-comments__box" + ((this.currentCommentQuality() === 'high') ? ' a4-comments__text--qualified' : 'a4-comments__text--highlighted')}>
-            <div className="a4-comments__box--user">
-              <div className="row">
+          <div className="a4-comments__box--user">
+            <div className="row">
 
-                <div className={this.props.is_deleted ? 'd-none' : 'col-2 col-lg-1 a4-comments__user-img'}>
-                  {userImage}
+              <div className={this.props.is_deleted ? 'd-none' : 'col-2 col-lg-1 a4-comments__user-img'}>
+                {userImage}
+              </div>
+              <div className="col-7 col-md-8 a4-comments__author-container">
+                <div className={this.props.is_deleted ? 'a4-comments__deleted-author' : 'a4-comments__author'}>
+                  {userProfile === ''
+                    ? this.props.user_name
+                    : <a href={userProfile}>{this.props.user_name}</a>}
                 </div>
-                <div className="col-7 col-md-8 a4-comments__author-container">
-                  <div className={this.props.is_deleted ? 'a4-comments__deleted-author' : 'a4-comments__author'}>
-                    {userProfile === ''
-                      ? this.props.user_name
-                      : <a href={userProfile}>{this.props.user_name}</a>}
-                  </div>
-                  {moderatorLabel}
-                  <time className="a4-comments__submission-date">
-                    {lastDate}
-                  </time>
-                </div>
+                {moderatorLabel}
+                <time className="a4-comments__submission-date">
+                  {lastDate}
+                </time>
+              </div>
 
 {/*  comment out here */}
 {/*                 <div className="col-1 col-md-1 ms-auto a4-comments__dropdown-container">
@@ -421,8 +390,6 @@ export default class Comment extends React.Component {
                       isParentComment={this.displayCategories()}
                     />}
                 </div> */}
-
-              </div>
             </div>
 
             <div className="row">
@@ -501,7 +468,6 @@ export default class Comment extends React.Component {
           </div>
         </div>
 
-        {/* We need the displayStanceChild as internal state variable for when to allow to close the box again since id===stanceId is always true  */}
         <div className="container">
           {this.state.showChildComments || (this.props.stanceModal && this.props.id === this.props.stanceId)
             ? (
@@ -521,7 +487,7 @@ export default class Comment extends React.Component {
                       useTermsOfUse={this.props.useTermsOfUse}
                       agreedTermsOfUse={this.props.agreedTermsOfUse}
                       orgTermsUrl={this.props.orgTermsUrl}
-                      quality={this.props.quality}
+                      topThreeCommentIds={this.props.topThreeCommentIds}
                     />
                   </div>
                 </div>
