@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import django from 'django'
 import update from 'immutability-helper'
 import Badge from '@mui/material/Badge';
+import Spinner from '../../../../adhocracy-plus/static/Spinner.jsx';
 import "../../../../adhocracy-plus/static/collapsible.css";
 
 import CommentForm from './comment_form'
@@ -45,6 +46,7 @@ export const CommentBox = (props) => {
     contentTypeId: props.subjectType
   }
 
+const [spinnerLoading, setSpinnerLoading] = useState(false)
 const [qualities, setQualities] = useState([])
 const [showQuestButtons, setShowQuestButtons] = useState(true)
 const [showFaqButtons, setShowFaqButtons] = useState(true)
@@ -317,6 +319,7 @@ function videoWatched(){
     }
   }
   function handleCommentSubmit (comment, parentIndex){
+    setSpinnerLoading(true)
     return api.comments
       .add(comment)
       .done((comment) => {
@@ -334,6 +337,7 @@ function videoWatched(){
         comment.displayNotification = true
         addComment(parentIndex, comment)
         updateAgreedTOS()
+        setSpinnerLoading(false)
 
       })
       .fail((xhr, status, err) => {
@@ -686,6 +690,8 @@ function videoWatched(){
         {renderButtons()}
         {renderQuestModal()}
         {renderFaqModal()}
+        <Spinner spinnerLoading={spinnerLoading} />
+      
       <div className="a4-comments__commentbox__form">
         <CommentForm
           subjectType={props.subjectType}

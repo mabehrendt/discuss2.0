@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import django from 'django'
 import update from 'immutability-helper'
 import Badge from '@mui/material/Badge';
+import Spinner from "../../../../adhocracy-plus/static/Spinner.jsx";
 import "../../../../adhocracy-plus/static/collapsible.css";
 
 import CommentForm from './comment_form'
@@ -37,6 +38,8 @@ const translated = {
   sortedBy: django.gettext('sorted by: ')
 }
 
+
+
 const autoScrollThreshold = 500
 
 export const CommentBox = (props) => {
@@ -45,6 +48,7 @@ export const CommentBox = (props) => {
     contentTypeId: props.subjectType
   }
 
+  const [spinnerLoading, setSpinnerLoading] = useState(false)
   const [qualities, setQualities] = useState([])
   const [showQuestButtons, setShowQuestButtons] = useState(true)
   const [showFaqButtons, setShowFaqButtons] = useState(true)
@@ -316,6 +320,7 @@ export const CommentBox = (props) => {
     }
   }
   function handleCommentSubmit (comment, parentIndex){
+    setSpinnerLoading(true)
     return api.comments
       .add(comment)
       .done((comment) => {
@@ -333,6 +338,7 @@ export const CommentBox = (props) => {
         comment.displayNotification = true
         addComment(parentIndex, comment)
         updateAgreedTOS()
+        setSpinnerLoading(false)
 
       })
       .fail((xhr, status, err) => {
@@ -671,6 +677,8 @@ export const CommentBox = (props) => {
     )
   }
 
+ 
+
   {
     /*
     RENDER MAIN THREAD
@@ -682,9 +690,11 @@ export const CommentBox = (props) => {
 
   return (
     <div>
-        {renderButtons()}
-        {renderQuestModal()}
-        {renderFaqModal()}
+      {renderButtons()}
+      {renderQuestModal()}
+      {renderFaqModal()}
+      <Spinner spinnerLoading={spinnerLoading} />
+
       <div className="a4-comments__commentbox__form">
         <CommentForm
           subjectType={props.subjectType}

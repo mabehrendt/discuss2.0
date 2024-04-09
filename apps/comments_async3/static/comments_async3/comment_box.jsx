@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import django from 'django'
 import update from 'immutability-helper'
 import Badge from '@mui/material/Badge';
+import Spinner from '../../../../adhocracy-plus/static/Spinner.jsx';
 import "../../../../adhocracy-plus/static/collapsible.css";
 
 import CommentForm from './comment_form'
@@ -49,6 +50,7 @@ export const CommentBox = (props) => {
     "Negativ": 0
   }
 
+  const [spinnerLoading, setSpinnerLoading] = useState(false)
   const [showQuestButtons, setShowQuestButtons] = useState(false)
   const [showFaqButtons, setShowFaqButtons] = useState(false)
   const [showStanceButtons, setShowStanceButtons] = useState(false)
@@ -543,6 +545,8 @@ export const CommentBox = (props) => {
   }
 
   function handleCommentSubmit (comment, parentIndex, isStanceModal){
+    setSpinnerLoading(true)
+
     // Check if posted comment comes from stanceModal
     if(isStanceModal){
       setCommentFromStanceModal(true)
@@ -602,6 +606,7 @@ export const CommentBox = (props) => {
           })
         }
         updateAgreedTOS()
+        setSpinnerLoading(false)
 
       })
       .fail((xhr, status, err) => {
@@ -1079,6 +1084,8 @@ export const CommentBox = (props) => {
         {renderQuestModal()}
         {renderStanceModal()}
         {renderFaqModal()}
+      
+      <Spinner spinnerLoading={spinnerLoading} />
       <div className="a4-comments__commentbox__form">
         <CommentForm
           subjectType={props.subjectType}

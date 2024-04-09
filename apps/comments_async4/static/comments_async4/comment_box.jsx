@@ -49,6 +49,7 @@ export const CommentBox = (props) => {
     "Negativ": 0
   }
 
+  const [spinnerLoading, setSpinnerLoading] = useState(false)
   const [showQuestButtons, setShowQuestButtons] = useState(false)
   const [showFaqButtons, setShowFaqButtons] = useState(false)
   const [showStanceButtons, setShowStanceButtons] = useState(false)
@@ -541,12 +542,15 @@ export const CommentBox = (props) => {
   }
 
   function handleCommentSubmit (comment, parentIndex, isStanceModal){
+    setSpinnerLoading(true)
+
     // Check if posted comment comes from stanceModal
     if(isStanceModal){
       setCommentFromStanceModal(true)
     }else{
       setCommentFromStanceModal(false)
     }
+
 
     return api.comments
       .add(comment)
@@ -600,7 +604,8 @@ export const CommentBox = (props) => {
           })
         }
         updateAgreedTOS()
-
+        setSpinnerLoading(false)
+        
       })
       .fail((xhr, status, err) => {
         const newErrorMessage = Object.values(xhr.responseJSON)[0]
@@ -1077,6 +1082,8 @@ export const CommentBox = (props) => {
         {renderQuestModal()}
         {renderStanceModal()}
         {renderFaqModal()}
+
+      <Spinner spinnerLoading={spinnerLoading} />
       <div className="a4-comments__commentbox__form">
         <CommentForm
           subjectType={props.subjectType}
