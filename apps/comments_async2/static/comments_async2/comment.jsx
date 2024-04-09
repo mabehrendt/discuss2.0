@@ -410,7 +410,8 @@ export default class Comment extends React.Component {
                   </time>
                 </div>
 
-                <div className="col-1 col-md-1 ms-auto a4-comments__dropdown-container">
+{/*  comment out here */}
+{/*                 <div className="col-1 col-md-1 ms-auto a4-comments__dropdown-container">
                   {!this.props.is_deleted && (this.props.has_changing_permission || this.props.has_deleting_permission) &&
                     <CommentManageDropdown
                       id={this.props.id}
@@ -419,7 +420,7 @@ export default class Comment extends React.Component {
                       has_deleting_permission={this.props.has_deleting_permission}
                       isParentComment={this.displayCategories()}
                     />}
-                </div>
+                </div> */}
 
               </div>
             </div>
