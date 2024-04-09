@@ -609,12 +609,12 @@ export const CommentBox = (props) => {
       return(
         <div>
           <div className="buttonBox">
-            <Badge color="primary" badgeContent="Einführung!" invisible={questBadgeInvisible}>
+            <Badge color="primary" badgeContent="Anleitung" invisible={questBadgeInvisible}>
               <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/video.png")} alt="Quest" /></button>
             </Badge>
           </div>
           <div className="buttonBox2">
-            <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="Infos!" invisible={faqBadgeInvisible}>
+            <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="Infos" invisible={faqBadgeInvisible}>
               <button className="faqButton" onClick={showFaqModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/faq-white.png")} alt="FAQ" /></button>
             </Badge>
           </div>
