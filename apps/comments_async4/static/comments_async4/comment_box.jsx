@@ -386,15 +386,15 @@ export const CommentBox = (props) => {
         console.log("FILTERED USED STANCES")
         console.log(filteredUsedStances)
 
-        for (let i = 0; i < stances.length; i++) {   
+        for (let i = 0; i < stances.length; i++) {
           let stance = stances[i]
           console.log(usedStances)
             if (stance.creator !== user && !filteredUsedStances.some(usedstance => usedstance.comment_id === stance.comment_id)) {
-                filteredStances.push(stance)            
+                filteredStances.push(stance)
             }
         }
       }
-      
+
       {/* Choose a random stance from the filtered stances that is not from the user */}
       if (filteredStances.length > 0){
         console.log("STANCE FOUND")
@@ -402,14 +402,14 @@ export const CommentBox = (props) => {
         console.log(filteredStances)
         setStanceText(filteredStances[random_index].comment_text)
         setUserText(filteredStances[random_index].creator)
-  
+
         // This is the comment identifier
         setStanceParentId(filteredStances[random_index].comment_id)
       }else if(filteredStances.length === 0 && _userStance !== ""){
         console.log("NO STANCES FOUND")
         setNoStancesFound(true)
       }
-  
+
     }
 
   {
@@ -417,7 +417,7 @@ export const CommentBox = (props) => {
     COUNTDOWN TIMER
     Countdown timers for Stance modal
     */
-  }  
+  }
 
   function countDown(_openQuestClicked, _userStance) {
     console.log("TIMER FIRED")
@@ -447,7 +447,7 @@ export const CommentBox = (props) => {
   }
 
 
- 
+
 
   function handleComments (result) {
     const data = result
@@ -584,8 +584,8 @@ export const CommentBox = (props) => {
             console.log("NO STANCES")
           })
         //}
-          
-        
+
+
         // ADD TO USEDSTANCES
         if(isStanceModal){
           console.log("COMMENT ID", stanceParentId)
@@ -605,7 +605,7 @@ export const CommentBox = (props) => {
         }
         updateAgreedTOS()
         setSpinnerLoading(false)
-        
+
       })
       .fail((xhr, status, err) => {
         const newErrorMessage = Object.values(xhr.responseJSON)[0]
@@ -888,7 +888,7 @@ export const CommentBox = (props) => {
             <button className="stanceButton"  onClick={showStanceModal}> <img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase-white.png")} alt="Sprechblase" /> </button>
           </div>
           <div className="buttonBox2">
-          <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="Infos" invisible={faqBadgeInvisible}>
+          <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="FAQs" invisible={faqBadgeInvisible}>
             <button className="faqButton" onClick={showFaqModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/faq-white.png")} alt="FAQ" /></button>
           </Badge>
           </div>
@@ -901,7 +901,7 @@ export const CommentBox = (props) => {
             <Badge color="primary" badgeContent="Anleitung" invisible={questBadgeInvisible}>
               <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/video.png")} alt="Quest" /></button>
             </Badge>
-          </div> 
+          </div>
           <div className="buttonBox2">
             <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="Infos" invisible={faqBadgeInvisible}>
               <button className="faqButton" onClick={showFaqModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/faq-white.png")} alt="FAQ" /></button>
