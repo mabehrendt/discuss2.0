@@ -309,6 +309,7 @@ export const CommentBox = (props) => {
     console.log(result)
     const params = {}
     params.urlReplaces = urlReplaces
+
     api.stances.get(params).done((stanceResult) => {
       console.log(stanceResult)
       chooseStanceComment(stanceResult, props.user.user, result.user_stance)
@@ -349,7 +350,7 @@ export const CommentBox = (props) => {
     setTimeout(countDown, 2000, _openQuestClicked, _userStance)
 
 
-    // GET STANCES AND USED STANCES
+    // GET STANCES AND USED STANCES TODO filter for creator in the database
     api.stances.get({urlReplaces: urlReplaces}).done((stanceResult) => {
       _stances = stanceResult
       api.usedstances.get({urlReplaces: urlReplaces}).done((usedstanceResult) => {
@@ -567,6 +568,13 @@ export const CommentBox = (props) => {
         fetchSorted(sort)
 
         comment.displayNotification = true
+
+        console.log("PARENT INDEX")
+        console.log(parentIndex)
+        if (parentIndex !== undefined) {
+          console.log(comments[parentIndex].id)
+        }
+
         addComment(parentIndex, comment)
         if(isStanceModal) {
           showStanceModal()
@@ -587,15 +595,13 @@ export const CommentBox = (props) => {
           })
         //}
           
-        
-        // ADD TO USEDSTANCES
-        if(isStanceModal){
-          console.log("COMMENT ID", stanceParentId)
+        // If we are answering to a comment, record as already answered
+        if (parentIndex !== undefined) {
           const usedstance_Data = {
             urlReplaces: urlReplaces,
             content_type: props.subjectType,
             object_id: props.subjectId,
-            comment_id: stanceParentId,
+            comment_id: isStanceModal ? stanceParentId : comments[parentIndex].id,
             creator: props.user.user,
             creator_id : cyrb53(props.user.user)
           }
@@ -675,7 +681,7 @@ export const CommentBox = (props) => {
           object_id: props.subjectId,
         }
 
-        // DELETE STANCES
+        // DELETE STANCES 
         api.stances.delete(delete_stanceData, comment.id).done((result) => {
           console.log("STANCE DELETED")
         }).fail((xhr, status, err) => {

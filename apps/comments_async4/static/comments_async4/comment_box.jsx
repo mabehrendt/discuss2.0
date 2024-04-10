@@ -565,6 +565,13 @@ export const CommentBox = (props) => {
         fetchSorted(sort)
 
         comment.displayNotification = true
+
+        console.log("PARENT INDEX")
+        console.log(parentIndex)
+        if (parentIndex !== undefined) {
+          console.log(comments[parentIndex].id)
+        }
+
         addComment(parentIndex, comment)
         if(isStanceModal) {
           showStanceModal()
@@ -585,15 +592,13 @@ export const CommentBox = (props) => {
           })
         //}
           
-        
-        // ADD TO USEDSTANCES
-        if(isStanceModal){
-          console.log("COMMENT ID", stanceParentId)
+        // If we are answering to a comment, record as already answered
+        if (parentIndex !== undefined) {
           const usedstance_Data = {
             urlReplaces: urlReplaces,
             content_type: props.subjectType,
             object_id: props.subjectId,
-            comment_id: stanceParentId,
+            comment_id: isStanceModal ? stanceParentId : comments[parentIndex].id,
             creator: props.user.user,
             creator_id : cyrb53(props.user.user)
           }

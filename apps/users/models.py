@@ -17,6 +17,7 @@ from . import USERNAME_INVALID_MESSAGE
 from . import USERNAME_REGEX
 
 
+
 class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
     username = models.CharField(
         _("username"),
@@ -194,3 +195,7 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
         return OrganisationTermsOfUse.objects.filter(
             user=self, organisation=organisation, has_agreed=True
         ).exists()
+
+class UserLogins(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateTimeField(auto_now_add=True)
