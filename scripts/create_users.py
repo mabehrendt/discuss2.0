@@ -15,10 +15,12 @@ from django.contrib.auth.hashers import make_password
 from django.conf import settings
 from datetime import datetime, timezone
 
+from allauth.account.models import EmailAddress
+
 import csv
 
 User = get_user_model()
-
+#Mail = EmailAddress.objects.create()
 
 file = 'import_users.csv'
 
@@ -37,5 +39,12 @@ for row in data:
     Post.is_staff = "1"
     Post.is_active = "1"
     Post.language = "de"
-    #Post.last_login = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d %H:%M:%S")
     Post.save()
+    Mail=EmailAddress()
+    Mail.verified="1"
+    Mail.primary="1"
+    Mail.user_id=Post.id
+    Mail.email=Post.email
+    Mail.save()
+    
+
