@@ -20,7 +20,6 @@ from allauth.account.models import EmailAddress
 import csv
 
 User = get_user_model()
-#Mail = EmailAddress.objects.create()
 
 file = 'import_users.csv'
 
