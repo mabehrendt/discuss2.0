@@ -2,7 +2,6 @@ import React, {useEffect, useRef, useState} from 'react'
 import django from 'django'
 import update from 'immutability-helper'
 import Badge from '@mui/material/Badge';
-import Spinner from '../../../../adhocracy-plus/static/Spinner.jsx';
 import "../../../../adhocracy-plus/static/collapsible.css";
 
 import CommentForm from './comment_form'
