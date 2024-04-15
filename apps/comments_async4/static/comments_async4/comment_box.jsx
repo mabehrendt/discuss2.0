@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import django from 'django'
 import update from 'immutability-helper'
 import Badge from '@mui/material/Badge';
+import FaqContent from '../../../../adhocracy-plus/static/Faq.jsx';
 import Spinner from '../../../../adhocracy-plus/static/Spinner.jsx';
 import "../../../../adhocracy-plus/static/collapsible.css";
 
@@ -948,12 +949,12 @@ export const CommentBox = (props) => {
   function renderFaqModal() {
     return(
       <Modal show={modalFaqState.isOpen}>
-            <div className="questModal" id="questModal">
-              <img className="questblase" src={require("../../../../adhocracy-plus/static/stance_icons/faq.png")} alt="Quest" />
+            <div className="faqModal" id="faqModal">
+              <img className="faqblase" src={require("../../../../adhocracy-plus/static/stance_icons/faq.png")} alt="Quest" />
               <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showFaqModal(e); console.log("CLOSED")}}/></button>
               <div style={{display: "flex", flexDirection: "column", padding: "20px", paddingLeft: "0px"}}>
                 {/* Embed video here */}
-                This is some formatted text. Maybe a PDF.
+                <FaqContent />
                 {/* <video controls style={{ marginLeft: '5%' }}>
                   <source src="/static/stance_icons/BigBuckBunny.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
