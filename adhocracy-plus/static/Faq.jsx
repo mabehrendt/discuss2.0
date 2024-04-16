@@ -1,17 +1,10 @@
 import * as React from 'react';
-import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SendIcon from '@mui/icons-material/Send';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
-import QuestionMarkIcon from '@mui/icons-material/HelpOutline';
 
 import NameDesVerfahrens from './faq_text/NameDesVerfahrens.jsx';
 import Beteiligungsprozess from './faq_text/Beteiligungsprozess.jsx';
@@ -38,7 +31,6 @@ function FaqContent() {
         {header: 'Fragen zu Teilnahmebedingungen und Vergütung', question: "Welche Anforderungen bei der Teilnahme muss ich erfüllen, um die Vergütung von bilendi zu erhalten?", answer: <Anforderungen /> },
         {header: '', question: "Wo kann ich die Datenschutzbestimmungen einsehen?", answer: <Datenschutz />},
         {header: 'Sonstiges', question: "Bei wem kann ich mich melden, wenn ich weiterführende Fragen habe?", answer: <Melden /> },
-        
         // Add more FAQs here
     ];
 
@@ -51,7 +43,7 @@ function FaqContent() {
 
 
     return (
-        <div style={{ overflowY: 'auto', maxHeight: '800px' , marginLeft: "10px"}}>
+        <div style={{ overflowY: 'auto', maxHeight: '75vh' , marginLeft: "10px"}}>
             <List
                 sx={{ width: '100%', bgcolor: 'background.paper' }}
                 component="nav"

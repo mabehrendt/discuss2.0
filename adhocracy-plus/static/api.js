@@ -103,8 +103,8 @@ const api = (function () {
       }
     },
     usedstances: {
-      get: function (data) {
-        return _sendRequest('usedstances', {
+      get: function (data, id) {
+        return _sendRequest('usedstances', id, {
           type: 'GET'
         }, data)
       },

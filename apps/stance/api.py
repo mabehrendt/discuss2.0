@@ -21,7 +21,9 @@ class UsedStanceViewSet(
 ):
     def usedstance_list(request, ct_id, object_pk):
         if request.method == "GET":
-            usedstances = UsedStance.objects.filter(content_type=ct_id, object_id=object_pk)
+            print("REQUEST DATA", request.path.split("/")[-2])
+            creator = request.path.split("/")[-2]
+            usedstances = UsedStance.objects.filter(content_type=ct_id, object_id=object_pk, creator=creator)
             serializer = UsedStanceSerializer(usedstances, many=True)
             response = JsonResponse(serializer.data, safe=False)
 

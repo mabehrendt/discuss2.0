@@ -2,13 +2,14 @@ import React, {useEffect, useRef, useState} from 'react'
 import django from 'django'
 import update from 'immutability-helper'
 import Badge from '@mui/material/Badge';
+import IntroVideo from '../../../../adhocracy-plus/static/Video.jsx';
 import FaqContent from '../../../../adhocracy-plus/static/Faq.jsx';
 import Spinner from '../../../../adhocracy-plus/static/Spinner.jsx';
 import "../../../../adhocracy-plus/static/collapsible.css";
+import Modal from './stance_modal.jsx'
 
 import CommentForm from './comment_form'
 import CommentList from './comment_list'
-import Modal from './stance_modal'
 import { FilterCategory } from './filter_category'
 import { FilterSearch } from './filter_search'
 import { FilterSort } from './filter_sort'
@@ -222,7 +223,7 @@ export const CommentBox = (props) => {
     if(modalQuestState.isOpen){
       if(questModalFirstTime){
         console.log("STARTED STANCE TIMER")
-        setTimeout(countDownStance, 5000, "")
+        setTimeout(countDownStance, 15000, "")
         setQuestModalFirstTime(false)
         videoWatched()
       }
@@ -348,13 +349,18 @@ export const CommentBox = (props) => {
     if(_openQuestClicked){
       setQuestModalFirstTime(false)
     }
-    setTimeout(countDown, 2000, _openQuestClicked, _userStance)
+
+    if (userStance != "" || _userStance != ""){
+      setFirstStanceAnswered({answered: true})
+    }
+    setTimeout(countDown, 15000, _openQuestClicked, _userStance)
 
 
-    // GET STANCES AND USED STANCES TODO filter for creator in the database
+
+    // GET STANCES AND USED STANCES AND THEN CALL CHOOSE STANCE COMMENT
     api.stances.get({urlReplaces: urlReplaces}).done((stanceResult) => {
       _stances = stanceResult
-      api.usedstances.get({urlReplaces: urlReplaces}).done((usedstanceResult) => {
+      api.usedstances.get({urlReplaces: urlReplaces}, props.user.user).done((usedstanceResult) => {
         _usedStances = usedstanceResult
         if (props.stances.length > 0 || _userStance !== "") {
           chooseStanceComment(_stances, _usedStances, props.user.user, _userStance)
@@ -370,52 +376,42 @@ export const CommentBox = (props) => {
    /*
     CHOOSE STANCE COMMENTS
   */
-    function chooseStanceComment (stances, usedStances, user, _userStance){
-      let filteredStances = []
-      console.log("CHOOSE STANCE COMMENT")
-      console.log(_userStance)
-      console.log("STANCESRESULT")
-      console.log(stances)
-      console.log("USEDSTANCESRESULT")
-      console.log(usedStances)
-      if (_userStance !== "") {
-        let filteredUsedStances = []
-        for (let i = 0; i < usedStances.length; i++) {
-          let usedstance = usedStances[i]
-          if (usedstance.creator === user) {
-            filteredUsedStances.push(usedstance)
+  function chooseStanceComment (stances, usedStances, user, _userStance){
+    let filteredStances = []
+    console.log("CHOOSE STANCE COMMENT")
+    console.log(_userStance)
+    console.log("STANCESRESULT")
+    console.log(stances)
+    console.log("USEDSTANCESRESULT")
+    console.log(usedStances)
+    if (_userStance !== "") {
+      for (let i = 0; i < stances.length; i++) {
+        let stance = stances[i]
+        console.log(usedStances)
+          if (stance.creator !== user
+            && stanceMap[stance.stance] !== stanceMap[_userStance] // This is to avoid showing a stance that is the same as the users
+            && !usedStances.some(usedstance => usedstance.comment_id === stance.comment_id)) {
+              filteredStances.push(stance)
           }
-        }
-        console.log("FILTERED USED STANCES")
-        console.log(filteredUsedStances)
-
-        for (let i = 0; i < stances.length; i++) {
-          let stance = stances[i]
-          console.log(usedStances)
-            if (stance.creator !== user
-              && stanceMap[stance.stance] !== stanceMap[_userStance]
-              && !filteredUsedStances.some(usedstance => usedstance.comment_id === stance.comment_id)) {
-                filteredStances.push(stance)
-            }
-        }
       }
-
-      {/* Choose a random stance from the filtered stances that is not from the user */}
-      if (filteredStances.length > 0){
-        console.log("STANCE FOUND")
-        const random_index = getRandomInt(0, filteredStances.length - 1)
-        console.log(filteredStances)
-        setStanceText(filteredStances[random_index].comment_text)
-        setUserText(filteredStances[random_index].creator)
-
-        // This is the comment identifier
-        setStanceParentId(filteredStances[random_index].comment_id)
-      }else if(filteredStances.length === 0 && _userStance !== ""){
-        console.log("NO STANCES FOUND")
-        setNoStancesFound(true)
-      }
-
     }
+
+    {/* Choose a random stance from the filtered stances that is not from the user */}
+    if (filteredStances.length > 0){
+      console.log("STANCE FOUND")
+      const random_index = getRandomInt(0, filteredStances.length - 1)
+      console.log(filteredStances)
+      setStanceText(filteredStances[random_index].comment_text)
+      setUserText(filteredStances[random_index].creator)
+
+      // This is the comment identifier
+      setStanceParentId(filteredStances[random_index].comment_id)
+    }else if(filteredStances.length === 0 && _userStance !== ""){
+      console.log("NO STANCES FOUND")
+      setNoStancesFound(true)
+    }
+
+  }
 
   {
     /*
@@ -429,23 +425,23 @@ export const CommentBox = (props) => {
     // Remove one second, set state so a re-render happens.
     console.log(modalQuestState.isOpen)
     console.log(_openQuestClicked)
-    if(!_openQuestClicked) {
-      showQuestModal()
-    }else{
-      if(!showStanceButtons){
-        console.log("STARTED STANCE TIMER")
-        setTimeout(countDownStance, 5000, _userStance);
-      }
+    //if(!_openQuestClicked) {
+    //  showQuestModal()
+    //}else{
+    if(!showStanceButtons){
+      console.log("STARTED STANCE TIMER")
+      setTimeout(countDownStance, 1000, _userStance);
     }
+    //}
     // Check if we're at zero.
     setShowQuestButtons(true)
   }
 
   function countDownStance(_userStance) {
     // Check if user's general stance has been asked
-    if (userStance != "" || _userStance != ""){
-      setFirstStanceAnswered({answered: true})
-    }
+    //if (userStance != "" || _userStance != ""){
+    //  setFirstStanceAnswered({answered: true})
+    //}
     showStanceModal()
     // Check if we're at zero.
     setShowStanceButtons(true)
@@ -564,6 +560,7 @@ export const CommentBox = (props) => {
           objectPk: props.subjectId,
           contentTypeId: props.subjectType
         }
+
         params.ordering = sort
         params.urlReplaces = urlReplaces
         fetchSorted(sort)
@@ -584,7 +581,7 @@ export const CommentBox = (props) => {
         // GET STANCES HERE AGAIN AND CALL CHOOSE STANCES
         //if(isStanceModal){
           api.stances.get({urlReplaces: urlReplaces}).done((stanceResult) => {
-            api.usedstances.get({urlReplaces: urlReplaces}).done((usedstanceResult) => {
+            api.usedstances.get({urlReplaces: urlReplaces}, props.user.user).done((usedstanceResult) => {
               if (props.stances.length > 0 || userStance !== "") {
                 chooseStanceComment(stanceResult, usedstanceResult, props.user.user, userStance)
               }
@@ -887,7 +884,7 @@ export const CommentBox = (props) => {
     */
   }
   function renderButtons() {
-   if (showQuestButtons && showStanceButtons) {
+   {/*if (showQuestButtons && showStanceButtons) { */}
       return(
         <div>
           <div className="buttonBox">
@@ -903,7 +900,7 @@ export const CommentBox = (props) => {
           </div>
         </div>
       )
-    } else if (showQuestButtons){
+    {/*} else if (showQuestButtons){ 
       return(
         <div>
           <div className="buttonBox">
@@ -918,7 +915,7 @@ export const CommentBox = (props) => {
           </div>
         </div>
       )
-    }
+    } */}
   }
 
   {
@@ -926,28 +923,6 @@ export const CommentBox = (props) => {
     RENDER MODALS
     */
   }
-
-  function renderQuestModal() {
-    return(
-      <Modal show={modalQuestState.isOpen}>
-            <div className="questModal" id="questModal">
-              <img className="questblase" src={require("../../../../adhocracy-plus/static/stance_icons/video.png")} alt="Quest" />
-              <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showQuestModal(e); console.log("CLOSED")}}/></button>
-              <div style={{display: "flex", flexDirection: "column", padding: "20px", paddingLeft: "0px"}}>
-                {/* Embed video here */}
-                <iframe class="introVideo" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                {/* <video controls style={{ marginLeft: '5%' }}>
-                  <source src="/static/stance_icons/BigBuckBunny.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video> */}
-                 {/* <div className="argumentText"> Wir bitten Sie an einer Umfrage teilzunehmen!</div>
-                <button className="questButtonModal" onClick={openQuest}>Hier gehts zur Umfrage!</button>  */}
-              </div>
-            </div>
-      </Modal>
-    )
-  }
-
   function renderFaqModal() {
     return(
       <Modal show={modalFaqState.isOpen}>
@@ -955,14 +930,7 @@ export const CommentBox = (props) => {
               <img className="faqblase" src={require("../../../../adhocracy-plus/static/stance_icons/faq.png")} alt="Quest" />
               <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showFaqModal(e); console.log("CLOSED")}}/></button>
               <div style={{display: "flex", flexDirection: "column", padding: "20px", paddingLeft: "0px"}}>
-                {/* Embed video here */}
                 <FaqContent />
-                {/* <video controls style={{ marginLeft: '5%' }}>
-                  <source src="/static/stance_icons/BigBuckBunny.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video> */}
-                 {/* <div className="argumentText"> Wir bitten Sie an einer Umfrage teilzunehmen!</div>
-                <button className="questButtonModal" onClick={openQuest}>Hier gehts zur Umfrage!</button>  */}
               </div>
             </div>
       </Modal>
@@ -1088,11 +1056,12 @@ export const CommentBox = (props) => {
   return (
     <div>
         {renderButtons()}
-        {renderQuestModal()}
         {renderStanceModal()}
         {renderFaqModal()}
 
+      <IntroVideo path={"https://mediathek.hhu.de/embed/68e65519-0e88-47a0-ae3a-f8c5e9304011"} modalQuestState={modalQuestState} showQuestModal={showQuestModal} />
       <Spinner spinnerLoading={spinnerLoading} />
+
       <div className="a4-comments__commentbox__form">
         <CommentForm
           subjectType={props.subjectType}

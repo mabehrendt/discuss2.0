@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import django from 'django'
 import update from 'immutability-helper'
 import Badge from '@mui/material/Badge';
+import IntroVideo from '../../../../adhocracy-plus/static/Video.jsx';
 import FaqContent from '../../../../adhocracy-plus/static/Faq.jsx';
 import Spinner from '../../../../adhocracy-plus/static/Spinner.jsx';
 import "../../../../adhocracy-plus/static/collapsible.css";
@@ -662,14 +663,7 @@ function videoWatched(){
               <img className="faqblase" src={require("../../../../adhocracy-plus/static/stance_icons/faq.png")} alt="Quest" />
               <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showFaqModal(e); console.log("CLOSED")}}/></button>
               <div style={{display: "flex", flexDirection: "column", padding: "20px", paddingLeft: "0px"}}>
-                {/* Embed video here */}
                 <FaqContent />
-                {/* <video controls style={{ marginLeft: '5%' }}>
-                  <source src="/static/stance_icons/BigBuckBunny.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video> */}
-                 {/* <div className="argumentText"> Wir bitten Sie an einer Umfrage teilzunehmen!</div>
-                <button className="questButtonModal" onClick={openQuest}>Hier gehts zur Umfrage!</button>  */}
               </div>
             </div>
       </Modal>
@@ -688,10 +682,11 @@ function videoWatched(){
 
   return (
     <div>
-        {renderButtons()}
-        {renderQuestModal()}
-        {renderFaqModal()}
-        <Spinner spinnerLoading={spinnerLoading} />
+      {renderButtons()}
+      {renderFaqModal()}
+
+      <IntroVideo path="https://mediathek.hhu.de/embed/f9219b16-96c3-4d27-8755-3886bb9abab9" modalQuestState={modalQuestState} showQuestModal={showQuestModal} />
+      <Spinner spinnerLoading={spinnerLoading} />
 
       <div className="a4-comments__commentbox__form">
         <CommentForm

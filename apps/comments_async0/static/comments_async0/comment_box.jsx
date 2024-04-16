@@ -2,7 +2,9 @@ import React, {useEffect, useRef, useState} from 'react'
 import django from 'django'
 import update from 'immutability-helper'
 import Badge from '@mui/material/Badge';
+import IntroVideo from '../../../../adhocracy-plus/static/Video';
 import FaqContent from '../../../../adhocracy-plus/static/Faq';
+import Spinner from '../../../../adhocracy-plus/static/Spinner';
 import "../../../../adhocracy-plus/static/collapsible.css";
 
 import CommentForm from './comment_form'
@@ -45,6 +47,7 @@ export const CommentBox = (props) => {
     contentTypeId: props.subjectType
   }
 
+  const [spinnerLoading, setSpinnerLoading] = useState(false)
   const [showQuestButtons, setShowQuestButtons] = useState(true)
   const [showFaqButtons, setShowFaqButtons] = useState(true)
   const [showStanceButtons, setShowStanceButtons] = useState(false)
@@ -309,6 +312,8 @@ export const CommentBox = (props) => {
     }
   }
   function handleCommentSubmit (comment, parentIndex){
+    setSpinnerLoading(true)
+
     return api.comments
       .add(comment)
       .done((comment) => {
@@ -324,7 +329,7 @@ export const CommentBox = (props) => {
         comment.displayNotification = true
         addComment(parentIndex, comment)
         updateAgreedTOS()
-
+        setSpinnerLoading(false)
       })
       .fail((xhr, status, err) => {
         const newErrorMessage = Object.values(xhr.responseJSON)[0]
@@ -605,28 +610,6 @@ export const CommentBox = (props) => {
     RENDER MODALS
     */
   }
-
-  function renderQuestModal() {
-    return(
-      <Modal show={modalQuestState.isOpen}>
-            <div className="questModal" id="questModal">
-              <img className="questblase" src={require("../../../../adhocracy-plus/static/stance_icons/video.png")} alt="Quest" />
-              <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showQuestModal(e); console.log("CLOSED")}}/></button>
-              <div style={{display: "flex", flexDirection: "column", padding: "20px", paddingLeft: "0px"}}>
-                {/* Embed video here */}
-                <iframe class="introVideo" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                {/* <video controls style={{ marginLeft: '5%' }}>
-                  <source src="/static/stance_icons/BigBuckBunny.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video> */}
-                 {/* <div className="argumentText"> Wir bitten Sie an einer Umfrage teilzunehmen!</div>
-                <button className="questButtonModal" onClick={openQuest}>Hier gehts zur Umfrage!</button>  */}
-              </div>
-            </div>
-      </Modal>
-    )
-  }
-
   function renderFaqModal() {
     return(
       <Modal show={modalFaqState.isOpen}>
@@ -634,14 +617,7 @@ export const CommentBox = (props) => {
               <img className="faqblase" src={require("../../../../adhocracy-plus/static/stance_icons/faq.png")} alt="Quest" />
               <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showFaqModal(e); console.log("CLOSED")}}/></button>
               <div style={{display: "flex", flexDirection: "column", padding: "20px", paddingLeft: "0px"}}>
-                {/* Embed video here */}
                 <FaqContent />
-                {/* <video controls style={{ marginLeft: '5%' }}>
-                  <source src="/static/stance_icons/BigBuckBunny.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video> */}
-                 {/* <div className="argumentText"> Wir bitten Sie an einer Umfrage teilzunehmen!</div>
-                <button className="questButtonModal" onClick={openQuest}>Hier gehts zur Umfrage!</button>  */}
               </div>
             </div>
       </Modal>
@@ -660,8 +636,11 @@ export const CommentBox = (props) => {
   return (
     <div>
         {renderButtons()}
-        {renderQuestModal()}
         {renderFaqModal()}
+
+      <IntroVideo path="https://mediathek.hhu.de/embed/c6bfd97d-abe1-4364-bdf9-21aa8ca416a2" modalQuestState={modalQuestState} showQuestModal={showQuestModal} />
+      <Spinner spinnerLoading={loading} />
+
       <div className="a4-comments__commentbox__form">
         <CommentForm
           subjectType={props.subjectType}
