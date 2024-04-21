@@ -25,8 +25,8 @@ class AIStanceSubject(module_models.Item):
         verbose_name=_('Title'),
         help_text=_('max 120 characters')
     )
-    description = models.CharField(
-        max_length=350,
+    description = models.TextField(
+        max_length=450,
         blank=True,
         verbose_name=_('Description'),
         help_text=_('In addition to the title, you can insert an optional '
