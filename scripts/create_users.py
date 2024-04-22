@@ -16,6 +16,7 @@ from django.conf import settings
 from datetime import datetime, timezone
 
 from allauth.account.models import EmailAddress
+from apps.organisations.models import Member
 
 import csv
 
@@ -46,5 +47,8 @@ for row in data:
     Mail.user_id=Post.id
     Mail.email=Post.email
     Mail.save()
+    # change organisation id here
+    Member.objects.create(member_id = Post.id, organisation_id = 2)
+    
 
 
