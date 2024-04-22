@@ -163,6 +163,7 @@ export default class Comment extends React.Component {
         for (let j = 0; i < this.props.quality.length; j++) {
           if (this.props.quality[j].comment_id === this.props.topThreeCommentIds[i]) {
             return this.props.quality[j].quality
+            //return "high"
           }
         }
       }
