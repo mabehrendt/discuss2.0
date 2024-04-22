@@ -157,6 +157,7 @@ export default class Comment extends React.Component {
   currentCommentQuality () {
     console.log("Comment IDS in comment.jsx")
     console.log(this.props.topThreeCommentIds)
+    console.log(this.props.quality)
     for (let i = 0; i < this.props.topThreeCommentIds.length; i++) {
       if (this.props.topThreeCommentIds[i] === this.props.id) {
         for (let j = 0; i < this.props.quality.length; j++) {

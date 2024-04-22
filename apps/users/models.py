@@ -128,6 +128,13 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
 
     objects = auth_models.UserManager()
 
+    # bilendi_id = models.CharField(
+    #     max_length=100,
+    #     blank=True,
+    #     null=True,
+    #     verbose_name=_("Bilendi ID"),
+    # )
+
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["username"]
 

@@ -20,7 +20,7 @@ import Melden from './faq_text/Melden.jsx';
 
 function FaqContent() {
     const faqs = [
-        {header: 'Fragen zum Online-Beteiligungsverfahren', question: "Was ist [Name des Verfahrens]?", answer: <NameDesVerfahrens /> },
+        {header: 'Fragen zum Online-Beteiligungsverfahren', question: "Worum geht es bei dem Beteiligungsverfahren?", answer: <NameDesVerfahrens /> },
         {header: '', question: "Wie läuft der Beteiligungsprozess ab?", answer: <Beteiligungsprozess /> },
         {header: '', question: "Was passiert mit den Ergebnissen des Beteiligungsverfahrens?", answer: <ErgebnisseBeteiligung /> },
         {header: 'Fragen zur Online-Diskussion und Netiquette', question: "Wie kann ich mich an der Diskussion beteiligen?", answer: <WieBeteiligen /> },
