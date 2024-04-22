@@ -38,6 +38,13 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
         },
     )
 
+    bilendi_id = models.CharField(
+        _("bilendi id"),
+        unique=False,
+        blank=True,
+        max_length=100,
+    )
+
     email = models.EmailField(
         _("Email address"),
         unique=True,

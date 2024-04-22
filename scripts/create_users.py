@@ -16,6 +16,7 @@ from django.conf import settings
 from datetime import datetime, timezone
 
 from allauth.account.models import EmailAddress
+from apps.organisations.models import Member
 
 import csv
 
@@ -28,10 +29,11 @@ data = csv.reader(open(file), delimiter=",")
 next(data, None)
 for row in data:
     Post=User()
-    Post.password = make_password(row[1])
+    Post.password = make_password(row[2])
     Post.is_superuser = "0"
-    Post.username = row[2]
-    Post.email = row[3]
+    Post.username = row[3]
+    Post.bilendi_id = row[1]
+    Post.email = row[4]
     Post.date_joined = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d %H:%M:%S")
     Post.get_notifications = "1"
     Post.get_newsletters = "0"
@@ -45,5 +47,8 @@ for row in data:
     Mail.user_id=Post.id
     Mail.email=Post.email
     Mail.save()
+    # change organisation id here
+    Member.objects.create(member_id = Post.id, organisation_id = 2)
     
+
 
