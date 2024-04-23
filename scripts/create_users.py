@@ -1,6 +1,6 @@
 import os
 import sys
-project_dir = "/home/maike/Dokumente/Uni/Repositories/discuss2.0"
+project_dir = "/home/maike/discuss2.0"
 sys.path.append(project_dir)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'adhocracy-plus.config.settings.build'
 import django
@@ -21,8 +21,9 @@ from apps.organisations.models import Member
 import csv
 
 User = get_user_model()
+print(User)
 
-file = 'import_users.csv'
+file = './scripts/import_users.csv'
 
 data = csv.reader(open(file), delimiter=",")
 # skip header
@@ -48,7 +49,7 @@ for row in data:
     Mail.email=Post.email
     Mail.save()
     # change organisation id here
-    Member.objects.create(member_id = Post.id, organisation_id = 2)
+    Member.objects.create(member_id = Post.id, organisation_id = 3)
     
 
 
