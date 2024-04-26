@@ -98,8 +98,8 @@ class CustomLoginView(LoginView):
         if user is not None:
             #print("USER: ", user)
             login(request, user)
-            UserLogins.objects.create(user=user, date=timezone.now())
-            all_user_logins = UserLogins.objects.all()
+            #UserLogins.objects.create(user=user, date=timezone.now().date())
+            #all_user_logins = UserLogins.objects.all()
             #for user_login in all_user_logins:
             #    print(user_login.user, user_login.date)
             return redirect(request.GET.get('next', ''))

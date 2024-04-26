@@ -6,6 +6,8 @@ from django.contrib.contenttypes.models import ContentType
 from django.core.exceptions import ImproperlyConfigured
 from django.utils.html import format_html
 
+from utils.count_logins import count_login
+
 register = template.Library()
 
 @register.simple_tag(takes_context=True)
@@ -17,6 +19,10 @@ def react_comments_async1(context, obj, with_categories=False):
     else:
         user = None
         user_authenticated = context["user"].is_authenticated
+
+    if user_authenticated:
+        count_login(user)
+    
     debateQualityQuestion = context["aiqualitysubject"].name
     anchoredCommentId = request.GET.get("comment", "")
     contenttype = ContentType.objects.get_for_model(obj)

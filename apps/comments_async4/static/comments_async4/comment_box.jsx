@@ -313,7 +313,7 @@ export const CommentBox = (props) => {
     params.urlReplaces = urlReplaces
     api.stances.get(params).done((stanceResult) => {
       console.log(stanceResult)
-      chooseStanceComment(stanceResult, props.user.user, result.user_stance)
+      chooseStanceComment(stanceResult, undefined, props.user.user, result.user_stance)
       setUserStance(result.user_stance)
     })
     // Call chooseStanceComment with stances
@@ -388,7 +388,7 @@ export const CommentBox = (props) => {
         let stance = stances[i]
         console.log(usedStances)
           if (stance.creator !== user 
-            && !usedStances.some(usedstance => usedstance.comment_id === stance.comment_id)) {
+            && (usedStances === undefined || !usedStances.some(usedstance => usedstance.comment_id === stance.comment_id))) {
               filteredStances.push(stance)
           }
       }
