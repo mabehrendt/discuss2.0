@@ -212,4 +212,4 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
 
 class UserLogins(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField(auto_now_add=True)
