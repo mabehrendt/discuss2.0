@@ -377,7 +377,7 @@ class PollQuestions extends React.Component {
                         />
                       </div>}
                     <div className="poll poll__btn--wrapper">
-                      {this.buttonVote}{!this.state.loading ? this.linkShowResults() : this.loadingIndicator}
+                      {this.buttonVote}{/*{!this.state.loading ? this.linkShowResults() : this.loadingIndicator}*/}
                     </div>
                   </>
                   )}
