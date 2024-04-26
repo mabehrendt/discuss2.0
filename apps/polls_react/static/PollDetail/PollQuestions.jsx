@@ -140,7 +140,7 @@ class PollQuestions extends React.Component {
             !this.state.checkedTermsOfUse)
           }
         >
-{/*           {this.state.hasUserVote ? django.gettext('Change answer') : django.gettext('Submit answer')} */}
+           {this.state.hasUserVote ? django.gettext('Change answer') : django.gettext('Submit answer')} 
         </button>
       )
     } else {
