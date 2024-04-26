@@ -19,7 +19,7 @@ from wagtail.documents import urls as wagtaildocs_urls
 from adhocracy4.api import routers as a4routers
 from adhocracy4.comments.api import CommentModerateSet
 from adhocracy4.follows.api import FollowViewSet
-from adhocracy4.polls.api import PollViewSet
+from apps.polls_react.api import PollViewSet
 from adhocracy4.ratings.api import RatingViewSet
 from adhocracy4.reports.api import ReportViewSet
 from apps.account.api import AccountViewSet

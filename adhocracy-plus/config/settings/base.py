@@ -85,7 +85,7 @@ INSTALLED_APPS = (
     "adhocracy4.modules",
     "adhocracy4.organisations",
     "adhocracy4.phases",
-    "adhocracy4.polls",
+    #"adhocracy4.polls",
     "adhocracy4.projects",
     "adhocracy4.ratings",
     "adhocracy4.reports",
@@ -119,6 +119,7 @@ INSTALLED_APPS = (
     "apps.ideas",
     "apps.mapideas",
     "apps.polls",
+    "apps.polls_react",
     "apps.topicprio",
     "apps.debate",
     "apps.debate_quality_random",
@@ -173,6 +174,7 @@ TEMPLATES = [
             'react_comments_async2': 'apps.comments_async2.templatetags.react_comments_async2',
             'react_comments_async3': 'apps.comments_async3.templatetags.react_comments_async3',
             'react_comments_async4': 'apps.comments_async4.templatetags.react_comments_async4',
+            'react_polls': 'apps.polls_react.templatetags.react_polls2'
 
             }
         },
@@ -465,7 +467,7 @@ A4_RATEABLES = (
 
 A4_COMMENTABLES = (
     ("a4comments", "comment"),
-    ("a4polls", "poll"),
+    ("a4pollsreact", "poll"),
     ("a4_candy_ideas", "idea"),
     ("a4_candy_documents", "chapter"),
     ("a4_candy_documents", "paragraph"),
@@ -502,7 +504,7 @@ A4_ACTIONABLES = (
 
 A4_AUTO_FOLLOWABLES = (
     ("a4comments", "comment"),
-    ("a4polls", "vote"),
+    ("a4pollsreact", "vote"),
     ("a4_candy_ideas", "idea"),
     ("a4_candy_mapideas", "mapidea"),
     ("a4_candy_budgeting", "proposal"),

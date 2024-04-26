@@ -6,7 +6,7 @@ from django.views import generic
 
 from adhocracy4.actions.models import Action
 from adhocracy4.comments.models import Comment
-from adhocracy4.polls.models import Poll
+from apps.polls_react.models import Poll
 from adhocracy4.projects.models import Project
 from adhocracy4.rules import mixins as rules_mixins
 from apps.documents.models import Chapter

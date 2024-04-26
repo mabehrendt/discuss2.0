@@ -1,7 +1,7 @@
 from django import template
 
 from adhocracy4.comments.models import Comment
-from adhocracy4.polls.models import Vote
+from apps.polls_react.models import Vote
 from apps.budgeting.models import Proposal as budget_proposal
 from apps.ideas.models import Idea
 from apps.interactiveevents.models import Like

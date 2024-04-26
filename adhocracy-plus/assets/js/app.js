@@ -25,6 +25,7 @@ import { renderComment1 } from '../../../apps/comments_async1/static/comments_as
 import { renderComment2 } from '../../../apps/comments_async2/static/comments_async2/react_comments_async2.jsx'
 import { renderComment3 } from '../../../apps/comments_async3/static/comments_async3/react_comments_async3.jsx'
 import { renderComment4 } from '../../../apps/comments_async4/static/comments_async4/react_comments_async4.jsx'
+import { renderPolls } from '../../../apps/polls_react/static/react_polls.jsx'
 
 function init () {
   ReactWidget.initialise('a4', 'comment_async', ReactCommentsAsync.renderComment)
@@ -39,7 +40,7 @@ function init () {
   initialise2('a4', 'comment_async2', renderComment2)
   initialise2('a4', 'comment_async3', renderComment3)
   initialise2('a4', 'comment_async4', renderComment4)
-
+  initialise2('a4', 'react_polls', renderPolls)
 
   $('.timeline-carousel__item').slick({
     initialSlide: parseInt($('#timeline-carousel').attr('data-initial-slide')),
