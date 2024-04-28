@@ -140,7 +140,7 @@ class PollQuestions extends React.Component {
             !this.state.checkedTermsOfUse)
           }
         >
-           {this.state.hasUserVote ? django.gettext('Change answer') : django.gettext('Submit answer')} 
+           {this.state.hasUserVote ? django.gettext('Change answer') : django.gettext('Submit answer')}
         </button>
       )
     } else {
@@ -332,9 +332,9 @@ class PollQuestions extends React.Component {
                 />
               ))}
               <Alert onClick={() => this.removeAlert()} {...this.state.alert} />
-              <div className="poll">
-                {this.state.hasUserVote ? this.linkChangeVote : this.linkToPoll}
-              </div>
+{/*               <div className="poll"> */}
+{/*                 {this.state.hasUserVote ? this.linkChangeVote : this.linkToPoll} */}
+{/*               </div> */}
             </div>)
           : (
             <div className="pollquestionlist-container">
