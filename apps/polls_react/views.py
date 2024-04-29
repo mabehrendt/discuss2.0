@@ -20,7 +20,7 @@ class PollDetailView(
     DisplayProjectOrModuleMixin,
 ):
     model = models.Poll
-    permission_required = "a4polls.view_poll"
+    permission_required = "a4pollsreact.view_poll"
 
     def get(self, request, *args, **kwargs):
         try:

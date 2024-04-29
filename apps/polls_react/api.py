@@ -33,15 +33,17 @@ class PollViewSet(
     queryset = Poll.objects.all()
     serializer_class = PollSerializer
     permission_classes = (ViewSetRulesPermission,)
+    print("Permission classes:", permission_classes)
 
     def get_permission_object(self):
         poll = self.get_object()
+        print("POLL REACT API")
         return poll.module
 
     @property
     def rules_method_map(self):
         return ViewSetRulesPermission.default_rules_method_map._replace(
-            POST="a4polls.add_vote",
+            POST="a4pollsreact.add_vote",
         )
 
     def _get_org_terms_model(self):

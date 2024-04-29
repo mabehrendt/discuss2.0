@@ -24,7 +24,7 @@ class PollCommentExportView(
     model = Comment
 
     fields = ["id", "comment", "created"]
-    permission_required = "a4polls.change_poll"
+    permission_required = "a4pollsreact.change_poll"
 
     def get_permission_object(self):
         return self.module
@@ -48,7 +48,7 @@ class PollCommentExportView(
 
 class PollExportView(PermissionRequiredMixin, export_views.BaseItemExportView):
 
-    permission_required = "a4polls.change_poll"
+    permission_required = "a4pollsreact.change_poll"
 
     def get_permission_object(self):
         return self.module

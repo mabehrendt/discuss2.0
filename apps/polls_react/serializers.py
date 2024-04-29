@@ -76,6 +76,8 @@ class QuestionSerializer(serializers.ModelSerializer):
     def get_authenticated(self, _):
         if "request" in self.context:
             user = self.context["request"].user
+            print("USER:", user)
+            print("AUTHENTICATED", bool(user.is_authenticated))
             return bool(user.is_authenticated)
         return False
 
@@ -84,8 +86,11 @@ class QuestionSerializer(serializers.ModelSerializer):
             user = self.context["request"].user
             has_poll_permission = user.has_perm("a4polls.add_vote", question.poll)
             would_have_poll_permission = NormalUser().would_have_perm(
-                "a4polls.add_vote", question.poll
+                "a4pollsreact.add_vote", question.poll
             )
+            print("USER:", user)
+            print(has_poll_permission)
+            print(would_have_poll_permission)
             return not has_poll_permission and not would_have_poll_permission
 
         return True

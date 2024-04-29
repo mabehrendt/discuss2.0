@@ -130,12 +130,14 @@ module.exports = {
       dependOn: 'adhocracy4'
     },
 
+/*
     poll_management: {
       import: [
         'adhocracy4/adhocracy4/polls/static/react_poll_management.jsx'
       ],
       dependOn: 'adhocracy4'
     },
+*/
 /*
     polls: {
       import: [

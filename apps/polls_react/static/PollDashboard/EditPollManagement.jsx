@@ -7,7 +7,7 @@ import { EditPollQuestion } from './EditPollQuestion'
 import { EditPollOpenQuestion } from './EditPollOpenQuestion'
 import EditPollDropdown from './EditPollDropdown'
 
-import { updateDashboard } from '../../../node_modules/adhocracy4/adhocracy4/dashboard/assets/dashboard.js'
+import { updateDashboard } from '../../../../node_modules/adhocracy4/adhocracy4/dashboard/assets/dashboard.js'
 
 import api from '../../../../adhocracy-plus/static/api'
 
