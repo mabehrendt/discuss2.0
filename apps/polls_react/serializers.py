@@ -84,7 +84,7 @@ class QuestionSerializer(serializers.ModelSerializer):
     def get_is_read_only(self, question):
         if "request" in self.context:
             user = self.context["request"].user
-            has_poll_permission = user.has_perm("a4polls.add_vote", question.poll)
+            has_poll_permission = user.has_perm("a4pollsreact.add_vote", question.poll)
             would_have_poll_permission = NormalUser().would_have_perm(
                 "a4pollsreact.add_vote", question.poll
             )
