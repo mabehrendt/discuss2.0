@@ -14,7 +14,6 @@ function Netiquette() {
                 <li>Beachten Sie auch bei Verlinkungen auf die Einhaltung der genannten Regeln. Wir behalten uns jedoch vor, Links zu entfernen, wenn deren Inhalte gegen die genannten Regeln verstoßen.</li>
                 <li>Verzichten Sie darauf, den gleichen Kommentar mehrmals zu veröffentlichen.</li>
             </ul>
-            <p >Weitere Bedienhinweise finden sich im Video. Dieses kann jederzeit über den Button mit der Beschriftung „Einführung“ in der unteren linken Ecke des Fensters aufgerufen werden.</p>           
         </div>
     );
 }
