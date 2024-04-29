@@ -1,5 +1,5 @@
-id,bilendi_id,password,username,email,gruppe
-,,k3IBpCv1o8PW,Alex,Alex1@hhu.de,1
-,,VOIECtwYw17W,Robin,Robin2@hhu.de,2
-,,H0Bx8kYkv232,Kim,Kim3@hhu.de,3
-,,3yMKxch5IjHb,Taylor,Taylor4@hhu.de,4
+id,bilendi_id,password,username,email,gruppe,link_platform,link_voting
+,,k3IBpCv1o8PW,Alex,Alex1@hhu.de,1,https://discuss20.de/accounts/login/?next=/heinrich-heine-universitat-dusseldorf/qsubjects/2024-00032/&user=Alex1@hhu.de&pass=k3IBpCv1o8PW,https://discuss20.de/accounts/login/?next=/heinrich-heine-universitat-dusseldorf/projects/module/umfrage&user=Alex1@hhu.de&pass=k3IBpCv1o8PW
+,,VOIECtwYw17W,Robin,Robin2@hhu.de,2,https://discuss20.de/accounts/login/?next=/heinrich-heine-universitat-dusseldorf/qsubjects/2024-00033/&user=Robin2@hhu.de&pass=VOIECtwYw17W,https://discuss20.de/accounts/login/?next=/heinrich-heine-universitat-dusseldorf/projects/module/umfrage-2&user=Robin2@hhu.de&pass=VOIECtwYw17W
+,,H0Bx8kYkv232,Kim,Kim3@hhu.de,3,https://discuss20.de/accounts/login/?next=/heinrich-heine-universitat-dusseldorf/ssubjects/2024-00034/&user=Kim3@hhu.de&pass=H0Bx8kYkv232,https://discuss20.de/accounts/login/?next=/heinrich-heine-universitat-dusseldorf/projects/module/umfrage-5&user=Kim3@hhu.de&pass=H0Bx8kYkv232
+,,3yMKxch5IjHb,Taylor,Taylor4@hhu.de,4,https://discuss20.de/accounts/login/?next=/heinrich-heine-universitat-dusseldorf/ssubjects/2024-00035/&user=Taylor4@hhu.de&pass=3yMKxch5IjHb,https://discuss20.de/accounts/login/?next=/heinrich-heine-universitat-dusseldorf/projects/module/umfrage-6&user=Taylor4@hhu.de&pass=3yMKxch5IjHb
