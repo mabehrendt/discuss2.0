@@ -332,9 +332,9 @@ class PollQuestions extends React.Component {
                 />
               ))}
               <Alert onClick={() => this.removeAlert()} {...this.state.alert} />
-               <div className="poll"> 
-                {this.state.hasUserVote ? this.linkChangeVote : this.linkToPoll} 
-               </div> 
+{/*               <div className="poll"> */}
+{/*                 {this.state.hasUserVote ? this.linkChangeVote : this.linkToPoll} */}
+{/*               </div> */}
             </div>)
           : (
             <div className="pollquestionlist-container">
@@ -377,7 +377,7 @@ class PollQuestions extends React.Component {
                         />
                       </div>}
                     <div className="poll poll__btn--wrapper">
-                      {this.buttonVote}{!this.state.loading ? this.linkShowResults() : this.loadingIndicator}
+                      {this.buttonVote}{/*{!this.state.loading ? this.linkShowResults() : this.loadingIndicator}*/}
                     </div>
                   </>
                   )}
