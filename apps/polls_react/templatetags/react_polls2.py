@@ -8,7 +8,6 @@ register = template.Library()
 
 @register.simple_tag
 def react_polls2(poll):
-    print("TEST REACT POLL")
     return format_html(
         '<div data-a4-widget="react_polls" data-poll-id="{pollId}"></div>',
         pollId=poll.pk,
