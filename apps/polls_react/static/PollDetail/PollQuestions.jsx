@@ -325,13 +325,14 @@ class PollQuestions extends React.Component {
         <>{this.state.showResults
           ? (
             <div className="pollquestionlist-container">
-              {this.state.result.map((question, idx) => (
-                <PollResults
+              {/*{this.state.result.map((question, idx) => (
+                 <PollResults
                   key={idx}
                   question={question}
                 />
-              ))}
+              ))} */}
               <Alert onClick={() => this.removeAlert()} {...this.state.alert} />
+
 {/*               <div className="poll"> */}
 {/*                 {this.state.hasUserVote ? this.linkChangeVote : this.linkToPoll} */}
 {/*               </div> */}
