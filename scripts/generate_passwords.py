@@ -10,7 +10,7 @@ def generate_password(length=12):
     password = ''.join(random.choice(characters) for _ in range(length))
     return password
 
-df = pd.read_csv(file,sep=',')
+df = pd.read_csv(file,sep=',',dtype=str)
 
 for row in df.index:
     pw = generate_password()

@@ -1,5 +1,5 @@
-id,bilendi_id,password,username,email
-,,sW?z7>c0__32,Alex,Alex@hhu.de
-,,":,XA_>LgeM*N",Robin,Robin@hhu.de
-,,"bbS/7<%eL""w,",Kim,Kim@hhu.de
-,,Of=tCT_A<'Yh,Taylor,Taylor@hhu.de
+id,bilendi_id,password,username,email,gruppe
+,,eLTS1aYwPSO7,Alex,,1
+,,9h8KYWqdqqUA,Robin,,2
+,,2oCnMJYKaxk2,Kim,,3
+,,3fBgqJSfSPYp,Taylor,,4
