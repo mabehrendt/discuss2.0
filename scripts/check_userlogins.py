@@ -19,4 +19,5 @@ all_userlogins = UserLogins.objects.all()
 for login in all_userlogins:
     print("USER: ", login.user)
     print("DATE: ", login.date)
+    print("EMAIL: ", login.email_intern)
     print("\n")
