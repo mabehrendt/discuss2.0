@@ -213,3 +213,4 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
 class UserLogins(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateField(auto_now_add=True)
+    email_intern = models.CharField(max_length=200,blank=True)
