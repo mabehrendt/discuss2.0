@@ -32,7 +32,7 @@
                     <div class="mt-5">
                     </div>
                     {% endif %}
-                    <a href="{% url 'profile' user.username %}" aria-label="{% trans 'Link to profile:' %}{{ user.username }}">
+                    <a href="{% url 'profile' user.email %}" aria-label="{% trans 'Link to profile:' %}{{ user.email }}">
                         {% if user.avatar %}
                             <img class="userdashboard-profile__avatar mb-2" src="{% thumbnail user.avatar '170x170' crop %}" alt="" />
                         {% else %}
