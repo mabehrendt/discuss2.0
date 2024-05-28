@@ -22,7 +22,7 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
     username = models.CharField(
         _("username"),
         max_length=60,
-        unique=True,
+        unique=False,
         help_text=_(
             "Required. 60 characters or fewer. Letters, digits, spaces and "
             "@/./+/-/_ only."
