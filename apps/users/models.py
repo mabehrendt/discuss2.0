@@ -135,13 +135,6 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
 
     objects = auth_models.UserManager()
 
-    # bilendi_id = models.CharField(
-    #     max_length=100,
-    #     blank=True,
-    #     null=True,
-    #     verbose_name=_("Bilendi ID"),
-    # )
-
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["username"]
 
@@ -203,7 +196,7 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
         return full_name.strip()
 
     def get_absolute_url(self):
-        return reverse("profile", args=[str(self.username)])
+        return reverse("profile", args=[str(self.email)])
 
     def has_agreed_on_org_terms(self, organisation):
         return OrganisationTermsOfUse.objects.filter(

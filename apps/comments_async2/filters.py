@@ -5,6 +5,7 @@ from rest_framework.filters import SearchFilter
 from django.contrib.contenttypes.models import ContentType
 import random
 from apps.quality.models import Quality
+from adhocracy4.comments.models import Comment
 
 class CommentCategoryFilterBackend(BaseFilterBackend):
     """Filter the comments for the categories."""
@@ -68,43 +69,31 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
                 qualities = Quality.objects.filter(object_id=request.GET["objectPk"]).filter(
                     content_type_id=request.GET["contentTypeId"]
                 )
-                qualities = qualities.order_by("quality","-created")
-                new_queryset = []
-                for j in range(len(qualities)):
-                    for i in range(len(queryset)):
-                        if qualities[j].comment_id == queryset[i].id:
-                            new_queryset.append(queryset[i])
-                            break
-                queryset = new_queryset
-
+                high_qualities = qualities.order_by('-prediction').filter(quality='high').order_by('-created')[:3]
+                blocked_ids = high_qualities.values("id")
+                qualities = qualities.order_by('-created')
+                qualities = qualities.exclude(id__in=blocked_ids)
+                print('High Qualities:', high_qualities.values_list("comment_id",flat=True))
+                print('Qualities:', qualities.values_list("comment_id",flat=True))
+                qualities_whole = list(chain(high_qualities.values_list("comment_id",flat=True),qualities.values_list("comment_id",flat=True)))
+                queryset = Comment.objects.filter(id__in=qualities_whole)
             elif ordering == "ranqua":
-                qualities = Quality.objects.filter(
-                    object_id=request.GET["objectPk"]).filter(
+                qualities = Quality.objects.filter(object_id=request.GET["objectPk"]).filter(
                     content_type_id=request.GET["contentTypeId"]
                 )
-                # k = random.randint(1,3)
                 qualities = qualities.order_by('-created')
-                new_queryset = []
+                quality_ids = qualities.values_list("comment_id", flat=True)
                 if len(qualities) <= 3:
-                    for j in range(len(qualities)):
-                        for i in range(len(queryset)):
-                            if qualities[j].comment_id == queryset[i].id:
-                                new_queryset.append(queryset[i])
-                                break
+                    queryset = Comment.objects.filter(id__in=quality_ids)
                 elif len(qualities) > 3:
-                    rand_high_qualities = random.sample(list(qualities), 3)
+                    rand_high_qualities = random.sample(list(qualities),3)
+                    print(rand_high_qualities)
                     id_list = [rec.id for rec in rand_high_qualities]
                     high_qualities = Quality.objects.filter(id__in=id_list)
                     blocked_ids = high_qualities.values("id")
                     qualities = qualities.exclude(id__in=blocked_ids)
-                    qualities_whole = list(chain(high_qualities, qualities))
-                    for j in range(len(qualities_whole)):
-                        for i in range(len(queryset)):
-                            if qualities_whole[j].comment_id == queryset[i].id:
-                                new_queryset.append(queryset[i])
-                                break
-                queryset = new_queryset
-
+                    qualities_whole = list(chain(high_qualities.values_list("comment_id",flat=True),qualities.values_list("comment_id",flat=True)))
+                    queryset = Comment.objects.filter(id__in=qualities_whole)
         return queryset
 
 
