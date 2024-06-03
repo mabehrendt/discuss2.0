@@ -16,7 +16,3 @@ def count_login(user_email):
 
     if not user_login.userlogins_set.filter(date=timezone.now().date()).exists():
         UserLogins.objects.create(email_intern=user_email, user=user_login, date=timezone.now().date())
-
-    all_user_logins = UserLogins.objects.all()
-    for user_login in all_user_logins:
-        print(user_login.user, user_login.date)
