@@ -16,6 +16,12 @@ def get_quality(sender, instance, created, update_fields, **kwargs):
     elif comment_text_changed:
         update_quality(str(instance.comment), labels, prediction, quality, instance.id)
 
+@receiver(signals.post_delete, sender=Comment)
+def delete_quality(sender, instance, **kwargs):
+    quality = Quality.objects.get(comment_id=instance.id)
+    quality.delete()
+
+
 def save_quality(comment, labels, prediction, quality, content_type, object_id, comment_id, creator):
     quality = Quality(
         content_type=content_type,

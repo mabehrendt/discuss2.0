@@ -23,6 +23,11 @@ def get_stance(sender, instance, created, update_fields, **kwargs):
     elif comment_text_changed:
         update_stance(str(instance.comment), stance, instance.id)
 
+@receiver(signals.post_delete, sender=Comment)
+def delete_stance(sender, instance, **kwargs):
+    quality = Stance.objects.get(comment_id=instance.id)
+    quality.delete()
+
 def save_stance(comment, stance_classification, content_type, object_id, comment_id, creator):
     stance = Stance(
         content_type=content_type,
