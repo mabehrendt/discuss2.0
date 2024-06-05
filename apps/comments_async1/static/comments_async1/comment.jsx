@@ -400,9 +400,10 @@ export default class Comment extends React.Component {
                 </div>
                 <div className="col-7 col-md-8 a4-comments__author-container">
                   <div className={this.props.is_deleted ? 'a4-comments__deleted-author' : 'a4-comments__author'}>
-                    {userProfile === ''
+                    {this.props.user_name}
+                    {/* {userProfile === ''
                       ? this.props.user_name
-                      : <a href={userProfile}>{this.props.user_name}</a>}
+                      : <a href={userProfile}>{this.props.user_name}</a>} */}
                   </div>
                   {moderatorLabel}
                   <time className="a4-comments__submission-date">
