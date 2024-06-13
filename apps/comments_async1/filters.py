@@ -3,6 +3,7 @@ from itertools import chain
 from rest_framework.filters import BaseFilterBackend
 from rest_framework.filters import SearchFilter
 from django.contrib.contenttypes.models import ContentType
+from django.db.models import Case, When
 import random
 from apps.quality.models import Quality
 from adhocracy4.comments.models import Comment
@@ -69,14 +70,19 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
                 qualities = Quality.objects.filter(object_id=request.GET["objectPk"]).filter(
                     content_type_id=request.GET["contentTypeId"]
                 )
-                high_qualities = qualities.order_by('-prediction').filter(quality='high').order_by('-created')[:3]
+                high_qualities = qualities.filter(quality='high').order_by('-prediction', '-created')[:3]
                 blocked_ids = high_qualities.values("id")
                 qualities = qualities.order_by('-created')
                 qualities = qualities.exclude(id__in=blocked_ids)
                 print('High Qualities:', high_qualities.values_list("comment_id",flat=True))
                 print('Qualities:', qualities.values_list("comment_id",flat=True))
                 qualities_whole = list(chain(high_qualities.values_list("comment_id",flat=True),qualities.values_list("comment_id",flat=True)))
-                queryset = Comment.objects.filter(id__in=qualities_whole)
+                print('Qualities Whole:', qualities_whole)
+                preserved = Case(
+                    *[When(id=field, then=position) for position, field in
+                      enumerate(qualities_whole)])
+                queryset = Comment.objects.filter(id__in=qualities_whole).order_by(
+                    preserved)
             elif ordering == "ranqua":
                 qualities = Quality.objects.filter(object_id=request.GET["objectPk"]).filter(
                     content_type_id=request.GET["contentTypeId"]
@@ -93,7 +99,11 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
                     blocked_ids = high_qualities.values("id")
                     qualities = qualities.exclude(id__in=blocked_ids)
                     qualities_whole = list(chain(high_qualities.values_list("comment_id",flat=True),qualities.values_list("comment_id",flat=True)))
-                    queryset = Comment.objects.filter(id__in=qualities_whole)
+                    preserved = Case(
+                        *[When(id=field, then=position) for position, field in
+                          enumerate(qualities_whole)])
+                    queryset = Comment.objects.filter(id__in=qualities_whole).order_by(
+                        preserved)
         return queryset
 
 

@@ -494,11 +494,11 @@ export const CommentBox = (props) => {
 
     api.comments.get(params).done((result) => {
       const data = result
+      console.log('Results:', data.results)
       setTopThreeCommentIds(data.results.slice(0,3).map(el => el.id))
       setComments(data.results)
       setNextComments(data.next)
       setCommentCount(data.count)
-      console.log("Comments:")
       /*setSort(order)*/
       setLoadingFilter(false)
     })
