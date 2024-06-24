@@ -12,6 +12,7 @@ from apps.moderatorfeedback.serializers import ModeratorCommentFeedbackSerialize
 
 class ModerationCommentSerializer(serializers.ModelSerializer):
     comment_url = serializers.SerializerMethodField()
+    report_description = serializers.SerializerMethodField()
     is_unread = serializers.SerializerMethodField()
     is_modified = serializers.SerializerMethodField()
     last_edit = serializers.SerializerMethodField()
@@ -27,6 +28,7 @@ class ModerationCommentSerializer(serializers.ModelSerializer):
         fields = [
             "comment",
             "comment_url",
+            "report_description",
             "feedback_api_url",
             "is_unread",
             "is_blocked",
@@ -52,6 +54,10 @@ class ModerationCommentSerializer(serializers.ModelSerializer):
             return get_date_display(comment.modified)
         else:
             return get_date_display(comment.created)
+
+    def get_report_description(self, comment):
+        print("Description: ", comment.report_description)
+        return comment.report_description
 
     def get_feedback_api_url(self, comment):
         return reverse("moderatorfeedback-list", kwargs={"comment_pk": comment.pk})

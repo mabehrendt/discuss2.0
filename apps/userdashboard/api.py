@@ -10,6 +10,8 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
+from django.db.models import OuterRef, Subquery
+from adhocracy4.reports.models import Report
 
 from adhocracy4.api.permissions import ViewSetRulesPermission
 from adhocracy4.filters.rest_filters import DefaultsRestFilterSet
@@ -67,8 +69,8 @@ class ModerationCommentViewSet(
         return all_comments_project.annotate(num_reports=num_reports).annotate(
             has_reports=ExpressionWrapper(
                 Q(num_reports__gt=0), output_field=BooleanField()
-            )
-        )
+            )).annotate(report_description=
+            Subquery(Report.objects.filter(comment=OuterRef('pk')).values_list('description',flat=True)))
 
     def update(self, request, *args, **kwargs):
         if "is_blocked" in self.request.data and request.data["is_blocked"]:
