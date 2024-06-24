@@ -56,7 +56,6 @@ class ModerationCommentSerializer(serializers.ModelSerializer):
             return get_date_display(comment.created)
 
     def get_report_description(self, comment):
-        print("Description: ", comment.report_description)
         return comment.report_description
 
     def get_feedback_api_url(self, comment):
