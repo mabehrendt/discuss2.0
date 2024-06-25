@@ -3,7 +3,9 @@ from itertools import chain
 from rest_framework.filters import BaseFilterBackend
 from rest_framework.filters import SearchFilter
 from django.contrib.contenttypes.models import ContentType
+from django.db.models import Q
 from django.db.models import Case, When
+from django.db.models import OuterRef, Subquery
 import random
 from apps.quality.models import Quality
 from adhocracy4.comments.models import Comment
@@ -28,7 +30,6 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
     def filter_queryset(self, request, queryset, view):
         if "ordering" in request.GET:
             ordering = request.GET["ordering"]
-
             if ordering == "new":
                 return queryset.order_by("-created")
             elif ordering == "ans":
@@ -69,15 +70,12 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
             elif ordering == "qua":
                 qualities = Quality.objects.filter(object_id=request.GET["objectPk"]).filter(
                     content_type_id=request.GET["contentTypeId"]
-                )
+                ).annotate(is_blocked=Subquery(Comment.objects.filter(id=OuterRef('comment_id')).values_list('is_blocked'),flat=True)).filter(is_blocked=False)
                 high_qualities = qualities.filter(quality='high').order_by('-prediction', '-created')[:3]
                 blocked_ids = high_qualities.values("id")
                 qualities = qualities.order_by('-created')
                 qualities = qualities.exclude(id__in=blocked_ids)
-                print('High Qualities:', high_qualities.values_list("comment_id",flat=True))
-                print('Qualities:', qualities.values_list("comment_id",flat=True))
                 qualities_whole = list(chain(high_qualities.values_list("comment_id",flat=True),qualities.values_list("comment_id",flat=True)))
-                print('Qualities Whole:', qualities_whole)
                 preserved = Case(
                     *[When(id=field, then=position) for position, field in
                       enumerate(qualities_whole)])
@@ -86,7 +84,7 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
             elif ordering == "ranqua":
                 qualities = Quality.objects.filter(object_id=request.GET["objectPk"]).filter(
                     content_type_id=request.GET["contentTypeId"]
-                )
+                ).annotate(is_blocked=Subquery(Comment.objects.filter(id=OuterRef('comment_id')).values_list('is_blocked'),flat=True)).filter(is_blocked=False)
                 qualities = qualities.order_by('-created')
                 quality_ids = qualities.values_list("comment_id", flat=True)
                 if len(qualities) <= 3:

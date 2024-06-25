@@ -4,6 +4,7 @@ from rest_framework.filters import BaseFilterBackend
 from rest_framework.filters import SearchFilter
 from django.contrib.contenttypes.models import ContentType
 from django.db.models import Case, When
+from django.db.models import OuterRef, Subquery
 
 import random
 from apps.quality.models import Quality
@@ -70,7 +71,7 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
             elif ordering == "qua":
                 qualities = Quality.objects.filter(object_id=request.GET["objectPk"]).filter(
                     content_type_id=request.GET["contentTypeId"]
-                )
+                ).annotate(is_blocked=Subquery(Comment.objects.filter(id=OuterRef('comment_id')).values_list('is_blocked'),flat=True)).filter(is_blocked=False)
                 high_qualities = qualities.order_by('-prediction').filter(quality='high').order_by('-created')[:3]
                 blocked_ids = high_qualities.values("id")
                 qualities = qualities.order_by('-created')
@@ -84,7 +85,7 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
             elif ordering == "ranqua":
                 qualities = Quality.objects.filter(object_id=request.GET["objectPk"]).filter(
                     content_type_id=request.GET["contentTypeId"]
-                )
+                ).annotate(is_blocked=Subquery(Comment.objects.filter(id=OuterRef('comment_id')).values_list('is_blocked'),flat=True)).filter(is_blocked=False)
                 qualities = qualities.order_by('-created')
                 quality_ids = qualities.values_list("comment_id", flat=True)
                 if len(qualities) <= 3:
