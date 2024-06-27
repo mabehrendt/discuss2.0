@@ -50,7 +50,7 @@ class SubjectCommentExportView(
 
     model = Comment
 
-    fields = ["id", "comment", "created"]
+    fields = ['id', 'comment', 'created', 'is_blocked']
     permission_required = "a4_candy_debate.change_subject"
 
     def get_permission_object(self):
@@ -67,6 +67,7 @@ class SubjectCommentExportView(
         virtual.setdefault("id", _("ID"))
         virtual.setdefault("comment", pgettext("noun", "Comment"))
         virtual.setdefault("created", _("Created"))
+        virtual.setdefault('is_blocked', _('Blocked'))
         return super().get_virtual_fields(virtual)
 
     @property
