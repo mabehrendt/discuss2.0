@@ -233,7 +233,6 @@ export const CommentBox = (props) => {
 
   function handleComments (result) {
     const data = result
-
     translated.entries = django.ngettext('entry', 'entries', data.count)
     setComments(data.results)
     setNextComments(data.next)
@@ -243,6 +242,7 @@ export const CommentBox = (props) => {
     setUseTermsOfUse(data.use_org_terms_of_use)
     setAgreedTermsOfUse(data.user_has_agreed)
     setOrgTermsUrl(data.org_terms_url)
+    setTopThreeCommentIds(data.results.slice(0,3).map(el => el.id))
     if (props.anchoredCommentId && data.comment_found) {
       setAnchoredCommentParentId(data.comment_parent)
       if (findAnchoredComment(data.results, data.comment_parent)) {
@@ -256,7 +256,8 @@ export const CommentBox = (props) => {
          * probably using a modal
          */
       }
-      fetchSorted(sort)
+      console.log("ARE WE GOING HERE?")
+      //fetchSorted(sort)
       setLoading(false)
       setWouldHaveCommentingPermission(data.would_have_commenting_permission)
     }
@@ -494,7 +495,7 @@ export const CommentBox = (props) => {
 
     api.comments.get(params).done((result) => {
       const data = result
-      console.log('Results:', data.results)
+      console.log("FETCH SORTED IS CALLED")
       setTopThreeCommentIds(data.results.slice(0,3).map(el => el.id))
       setComments(data.results)
       setNextComments(data.next)
