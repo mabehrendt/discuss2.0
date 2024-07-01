@@ -620,6 +620,9 @@ export const CommentBox = (props) => {
             <Badge color="primary" badgeContent="Anleitung" invisible={questBadgeInvisible}>
               <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/video.png")} alt="Quest" /></button>
             </Badge>
+            <Badge color="primary" badgeContent="Feed" invisible={false}>
+              <button className="feedButton" onClick={() => window.location.href = '/userdashboard/overview/'}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/rss-feed.png")} alt="Feed" /></button>
+            </Badge>
           </div>
           <div className="buttonBox2">
             <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="FAQs" invisible={faqBadgeInvisible}>

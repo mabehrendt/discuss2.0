@@ -25,11 +25,6 @@
   top: 0;
 }
 
-.mapboxgl-map:-webkit-full-screen, .maplibregl-map:-webkit-full-screen {
-  height: 100%;
-  width: 100%;
-}
-
 .mapboxgl-map:-ms-fullscreen, .maplibregl-map:-ms-fullscreen {
   height: 100%;
   width: 100%;
@@ -409,8 +404,7 @@ a.mapboxgl-ctrl-logo.mapboxgl-compact, a.maplibregl-ctrl-logo.maplibregl-compact
     width: 24px;
   }
   .maplibregl-ctrl-attrib summary.maplibregl-ctrl-attrib-button {
-    -webkit-appearance: none;
-            appearance: none;
+    appearance: none;
     list-style: none;
   }
   .maplibregl-ctrl-attrib summary.maplibregl-ctrl-attrib-button::-webkit-details-marker {

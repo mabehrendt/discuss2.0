@@ -893,6 +893,9 @@ export const CommentBox = (props) => {
               <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/video.png")} alt="Quest" /></button>
             </Badge>
             <button className="stanceButton"  onClick={showStanceModal}> <img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase-white.png")} alt="Sprechblase" /> </button>
+            <Badge color="primary" badgeContent="Feed" invisible={false}>
+              <button className="feedButton" onClick={() => window.location.href = '/userdashboard/overview/'}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/rss-feed.png")} alt="Feed" /></button>
+            </Badge>
           </div>
           <div className="buttonBox2">
           <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="FAQs" invisible={faqBadgeInvisible}>
@@ -979,14 +982,14 @@ export const CommentBox = (props) => {
                 flexDirection: "column",
                 marginLeft: "30px",
                 paddingRight: "20px",
-                paddingLeft: "20px",
+                paddingLeft: "0px",
                 marginTop: "10px"
               }}>
                 <div className="argumentText"> Folgender Kommentar wurde bereits zur Diskussion beigetragen. Möchten Sie
                   darauf antworten?
                 </div>
                 <div className="stanceBox">
-                  <div style={{fontSize: '16px'}}> Kommentar von {userText}:</div>
+                  <div style={{fontSize: '1.7vh'}}> Kommentar von {userText}:</div>
                   <div className="stanceText"> {stanceText}</div>
                   <CommentForm
                     subjectType={stanceID}

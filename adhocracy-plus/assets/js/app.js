@@ -41,7 +41,7 @@ function init () {
   initialise2('a4', 'comment_async2', renderComment2)
   initialise2('a4', 'comment_async3', renderComment3)
   initialise2('a4', 'comment_async4', renderComment4)
-  initialise2('a4', 'react_polls', renderPolls)
+  initialise2('a4', 'react_polls2', renderPolls)
   initialise2('a4', 'react_poll_management', renderPollManagement)
 
   $('.timeline-carousel__item').slick({

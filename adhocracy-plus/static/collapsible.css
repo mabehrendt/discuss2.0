@@ -29,7 +29,7 @@
 }
 
 .argumentText{
-    font-size: 25px;
+    font-size: 1.8vh;
     color: red;
     /* padding: 40px; */
     padding-top: 40px;
@@ -125,6 +125,48 @@
   background-color: orange;
 }
 
+.feedButton {
+    position: relative;
+    left: 30px;
+    padding: 10px;
+    margin-right:20px;
+    margin-bottom:20px;
+    display: block;
+    background: darkgray;
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    cursor: pointer;
+    float:left;
+    transition:
+    background-color 1s;
+}
+
+.feedButtonModal {
+    padding: 10px;
+    margin-right: 90px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: block;
+    background: darkgray;
+    color: white;
+    width: 180px;
+    height: auto;
+    /* border-radius: 15px; */
+    cursor: pointer;
+    /* float: left; */
+    transition: background-color 1s;
+}
+
+.feedButton:hover, .feedButton:focus-within {
+  background-color: lightgray;
+}
+
+.feedButton:hover, .feedButton:focus-within {
+  background-color: lightgray;
+}
+
 .faqText{
     font-size: 24px;
     border-left: 5px solid;
@@ -183,7 +225,9 @@
 
 
 .stanceText{
-    font-size: 24px;
+    height: 150px;
+    overflow: scroll;
+    font-size: 2vh;
     border-left: 5px solid;
     padding: 10px;
     margin-bottom: 10px;
