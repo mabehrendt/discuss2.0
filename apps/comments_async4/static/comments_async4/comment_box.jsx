@@ -387,7 +387,7 @@ export const CommentBox = (props) => {
       for (let i = 0; i < stances.length; i++) {
         let stance = stances[i]
         console.log(usedStances)
-          if (stance.creator !== user 
+          if (stance.creator !== user && !stance.is_blocked && !stance.is_censored && !stance.is_removed
             && (usedStances === undefined || !usedStances.some(usedstance => usedstance.comment_id === stance.comment_id))) {
               filteredStances.push(stance)
           }

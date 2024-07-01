@@ -19,7 +19,7 @@ class StanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Stance
         fields = [
-            'content_type', 'object_id', 'stance', 'comment_text', 'comment_id', 'creator'
+            'content_type', 'object_id', 'stance', 'comment_text', 'comment_id', 'creator', 'is_blocked', 'is_removed', 'is_censored'
         ]
 
 

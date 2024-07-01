@@ -389,7 +389,7 @@ export const CommentBox = (props) => {
       for (let i = 0; i < stances.length; i++) {
         let stance = stances[i]
         console.log(usedStances)
-          if (stance.creator !== user // Check the comment is not from the same user
+          if (stance.creator !== user && !stance.is_blocked && !stance.is_censored && !stance.is_removed  // Check the comment is not from the same user
             && stanceMap[stance.stance] !== stanceMap[_userStance] // This is to avoid showing a stance that is the same as the users stance
             && (usedStances === undefined || !usedStances.some(usedstance => usedstance.comment_id === stance.comment_id))) { // If first term in or is true the second term is not evaluated
               filteredStances.push(stance)
@@ -453,6 +453,9 @@ export const CommentBox = (props) => {
 
   function handleComments (result) {
     const data = result
+
+    console.log("COMMENTS")
+    console.log(data)
 
     translated.entries = django.ngettext('entry', 'entries', data.count)
     setComments(data.results)
