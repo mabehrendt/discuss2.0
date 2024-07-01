@@ -22,8 +22,8 @@ def get_stance(sender, instance, created, update_fields, **kwargs):
         save_stance(str(instance.comment), stance, instance.content_type, instance.object_pk, instance.id, instance.creator, instance.is_blocked, instance.is_removed, instance.is_censored)
     elif comment_text_changed:
         update_stance(str(instance.comment), stance, instance.id, instance.is_blocked, instance.is_removed, instance.is_censored)
-
-    update_stance_status(instance.id, instance.is_blocked, instance.is_removed, instance.is_censored)
+    else:
+        update_stance_status(instance.id, instance.is_blocked, instance.is_removed, instance.is_censored)
 
 @receiver(signals.post_delete, sender=Comment)
 def delete_stance(sender, instance, **kwargs):
