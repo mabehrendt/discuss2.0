@@ -7,8 +7,7 @@ from adhocracy4.exports import mixins
 from adhocracy4.exports import views as a4_export_views
 from apps.exports import mixins as export_mixins
 from apps.users.models import User
-from apps.users.models import UserLogins
-from django.db.models import OuterRef, Subquery, Count, IntegerField
+from django.db.models import OuterRef, Subquery, Count
 
 
 from . import models
@@ -50,7 +49,7 @@ class AIQualitySubjectCommentExportView(PermissionRequiredMixin,
 
     model = Comment
 
-    fields = ['id', 'comment', 'created', 'is_blocked']#,'bilendi_id']
+    fields = ['id', 'comment', 'created', 'is_blocked']
     permission_required = 'a4_candy_debate_quality.change_aiqualitysubject'
 
     def get_permission_object(self):
@@ -61,7 +60,7 @@ class AIQualitySubjectCommentExportView(PermissionRequiredMixin,
                    Comment.objects.filter(
                    parent_comment__aiqualitysubject__module=self.module)).annotate(
                    bilendi_id=Subquery(User.objects.filter(id=OuterRef('creator_id')).values_list('bilendi_id',flat=True))
-                   ).annotate(days_logged_in=Subquery(User.objects.filter(id=OuterRef('creator_id')).annotate(num_logins=Count('userlogins')).values_list('num_logins',flat=True)#values_list('num_logins',flat=True)
+                   ).annotate(days_logged_in=Subquery(User.objects.filter(id=OuterRef('creator_id')).annotate(num_logins=Count('userlogins')).values_list('num_logins',flat=True)
        ))
        return comments
 
