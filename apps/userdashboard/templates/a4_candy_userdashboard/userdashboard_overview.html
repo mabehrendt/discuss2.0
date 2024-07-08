@@ -43,36 +43,42 @@
 
       {% has_perm 'a4_candy_userdashboard.view_moderation_dashboard' user as user_is_moderator %}
       {% if user_is_moderator %}
-      <button onclick="window.history.back();" class="btn btn--light">Zurück</button>
-      
-      <section aria-labelledby="sr-activity-header">
-          <h2 class="mt-2"><span id="sr-activity-header" class="visually-hidden">{% trans 'My activity feed' %}</span>{% trans 'My Feed' %}</h2>
+          <button onclick="window.history.back();" class="btn btn--light">Zurück zur Diskussion!</button>
+        
+          <section aria-labelledby="sr-activity-header">
+            <h2 class="mt-2"><span id="sr-activity-header" class="visually-hidden">{% trans 'My activity feed' %}</span>{% trans 'My Feed' %}</h2>
 
-          {% for action in view.actions|slice:":5" %}
-          {% include 'a4_candy_actions/includes/reaction.html' with action=action %}
-          {% empty %}
+            {% for action in view.actions|slice:":5" %}
+            {% include 'a4_candy_actions/includes/reaction.html' with action=action %}
 
-          {% trans 'No activity yet. '%}
-          {% endfor %}
-      </section>
+            {% empty %}
+
+            {% trans 'No activity yet. '%}
+            {% endfor %}
+            {% if view.actions|length > 5 %}
+
+            <a class="btn btn--light mt-4" href="{% url 'userdashboard-activities' %}"
+              aria-label="{% trans 'Account activity page' %}">{% trans 'View more' %}</a>
+            {% endif %}
+          </section>
       {% else %}
+        <button onclick="window.history.back();" class="btn btn--light">Zurück zur Diskussion!</button>
 
-      <h2>
-          <span id="sr-activity-header" class="visually-hidden">{% trans 'Last few activities on my account' %}</span>
-          {% trans 'My Feed' %}
-        </h2>
-        {% for action in view.actions|slice:":5" %}
-        {% include 'a4_candy_actions/includes/reaction.html' with action=action %}
-        {% empty %}
+          <h2>
+            <span id="sr-activity-header" class="visually-hidden">{% trans 'Last few activities on my account' %}</span>
+              {% trans 'My Feed' %}
+            </h2>
+            <!-- {% for comment in view.get_user_comments %}
+            {% endfor %} -->
 
-        {% trans 'No activity yet. '%}
-        {% endfor %}
-        {% if view.actions|length > 5 %}
+            {% for action in view.actions %}
+            {% include 'a4_candy_actions/includes/reaction.html' with action=action %}
+            {% empty %}
 
-        <a class="btn btn--light mt-4" href="{% url 'userdashboard-activities' %}"
-          aria-label="{% trans 'Account activity page' %}">{% trans 'View more' %}</a>
-        {% endif %}
-    </section> 
+            {% trans 'No activity yet. '%}
+            {% endfor %}
+            
+            </section> 
     {% endif %}
 
 

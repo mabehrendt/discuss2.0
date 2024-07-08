@@ -78,6 +78,7 @@ class UserDashboardOverviewView(UserDashboardBaseMixin):
             .select_related("actor", "project")
             .prefetch_related("obj", "target__creator")
         )
+
         filtered_comment_actions = [
             action for action in comment_actions if not action.obj.is_blocked
         ]
@@ -113,6 +114,78 @@ class UserDashboardOverviewView(UserDashboardBaseMixin):
         )[:8]
 
         return projects
+
+
+class UserDashboardOverviewView(UserDashboardBaseMixin):
+    template_name = "a4_candy_userdashboard/userdashboard_overview.html"
+    menu_item = "overview"
+
+    @property
+    def actions(self):
+        user = self.request.user
+        comment_actions = (
+            Action.objects.filter(
+                obj_content_type=ContentType.objects.get_for_model(Comment),
+                verb="add",
+                target_creator=user,
+            )
+            .exclude(
+                target_content_type__in=[
+                    ContentType.objects.get_for_model(Poll),
+                    ContentType.objects.get_for_model(Chapter),
+                    ContentType.objects.get_for_model(Paragraph),
+                ]
+            )
+            .select_related("actor", "project")
+            .prefetch_related("obj", "target__creator")
+        )
+
+        filtered_comment_actions = [
+            action for action in comment_actions if not action.obj.is_blocked
+        ]
+        
+        for action in filtered_comment_actions:
+            print(action.obj.get_absolute_url())  # Print the absolute URL of each comment
+
+        feedback_actions = (
+            Action.objects.filter(
+                obj_content_type=ContentType.objects.get_for_model(
+                    ModeratorCommentFeedback
+                ),
+                obj_comment_creator=user,
+            )
+            .select_related("project", "project__organisation")
+            .prefetch_related("obj__comment__creator", "obj__comment__content_object")
+        )
+
+        return sorted(
+            filtered_comment_actions + list(feedback_actions),
+            key=lambda action: action.timestamp,
+            reverse=True,
+        )
+
+    @property
+    def projects_carousel(self):
+        (
+            sorted_active_projects,
+            sorted_future_projects,
+            sorted_past_projects,
+        ) = self.request.user.get_projects_follow_list()
+        projects = (
+            list(sorted_active_projects)
+            + list(sorted_future_projects)
+            + list(sorted_past_projects)
+        )[:8]
+
+        return projects
+
+    # @property    
+    # def get_user_comments(self):
+    #     """Retrieve all comments created by the user."""
+    #     user = self.request.user
+    #     user_comments = Comment.objects.filter(creator=user)
+    #     print("USER_COMMENTS: ", user_comments)
+    #     return user_comments
 
 
 class UserDashboardActivitiesView(UserDashboardBaseMixin):

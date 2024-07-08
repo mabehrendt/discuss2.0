@@ -51,6 +51,8 @@ class UserStance(models.Model):
     questionbox_shown = models.BooleanField(default=False)
     questionbox_clicked = models.BooleanField(default=False)
 
+    guideline_shown = models.BooleanField(default=False)
+
     creator = models.TextField(max_length=200)
     creator_id = models.CharField(max_length=500)
 

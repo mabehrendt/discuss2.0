@@ -21,6 +21,7 @@ const api = (function () {
     follow: baseURL + 'follows/',
     comment: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/comments/',
     qualities: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/qualities/',
+    userqualities: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/userqualities/',
     userstances: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/userstances/',
     usedstances: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/usedstances/',
     stances: baseURL + 'contenttypes/$contentTypeId/objects/$objectPk/stances/',
@@ -146,6 +147,30 @@ const api = (function () {
 
       delete: function (data, id) {
         return _sendRequest('stances', id, {
+          type: 'DELETE'
+        }, data)
+      }
+    },
+    userqualities: {
+      get: function (data) {
+        return _sendRequest('userqualities', {
+          type: 'GET'
+        }, data)
+      },
+      add: function (data) {
+        return _sendRequest('userqualities', {
+          type: 'POST'
+        }, data)
+      },
+
+      change: function (data, id) {
+        return _sendRequest('userqualities', id, {
+          type: 'PATCH'
+        }, data)
+      },
+
+      delete: function (data, id) {
+        return _sendRequest('userqualities', id, {
           type: 'DELETE'
         }, data)
       }

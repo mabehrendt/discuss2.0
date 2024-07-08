@@ -5,7 +5,7 @@ class UserStanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserStance
         fields = [
-            'content_type', 'object_id', 'user_stance', 'questionbox_shown', 'questionbox_clicked', 'creator', 'creator_id'
+            'content_type', 'object_id', 'user_stance', 'questionbox_shown', 'questionbox_clicked', 'guideline_shown', 'creator', 'creator_id'
         ]
 
 class UsedStanceSerializer(serializers.ModelSerializer):

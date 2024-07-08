@@ -4,6 +4,7 @@ import update from 'immutability-helper'
 import Badge from '@mui/material/Badge';
 import IntroVideo from '../../../../adhocracy-plus/static/Video.jsx';
 import FaqContent from '../../../../adhocracy-plus/static/Faq.jsx';
+import GuidelineContent from '../../../../adhocracy-plus/static/Guideline.jsx'
 import Spinner from '../../../../adhocracy-plus/static/Spinner.jsx';
 import "../../../../adhocracy-plus/static/collapsible.css";
 
@@ -71,8 +72,10 @@ export const CommentBox = (props) => {
   const [creatorId, setCreatorId] = useState(0)
   const [modalQuestState, setModalQuestState] = useState({isOpen: false})
   const [modalFaqState, setModalFaqState] = useState({isOpen: false})
+  const [modalGuidelineState, setModalGuidelineState] = useState({isOpen: false})
   const [modalStanceState, setModalStanceState] = useState({isOpen: false})
   const [firstStanceAnswered, setFirstStanceAnswered] = useState({answered: false})
+  const [isGuidelineShown, setIsGuidelineShown] = useState({shown: false})
 
   const [stanceText, setStanceText] = useState("")
   const [userText, setUserText] = useState("")
@@ -211,6 +214,29 @@ export const CommentBox = (props) => {
     api.userstances.change(u_stanceData).fail()
   }
 
+  function guidelineShown(){
+    console.log("Guideline Shown")
+    const urlReplaces = {
+      objectPk: props.subjectId,
+      contentTypeId: props.subjectType
+    }
+
+    const payload = {
+      guideline_shown: true
+    }
+
+    const u_stanceData = {
+      urlReplaces: urlReplaces,
+      content_type: props.subjectType,
+      object_id: props.subjectId,
+      creator_id: creatorId,
+      payload: payload
+    }
+    //showQuestModal()
+
+    api.userstances.change(u_stanceData).fail()
+  }
+
   {
     /*
       SHOW MODALS STANCE, VIDEO AND FAQ
@@ -246,6 +272,11 @@ export const CommentBox = (props) => {
     }
 
     setModalFaqState({isOpen: !modalFaqState.isOpen})
+  }
+
+  function showGuidelineModal(){
+    guidelineShown()
+    setModalGuidelineState({isOpen: !modalGuidelineState.isOpen})
   }
 
   function showStanceModal(e){
@@ -324,8 +355,9 @@ export const CommentBox = (props) => {
     const data = result
     console.log("USERSTANCE")
     console.log(data)
-    let _userStance
+    let _userStance = ""
     let _hasCreator = ""
+    let _guideline_shown = ""
     let _openQuestClicked = false
     let _stances = []
     let _usedStances = []
@@ -339,6 +371,7 @@ export const CommentBox = (props) => {
         _hasCreator = userstances.creator_id
         _openQuestClicked = userstances.questionbox_clicked
         setOpenQuestClicked(_openQuestClicked)
+        _guideline_shown = userstances.guideline_shown
       }
     })
 
@@ -353,6 +386,18 @@ export const CommentBox = (props) => {
     if (userStance != "" || _userStance != ""){
       setFirstStanceAnswered({answered: true})
     }
+
+    console.log("GUIDELINE_SHOWN")
+    console.log(_guideline_shown)
+    //console.log(_guideline_shown.length)
+
+    if (_guideline_shown === "" || !_guideline_shown){
+      setModalGuidelineState({isOpen: true})
+    }
+    else{
+      setIsGuidelineShown({shown: true})
+    }
+
     setTimeout(countDown, 15000, _openQuestClicked, _userStance)
 
 
@@ -935,6 +980,20 @@ export const CommentBox = (props) => {
     )
   }
 
+  function renderGuidelineModal(){
+    return(
+      <Modal show={modalGuidelineState.isOpen}>
+      <div className="gdModal" id="gdModal">
+        <img className="gdblase" src={require("../../../../adhocracy-plus/static/stance_icons/faq.png")} alt="Quest" />
+        <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showGuidelineModal(e); console.log("CLOSED")}}/></button>
+        <div style={{display: "flex", flexDirection: "column", padding: "20px", width: "100%"}}>
+          <GuidelineContent />
+        </div>
+      </div>
+      </Modal>
+    )
+  }
+
   function renderStanceModal() {
     if (!firstStanceAnswered.answered){
        return(
@@ -1053,6 +1112,7 @@ export const CommentBox = (props) => {
 
   return (
     <div>
+        {!isGuidelineShown.shown && renderGuidelineModal()}
         {renderButtons()}
         {renderStanceModal()}
         {renderFaqModal()}

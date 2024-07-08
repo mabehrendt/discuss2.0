@@ -7,11 +7,11 @@ import django
 django.setup()
 
 import csv
-from apps.stance.models import UserStance
+from apps.quality.models import UserQuality
 
 from django.apps import apps
 
 tables = [m._meta.db_table for c in apps.get_app_configs() for m in c.get_models()]
 print(tables)
 
-UserStance.objects.all().delete()
+UserQuality.objects.all().delete()

@@ -33,7 +33,7 @@ from apps.interactiveevents.routers import LikesDefaultRouter
 from apps.moderatorfeedback.api import CommentWithFeedbackViewSet
 from apps.moderatorfeedback.api import ModeratorCommentFeedbackViewSet
 from apps.moderatorremark.api import ModeratorRemarkViewSet
-from apps.quality.api import QualityViewSet
+from apps.quality.api import QualityViewSet, UserQualityViewSet
 from apps.stance.api import UserStanceViewSet, UsedStanceViewSet, StanceViewSet
 from apps.organisations.sitemaps import organisations_sitemap_index
 from apps.projects.api import AppModuleViewSet
@@ -104,6 +104,7 @@ urlpatterns = [
     re_path(r"^i18n/", include(i18n)),
     # API urls
     re_path(r"^api/contenttypes/(?P<ct_id>[\d]+)/objects/(?P<object_pk>[\d]+)/qualities", QualityViewSet.quality_list),
+    re_path(r"^api/contenttypes/(?P<ct_id>[\d]+)/objects/(?P<object_pk>[\d]+)/userqualities", UserQualityViewSet.userquality_list),
     re_path(r"^api/contenttypes/(?P<ct_id>[\d]+)/objects/(?P<object_pk>[\d]+)/stances", StanceViewSet.stance_list),
     re_path(r"^api/contenttypes/(?P<ct_id>[\d]+)/objects/(?P<object_pk>[\d]+)/userstances", UserStanceViewSet.userstance_list),
     re_path(r"^api/contenttypes/(?P<ct_id>[\d]+)/objects/(?P<object_pk>[\d]+)/usedstances", UsedStanceViewSet.usedstance_list),
