@@ -129,16 +129,16 @@ module.exports = {
       ],
       dependOn: 'adhocracy4'
     },
-
 /*
+
     poll_management: {
       import: [
         'adhocracy4/adhocracy4/polls/static/react_poll_management.jsx'
       ],
       dependOn: 'adhocracy4'
     },
-*/
-/*
+
+
     polls: {
       import: [
         'adhocracy4/adhocracy4/polls/static/react_polls.jsx'
@@ -146,6 +146,7 @@ module.exports = {
       dependOn: 'adhocracy4'
     },
 */
+
     select_dropdown_init: {
       import: [
         'adhocracy4/adhocracy4/categories/assets/select_dropdown_init.js'
