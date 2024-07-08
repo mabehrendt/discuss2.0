@@ -4,6 +4,7 @@ import update from 'immutability-helper'
 import Badge from '@mui/material/Badge';
 import IntroVideo from '../../../../adhocracy-plus/static/Video.jsx';
 import FaqContent from '../../../../adhocracy-plus/static/Faq.jsx';
+import GuidelineContent from '../../../../adhocracy-plus/static/Guideline.jsx'
 import Spinner from '../../../../adhocracy-plus/static/Spinner.jsx';
 import "../../../../adhocracy-plus/static/collapsible.css";
 
@@ -71,8 +72,10 @@ export const CommentBox = (props) => {
   const [creatorId, setCreatorId] = useState(0)
   const [modalQuestState, setModalQuestState] = useState({isOpen: false})
   const [modalFaqState, setModalFaqState] = useState({isOpen: false})
+  const [modalGuidelineState, setModalGuidelineState] = useState({isOpen: false})
   const [modalStanceState, setModalStanceState] = useState({isOpen: false})
   const [firstStanceAnswered, setFirstStanceAnswered] = useState({answered: false})
+  const [isGuidelineShown, setIsGuidelineShown] = useState({shown: false})
 
   const [stanceText, setStanceText] = useState("")
   const [userText, setUserText] = useState("")
@@ -211,6 +214,29 @@ export const CommentBox = (props) => {
     api.userstances.change(u_stanceData).fail()
   }
 
+  function guidelineShown(){
+    console.log("Guideline Shown")
+    const urlReplaces = {
+      objectPk: props.subjectId,
+      contentTypeId: props.subjectType
+    }
+
+    const payload = {
+      guideline_shown: true
+    }
+
+    const u_stanceData = {
+      urlReplaces: urlReplaces,
+      content_type: props.subjectType,
+      object_id: props.subjectId,
+      creator_id: creatorId,
+      payload: payload
+    }
+    //showQuestModal()
+
+    api.userstances.change(u_stanceData).fail()
+  }
+
   {
     /*
       SHOW MODALS STANCE, VIDEO AND FAQ
@@ -246,6 +272,11 @@ export const CommentBox = (props) => {
     }
 
     setModalFaqState({isOpen: !modalFaqState.isOpen})
+  }
+
+  function showGuidelineModal(){
+    guidelineShown()
+    setModalGuidelineState({isOpen: !modalGuidelineState.isOpen})
   }
 
   function showStanceModal(e){
@@ -324,8 +355,9 @@ export const CommentBox = (props) => {
     const data = result
     console.log("USERSTANCE")
     console.log(data)
-    let _userStance
+    let _userStance = ""
     let _hasCreator = ""
+    let _guideline_shown = ""
     let _openQuestClicked = false
     let _stances = []
     let _usedStances = []
@@ -339,6 +371,7 @@ export const CommentBox = (props) => {
         _hasCreator = userstances.creator_id
         _openQuestClicked = userstances.questionbox_clicked
         setOpenQuestClicked(_openQuestClicked)
+        _guideline_shown = userstances.guideline_shown
       }
     })
 
@@ -353,6 +386,18 @@ export const CommentBox = (props) => {
     if (userStance != "" || _userStance != ""){
       setFirstStanceAnswered({answered: true})
     }
+
+    console.log("GUIDELINE_SHOWN")
+    console.log(_guideline_shown)
+    //console.log(_guideline_shown.length)
+
+    if (_guideline_shown === "" || !_guideline_shown){
+      setModalGuidelineState({isOpen: true})
+    }
+    else{
+      setIsGuidelineShown({shown: true})
+    }
+
     setTimeout(countDown, 15000, _openQuestClicked, _userStance)
 
 
@@ -387,7 +432,7 @@ export const CommentBox = (props) => {
       for (let i = 0; i < stances.length; i++) {
         let stance = stances[i]
         console.log(usedStances)
-          if (stance.creator !== user 
+          if (stance.creator !== user && !stance.is_blocked && !stance.is_censored && !stance.is_removed
             && (usedStances === undefined || !usedStances.some(usedstance => usedstance.comment_id === stance.comment_id))) {
               filteredStances.push(stance)
           }
@@ -886,6 +931,9 @@ export const CommentBox = (props) => {
               <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/video.png")} alt="Quest" /></button>
             </Badge>
             <button className="stanceButton"  onClick={showStanceModal}> <img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/sprechblase-white.png")} alt="Sprechblase" /> </button>
+            <Badge color="primary" badgeContent="Feed" invisible={false}>
+              <button className="feedButton" onClick={() => window.location.href = '/userdashboard/overview/'}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/rss-feed.png")} alt="Feed" /></button>
+            </Badge>
           </div>
           <div className="buttonBox2">
           <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="FAQs" invisible={faqBadgeInvisible}>
@@ -928,6 +976,20 @@ export const CommentBox = (props) => {
                 <FaqContent />
               </div>
             </div>
+      </Modal>
+    )
+  }
+
+  function renderGuidelineModal(){
+    return(
+      <Modal show={modalGuidelineState.isOpen}>
+      <div className="gdModal" id="gdModal">
+        <img className="gdblase" src={require("../../../../adhocracy-plus/static/stance_icons/faq.png")} alt="Quest" />
+        <button className="closedButton"> <img className="close" src={require("../../../../adhocracy-plus/static/stance_icons/close.png")} alt="Close" onClick={e => {showGuidelineModal(e); console.log("CLOSED")}}/></button>
+        <div style={{display: "flex", flexDirection: "column", padding: "20px", width: "100%"}}>
+          <GuidelineContent />
+        </div>
+      </div>
       </Modal>
     )
   }
@@ -980,7 +1042,7 @@ export const CommentBox = (props) => {
                   darauf antworten?
                 </div>
                 <div className="stanceBox">
-                  <div style={{fontSize: '16px'}}> Kommentar von {userText}:</div>
+                  <div style={{fontSize: '1.7vh'}}> Kommentar von {userText}:</div>
                   <div className="stanceText"> {stanceText}</div>
                   <CommentForm
                     subjectType={stanceID}
@@ -1026,7 +1088,7 @@ export const CommentBox = (props) => {
                 flexDirection: "column",
                 marginLeft: "30px",
                 paddingRight: "20px",
-                paddingLeft: "20px",
+                paddingLeft: "0px",
                 marginTop: "10px"
               }}>
                 <div className="argumentText"> Sobald genügend Teilnehmer an der Diskussion beteiligt sind, bekommen Sie hier einen Kommentar vorgeschlagen auf den Sie eingehen können!
@@ -1050,6 +1112,7 @@ export const CommentBox = (props) => {
 
   return (
     <div>
+        {!isGuidelineShown.shown && renderGuidelineModal()}
         {renderButtons()}
         {renderStanceModal()}
         {renderFaqModal()}

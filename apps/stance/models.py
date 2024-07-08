@@ -29,6 +29,11 @@ class Stance(models.Model):
 
     creator = models.TextField(max_length=200)
 
+    is_blocked = models.BooleanField(default=False, null=True)    
+    is_removed = models.BooleanField(default=False, null=True)
+    is_censored = models.BooleanField(default=False, null=True)
+
+
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
@@ -45,6 +50,8 @@ class UserStance(models.Model):
     user_stance = models.CharField(max_length=50, default="")
     questionbox_shown = models.BooleanField(default=False)
     questionbox_clicked = models.BooleanField(default=False)
+
+    guideline_shown = models.BooleanField(default=False)
 
     creator = models.TextField(max_length=200)
     creator_id = models.CharField(max_length=500)

@@ -12,7 +12,7 @@ function addCreatorData(urlReplaces, props){
         creator: props.user.user,
         creator_id : cyrb53(props.user.user)
       }
-      api.userstances.add(stanceData)
+      api.userqualities.add(stanceData)
 }
 
 export {addCreatorData}

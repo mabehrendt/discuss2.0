@@ -6,6 +6,9 @@ from adhocracy4.comments.models import Comment
 from adhocracy4.exports import mixins
 from adhocracy4.exports import views as a4_export_views
 from apps.exports import mixins as export_mixins
+from apps.users.models import User
+from django.db.models import OuterRef, Subquery, Count
+
 
 from . import models
 
@@ -53,17 +56,21 @@ class AIQualitySubjectCommentExportView(PermissionRequiredMixin,
         return self.module
 
     def get_queryset(self):
-        comments = (Comment.objects.filter(aiqualitysubject__module=self.module) |
-                    Comment.objects.filter(
-                    parent_comment__aiqualitysubject__module=self.module))
-
-        return comments
+       comments = (Comment.objects.filter(aiqualitysubject__module=self.module) |
+                   Comment.objects.filter(
+                   parent_comment__aiqualitysubject__module=self.module)).annotate(
+                   bilendi_id=Subquery(User.objects.filter(id=OuterRef('creator_id')).values_list('bilendi_id',flat=True))
+                   ).annotate(days_logged_in=Subquery(User.objects.filter(id=OuterRef('creator_id')).annotate(num_logins=Count('userlogins')).values_list('num_logins',flat=True)
+       ))
+       return comments
 
     def get_virtual_fields(self, virtual):
         virtual.setdefault('id', _('ID'))
         virtual.setdefault('comment', pgettext('noun', 'Comment'))
         virtual.setdefault('created', _('Created'))
         virtual.setdefault('is_blocked', _('Blocked'))
+        virtual.setdefault('bilendi_id', _('Bilendi ID'))
+        virtual.setdefault('days_logged_in', _('Eingeloggte Tage'))
         return super().get_virtual_fields(virtual)
 
     @property

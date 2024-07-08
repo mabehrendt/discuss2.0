@@ -1,6 +1,6 @@
 import os
 import sys
-project_dir = "/home/maike/discuss2.0"
+project_dir = "/Users/stefansylviuswagner/Documents/discuss2.0"
 sys.path.append(project_dir)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'adhocracy-plus.config.settings.build'
 import django

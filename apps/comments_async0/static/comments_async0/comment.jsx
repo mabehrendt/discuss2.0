@@ -403,7 +403,7 @@ export default class Comment extends React.Component {
                 </div>
               </div>
 
-              {this.renderToolTipElement()}
+              {/*{this.renderToolTipElement()} */}
 
               <div className="row">
                 <div className="col-12">
