@@ -143,9 +143,6 @@ class UserDashboardOverviewView(UserDashboardBaseMixin):
         filtered_comment_actions = [
             action for action in comment_actions if not action.obj.is_blocked
         ]
-        
-        for action in filtered_comment_actions:
-            print(action.obj.get_absolute_url())  # Print the absolute URL of each comment
 
         feedback_actions = (
             Action.objects.filter(
@@ -179,7 +176,7 @@ class UserDashboardOverviewView(UserDashboardBaseMixin):
 
         return projects
 
-    # @property    
+    # @property
     # def get_user_comments(self):
     #     """Retrieve all comments created by the user."""
     #     user = self.request.user

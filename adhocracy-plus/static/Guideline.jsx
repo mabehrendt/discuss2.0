@@ -11,6 +11,7 @@ import Beteiligungsprozess from './faq_text/Beteiligungsprozess.jsx';
 import ErgebnisseBeteiligung from './faq_text/ErgebnisseBeteiligung.jsx';
 import WieBeteiligen from './faq_text/WieBeteiligen.jsx';
 import Netiquette from './faq_text/Netiquette.jsx';
+import NetiquettePopup from './faq_text/NetiquettePopup.jsx';
 import Regeln from './faq_text/Regeln.jsx';
 import Wer from './faq_text/Wer.jsx';
 import Schwierigkeiten from './faq_text/Schwierigkeiten.jsx';
@@ -20,7 +21,7 @@ import Melden from './faq_text/Melden.jsx';
 
 function GuidelineContent() {
     const faqs = [
-        {header: 'Netiquette', question: "Welche Netiquette gilt für die Teilnahme an der Diskussion?", answer: <Netiquette />},
+        {header: 'Wichtiger Hinweis zur Netiquette',question: 'Herzlich willkommen bei discuss20! Bevor Sie in die Diskussion starten, möchten wir Sie bitten, sich die folgenden Verhaltensregeln (Netiquette) genau durchzulesen und diese zukünftig beim Schreiben von Beiträgen einzuhalten. Nur so ist ein respektvoller und offener Meinungsaustausch möglich. Bitte beachten Sie, dass die Nichteinhaltung dieser Regeln zu einem Ausschluss von der Studie führen kann.', answer: <NetiquettePopup />},
         // Add more FAQs here
     ];
 
