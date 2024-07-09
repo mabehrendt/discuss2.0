@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-24 21:28+0200\n"
+"POT-Creation-Date: 2024-07-09 13:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,53 +18,45 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:3
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:3
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/templates/a4categories/includes/module_categories_form.html:3
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:3
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:3
 msgid ""
 "In this section, you can create\n"
 "categories. If you create any, each contribution has to be assigned\n"
 "to one of them. This way, content can be classified."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:21
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:21
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/templates/a4categories/includes/module_categories_form.html:21
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:21
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:21
 msgid "Add category"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_dashboard.html:4
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_dashboard.html:4
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/base_dashboard.html:4
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_dashboard.html:4
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_dashboard.html:4
 #: adhocracy-plus/templates/a4dashboard/base_dashboard.html:55
 #: adhocracy-plus/templates/includes/userdashboard_mobile_toggle.html:30
 msgid "Dashboard"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:5
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:5
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/base_dashboard_project.html:5
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:5
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:5
 #: adhocracy-plus/templates/a4dashboard/base_dashboard_project.html:24
 msgid "Project Settings"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:33
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:33
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/base_dashboard_project.html:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/base_dashboard_project.html:33
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:15
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:33
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:15
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:33
 #: adhocracy-plus/templates/a4dashboard/base_dashboard_project.html:49
 #: adhocracy-plus/templates/a4dashboard/base_dashboard_project.html:103
 msgid "Missing fields for publication"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_form_module.html:18
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_form_project.html:18
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_form_module.html:18
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_form_project.html:18
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/base_form_module.html:18
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/base_form_project.html:18
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_form_module.html:18
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_form_project.html:18
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_form_module.html:18
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_form_project.html:18
 #: apps/activities/templates/a4_candy_activities/activities_dashboard.html:19
 #: apps/budgeting/templates/a4_candy_budgeting/includes/proposal_form.html:32
 #: apps/budgeting/templates/a4_candy_budgeting/proposal_moderate_form.html:39
@@ -86,58 +78,48 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:4
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:7
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:9
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:4
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:7
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:9
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/blueprint_list.html:4
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/blueprint_list.html:7
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_list.html:9
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:4
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:7
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:9
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:4
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:7
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:9
 #: adhocracy-plus/templates/a4dashboard/blueprint_list.html:6
 #: adhocracy-plus/templates/a4dashboard/project_list.html:13
 msgid "New Project"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:17
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:17
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/blueprint_list.html:17
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:17
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:17
 msgid "Phase"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:23
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:23
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/blueprint_list.html:23
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:23
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:23
 #: apps/organisations/templates/a4_candy_organisations/communication_form_social_media.html:15
 #: adhocracy-plus/templates/a4dashboard/includes/blueprint_list_tile.html:17
 msgid "Select"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/form_field.html:6
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/form_field.html:6
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/includes/form_field.html:6
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/form_field.html:6
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/form_field.html:6
 msgid "Missing field for publication"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:7
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:39
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:7
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:39
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/includes/preview.html:7
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_list.html:39
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:7
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:39
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:7
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:39
 #: apps/organisations/templates/a4_candy_organisations/communication_form_social_media.html:59
 #: adhocracy-plus/templates/a4dashboard/includes/preview.html:7
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:42
 msgid "Preview"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:9
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:41
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:9
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:41
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/includes/preview.html:9
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_list.html:41
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:9
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:41
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:9
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:41
 #: apps/contrib/templates/a4_candy_contrib/includes/map_filter_and_sort.html:8
 #: apps/contrib/templates/a4_candy_contrib/includes/map_filter_and_sort.html:14
 #: apps/debate/templates/a4_candy_debate/includes/subject_dashboard_list_item.html:14
@@ -152,64 +134,55 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:16
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:16
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/includes/progress.html:16
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:16
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:16
 #, python-format
 msgid "%(value)s from %(max)s"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:17
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:17
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/includes/progress.html:17
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:17
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:17
 msgid "required fields for publication"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:27
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:27
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/includes/progress.html:27
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:27
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:27
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:12
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:31
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:57
 msgid "Publish"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:31
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:31
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/includes/progress.html:31
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:31
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:31
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:19
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:35
 msgid "Unpublish"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:4
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:7
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:4
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:7
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_create_form.html:4
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_create_form.html:7
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:4
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:7
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:4
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:7
 msgid "Create project based on"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:23
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:23
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_create_form.html:23
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:23
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:23
 #: adhocracy-plus/templates/a4dashboard/project_create_form.html:41
 msgid ""
 "After saving the draft project you can further customize and edit your "
 "project and eventually publish it."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:25
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:25
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_create_form.html:25
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:25
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:25
 #: adhocracy-plus/templates/a4dashboard/project_create_form.html:46
 msgid "Create draft"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:27
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:27
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_create_form.html:27
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:27
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:27
 #: apps/budgeting/templates/a4_candy_budgeting/includes/proposal_form.html:31
 #: apps/budgeting/templates/a4_candy_budgeting/proposal_confirm_delete.html:14
 #: apps/budgeting/templates/a4_candy_budgeting/proposal_moderate_form.html:38
@@ -239,12 +212,10 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:4
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:7
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:4
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:7
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_list.html:4
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_list.html:7
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:4
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:7
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:4
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:7
 #: apps/projects/templates/a4_candy_projects/project_list.html:4
 #: adhocracy-plus/templates/a4dashboard/base_project_list.html:16
 #: adhocracy-plus/templates/a4dashboard/project_list.html:4
@@ -252,34 +223,28 @@ msgstr ""
 msgid "Projects"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:24
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:24
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_list.html:24
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:24
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:24
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:25
 msgid "Finished"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:27
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:27
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/enums.py:14
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_list.html:27
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/enums.py:14
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:27
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:27
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/enums.py:14
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:28
 msgid "semipublic"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:30
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:30
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/enums.py:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_list.html:30
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/enums.py:15
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:30
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:30
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/enums.py:15
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:31
 msgid "private"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:48
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:48
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_list.html:48
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:48
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:48
 #: apps/contrib/templates/a4_candy_contrib/item_detail.html:103
 #: apps/debate/templates/a4_candy_debate/includes/subject_dashboard_list_item.html:19
 #: apps/debate_quality/templates/a4_candy_debate_quality/includes/aiqualitysubject_dashboard_list_item.html:19
@@ -293,75 +258,61 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:57
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:57
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_list.html:57
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:57
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:57
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:73
 msgid "Duplicate"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:65
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:65
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/templates/a4dashboard/project_list.html:65
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:65
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:65
 #: apps/projects/templates/a4_candy_projects/project_list.html:18
 #: adhocracy-plus/templates/a4dashboard/project_list.html:27
 msgid "We could not find any projects."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:5
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:23
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:35
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:47
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:59
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:5
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:23
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:35
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:47
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:59
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/templates/a4exports/export_dashboard.html:5
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/templates/a4exports/export_dashboard.html:23
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/templates/a4exports/export_dashboard.html:35
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/templates/a4exports/export_dashboard.html:47
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/templates/a4exports/export_dashboard.html:59
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:5
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:23
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:35
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:47
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:59
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:5
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:23
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:35
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:47
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:59
 msgid "Export"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:7
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:7
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/templates/a4exports/export_dashboard.html:7
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:7
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:7
 msgid ""
 "You can export the results of your participation project as an excel file."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:19
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:19
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/templates/a4exports/export_dashboard.html:19
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:19
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:19
 msgid "here you can export all ideas"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:31
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:31
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/templates/a4exports/export_dashboard.html:31
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:31
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:31
 msgid "here you can export all subjects"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:43
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:43
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/templates/a4exports/export_dashboard.html:43
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:43
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:43
 msgid "here you can export all answers"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:55
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:55
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/templates/a4exports/export_dashboard.html:55
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:55
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:55
 msgid "here you can export all comments"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/filters/templates/a4filters/widgets/free_text_filter.html:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/filter.py:11
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/filters/templates/a4filters/widgets/free_text_filter.html:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/filter.py:11
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ilters/templates/a4filters/widgets/free_text_filter.html:15
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/filters/templates/a4filters/widgets/free_text_filter.html:15
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/filter.py:11
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/filters/templates/a4filters/widgets/free_text_filter.html:15
 #: apps/debate/filters.py:12 apps/debate_quality/filters.py:12
 #: apps/debate_quality_random/filters.py:12 apps/debate_stance/filters.py:12
 #: apps/debate_stance_random/filters.py:12 apps/ideas/views.py:29
@@ -372,9 +323,8 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/form_field.html:5
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/forms/templates/a4forms/includes/form_field.html:5
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~orms/templates/a4forms/includes/form_field.html:5
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/form_field.html:5
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/forms/templates/a4forms/includes/form_field.html:5
 #: apps/contrib/templates/a4_candy_contrib/includes/form_checkbox_field.html:6
 #: apps/contrib/templates/a4_candy_contrib/includes/form_field.html:5
 #: adhocracy-plus/templates/account/signup.html:27
@@ -383,24 +333,19 @@ msgstr ""
 msgid "This field is required"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/inline_form.html:14
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/inline_form.html:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/inline_form.html:18
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/inline_form.html:19
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/forms/templates/a4forms/includes/inline_form.html:14
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/forms/templates/a4forms/includes/inline_form.html:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/forms/templates/a4forms/includes/inline_form.html:18
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/forms/templates/a4forms/includes/inline_form.html:19
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~orms/templates/a4forms/includes/inline_form.html:14
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~orms/templates/a4forms/includes/inline_form.html:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~orms/templates/a4forms/includes/inline_form.html:18
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~orms/templates/a4forms/includes/inline_form.html:19
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/inline_form.html:14
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/inline_form.html:15
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/inline_form.html:18
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/inline_form.html:19
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/forms/templates/a4forms/includes/inline_form.html:14
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/forms/templates/a4forms/includes/inline_form.html:15
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/forms/templates/a4forms/includes/inline_form.html:18
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/forms/templates/a4forms/includes/inline_form.html:19
 msgid "Remove category"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/images/templates/a4images/image_upload_widget.html:8
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/templates/a4images/image_upload_widget.html:8
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/templates/a4images/image_upload_widget.html:8
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/images/templates/a4images/image_upload_widget.html:8
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/templates/a4images/image_upload_widget.html:8
 #: adhocracy-plus/templates/a4images/image_upload_widget.html:10
 #: adhocracy-plus/templates/a4images/image_upload_widget.html:11
 #: adhocracy-plus/templates/a4images/image_upload_widget_simple.html:10
@@ -408,9 +353,8 @@ msgstr ""
 msgid "Remove the picture"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/images/templates/a4images/image_upload_widget.html:12
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/templates/a4images/image_upload_widget.html:12
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/templates/a4images/image_upload_widget.html:12
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/images/templates/a4images/image_upload_widget.html:12
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/templates/a4images/image_upload_widget.html:12
 #: adhocracy-plus/templates/a4images/image_upload_widget.html:16
 #: adhocracy-plus/templates/a4images/image_upload_widget.html:17
 #: adhocracy-plus/templates/a4images/image_upload_widget_simple.html:16
@@ -418,9 +362,8 @@ msgstr ""
 msgid "Upload a picture"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/images/templates/a4images/image_upload_widget.html:19
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/templates/a4images/image_upload_widget.html:19
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/templates/a4images/image_upload_widget.html:19
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/images/templates/a4images/image_upload_widget.html:19
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/templates/a4images/image_upload_widget.html:19
 msgid ""
 "\n"
 "            Your image will be uploaded/removed once you save your changes\n"
@@ -428,123 +371,100 @@ msgid ""
 "            "
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:3
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:3
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~abels/templates/a4labels/includes/module_labels_form.html:3
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:3
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:3
 msgid ""
 "In this section, you can create\n"
 "labels. If you create any, each contribution can be assigned\n"
 "to one or more of them. This way, content can be classified."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:21
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:21
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~abels/templates/a4labels/includes/module_labels_form.html:21
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:21
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:21
 msgid "Add label"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/polls/templates/a4polls/poll_404.html:8
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/templates/a4polls/poll_404.html:8
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/templates/a4polls/poll_404.html:8
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/polls/templates/a4polls/poll_404.html:8
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/templates/a4polls/poll_404.html:8
 #: apps/polls_react/templates/a4polls/poll_404.html:8
 msgid ""
 "Participation is not possible at the moment. The poll has not been set up "
 "yet."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/polls/templates/a4polls/poll_404.html:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/templates/a4polls/poll_404.html:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/templates/a4polls/poll_404.html:15
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/polls/templates/a4polls/poll_404.html:15
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/templates/a4polls/poll_404.html:15
 #: apps/polls_react/templates/a4polls/poll_404.html:15
 msgid "Setup the poll by adding questions and answers in the dashboard."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/node_modules/adhocracy4/adhocracy4/polls/templates/a4polls/poll_dashboard.html:5
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/templates/a4polls/poll_dashboard.html:5
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/templates/a4polls/poll_dashboard.html:5
+#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/polls/templates/a4polls/poll_dashboard.html:5
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/templates/a4polls/poll_dashboard.html:5
 #: apps/polls_react/templates/a4polls/poll_dashboard.html:5
 msgid "Edit poll"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/dashboard.py:13
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/dashboard.py:13
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/dashboard.py:13
 #: apps/exports/mixins.py:19
 msgid "Categories"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/dashboard.py:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/dashboard.py:15
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/dashboard.py:15
 msgid "Edit categories"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/fields.py:11
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/filters.py:16
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/forms.py:52
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/models.py:34
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/items.py:24
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/fields.py:11
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/filters.py:16
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/forms.py:52
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/models.py:34
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/items.py:24
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/fields.py:11
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/filters.py:16
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/forms.py:52
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/models.py:34
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/items.py:24
 msgid "Category"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/forms.py:46
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/labels/forms.py:23
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~abels/forms.py:23
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/forms.py:46
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/forms.py:46
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/forms.py:23
 msgid "Category name"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/forms.py:47
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/forms.py:47
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/forms.py:47
 msgid "Category icon"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/models.py:36
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/models.py:36
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/models.py:36
 msgid "Type of category"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/models.py:38
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/models.py:38
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/models.py:38
 msgid ""
 "You can individualise the term category. The character limit is max. 25 "
 "characters (with spaces)."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/models.py:46
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/models.py:46
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/models.py:46
 msgid ""
 "Assign your proposal to a category. This automatically appears in the "
 "display of your proposal. The list of all proposals can be filtered by "
 "category."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/models.py:52
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/labels/models.py:29
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~abels/models.py:29
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/models.py:52
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/models.py:52
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/models.py:29
 msgid "Description/Helptext"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/categories/models.py:54
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/labels/models.py:31
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~abels/models.py:31
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ategories/models.py:54
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/models.py:54
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/models.py:31
 msgid ""
 "You can individualise the description text. The description text is "
 "displayed to the participants as help text when they have to assign their "
 "ideas. The character limit is max. 300 characters (with spaces)."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/comments/models.py:47
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/exports.py:40
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/exports.py:40
-#: apps/budgeting/exports.py:78 apps/debate/exports.py:68
-#: apps/debate_quality/exports.py:64 apps/debate_quality_random/exports.py:64
-#: apps/debate_stance/exports.py:64 apps/debate_stance_random/exports.py:64
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments/models.py:47
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/exports.py:40
+#: apps/budgeting/exports.py:78 apps/debate/exports.py:78
+#: apps/debate_quality/exports.py:69 apps/debate_quality_random/exports.py:70
+#: apps/debate_stance/exports.py:69 apps/debate_stance_random/exports.py:68
 #: apps/documents/exports.py:41 apps/ideas/exports.py:77
 #: apps/mapideas/exports.py:78 apps/polls_react/exports.py:40
 #: apps/topicprio/exports.py:75
@@ -552,9 +472,8 @@ msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/comments/models.py:48
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/comments.py:48
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/comments.py:48
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments/models.py:48
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/comments.py:48
 #: apps/budgeting/templates/a4_candy_budgeting/includes/proposal_list_item.html:16
 #: apps/budgeting/templates/a4_candy_budgeting/includes/proposal_list_item.html:17
 #: apps/ideas/templates/a4_candy_ideas/includes/idea_list_item.html:18
@@ -566,34 +485,30 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/comments/serializers.py:78
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/comments/serializers.py:178
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments/serializers.py:78
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments/serializers.py:178
 msgid "Please choose a category"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/comments/serializers.py:87
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/comments_async/serializers.py:92
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~omments_async/serializers.py:92
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments/serializers.py:87
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments_async/serializers.py:92
 #: apps/comments_async0/serializers.py:92
 #: apps/comments_async1/serializers.py:92
 #: apps/comments_async2/serializers.py:92
 #: apps/comments_async3/serializers.py:92
-#: apps/comments_async4/serializers.py:92 apps/userdashboard/serializers.py:70
+#: apps/comments_async4/serializers.py:92 apps/userdashboard/serializers.py:69
 msgid "unknown user"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/comments_async/api.py:139
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/api.py:115
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/api.py:115
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~omments_async/api.py:139
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments_async/api.py:139
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/api.py:115
 #: apps/comments_async0/api.py:139 apps/comments_async1/api.py:139
 #: apps/comments_async2/api.py:139 apps/comments_async3/api.py:139
-#: apps/comments_async4/api.py:139 apps/polls_react/api.py:115
+#: apps/comments_async4/api.py:139 apps/polls_react/api.py:117
 msgid "Please agree to the organisation's terms of use."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/comments_async/serializers.py:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~omments_async/serializers.py:15
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments_async/serializers.py:15
 #: apps/comments_async0/serializers.py:15
 #: apps/comments_async1/serializers.py:15
 #: apps/comments_async2/serializers.py:15
@@ -602,28 +517,23 @@ msgstr ""
 msgid "Please choose one or more categories."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/components/forms/views.py:24
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/components/forms/views.py:24
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/components/forms/views.py:24
 msgid "The project has been updated."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/components/forms/views.py:51
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/components/forms/views.py:51
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/components/forms/views.py:51
 msgid "The module has been updated."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/dashboard.py:13
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/dashboard.py:13
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:13
 msgid "Basic settings"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/dashboard.py:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/dashboard.py:15
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:15
 msgid "Edit basic settings"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/dashboard.py:23
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/dashboard.py:23
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:23
 #: apps/organisations/templates/a4_candy_organisations/organisation_information.html:4
 #: apps/organisations/templates/a4_candy_organisations/organisation_information.html:19
 #: apps/projects/templates/a4_candy_projects/project_detail.html:87
@@ -631,75 +541,61 @@ msgstr ""
 msgid "Information"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/dashboard.py:25
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/dashboard.py:25
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:25
 msgid "Edit project information"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/dashboard.py:33
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/dashboard.py:33
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:33
 #: apps/projects/templates/a4_candy_projects/project_detail.html:107
 #: adhocracy-plus/templates/includes/project_header_mobile_toggle.html:41
 msgid "Result"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/dashboard.py:35
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/dashboard.py:35
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:35
 msgid "Edit project result"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/dashboard.py:43
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/dashboard.py:43
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:43
 msgid "Basic information"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/dashboard.py:45
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/dashboard.py:45
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:45
 msgid "Edit basic module information"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/dashboard.py:53
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/dashboard.py:53
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:53
 msgid "Phases"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/dashboard.py:55
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/dashboard.py:55
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:55
 msgid "Edit phases information"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/dashboard.py:64
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/dashboard.py:64
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:64
 msgid "Area settings"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/dashboard.py:65
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/dashboard.py:65
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:65
 msgid "Edit area settings"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/filter.py:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/filter.py:15
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/filter.py:15
 #: apps/budgeting/views.py:27
 msgid "Archived"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/filter.py:19
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/filters/widgets.py:33
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/filter.py:19
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ilters/widgets.py:33
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/filter.py:19
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/filters/widgets.py:33
 #: apps/budgeting/views.py:31
 msgid "All"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/filter.py:20
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/filter.py:20
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/filter.py:20
 #: apps/budgeting/views.py:32
 msgid "No"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/filter.py:21
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/filter.py:21
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/filter.py:21
 #: apps/budgeting/templates/a4_candy_budgeting/proposal_confirm_delete.html:15
 #: apps/budgeting/views.py:33
 #: apps/debate/templates/a4_candy_debate/subject_confirm_delete.html:16
@@ -714,231 +610,186 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/forms.py:80
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/forms.py:80
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:80
 msgid "All users can participate (public)."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/forms.py:83
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/forms.py:83
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:83
 msgid "Only invited users can participate (private)."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/forms.py:91
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/forms.py:91
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:91
 #: apps/projects/templates/a4_candy_projects/project_detail.html:134
 msgid "Contact for questions"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/forms.py:93
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/forms.py:93
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:93
 msgid ""
 "Please name a contact person. The user will then know who is carrying out "
 "this project and to whom they can address possible questions. The contact "
 "person will be shown in the information tab on the project page."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/forms.py:99
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/forms.py:99
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:99
 msgid "More contact possibilities"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/forms.py:144
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/phases/models.py:66
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/forms.py:144
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~hases/models.py:66
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:144
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:66
 msgid "End date"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/forms.py:144
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/forms.py:144
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:144
 msgid "End time"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/forms.py:150
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/phases/models.py:64
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/forms.py:150
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~hases/models.py:64
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:150
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:64
 msgid "Start date"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/forms.py:150
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/forms.py:150
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:150
 msgid "Start time"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/mixins.py:209
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/mixins.py:209
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/mixins.py:209
 msgid "Project successfully duplicated."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/views.py:73
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/views.py:73
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:73
 msgid "Project successfully created."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/views.py:164
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/views.py:164
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:164
 #: apps/dashboard/views.py:133
 msgid "Invalid action"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/views.py:181
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/views.py:181
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:181
 msgid "Project is already published"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/views.py:186
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/views.py:186
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:186
 msgid "Project cannot be published. No module is added."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/views.py:202
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/views.py:202
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:202
 msgid "Project cannot be published. Required fields are missing."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/views.py:211
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/views.py:211
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:211
 msgid "Project cannot be published."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/views.py:221
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/views.py:221
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:221
 msgid "the project has been published."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/views.py:226
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/views.py:226
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:226
 msgid "Project is already unpublished"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/dashboard/views.py:234
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ashboard/views.py:234
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:234
 msgid "the project has been unpublished."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/comments.py:17
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/comments.py:17
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/comments.py:17
 msgid "Comment count"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/comments.py:80
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/comments.py:80
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/comments.py:80
 msgid "Reply to Comment"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/comments.py:99
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/comments.py:99
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/comments.py:99
 msgid "Reply to Reference"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/general.py:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/general.py:15
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/general.py:15
 msgid "Creator"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/general.py:17
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/models/base.py:9
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/exports.py:41
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odels/base.py:9
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/exports.py:41
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/general.py:17
-#: apps/budgeting/exports.py:79 apps/debate/exports.py:69
-#: apps/debate_quality/exports.py:65 apps/debate_quality_random/exports.py:65
-#: apps/debate_stance/exports.py:65 apps/debate_stance_random/exports.py:65
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/general.py:17
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/models/base.py:9
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/exports.py:41
+#: apps/budgeting/exports.py:79 apps/debate/exports.py:79
+#: apps/debate_quality/exports.py:70 apps/debate_quality_random/exports.py:71
+#: apps/debate_stance/exports.py:70 apps/debate_stance_random/exports.py:69
 #: apps/documents/exports.py:42 apps/ideas/exports.py:78
 #: apps/mapideas/exports.py:79 apps/polls_react/exports.py:41
 #: apps/topicprio/exports.py:76
 msgid "Created"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/general.py:36
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/general.py:36
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/general.py:36
 msgid "Link"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/general.py:52
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/general.py:52
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/general.py:52
 msgid "Location (Longitude)"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/general.py:54
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/general.py:54
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/general.py:54
 msgid "Location (Latitude)"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/general.py:56
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/general.py:56
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/general.py:56
 msgid "Location label"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/items.py:43
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/labels/dashboard.py:13
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~abels/dashboard.py:13
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/items.py:43
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/items.py:43
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/dashboard.py:13
 #: apps/ideas/models.py:46 apps/topicprio/models.py:50
 msgid "Labels"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/items.py:61
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/items.py:61
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/items.py:61
 #: apps/contrib/templates/a4_candy_contrib/item_detail.html:63
 msgid "Reference No."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/items.py:81
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/items.py:81
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/items.py:81
 msgid "Status"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/items.py:83
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/items.py:83
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/items.py:83
 msgid "Feedback"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/items.py:107
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/items.py:107
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/items.py:107
 #: apps/moderatorremark/models.py:14
 #: apps/moderatorremark/templates/a4_candy_moderatorremark/includes/popover_remark.html:5
 #: apps/moderatorremark/templates/a4_candy_moderatorremark/includes/popover_remark.html:21
 msgid "Remark"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/rates.py:16
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/rates.py:16
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/rates.py:16
 msgid "Positive ratings"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/mixins/rates.py:18
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/mixins/rates.py:18
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/rates.py:18
 msgid "Negative ratings"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/views.py:91
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/views.py:91
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/views.py:91
 msgid "yes"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/exports/views.py:92
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~xports/views.py:92
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/views.py:92
 msgid "no"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/filters/widgets.py:76
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~ilters/widgets.py:76
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/filters/widgets.py:76
 #: apps/contrib/widgets.py:59
 msgid "Ordering"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/forms/fields.py:19
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~orms/fields.py:19
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/forms/fields.py:19
 #, python-format
 msgid "Time of %(date_label)s"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/fields.py:70
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/fields.py:70
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/fields.py:70
 #, python-brace-format
 msgid ""
 "{help_prefix} It must be min. {min_resolution[0]} pixel wide and "
@@ -946,284 +797,229 @@ msgid ""
 "The file size should be max. {max_size_mb} MB."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/fields.py:87
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/fields.py:87
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/fields.py:87
 #, python-brace-format
 msgid "{image_name} copyright"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/fields.py:90
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/fields.py:90
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/fields.py:90
 #, python-brace-format
 msgid "Copyright shown in the {image_name}."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/fields.py:103
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/fields.py:103
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/fields.py:103
 #, python-brace-format
 msgid "{image_name} alt text"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/fields.py:106
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/fields.py:106
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/fields.py:106
 msgid ""
 "An alternate text serves as a textual description of the image content and "
 "is read out by screen readers. Describe the image in max. 80 characters. "
 "Example: A busy square with people in summer."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/mixins.py:30
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/mixins.py:35
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/mixins.py:30
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/mixins.py:35
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/mixins.py:30
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/mixins.py:35
 msgid "Please add copyright information."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/mixins.py:40
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/mixins.py:45
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/mixins.py:40
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/mixins.py:45
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/mixins.py:40
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/mixins.py:45
 msgid "Please add an alternative text for this image"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/validators.py:26
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/validators.py:26
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:26
 msgid "Unsupported file format. Supported formats are {}."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/validators.py:33
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/validators.py:33
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:33
 #: apps/organisations/forms.py:362
 #, python-brace-format
 msgid "Image should be at most {max_size} MB"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/validators.py:41
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/validators.py:41
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:41
 #: apps/organisations/forms.py:370
 #, python-brace-format
 msgid "Image must be at least {min_width} pixels wide"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/validators.py:49
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/validators.py:49
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:49
 #: apps/organisations/forms.py:380
 #, python-brace-format
 msgid "Image must be at least {min_height} pixels high"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/validators.py:55
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/validators.py:55
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:55
 #, python-brace-format
 msgid "Image must be at most {max_width} pixels wide"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/validators.py:58
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/validators.py:58
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:58
 #, python-brace-format
 msgid "Image must be at most {max_height} pixels high"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/validators.py:67
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/validators.py:67
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:67
 #, python-brace-format
 msgid "Image aspect ratio should be {aspect_width}:{aspect_height}"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/images/widgets.py:28
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~mages/widgets.py:28
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/widgets.py:28
 msgid "Select a picture from your local folder."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/labels/dashboard.py:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~abels/dashboard.py:15
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/dashboard.py:15
 msgid "Edit labels"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/labels/filters.py:10
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/labels/forms.py:25
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/labels/models.py:10
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~abels/filters.py:10
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~abels/forms.py:25
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~abels/models.py:10
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/filters.py:10
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/forms.py:25
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/models.py:10
 msgid "Label"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/labels/models.py:12
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~abels/models.py:12
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/models.py:12
 msgid "Type of label"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/labels/models.py:14
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~abels/models.py:14
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/models.py:14
 msgid ""
 "You can individualise the term label. The character limit is max. 25 "
 "characters (with spaces)."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/labels/models.py:22
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~abels/models.py:22
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/models.py:22
 msgid ""
 "Specify your proposal with one or more labels. These will automatically "
 "appear in the display of your proposal. In addition, the list of all "
 "proposals can be filtered by labels."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/maps/admin.py:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/maps/models.py:11
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~aps/admin.py:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~aps/models.py:11
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/admin.py:15
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/models.py:11
 msgid "Polygon"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/maps/admin.py:19
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~aps/admin.py:19
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/admin.py:19
 msgid ""
 "Enter a valid GeoJSON object. To initialize a new areasetting enter the "
 "string \"false\" without quotation marks."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/maps/fields.py:16
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~aps/fields.py:16
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/fields.py:16
 msgid "Geometry as GeoJSON"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/maps/fields.py:34
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~aps/fields.py:34
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/fields.py:34
 msgid "Please add a Marker on the map"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/maps/fields.py:39
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~aps/fields.py:39
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/fields.py:39
 msgid "Please draw a Polygon on the map"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/maps/models.py:11
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~aps/models.py:11
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/models.py:11
 msgid "Please draw an area on the map."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/models/base.py:14
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odels/base.py:14
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/models/base.py:14
 msgid "Modified"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:74
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:74
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:74
 msgid "Title of the module"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:76
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:76
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:76
 msgid ""
 "This title will appear in the timeline and the header on the module and "
 "project detail pages. It should be max. 512 characters long"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:85
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:85
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:85
 msgid "Short description of the module"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:87
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:87
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:87
 msgid ""
 "This short description will appear on the header of the module and project "
 "detail pages. It should briefly state the goal of the module in max. 512 "
 "chars."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:224
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:224
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:224
 msgid "day"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:224
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:231
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:224
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:231
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:224
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:231
 msgid "days"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:225
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:225
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:225
 msgid "hour"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:225
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:232
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:225
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:232
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:225
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:232
 msgid "hours"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:226
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:226
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:226
 msgid "minute"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:226
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:233
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:226
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:233
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:226
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:233
 msgid "minutes"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:227
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:227
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:227
 msgid "second"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:227
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:234
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:227
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:234
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:227
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:234
 msgid "seconds"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:231
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:231
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:231
 msgctxt "abbreviation for day(s)"
 msgid "D"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:232
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:232
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:232
 msgctxt "abbreviation for hour(s)"
 msgid "H"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:233
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:233
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:233
 msgctxt "abbreviation for minute(s)"
 msgid "M"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/modules/models.py:234
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~odules/models.py:234
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:234
 msgctxt "abbreviation for second(s)"
 msgid "S"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/phases/forms.py:24
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~hases/forms.py:24
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/forms.py:24
 msgid "Phases cannot run at the same time and must follow after each other."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/phases/forms.py:31
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~hases/forms.py:31
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/forms.py:31
 msgid "Phases need to be in same order as in form."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/phases/models.py:59
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~hases/models.py:59
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:59
 #: apps/newsletters/models.py:28
 #: apps/projects/templates/a4_candy_projects/includes/removeable_user_list.html:7
 msgid "Name"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/phases/models.py:60
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~hases/models.py:60
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:60
 #: apps/activities/models.py:22 apps/debate/models.py:25
 #: apps/debate_quality/models.py:32 apps/debate_quality_random/models.py:32
 #: apps/debate_stance/models.py:31 apps/debate_stance_random/models.py:31
@@ -1233,56 +1029,46 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/phases/models.py:84
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~hases/models.py:84
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:84
 msgid "End date can not be before start date."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/phases/models.py:88
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/phases/models.py:92
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~hases/models.py:88
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~hases/models.py:92
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:88
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:92
 msgid "Either both or no date has to be set."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/api.py:155
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/api.py:155
-#: apps/polls_react/api.py:155
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/api.py:155
+#: apps/polls_react/api.py:157
 msgid "Please specify your answer."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/api.py:169
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/api.py:169
-#: apps/polls_react/api.py:169
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/api.py:169
+#: apps/polls_react/api.py:171
 msgid "Key error for {}"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/api.py:171
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/api.py:171
-#: apps/polls_react/api.py:171
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/api.py:171
+#: apps/polls_react/api.py:173
 msgid "Choice not found."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/api.py:190
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/api.py:190
-#: apps/polls_react/api.py:190
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/api.py:190
+#: apps/polls_react/api.py:192
 msgid "Duplicate choices detected."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/api.py:193
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/api.py:193
-#: apps/polls_react/api.py:193
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/api.py:193
+#: apps/polls_react/api.py:195
 msgid "Multiple choice disabled for question."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/dashboard.py:15
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/dashboard.py:15
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/dashboard.py:15
 #: apps/dashboard/blueprints.py:103 apps/polls_react/dashboard.py:15
 msgid "Poll"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/dashboard.py:44
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/dashboard.py:44
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/dashboard.py:44
 #: apps/budgeting/dashboard.py:14 apps/debate/dashboard.py:65
 #: apps/debate_quality/dashboard.py:65
 #: apps/debate_quality_random/dashboard.py:65
@@ -1293,143 +1079,121 @@ msgstr ""
 msgid "Export Excel"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/exports.py:39
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/exports.py:39
-#: apps/budgeting/exports.py:77 apps/debate/exports.py:67
-#: apps/debate_quality/exports.py:63 apps/debate_quality_random/exports.py:63
-#: apps/debate_stance/exports.py:63 apps/debate_stance_random/exports.py:63
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/exports.py:39
+#: apps/budgeting/exports.py:77 apps/debate/exports.py:77
+#: apps/debate_quality/exports.py:68 apps/debate_quality_random/exports.py:69
+#: apps/debate_stance/exports.py:68 apps/debate_stance_random/exports.py:67
 #: apps/documents/exports.py:40 apps/ideas/exports.py:76
 #: apps/mapideas/exports.py:77 apps/polls_react/exports.py:39
 #: apps/topicprio/exports.py:74
 msgid "ID"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/models.py:41
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/models.py:41
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:41
 #: apps/polls_react/models.py:41
 msgid "Explanation"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/models.py:68
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/models.py:68
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:68
 #: apps/polls_react/models.py:68
 msgid "Questions with open answers cannot have multiple choices."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/models.py:77
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/models.py:77
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:77
 #: apps/polls_react/models.py:77
 msgid ""
 "Question with choices cannot become open question. Delete choices or add new "
 "open question."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/models.py:140
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/models.py:258
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/models.py:140
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/models.py:258
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:140
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:258
 #: apps/polls_react/models.py:140 apps/polls_react/models.py:258
 msgid "Answer"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/models.py:151
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/models.py:151
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:151
 #: apps/polls_react/models.py:151
 msgid "Only open questions can have answers."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/models.py:187
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/models.py:187
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:187
 #: apps/polls_react/models.py:187
 msgid "Open questions cannot have choices."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/models.py:193
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/models.py:193
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:193
 #: apps/polls_react/models.py:193
 msgid ""
 "\"Other\" cannot be the only choice. Use open question or add more choices."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/models.py:204
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/models.py:204
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:204
 #: apps/polls_react/models.py:204
 msgid "Question already has \"other\" choice."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/models.py:265
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/models.py:265
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:265
 #: apps/polls_react/models.py:265
 msgid "Other vote can only be created for vote on \"other\" choice."
 msgstr ""
 
 #. Translators: kosmo
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/models.py:287
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/models.py:287
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:287
 #: apps/classifications/models.py:15 apps/polls_react/models.py:287
 msgid "other"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/phases.py:16
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/phases.py:16
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/phases.py:16
 #: apps/polls_react/phases.py:16
 msgctxt "A4: voting phase name"
 msgid "Voting phase"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/phases.py:18
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/phases.py:18
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/phases.py:18
 #: apps/polls_react/phases.py:18
 msgctxt "A4: voting phase description"
 msgid "Answer the questions and comment on the poll."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/phases.py:20
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/phases.py:20
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/phases.py:20
 #: apps/polls_react/phases.py:20
 msgid "polls"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/validators.py:16
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/validators.py:16
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/validators.py:16
 #: apps/polls_react/validators.py:16
 #, python-format
 msgid "Item of type %(item)s for that module already exists"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/validators.py:28
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/validators.py:28
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/validators.py:28
 #: apps/polls_react/validators.py:28
 msgid "Question has to belong to the poll set in the url."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/validators.py:39
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/validators.py:39
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/validators.py:39
 #: apps/polls_react/validators.py:39
 msgid "Choice has to belong to the question set in the url."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/polls/validators.py:57
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~olls/validators.py:57
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/validators.py:57
 #: apps/polls_react/validators.py:57
 msgid "Only one vote per choice is allowed per user."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/admin.py:10
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/admin.py:10
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/admin.py:10
 #: apps/newsletters/forms.py:38
 #: adhocracy-plus/templates/includes/project_header_mobile_toggle.html:12
 msgid "Project"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/admin.py:63
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/admin.py:63
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/admin.py:63
 #: apps/projects/admin.py:38
 msgid "Information and result"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/admin.py:69
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/admin.py:69
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/admin.py:69
 #: apps/organisations/templates/a4_candy_organisations/communication_form_social_media.html:4
 #: apps/organisations/templates/a4_candy_organisations/organisation_form.html:4
 #: apps/organisations/templates/a4_candy_organisations/organisation_form_legal_info.html:4
@@ -1437,195 +1201,159 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/admin.py:81
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/admin.py:81
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/admin.py:81
 #: apps/projects/admin.py:58
 msgid "Images"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/admin.py:93
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/admin.py:93
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/admin.py:93
 #: apps/projects/admin.py:70 adhocracy-plus/templates/email_base.html:112
 #: adhocracy-plus/templates/footer.html:58
 msgid "Contact"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/enums.py:13
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/enums.py:13
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/enums.py:13
 msgid "public"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:42
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:42
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:42
 msgid ""
 "Phone numbers can only contain digits, spaces and the following characters: "
 "-, +, (, ). It has to be between 8 and 20 characters long."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:49
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:49
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:49
 msgid "Postal address"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:52
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:52
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:52
 #: apps/projects/templates/a4_candy_projects/includes/removeable_invite_list.html:7
 #: apps/projects/templates/a4_candy_projects/project_detail.html:146
 msgid "Email"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:55
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:55
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:55
 msgid "Contact person"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:59
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:59
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:59
 msgid "Phone"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:62
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:62
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:62
 #: apps/projects/templates/a4_candy_projects/project_detail.html:151
 msgid "Website"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:72
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:72
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:72
 msgid "Can your project be located on the map?"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:74
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:74
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:74
 msgid ""
 "Locate your project. Click inside the marked area or type in an address to "
 "set the marker. A set marker can be dragged when pressed."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:86
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:86
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:86
 msgid "Administrative district"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:174
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:174
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:174
 msgid "Title of your project"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:176
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:176
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:176
 msgid ""
 "This title will appear on the teaser card and on top of the project detail "
 "page. It should be max. 120 characters long"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:189
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:189
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:189
 msgid "Short description of your project"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:191
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:191
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:191
 msgid ""
 "This short description will appear on the header of the project and in the "
 "teaser. It should briefly state the goal of the project in max. 250 chars."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:200
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:200
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:200
 msgid "Description of your project"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:202
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:202
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:202
 msgid ""
 "This description should tell participants what the goal of the project is, "
 "how the project’s participation will look like. It will be always visible in "
 "the „Info“ tab on your project’s page."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:211
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:211
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:211
 msgid "Results of your project"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:213
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:213
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:213
 msgid ""
 "Here you should explain what the expected outcome of the project will be and "
 "how you are planning to use the results. If the project is finished you "
 "should add a summary of the results."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:220
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:220
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:220
 msgid "Access to the project"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:225
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:231
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:232
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:225
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:231
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:232
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:225
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:231
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:232
 #: apps/organisations/models.py:97
 msgid "Header image"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:226
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:226
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:226
 #: apps/organisations/models.py:98
 msgid "The image will be shown as a decorative background image."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:235
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:241
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:242
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:235
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:241
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:242
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:235
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:241
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:242
 msgid "Tile image"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:236
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:236
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:236
 msgid "The image will be shown in the project tile."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:255
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:255
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:255
 msgid "Project is archived"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:257
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:257
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:257
 msgid ""
 "Archived projects are not shown in the project overview. For project "
 "initiators they are still visible in the dashboard."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:263
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:263
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:263
 msgid "Project topics"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/models.py:263
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/models.py:263
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:263
 msgid "Add topics to your project."
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/utils.py:46
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/utils.py:46
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/utils.py:46
 msgid "{}. Online Participation"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/projects/utils.py:55
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~rojects/utils.py:55
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/utils.py:55
 msgid "Online Participation"
 msgstr ""
 
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/reports/templatetags/react_reports.py:28
-#: /home/maike/Dokumente/Uni/Repositories/discuss2.0/venv/lib/python3.9/site-packages/adhocracy4/~eports/templatetags/react_reports.py:28
+#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/reports/templatetags/react_reports.py:28
 #: apps/contrib/templates/a4_candy_contrib/item_detail.html:114
 msgid "Report"
 msgstr ""
@@ -1739,9 +1467,8 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"                <a href=\"%(actor_profile)s\">%(name)s</a> left a <a "
-"href=\"%(comment_url)s\">comment</a> on your <a "
-"href=\"%(item_url)s\">contribution</a>\n"
+"                %(name)s left a <a href=\"%(comment_url)s\">comment</a> on "
+"your <a href=\"%(item_url)s\">contribution</a>\n"
 "                "
 msgstr ""
 
@@ -1749,9 +1476,8 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"              <a href=\"%(actor_profile)s\">%(name)s</a> left a <a "
-"href=\"%(comment_url)s\">reply</a> to your <a "
-"href=\"%(parent_comment_url)s\">comment</a>\n"
+"              %(name)s left a <a href=\"%(comment_url)s\">reply</a> to your "
+"<a href=\"%(parent_comment_url)s\">comment</a>\n"
 "              "
 msgstr ""
 
@@ -2080,46 +1806,6 @@ msgstr ""
 
 #: apps/cms/contacts/models.py:178
 msgid "Your name"
-msgstr ""
-
-#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:4
-#, python-format
-msgid "We received your message on %(site_name)s"
-msgstr ""
-
-#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:6
-msgid "We received your message"
-msgstr ""
-
-#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:10
-msgid "This is the data we received from you:"
-msgstr ""
-
-#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:13
-#, python-format
-msgid "Your email address: %(sender_mail)s"
-msgstr ""
-
-#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:16
-#, python-format
-msgid "Your message: %(message)s"
-msgstr ""
-
-#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:20
-#, python-format
-msgid "Your telephone number: %(sender_phone)s"
-msgstr ""
-
-#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:25
-#, python-format
-msgid "Your Name: %(sender_name)s"
-msgstr ""
-
-#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:30
-#, python-format
-msgid ""
-"This message was sent to %(receiver)s. It was sent because you wrote us a "
-"message via our contact form and asked us to send you a copy."
 msgstr ""
 
 #: apps/cms/contacts/templates/a4_candy_cms_contacts/includes/form.html:16
@@ -2570,6 +2256,24 @@ msgstr ""
 
 #: apps/debate/dashboard.py:15 apps/debate_quality_random/dashboard.py:15
 msgid "Subjects"
+msgstr ""
+
+#: apps/debate/exports.py:80 apps/debate_quality/exports.py:71
+#: apps/debate_quality_random/exports.py:72 apps/debate_stance/exports.py:71
+#: apps/debate_stance_random/exports.py:70
+msgid "Blocked"
+msgstr ""
+
+#: apps/debate/exports.py:81 apps/debate_quality/exports.py:72
+#: apps/debate_quality_random/exports.py:73 apps/debate_stance/exports.py:72
+#: apps/debate_stance_random/exports.py:71
+msgid "Bilendi ID"
+msgstr ""
+
+#: apps/debate/exports.py:82 apps/debate_quality/exports.py:73
+#: apps/debate_quality_random/exports.py:74 apps/debate_stance/exports.py:73
+#: apps/debate_stance_random/exports.py:72
+msgid "Eingeloggte Tage"
 msgstr ""
 
 #: apps/debate/filters.py:19 apps/debate/filters.py:34
@@ -3234,14 +2938,6 @@ msgstr ""
 msgid "Receivers"
 msgstr ""
 
-#: apps/newsletters/templates/a4_candy_newsletters/emails/newsletter_email.en.email:10
-#, python-format
-msgid ""
-"This email was sent to %(receiver_mail)s. This email was sent to you because "
-"you are registered on %(site_name)s. If you don't want to receive "
-"newsletters anymore, you may disable them in your user account settings."
-msgstr ""
-
 #: apps/newsletters/templates/a4_candy_newsletters/restricted_newsletter_dashboard_form.html:4
 #: adhocracy-plus/templates/a4dashboard/communication_form_base.html:16
 msgid "Newsletter"
@@ -3253,379 +2949,6 @@ msgstr ""
 
 #: apps/newsletters/views.py:57
 msgid "Newsletter has been saved and will be sent to the recipients."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:4
-#, python-format
-msgid "Reaction to your contribution in project %(project_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:6
-msgid "Reaction to your contribution"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:9
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:17
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:9
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:9
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:9
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:9
-#, python-format
-msgid "Hello %(receiver_name)s,"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:13
-#, python-format
-msgid "%(actor_name)s commented on your post:"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:21
-msgid "Would you like to answer?"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:26
-msgid "View Post"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:26
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:31
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:55
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:57
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:59
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:61
-msgid "Visit the project"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:28
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:33
-#, python-format
-msgid ""
-"This email was sent to %(receiver_mail)s. You have received the e-mail "
-"because you added a contribution to the above project."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:5
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:9
-msgid "Your contribution was deleted"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:18
-#, python-format
-msgid "Hello <strong>%(receiver_name)s</strong>,"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:22
-#, python-format
-msgid ""
-"Your contribution in the project <strong>\"%(project_name)s\"</strong> was "
-"deleted by the moderator."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:22
-msgid ""
-"Please pay attention to the basic rules when writing contributions. In this "
-"way we create a pleasant atmosphere for an open exchange and achieve good "
-"results."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:24
-msgid "Thank you very much!"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:27
-msgid "Your contribution:"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:40
-msgid "Show discussion"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:44
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:34
-#, python-format
-msgid ""
-"This email was sent to %(receiver_mail)s. This email was sent to you because "
-"of your participation in the project."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:5
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:9
-msgid "Feedback of the moderation"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:20
-#, python-format
-msgid ""
-"the moderator %(moderator_name)s of the project %(project_name)s gave "
-"feedback on your contribution:"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:24
-msgid "Here you can find your contribution:"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:30
-msgid "Show contribution"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:4
-#, python-format
-msgid "Feedback for your contribution on %(site_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:6
-msgid "Feedback for your contribution"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:13
-#, python-format
-msgid "%(organisation_name)s reacted on your contribution."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:17
-#, python-format
-msgid "Your contribution is %(status)s."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:22
-#, python-format
-msgid "Official feedback: %(feedback)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:26
-msgid "Do you want to answer?"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:31
-msgid "Check your contribution"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:4
-#, python-format
-msgid "Event in project %(project_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:6
-msgid "Event"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:13
-#, python-format
-msgid "The following event takes place on %(date)s:"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:19
-msgid "Further information about the event can be found in the project."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:24
-msgid "Show Event"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:26
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:23
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:23
-#, python-format
-msgid ""
-"This email was sent to %(receiver_mail)s. You have received the e-mail "
-"because you are following the above project."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:4
-#, python-format
-msgid "Participation ends soon for %(project_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:6
-msgid "Participation ends soon!"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:13
-msgid "the online participation in the above mentioned project will end soon."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:16
-#, python-format
-msgid "You can still participate until %(end_date)s."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:21
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:21
-msgid "Join now"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:4
-#, python-format
-msgid "Here we go: %(project_name)s starts now!"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:6
-msgid "Here we go!"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:13
-msgid "Online participation for the above project has started."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:16
-#, python-format
-msgid "You can participate until %(end_date)s."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_created.en.email:4
-#, python-format
-msgid "New project %(project_name)s on %(site_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_created.en.email:6
-#, python-format
-msgid "The new project %(project_name)s was created for %(organisation_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_created.en.email:10
-#, python-format
-msgid ""
-"%(creator_name)s has created the project %(project_name)s for "
-"%(organisation_name)s."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_created.en.email:15
-msgid "Show project"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_created.en.email:17
-#, python-format
-msgid ""
-"This email was sent to %(receiver_mail)s. This email was sent to you because "
-"you are an intiator of %(organisation_name)s."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_deleted.en.email:4
-msgid "Deletion of project"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_deleted.en.email:6
-#, python-format
-msgid "The project %(name)s was deleted."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_deleted.en.email:10
-#, python-format
-msgid ""
-"The project \"%(name)s\" on the participation platform %(site_name)s was "
-"deleted."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_deleted.en.email:14
-#, python-format
-msgid ""
-"This email was sent to %(receiver)s. This email was sent to you because you "
-"are an initiator of the organisation '%(organisation_name)s', in which a "
-"project was deleted."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:7
-#, python-format
-msgid "A comment was added to the project %(project_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:9
-#, python-format
-msgid "An idea was added to the project %(project_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:11
-#, python-format
-msgid "A proposal was added to the project %(project_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:13
-#, python-format
-msgid "A contribution was added to the project %(project_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:21
-#, python-format
-msgid "%(actor_name)s created a comment on the project %(project_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:23
-#, python-format
-msgid "%(actor_name)s created an idea on the project %(project_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:25
-#, python-format
-msgid "%(actor_name)s created a proposal on the project %(project_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:27
-#, python-format
-msgid "%(actor_name)s created a contribution on the project %(project_name)s"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:36
-#, python-format
-msgid "on the project %(project_name)s a comment was added by %(actor_name)s."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:36
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:38
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:40
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:42
-#, python-format
-msgid ""
-"Checkout what happend on the project %(project_name)s on %(site_name)s by "
-"clicking the link below."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:36
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:38
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:40
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:42
-#, python-format
-msgid ""
-"Checkout what happend on the project %(project_name)s on %(site_name)s by "
-"clicking the button below."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:38
-#, python-format
-msgid "on the project %(project_name)s an idea was added by %(actor_name)s."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:40
-#, python-format
-msgid "on the project %(project_name)s a proposal was added by %(actor_name)s."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:42
-#, python-format
-msgid ""
-"on the project %(project_name)s a contribution was added by %(actor_name)s."
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:55
-msgid "Check the comment"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:57
-msgid "Check the idea"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:59
-msgid "Check the proposal"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:61
-msgid "Check the contribution"
-msgstr ""
-
-#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:67
-#, python-format
-msgid ""
-"This email was sent to %(receiver_mail)s. This email was sent to you because "
-"you are a moderator in the project."
 msgstr ""
 
 #: apps/offlineevents/dashboard.py:13
@@ -3862,6 +3185,7 @@ msgstr ""
 #: apps/users/forms.py:36 apps/users/forms.py:190
 #: adhocracy-plus/templates/email_base.html:79
 #: adhocracy-plus/templates/email_base.html:109
+#: adhocracy-plus/templates/email_base.txt:18
 #: adhocracy-plus/templates/footer.html:43
 #: adhocracy-plus/templates/footer_upper.html:25
 msgid "Terms of use"
@@ -3996,16 +3320,16 @@ msgstr ""
 #: apps/organisations/templates/a4_candy_organisations/organisation_landing_page.html:95
 #, python-format
 msgid ""
-"Currently, there are no public participation processes. Sign in <a "
-"href=\"%(account_login_url)s?next=%(organisation_url)s\">here</a> or read "
-"more in <a href=\"%(organisation_information_url)s\">About</a>."
+"Currently, there are no public participation processes. Sign in <a href="
+"\"%(account_login_url)s?next=%(organisation_url)s\">here</a> or read more in "
+"<a href=\"%(organisation_information_url)s\">About</a>."
 msgstr ""
 
 #: apps/organisations/templates/a4_candy_organisations/organisation_landing_page.html:99
 #, python-format
 msgid ""
-"Currently, there are no public participation processes. Sign in <a "
-"href=\"%(account_login_url)s?next=%(organisation_url)s\">here</a>."
+"Currently, there are no public participation processes. Sign in <a href="
+"\"%(account_login_url)s?next=%(organisation_url)s\">here</a>."
 msgstr ""
 
 #: apps/organisations/views.py:43
@@ -4098,116 +3422,6 @@ msgstr ""
 
 #: apps/projects/serializers.py:252
 msgid "completed"
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/invite_moderator.en.email:4
-#, python-format
-msgid "Invitation to moderate the project: \"%(project_name)s\""
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/invite_moderator.en.email:6
-#, python-format
-msgid "Invitation to moderate project: \"%(project_name)s\""
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/invite_moderator.en.email:10
-#, python-format
-msgid ""
-"you are invited to moderate the project \"%(project_name)s\" on the "
-"participation platform %(site_name)s. To be able to moderate and change the "
-"project click on \"Accept invitation\"."
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/invite_moderator.en.email:15
-#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:15
-msgid "Accept invitation"
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/invite_moderator.en.email:17
-#, python-format
-msgid ""
-"This email was sent to %(receiver_mail)s. This email was sent to you because "
-"you are invited to moderate a project."
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:4
-#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:6
-#, python-format
-msgid "Invitation to the semi-public project: \"%(project_name)s\""
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:4
-#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:6
-#, python-format
-msgid "Invitation to the private project: \"%(project_name)s\""
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:10
-#, python-format
-msgid ""
-"you are invited to participate in the semi-public project "
-"\"%(project_name)s\" on the participation platform  %(site_name)s. To "
-"participate click on \"Accept invitation\"."
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:10
-#, python-format
-msgid ""
-"you are invited to participate in the private project \"%(project_name)s\" "
-"on the participation platform  %(site_name)s. To participate click on "
-"\"Accept invitation\"."
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:17
-#, python-format
-msgid ""
-"This email was sent to %(receiver_mail)s. This email was sent to you because "
-"you are invited to participate in a private project."
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:4
-#, python-format
-msgid "Welcome to the semi-public project: \"%(project_name)s\""
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:4
-#, python-format
-msgid "Welcome to the private project: \"%(project_name)s\""
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:6
-#, python-format
-msgid "Link to semi-public project: \"%(project_name)s\""
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:6
-#, python-format
-msgid "Link to private project: \"%(project_name)s\""
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:10
-#, python-format
-msgid ""
-"you have accepted the invitation to the semi-public project "
-"\"%(project_name)s\". To participate click on \"Go to Project\"."
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:10
-#, python-format
-msgid ""
-"you have accepted the invitation to the private project "
-"\"%(project_name)s\". To participate click on \"Go to Project\"."
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:15
-msgid "Go to project"
-msgstr ""
-
-#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:17
-#, python-format
-msgid ""
-"This email was sent to %(receiver_mail)s. This email was sent to you because "
-"you accepted the invitation to participate in a private project."
 msgstr ""
 
 #: apps/projects/templates/a4_candy_projects/includes/project_list_tile.html:18
@@ -4327,7 +3541,6 @@ msgstr ""
 #: apps/projects/templates/a4_candy_projects/moderatorinvite_detail.html:15
 #: apps/projects/templates/a4_candy_projects/participantinvite_detail.html:15
 #: apps/users/templates/a4_candy_users/indicator.html:60
-#: adhocracy-plus/templates/account/email/unknown_account.en.email:24
 #: adhocracy-plus/templates/account/signup.html:4
 #: adhocracy-plus/templates/account/signup.html:7
 #: adhocracy-plus/templates/account/signup.html:69
@@ -4584,58 +3797,58 @@ msgstr ""
 msgid "Moderation"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:30
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:34
 msgid "My profile"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:36
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:40
 msgid "My user Settings"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:48
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:52
 #: apps/users/templates/a4_candy_users/indicator.html:40
 #: apps/users/templates/a4_candy_users/user_detail.html:28
 msgid "Account Settings"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:52
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:56
 #: apps/users/templates/a4_candy_users/user_detail.html:35
 msgid "Link to profile:"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:63
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:67
 #: apps/users/templates/a4_candy_users/user_detail.html:46
 msgid "Since"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:69
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:73
 #: adhocracy-plus/templates/a4dashboard/base_project_list.html:27
 #: adhocracy-plus/templates/footer.html:63
 msgid "Manual"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:76
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:107
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:80
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:111
 msgid "Initiator Organisations"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:89
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:125
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:153
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:196
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:93
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:129
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:157
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:200
 #: adhocracy-plus/templates/a4dashboard/base_dashboard.html:17
 msgid "Home"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:140
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:178
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:206
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:144
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:182
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:210
 #: adhocracy-plus/templates/a4dashboard/base_dashboard.html:24
 msgid "Organisations"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:162
-#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:209
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:166
+#: apps/userdashboard/templates/a4_candy_userdashboard/base_userdashboard.html:213
 msgid "You are not yet following any projects."
 msgstr ""
 
@@ -4646,11 +3859,13 @@ msgid "Your User Overview"
 msgstr ""
 
 #: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_activities.html:16
+#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:49
 msgid "My activity feed"
 msgstr ""
 
 #: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_activities.html:16
-#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:41
+#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:49
+#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:69
 msgid "My Feed"
 msgstr ""
 
@@ -4659,7 +3874,7 @@ msgid "Projects I am following"
 msgstr ""
 
 #: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_following.html:16
-#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:12
+#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:15
 #: apps/users/templates/a4_candy_users/user_detail.html:77
 msgid "Following"
 msgstr ""
@@ -4668,34 +3883,35 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:11
+#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:14
 msgid "Selection of projects I am following"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:19
+#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:22
 msgid "Projects I am following page"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:21
-#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:52
+#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:24
+#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:61
 msgid "View more"
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:33
+#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:36
 msgid "You are not active in any projects yet."
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:40
-msgid "Last few activities on my account"
-msgstr ""
-
-#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:47
+#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:56
+#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:78
 #: apps/users/templates/a4_candy_users/user_detail.html:100
 msgid "No activity yet. "
 msgstr ""
 
-#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:52
+#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:61
 msgid "Account activity page"
+msgstr ""
+
+#: apps/userdashboard/templates/a4_candy_userdashboard/userdashboard_overview.html:68
+msgid "Last few activities on my account"
 msgstr ""
 
 #: apps/users/__init__.py:8
@@ -4895,6 +4111,7 @@ msgstr ""
 
 #: apps/users/templates/a4_candy_users/indicator.html:29
 #: adhocracy-plus/templates/email_base.html:40
+#: adhocracy-plus/templates/email_base.txt:5
 msgid "Hello"
 msgstr ""
 
@@ -5304,35 +4521,6 @@ msgstr ""
 msgid "More questions from this online participation"
 msgstr ""
 
-#: adhocracy-plus/templates/a4reports/emails/report_moderators.en.email:4
-#, python-format
-msgid "Moderation request in the project %(project_name)s on %(site_name)s"
-msgstr ""
-
-#: adhocracy-plus/templates/a4reports/emails/report_moderators.en.email:6
-#, python-format
-msgid "Moderation request in the project %(project_name)s"
-msgstr ""
-
-#: adhocracy-plus/templates/a4reports/emails/report_moderators.en.email:10
-#, python-format
-msgid ""
-"User %(user_name)s reported a post in your project \"%(project_name)s\". It "
-"is possible, the message could also be spam. As a moderator, you can review "
-"the post and delete it if necessary. The following reasons were given:"
-msgstr ""
-
-#: adhocracy-plus/templates/a4reports/emails/report_moderators.en.email:18
-msgid "Review post"
-msgstr ""
-
-#: adhocracy-plus/templates/a4reports/emails/report_moderators.en.email:20
-#, python-format
-msgid ""
-"This email has been sent to %(receiver_mail)s. The email was sent to you as "
-"you are the moderator of the project."
-msgstr ""
-
 #: adhocracy-plus/templates/account/email.html:6
 #: adhocracy-plus/templates/account/email.html:9
 msgid "Email Addresses"
@@ -5375,147 +4563,6 @@ msgstr ""
 msgid "Add Email"
 msgstr ""
 
-#: adhocracy-plus/templates/account/email/account_already_exists.en.email:4
-msgid "Account Already Exists"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/account_already_exists.en.email:8
-msgid ""
-"You are receiving this e-mail because you or someone else tried to signup "
-"for an\n"
-"    account using the e-mail address:"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/account_already_exists.en.email:15
-msgid ""
-"However, an account using that e-mail address already exists.  In case you "
-"have\n"
-"    forgotten about this, please use the password forgotten procedure to "
-"recover\n"
-"    your account:"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/account_already_exists.en.email:21
-#: adhocracy-plus/templates/account/email/password_reset_key.en.email:15
-#: adhocracy-plus/templates/account/email/unknown_account.en.email:6
-msgid "Reset password"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/email_confirmation.en.email:4
-#, python-format
-msgid "Please confirm your email address on %(current_site)s"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/email_confirmation.en.email:6
-#, python-format
-msgid "Your email address on %(current_site)s"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/email_confirmation.en.email:10
-#, python-format
-msgid ""
-"this email address has been added to the user account \"%(username)s\" on "
-"\"%(current_site)s\". Please confirm this address. If you did not add this "
-"email address, you can ignore this email. We will not send you any further "
-"emails."
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/email_confirmation.en.email:15
-msgid "Confirm your email address"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/email_confirmation.en.email:17
-#, python-format
-msgid ""
-"This email was sent to %(receiver)s. If you have any further questions, "
-"please contact us via %(contact_email)s"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/email_confirmation_signup.en.email:4
-#, python-format
-msgid "Please confirm your registration on %(current_site)s"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/email_confirmation_signup.en.email:6
-#, python-format
-msgid "Your registration on %(current_site)s"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/email_confirmation_signup.en.email:10
-#, python-format
-msgid ""
-"You have registered with the username \"%(username)s\" on the participation "
-"platform \"%(current_site)s\". Click \"Confirm email address\" to complete "
-"your registration. As soon as you are registered, you can participate on "
-"\"%(current_site)s\". If you haven't registered, you can ignore this message."
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/email_confirmation_signup.en.email:15
-msgid "Confirm email address"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/email_confirmation_signup.en.email:17
-#, python-format
-msgid ""
-"This email was sent to %(useremail)s. If you have any further questions, "
-"please contact us via %(contact_email)s"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/password_reset_key.en.email:4
-#: adhocracy-plus/templates/account/email/unknown_account.en.email:4
-#, python-format
-msgid "Reset password request for %(current_site)s"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/password_reset_key.en.email:6
-#, python-format
-msgid "Password reset for your account %(username)s"
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/password_reset_key.en.email:10
-#, python-format
-msgid ""
-"you have requested a password reset. Please click on \"Reset password\" to "
-"set a new password. If you have not requested a password reset, you can "
-"ighnore this email and your %(current_site)s password stays unchanged."
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/password_reset_key.en.email:17
-#, python-format
-msgid ""
-"This email was sent to %(useremail)s. You receive this email because your "
-"password on %(current_site)s has been reset."
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/unknown_account.en.email:10
-#, python-format
-msgid ""
-"You are receiving this e-mail because you or someone else has requested a "
-"password for your user account. However, we do not have any record of a user "
-"with email %(email)s in our database."
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/unknown_account.en.email:13
-msgid ""
-"This mail can be safely ignored if you did not request a password reset."
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/unknown_account.en.email:16
-msgid "If it was you, you can sign up for an account using the link below."
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/unknown_account.en.email:19
-#, python-format
-msgid "If you need assistance, please contact %(contact_email)s."
-msgstr ""
-
-#: adhocracy-plus/templates/account/email/unknown_account.en.email:26
-#, python-format
-msgid ""
-"This email was sent to %(email)s. You have received the e-mail because the "
-"reset of your password has been requested on %(current_site)s."
-msgstr ""
-
 #: adhocracy-plus/templates/account/email_confirm.html:4
 #: adhocracy-plus/templates/account/email_confirm.html:7
 msgid "Confirm Email Address"
@@ -5544,8 +4591,8 @@ msgstr ""
 #: adhocracy-plus/templates/account/login_old.html:9
 #, python-format
 msgid ""
-"If you have not created an account yet, then please <a "
-"href=\"%(signup_url)s\">register</a> first."
+"If you have not created an account yet, then please <a href=\"%(signup_url)s"
+"\">register</a> first."
 msgstr ""
 
 #: adhocracy-plus/templates/account/login_old.html:30
@@ -5631,10 +4678,10 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"                I confirm that I have read and accepted the <a "
-"href=\"%(terms_of_use_url)s\" target=\"_blank\">terms of use</a> and the <a "
-"href=\"%(data_protection_policy)s\" target=\"_blank\">data protection "
-"policy</a>.\n"
+"                I confirm that I have read and accepted the <a href="
+"\"%(terms_of_use_url)s\" target=\"_blank\">terms of use</a> and the <a href="
+"\"%(data_protection_policy)s\" target=\"_blank\">data protection policy</"
+"a>.\n"
 "                "
 msgstr ""
 
@@ -5646,8 +4693,8 @@ msgid ""
 "every public participation project on this platform. This platform allows "
 "organisations initiatives to conduct digital participation projects.\n"
 "            If you have any questions regarding the data protection on this "
-"platform you can find <a href=\"%(data_protection_url)s\" "
-"target=\"_blank\">further information here</a>.\n"
+"platform you can find <a href=\"%(data_protection_url)s\" target=\"_blank"
+"\">further information here</a>.\n"
 "        "
 msgstr ""
 
@@ -5683,6 +4730,7 @@ msgid "Responsible for the participation project:"
 msgstr ""
 
 #: adhocracy-plus/templates/email_base.html:93
+#: adhocracy-plus/templates/email_base.txt:13
 #, python-format
 msgid "%(platformname)s is a participation platform operated by"
 msgstr ""
@@ -5690,8 +4738,8 @@ msgstr ""
 #: adhocracy-plus/templates/footer.html:10
 #, python-format
 msgid ""
-"<a href=\"/\">%(platformname)s</a> is a platform provided by <a "
-"href=\"https://liqd.net/de/\">Liquid Democracy e.V.</a> in Berlin."
+"<a href=\"/\">%(platformname)s</a> is a platform provided by <a href="
+"\"https://liqd.net/de/\">Liquid Democracy e.V.</a> in Berlin."
 msgstr ""
 
 #: adhocracy-plus/templates/footer.html:10
