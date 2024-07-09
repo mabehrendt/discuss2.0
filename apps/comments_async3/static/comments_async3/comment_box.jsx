@@ -389,7 +389,7 @@ export const CommentBox = (props) => {
     if (userStance != "" || _userStance != ""){
       setFirstStanceAnswered({answered: true})
     }
-    
+
     console.log("GUIDELINE_SHOWN")
     console.log(_guideline_shown)
     //console.log(_guideline_shown.length)
@@ -441,7 +441,7 @@ export const CommentBox = (props) => {
             && (usedStances === undefined || !usedStances.some(usedstance => usedstance.comment_id === stance.comment_id))) { // If first term in or is true the second term is not evaluated
               filteredStances.push(stance)
           }
-      } 
+      }
     }
 
     {/* Choose a random stance from the filtered stances that is not from the user */}
@@ -641,7 +641,7 @@ export const CommentBox = (props) => {
             console.log("NO STANCES")
           })
         //}
-          
+
         // If we are answering to a comment, record as already answered
         if (parentIndex !== undefined) {
           const usedstance_Data = {
@@ -728,7 +728,7 @@ export const CommentBox = (props) => {
           object_id: props.subjectId,
         }
 
-        // DELETE STANCES 
+        // DELETE STANCES
         api.stances.delete(delete_stanceData, comment.id).done((result) => {
           console.log("STANCE DELETED")
         }).fail((xhr, status, err) => {
@@ -946,13 +946,13 @@ export const CommentBox = (props) => {
             </Badge>
           </div>
           <div className="buttonBox2">
-          <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="FAQs" invisible={faqBadgeInvisible}>
+          <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="FAQs & Netiquette" invisible={faqBadgeInvisible}>
             <button className="faqButton" onClick={showFaqModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/faq-white.png")} alt="FAQ" /></button>
           </Badge>
           </div>
         </div>
       )
-    {/*} else if (showQuestButtons){ 
+    {/*} else if (showQuestButtons){
       return(
         <div>
           <div className="buttonBox">

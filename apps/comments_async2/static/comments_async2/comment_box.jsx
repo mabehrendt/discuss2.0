@@ -112,7 +112,7 @@ export const CommentBox = (props) => {
     if (props.anchoredCommentId) {
       params.commentID = props.anchoredCommentId
     }
-    
+
     if (props.user.user_auth){
       console.log("GETUSERQUALITES")
       api.userqualities.get(params).done(handleUserqualities).fail()
@@ -291,7 +291,7 @@ function videoWatched(){
     if(_hasCreator === "") {
       addCreatorData(urlReplaces, props)
     }
-    
+
     console.log("GUIDELINE_SHOWN")
     console.log(_guideline_shown)
     //console.log(_guideline_shown.length)
@@ -698,7 +698,7 @@ function videoWatched(){
             </Badge>
           </div>
           <div className="buttonBox2">
-            <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="FAQs" invisible={faqBadgeInvisible}>
+            <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="FAQs & Netiquette" invisible={faqBadgeInvisible}>
               <button className="faqButton" onClick={showFaqModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/faq-white.png")} alt="FAQ" /></button>
             </Badge>
           </div>

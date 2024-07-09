@@ -631,7 +631,7 @@ export const CommentBox = (props) => {
           }).fail((xhr, status, err) => {
             console.log("NO STANCES")
         })
-          
+
         // If we are answering to a comment, record as already answered
         if (parentIndex !== undefined) {
           const usedstance_Data = {
@@ -936,13 +936,13 @@ export const CommentBox = (props) => {
             </Badge>
           </div>
           <div className="buttonBox2">
-          <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="FAQs" invisible={faqBadgeInvisible}>
+          <Badge anchorOrigin={{vertical: 'top', horizontal:"left"}} overlap="circular" color="primary" badgeContent="FAQs & Netiquette" invisible={faqBadgeInvisible}>
             <button className="faqButton" onClick={showFaqModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/faq-white.png")} alt="FAQ" /></button>
           </Badge>
           </div>
         </div>
       )
-   {/* } else if (showQuestButtons){ 
+   {/* } else if (showQuestButtons){
       return(
         <div>
           <div className="buttonBox">
