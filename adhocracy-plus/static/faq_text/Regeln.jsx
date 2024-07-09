@@ -3,15 +3,8 @@ import React from 'react';
 function Regeln() {
     return (
         <div>
-            <p>Das Beteiligungsprojekt wird durch die Projektverantwortlichen wie folgt begleitet:</p>
-            <ul>
-                <li>Die Beiträge werden auf Einhaltung der oben genannten Regeln hin überprüft. Bei Verstößen kann die Moderation die entsprechenden Beiträge löschen.</li>
-                <li>Sie können die Beiträge anderer Nutzer:innen durch einen Klick auf den Button „Melden“ melden, wenn diese gegen die oben genannten Regeln (Netiquette) verstoßen. In diesem Falle wird die zuständige Moderation informiert und der betreffende Beitrag überprüft.</li>
-                <li>Bei schweren oder wiederholten Verstößen gegen die Netiquette oder der missbräuchlichen Nutzung anderer Funktionen können einzelne Nutzer:innen gesperrt werden.
-</li>
-            </ul>
+            <p>Als Projektverantwortliche nehmen wir <b>nicht aktiv</b> an den Diskussionen teil. Wir <b>prüfen</b> aber sehr wohl alle Diskussionsbeiträge auf Einhaltung der Verhaltensregeln (Netiquette). Bei Verstößen können entsprechende Beiträge <b>gelöscht</b> werden. Wenn Sie Beiträge anderer Nutzer:innen lesen, die gegen die genannten Regeln verstoßen, können Sie diese durch einen Klick auf den Button „Melden“ melden. In diesem Falle wird die zuständige Moderation informiert und der betreffende Beitrag überprüft. Bei schweren oder wiederholten Verstößen gegen die Diskussionsregeln oder der missbräuchlichen Nutzung anderer Funktionen der Diskussionsplattform können einzelne <b>Nutzer:innen gesperrt</b> werden. Verstöße gegen die Diskussionsregeln können außerdem dazu führen, dass die Vergütungsbedingungen der Studie nicht erfüllt werden und Sie abschließend <b>keine Vergütung</b> ausgezahlt bekommen.</p>
         </div>
     );
 }
-
 export default Regeln;
