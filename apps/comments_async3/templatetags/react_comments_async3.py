@@ -13,7 +13,6 @@ register = template.Library()
 @register.simple_tag(takes_context=True)
 def react_comments_async3(context, obj, with_categories=False):
     request = context["request"]
-    print("REQUEST: ", context)
     if context["user"].is_authenticated:
         user = context["user"].email
         user_authenticated = context["user"].is_authenticated
@@ -34,7 +33,7 @@ def react_comments_async3(context, obj, with_categories=False):
         #    print(user_login.user, user_login.date)
 
 
-    
+
     debateStanceQuestion = context["aistancesubject"].name
     anchoredCommentId = request.GET.get("comment", "")
     contenttype = ContentType.objects.get_for_model(obj)
@@ -53,7 +52,7 @@ def react_comments_async3(context, obj, with_categories=False):
 
     use_moderator_marked = getattr(settings, "A4_COMMENTS_USE_MODERATOR_MARKED", False)
 
-    attributes = { 
+    attributes = {
         "subjectType": contenttype.pk,
         "subjectId": obj.pk,
         "debateStanceQuestion": debateStanceQuestion,

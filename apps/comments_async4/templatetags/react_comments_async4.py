@@ -13,7 +13,6 @@ register = template.Library()
 @register.simple_tag(takes_context=True)
 def react_comments_async4(context, obj, with_categories=False):
     request = context["request"]
-    print(context)
     if context["user"].is_authenticated:
         user = context["user"].email
         user_authenticated = context["user"].is_authenticated
@@ -23,7 +22,7 @@ def react_comments_async4(context, obj, with_categories=False):
 
     if user_authenticated:
         count_login(user)
-    
+
     debateStanceQuestion = context["stancerandomsubject"].name
     anchoredCommentId = request.GET.get("comment", "")
     contenttype = ContentType.objects.get_for_model(obj)
