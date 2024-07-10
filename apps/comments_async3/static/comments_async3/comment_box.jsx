@@ -1100,7 +1100,7 @@ export const CommentBox = (props) => {
                 paddingLeft: "20px",
                 marginTop: "10px"
               }}>
-                <div className="argumentText"> Sobald genügend Teilnehmer:innen an der Diskussion beteiligt sind, bekommen Sie hier einen Kommentar vorgeschlagen, auf den Sie eingehen können!
+                <div className="argumentText"> Sobald genügend Teilnehmer:innen an der Diskussion beteiligt sind, bekommen Sie hier einen Kommentar vorgeschlagen, auf den Sie eingehen können.
                 </div>
               </div>
             </div>
