@@ -21,7 +21,7 @@ def react_polls2(context, poll):
         count_login(user)
 
     return format_html(
-        '<div data-a4-widget="react_polls" data-poll-id="{pollId}"></div>',
+        '<div data-a4-widget="react_polls2" data-poll-id="{pollId}"></div>',
         pollId=poll.pk,
     )
 
@@ -32,7 +32,7 @@ def react_poll_form(poll, reload_on_success=False):
 
     return format_html(
         (
-            '<div data-a4-widget="poll-management" data-poll-id="{pollId}" '
+            '<div data-a4-widget="react_poll_management" data-poll-id="{pollId}" '
             ' data-reloadOnSuccess="{reload_on_success}">'
             "</div>"
         ),
