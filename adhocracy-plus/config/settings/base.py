@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     "ckeditor_uploader",
     "background_task",
     "parler",
+    "fontawesomefree",
     # Wagtail cms components
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
