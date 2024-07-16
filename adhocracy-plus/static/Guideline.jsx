@@ -21,9 +21,7 @@ import Melden from './faq_text/Melden.jsx';
 
 function GuidelineContent() {
     const faqs = [
-        {header: 'Wichtiger Hinweis zur Netiquette',question: 'Herzlich willkommen bei discuss20! Bevor Sie in die Diskussion starten, möchten wir Sie bitten, sich die folgenden Verhaltensregeln (Netiquette) \\
-        genau durchzulesen und diese zukünftig beim Schreiben von Beiträgen einzuhalten. Nur so ist ein respektvoller und offener Meinungsaustausch möglich. \\
-        Bitte beachten Sie, dass die Nichteinhaltung dieser Regeln zu einem Ausschluss von der Studie führen kann. Sie finden die Netiquette zum Nachlesen auch weiterhin unter "FAQs".', answer: <NetiquettePopup />},
+        {header: 'Wichtiger Hinweis zur Netiquette',question: 'Herzlich willkommen bei discuss20! Bevor Sie in die Diskussion starten, möchten wir Sie bitten, sich die folgenden Verhaltensregeln (Netiquette) genau durchzulesen und diese zukünftig beim Schreiben von Beiträgen einzuhalten. Nur so ist ein respektvoller und offener Meinungsaustausch möglich. Bitte beachten Sie, dass die Nichteinhaltung dieser Regeln zu einem Ausschluss von der Studie führen kann. Sie finden die Netiquette zum Nachlesen auch weiterhin unter "FAQs".', answer: <NetiquettePopup />},
         // Add more FAQs here
     ];
 
