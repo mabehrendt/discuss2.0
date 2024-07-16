@@ -6,7 +6,6 @@ brotli==1.0.9
 django-cloudflare-push==0.2.2
 django_csp==3.7
 django-parler==2.3
-fontawesomefree==6.5.1
 pandas
 sentry-sdk==1.25.1
 wagtail==4.1.6
