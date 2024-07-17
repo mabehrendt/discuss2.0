@@ -16,6 +16,7 @@ const translated = {
   pleaseComment: django.gettext('Please login to comment'),
   onlyInvited: django.gettext('Only invited users can actively participate.'),
   notAllowedComment: django.gettext('The currently active phase doesn\'t allow to comment.')
+  participationEnded: django.gettext('The participation ended on the 03.08.2024. The voting phase will begin on the 05.08.2024.')
 }
 export default class CommentForm extends React.Component {
   constructor (props) {
