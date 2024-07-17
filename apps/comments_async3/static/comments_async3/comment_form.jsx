@@ -165,7 +165,7 @@ export default class CommentForm extends React.Component {
     } else if (!this.props.projectIsPublic) {
       return (
         <div>
-          {translated.onlyInvited}
+          {translated.participationEnded}
         </div>
       )
     } else {
