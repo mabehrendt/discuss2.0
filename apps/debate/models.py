@@ -20,7 +20,7 @@ class Subject(module_models.Item):
         max_length=120, verbose_name=_("Title"), help_text=_("max 120 characters")
     )
     description = models.TextField(
-        max_length=450,
+        max_length=500,
         blank=True,
         verbose_name=_("Description"),
         help_text=_(

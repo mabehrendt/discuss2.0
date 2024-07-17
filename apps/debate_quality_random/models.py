@@ -27,7 +27,7 @@ class QualityRandomSubject(module_models.Item):
         help_text=_('max 120 characters')
     )
     description = models.TextField(
-        max_length=450,
+        max_length=500,
         blank=True,
         verbose_name=_('Description'),
         help_text=_('In addition to the title, you can insert an optional '
