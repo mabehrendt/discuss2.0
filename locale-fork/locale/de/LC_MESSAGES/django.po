@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adhocracy-plus\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 13:10+0200\n"
+"POT-Creation-Date: 2024-07-17 22:04+0200\n"
 "PO-Revision-Date: 2020-11-12 13:23+0000\n"
 "Last-Translator: Luca Thüer, 2023\n"
 "Language-Team: German (https://app.transifex.com/liqd/teams/109316/de/)\n"
@@ -24,8 +24,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:3
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:3
+#: adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:3
+#: adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:3
 msgid ""
 "In this section, you can create\n"
 "categories. If you create any, each contribution has to be assigned\n"
@@ -34,37 +34,37 @@ msgstr ""
 "Hier können Sie Kategorien anlegen. Dadurch können alle Beiträge einer "
 "Kategorie zugeordnet und entsprechend gefiltert werden."
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:21
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:21
+#: adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:21
+#: adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:21
 msgid "Add category"
 msgstr "Kategorie hinzufügen"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_dashboard.html:4
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_dashboard.html:4
+#: adhocracy4/dashboard/templates/a4dashboard/base_dashboard.html:4
+#: adhocracy4/dashboard/templates/a4dashboard/base_dashboard.html:4
 #: adhocracy-plus/templates/a4dashboard/base_dashboard.html:55
 #: adhocracy-plus/templates/includes/userdashboard_mobile_toggle.html:30
 msgid "Dashboard"
 msgstr "Organisationsverwaltung"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:5
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:5
+#: adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:5
+#: adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:5
 #: adhocracy-plus/templates/a4dashboard/base_dashboard_project.html:24
 msgid "Project Settings"
 msgstr "Projekteinstellungen"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:15
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:33
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:15
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:33
+#: adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:15
+#: adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:33
+#: adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:15
+#: adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:33
 #: adhocracy-plus/templates/a4dashboard/base_dashboard_project.html:49
 #: adhocracy-plus/templates/a4dashboard/base_dashboard_project.html:103
 msgid "Missing fields for publication"
 msgstr "Benötigte Felder zur Veröffentlichung"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_form_module.html:18
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/base_form_project.html:18
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_form_module.html:18
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/base_form_project.html:18
+#: adhocracy4/dashboard/templates/a4dashboard/base_form_module.html:18
+#: adhocracy4/dashboard/templates/a4dashboard/base_form_project.html:18
+#: adhocracy4/dashboard/templates/a4dashboard/base_form_module.html:18
+#: adhocracy4/dashboard/templates/a4dashboard/base_form_project.html:18
 #: apps/activities/templates/a4_candy_activities/activities_dashboard.html:19
 #: apps/budgeting/templates/a4_candy_budgeting/includes/proposal_form.html:32
 #: apps/budgeting/templates/a4_candy_budgeting/proposal_moderate_form.html:39
@@ -86,48 +86,48 @@ msgstr "Benötigte Felder zur Veröffentlichung"
 msgid "Save"
 msgstr "Speichern"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:4
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:7
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:9
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:4
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:7
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:9
+#: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:4
+#: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:7
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:9
+#: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:4
+#: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:7
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:9
 #: adhocracy-plus/templates/a4dashboard/blueprint_list.html:6
 #: adhocracy-plus/templates/a4dashboard/project_list.html:13
 msgid "New Project"
 msgstr "Neues Projekt"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:17
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:17
+#: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:17
+#: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:17
 msgid "Phase"
 msgstr "Phase"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:23
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:23
+#: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:23
+#: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:23
 #: apps/organisations/templates/a4_candy_organisations/communication_form_social_media.html:15
 #: adhocracy-plus/templates/a4dashboard/includes/blueprint_list_tile.html:17
 msgid "Select"
 msgstr "Auswählen"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/form_field.html:6
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/form_field.html:6
+#: adhocracy4/dashboard/templates/a4dashboard/includes/form_field.html:6
+#: adhocracy4/dashboard/templates/a4dashboard/includes/form_field.html:6
 msgid "Missing field for publication"
 msgstr "Benötigtes Feld zur Veröffentlichung"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:7
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:39
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:7
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:39
+#: adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:7
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:39
+#: adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:7
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:39
 #: apps/organisations/templates/a4_candy_organisations/communication_form_social_media.html:59
 #: adhocracy-plus/templates/a4dashboard/includes/preview.html:7
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:42
 msgid "Preview"
 msgstr "Vorschau"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:9
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:41
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:9
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:41
+#: adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:9
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:41
+#: adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:9
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:41
 #: apps/contrib/templates/a4_candy_contrib/includes/map_filter_and_sort.html:8
 #: apps/contrib/templates/a4_candy_contrib/includes/map_filter_and_sort.html:14
 #: apps/debate/templates/a4_candy_debate/includes/subject_dashboard_list_item.html:14
@@ -142,41 +142,41 @@ msgstr "Vorschau"
 msgid "View"
 msgstr "Ansicht"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:16
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:16
+#: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:16
+#: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:16
 #, python-format
 msgid "%(value)s from %(max)s"
 msgstr "%(value)s von %(max)s"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:17
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:17
+#: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:17
+#: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:17
 msgid "required fields for publication"
 msgstr "benötigte Felder zur Veröffentlichung"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:27
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:27
+#: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:27
+#: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:27
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:12
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:31
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:57
 msgid "Publish"
 msgstr "Veröffentlichen"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:31
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:31
+#: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:31
+#: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:31
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:19
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:35
 msgid "Unpublish"
 msgstr "Depublizieren"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:4
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:7
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:4
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:7
+#: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:4
+#: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:7
+#: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:4
+#: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:7
 msgid "Create project based on"
 msgstr "Projekt anlegen basierend auf"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:23
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:23
+#: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:23
+#: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:23
 #: adhocracy-plus/templates/a4dashboard/project_create_form.html:41
 msgid ""
 "After saving the draft project you can further customize and edit your "
@@ -187,14 +187,14 @@ msgstr ""
 "werden. Wenn alle benötigten Informationen eingegeben sind, kann das Projekt "
 "veröffentlicht werden."
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:25
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:25
+#: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:25
+#: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:25
 #: adhocracy-plus/templates/a4dashboard/project_create_form.html:46
 msgid "Create draft"
 msgstr "Projektentwurf anlegen"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:27
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:27
+#: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:27
+#: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:27
 #: apps/budgeting/templates/a4_candy_budgeting/includes/proposal_form.html:31
 #: apps/budgeting/templates/a4_candy_budgeting/proposal_confirm_delete.html:14
 #: apps/budgeting/templates/a4_candy_budgeting/proposal_moderate_form.html:38
@@ -224,10 +224,10 @@ msgstr "Projektentwurf anlegen"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:4
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:7
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:4
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:7
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:4
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:7
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:4
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:7
 #: apps/projects/templates/a4_candy_projects/project_list.html:4
 #: adhocracy-plus/templates/a4dashboard/base_project_list.html:16
 #: adhocracy-plus/templates/a4dashboard/project_list.html:4
@@ -235,28 +235,28 @@ msgstr "Abbrechen"
 msgid "Projects"
 msgstr "Projekte"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:24
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:24
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:24
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:24
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:25
 msgid "Finished"
 msgstr "Abgeschlossen"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:27
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:27
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/enums.py:14
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:27
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:27
+#: adhocracy4/projects/enums.py:14
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:28
 msgid "semipublic"
 msgstr "halb-öffentlich"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:30
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:30
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/enums.py:15
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:30
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:30
+#: adhocracy4/projects/enums.py:15
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:31
 msgid "private"
 msgstr "privat"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:48
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:48
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:48
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:48
 #: apps/contrib/templates/a4_candy_contrib/item_detail.html:103
 #: apps/debate/templates/a4_candy_debate/includes/subject_dashboard_list_item.html:19
 #: apps/debate_quality/templates/a4_candy_debate_quality/includes/aiqualitysubject_dashboard_list_item.html:19
@@ -270,63 +270,63 @@ msgstr "privat"
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:57
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:57
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:57
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:57
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:73
 msgid "Duplicate"
 msgstr "Duplizieren"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/dashboard/templates/a4dashboard/project_list.html:65
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/templates/a4dashboard/project_list.html:65
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:65
+#: adhocracy4/dashboard/templates/a4dashboard/project_list.html:65
 #: apps/projects/templates/a4_candy_projects/project_list.html:18
 #: adhocracy-plus/templates/a4dashboard/project_list.html:27
 msgid "We could not find any projects."
 msgstr "Wir konnten keine Projekte finden."
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:5
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:23
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:35
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:47
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:59
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:5
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:23
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:35
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:47
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:59
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:5
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:23
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:35
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:47
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:59
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:5
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:23
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:35
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:47
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:59
 msgid "Export"
 msgstr "Export"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:7
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:7
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:7
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:7
 msgid ""
 "You can export the results of your participation project as an excel file."
 msgstr ""
 "Sie können die Ergebnisse Ihres Beteiligungsprojektes als Excel-Datei "
 "exportieren."
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:19
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:19
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:19
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:19
 msgid "here you can export all ideas"
 msgstr "hier können Sie alle Ideen exportieren"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:31
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:31
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:31
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:31
 msgid "here you can export all subjects"
 msgstr "hier können Sie alle Themen exportieren"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:43
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:43
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:43
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:43
 msgid "here you can export all answers"
 msgstr "hier können Sie alle Antworten exportieren"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/exports/templates/a4exports/export_dashboard.html:55
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/templates/a4exports/export_dashboard.html:55
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:55
+#: adhocracy4/exports/templates/a4exports/export_dashboard.html:55
 msgid "here you can export all comments"
 msgstr "hier können Sie alle Kommentare exportieren"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/filters/templates/a4filters/widgets/free_text_filter.html:15
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/filter.py:11
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/filters/templates/a4filters/widgets/free_text_filter.html:15
+#: adhocracy4/filters/templates/a4filters/widgets/free_text_filter.html:15
+#: adhocracy4/dashboard/filter.py:11
+#: adhocracy4/filters/templates/a4filters/widgets/free_text_filter.html:15
 #: apps/debate/filters.py:12 apps/debate_quality/filters.py:12
 #: apps/debate_quality_random/filters.py:12 apps/debate_stance/filters.py:12
 #: apps/debate_stance_random/filters.py:12 apps/ideas/views.py:29
@@ -337,8 +337,8 @@ msgstr "hier können Sie alle Kommentare exportieren"
 msgid "Search"
 msgstr "Suchen"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/form_field.html:5
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/forms/templates/a4forms/includes/form_field.html:5
+#: adhocracy4/forms/templates/a4forms/includes/form_field.html:5
+#: adhocracy4/forms/templates/a4forms/includes/form_field.html:5
 #: apps/contrib/templates/a4_candy_contrib/includes/form_checkbox_field.html:6
 #: apps/contrib/templates/a4_candy_contrib/includes/form_field.html:5
 #: adhocracy-plus/templates/account/signup.html:27
@@ -347,19 +347,19 @@ msgstr "Suchen"
 msgid "This field is required"
 msgstr "Dieses Feld muss ausgefüllt werden"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/inline_form.html:14
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/inline_form.html:15
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/inline_form.html:18
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/forms/templates/a4forms/includes/inline_form.html:19
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/forms/templates/a4forms/includes/inline_form.html:14
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/forms/templates/a4forms/includes/inline_form.html:15
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/forms/templates/a4forms/includes/inline_form.html:18
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/forms/templates/a4forms/includes/inline_form.html:19
+#: adhocracy4/forms/templates/a4forms/includes/inline_form.html:14
+#: adhocracy4/forms/templates/a4forms/includes/inline_form.html:15
+#: adhocracy4/forms/templates/a4forms/includes/inline_form.html:18
+#: adhocracy4/forms/templates/a4forms/includes/inline_form.html:19
+#: adhocracy4/forms/templates/a4forms/includes/inline_form.html:14
+#: adhocracy4/forms/templates/a4forms/includes/inline_form.html:15
+#: adhocracy4/forms/templates/a4forms/includes/inline_form.html:18
+#: adhocracy4/forms/templates/a4forms/includes/inline_form.html:19
 msgid "Remove category"
 msgstr "Kategorie entfernen"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/images/templates/a4images/image_upload_widget.html:8
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/templates/a4images/image_upload_widget.html:8
+#: adhocracy4/images/templates/a4images/image_upload_widget.html:8
+#: adhocracy4/images/templates/a4images/image_upload_widget.html:8
 #: adhocracy-plus/templates/a4images/image_upload_widget.html:10
 #: adhocracy-plus/templates/a4images/image_upload_widget.html:11
 #: adhocracy-plus/templates/a4images/image_upload_widget_simple.html:10
@@ -367,8 +367,8 @@ msgstr "Kategorie entfernen"
 msgid "Remove the picture"
 msgstr "Bild entfernen"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/images/templates/a4images/image_upload_widget.html:12
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/templates/a4images/image_upload_widget.html:12
+#: adhocracy4/images/templates/a4images/image_upload_widget.html:12
+#: adhocracy4/images/templates/a4images/image_upload_widget.html:12
 #: adhocracy-plus/templates/a4images/image_upload_widget.html:16
 #: adhocracy-plus/templates/a4images/image_upload_widget.html:17
 #: adhocracy-plus/templates/a4images/image_upload_widget_simple.html:16
@@ -376,8 +376,8 @@ msgstr "Bild entfernen"
 msgid "Upload a picture"
 msgstr "Bild hochladen"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/images/templates/a4images/image_upload_widget.html:19
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/templates/a4images/image_upload_widget.html:19
+#: adhocracy4/images/templates/a4images/image_upload_widget.html:19
+#: adhocracy4/images/templates/a4images/image_upload_widget.html:19
 msgid ""
 "\n"
 "            Your image will be uploaded/removed once you save your changes\n"
@@ -388,8 +388,8 @@ msgstr ""
 "Ihr Bild wird hochgeladen sobald Sie Ihre Änderungen am Ende der Seite "
 "speichern."
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:3
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:3
+#: adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:3
+#: adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:3
 msgid ""
 "In this section, you can create\n"
 "labels. If you create any, each contribution can be assigned\n"
@@ -398,13 +398,13 @@ msgstr ""
 "Hier können Sie Merkmale anlegen. Dadurch können alle Beiträge um ein oder "
 "mehrere Merkmale ergänzt werden."
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:21
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:21
+#: adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:21
+#: adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:21
 msgid "Add label"
 msgstr "Merkmal hinzufügen"
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/polls/templates/a4polls/poll_404.html:8
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/templates/a4polls/poll_404.html:8
+#: adhocracy4/polls/templates/a4polls/poll_404.html:8
+#: adhocracy4/polls/templates/a4polls/poll_404.html:8
 #: apps/polls_react/templates/a4polls/poll_404.html:8
 msgid ""
 "Participation is not possible at the moment. The poll has not been set up "
@@ -413,78 +413,78 @@ msgstr ""
 "Die Beteiligung ist aktuell noch nicht möglich. Die Umfrage wird gerade "
 "angelegt."
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/polls/templates/a4polls/poll_404.html:15
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/templates/a4polls/poll_404.html:15
+#: adhocracy4/polls/templates/a4polls/poll_404.html:15
+#: adhocracy4/polls/templates/a4polls/poll_404.html:15
 #: apps/polls_react/templates/a4polls/poll_404.html:15
 msgid "Setup the poll by adding questions and answers in the dashboard."
 msgstr ""
 "Legen Sie die Umfrage an indem Sie Fragen und Antwortmöglichkeiten in der "
 "Projektverwaltung hinzufügen."
 
-#: /home/maike/discuss2.0/node_modules/adhocracy4/adhocracy4/polls/templates/a4polls/poll_dashboard.html:5
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/templates/a4polls/poll_dashboard.html:5
+#: adhocracy4/polls/templates/a4polls/poll_dashboard.html:5
+#: adhocracy4/polls/templates/a4polls/poll_dashboard.html:5
 #: apps/polls_react/templates/a4polls/poll_dashboard.html:5
 msgid "Edit poll"
 msgstr "Umfrage bearbeiten"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/dashboard.py:13
+#: adhocracy4/categories/dashboard.py:13
 #: apps/exports/mixins.py:19
 msgid "Categories"
 msgstr "Kategorien"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/dashboard.py:15
+#: adhocracy4/categories/dashboard.py:15
 msgid "Edit categories"
 msgstr "Kategorien bearbeiten"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/fields.py:11
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/filters.py:16
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/forms.py:52
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/models.py:34
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/items.py:24
+#: adhocracy4/categories/fields.py:11
+#: adhocracy4/categories/filters.py:16
+#: adhocracy4/categories/forms.py:52
+#: adhocracy4/categories/models.py:34
+#: adhocracy4/exports/mixins/items.py:24
 msgid "Category"
 msgstr "Kategorie"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/forms.py:46
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/forms.py:23
+#: adhocracy4/categories/forms.py:46
+#: adhocracy4/labels/forms.py:23
 msgid "Category name"
 msgstr "Kategoriename"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/forms.py:47
+#: adhocracy4/categories/forms.py:47
 msgid "Category icon"
 msgstr "Kategorieicon"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/models.py:36
+#: adhocracy4/categories/models.py:36
 msgid "Type of category"
 msgstr ""
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/models.py:38
+#: adhocracy4/categories/models.py:38
 msgid ""
 "You can individualise the term category. The character limit is max. 25 "
 "characters (with spaces)."
 msgstr ""
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/models.py:46
+#: adhocracy4/categories/models.py:46
 msgid ""
 "Assign your proposal to a category. This automatically appears in the "
 "display of your proposal. The list of all proposals can be filtered by "
 "category."
 msgstr ""
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/models.py:52
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/models.py:29
+#: adhocracy4/categories/models.py:52
+#: adhocracy4/labels/models.py:29
 msgid "Description/Helptext"
 msgstr ""
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/categories/models.py:54
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/models.py:31
+#: adhocracy4/categories/models.py:54
+#: adhocracy4/labels/models.py:31
 msgid ""
 "You can individualise the description text. The description text is "
 "displayed to the participants as help text when they have to assign their "
 "ideas. The character limit is max. 300 characters (with spaces)."
 msgstr ""
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments/models.py:47
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/exports.py:40
+#: adhocracy4/comments/models.py:47
+#: adhocracy4/polls/exports.py:40
 #: apps/budgeting/exports.py:78 apps/debate/exports.py:78
 #: apps/debate_quality/exports.py:69 apps/debate_quality_random/exports.py:70
 #: apps/debate_stance/exports.py:69 apps/debate_stance_random/exports.py:68
@@ -495,8 +495,8 @@ msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments/models.py:48
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/comments.py:48
+#: adhocracy4/comments/models.py:48
+#: adhocracy4/exports/mixins/comments.py:48
 #: apps/budgeting/templates/a4_candy_budgeting/includes/proposal_list_item.html:16
 #: apps/budgeting/templates/a4_candy_budgeting/includes/proposal_list_item.html:17
 #: apps/ideas/templates/a4_candy_ideas/includes/idea_list_item.html:18
@@ -508,13 +508,13 @@ msgstr "Kommentar"
 msgid "Comments"
 msgstr "Kommentare"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments/serializers.py:78
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments/serializers.py:178
+#: adhocracy4/comments/serializers.py:78
+#: adhocracy4/comments/serializers.py:178
 msgid "Please choose a category"
 msgstr "Bitte wählen Sie eine Kategorie"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments/serializers.py:87
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments_async/serializers.py:92
+#: adhocracy4/comments/serializers.py:87
+#: adhocracy4/comments_async/serializers.py:92
 #: apps/comments_async0/serializers.py:92
 #: apps/comments_async1/serializers.py:92
 #: apps/comments_async2/serializers.py:92
@@ -523,15 +523,15 @@ msgstr "Bitte wählen Sie eine Kategorie"
 msgid "unknown user"
 msgstr "unbekannter Nutzer"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments_async/api.py:139
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/api.py:115
+#: adhocracy4/comments_async/api.py:139
+#: adhocracy4/polls/api.py:115
 #: apps/comments_async0/api.py:139 apps/comments_async1/api.py:139
 #: apps/comments_async2/api.py:139 apps/comments_async3/api.py:139
 #: apps/comments_async4/api.py:139 apps/polls_react/api.py:117
 msgid "Please agree to the organisation's terms of use."
 msgstr "Bitte stimmen Sie den Nutzungsbedingungen der Organisation zu."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/comments_async/serializers.py:15
+#: adhocracy4/comments_async/serializers.py:15
 #: apps/comments_async0/serializers.py:15
 #: apps/comments_async1/serializers.py:15
 #: apps/comments_async2/serializers.py:15
@@ -540,23 +540,23 @@ msgstr "Bitte stimmen Sie den Nutzungsbedingungen der Organisation zu."
 msgid "Please choose one or more categories."
 msgstr "Bitte wählen Sie eine oder mehrere Kategorien aus."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/components/forms/views.py:24
+#: adhocracy4/dashboard/components/forms/views.py:24
 msgid "The project has been updated."
 msgstr "Das Projekt wurde aktualisiert."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/components/forms/views.py:51
+#: adhocracy4/dashboard/components/forms/views.py:51
 msgid "The module has been updated."
 msgstr "Das Modul wurde aktualisiert."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:13
+#: adhocracy4/dashboard/dashboard.py:13
 msgid "Basic settings"
 msgstr "Grundeinstellungen"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:15
+#: adhocracy4/dashboard/dashboard.py:15
 msgid "Edit basic settings"
 msgstr "Grundeinstellungen bearbeiten"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:23
+#: adhocracy4/dashboard/dashboard.py:23
 #: apps/organisations/templates/a4_candy_organisations/organisation_information.html:4
 #: apps/organisations/templates/a4_candy_organisations/organisation_information.html:19
 #: apps/projects/templates/a4_candy_projects/project_detail.html:87
@@ -564,61 +564,61 @@ msgstr "Grundeinstellungen bearbeiten"
 msgid "Information"
 msgstr "Information"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:25
+#: adhocracy4/dashboard/dashboard.py:25
 msgid "Edit project information"
 msgstr "Projektinformation bearbeiten"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:33
+#: adhocracy4/dashboard/dashboard.py:33
 #: apps/projects/templates/a4_candy_projects/project_detail.html:107
 #: adhocracy-plus/templates/includes/project_header_mobile_toggle.html:41
 msgid "Result"
 msgstr "Ergebnis"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:35
+#: adhocracy4/dashboard/dashboard.py:35
 msgid "Edit project result"
 msgstr "Projektresultat bearbeiten"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:43
+#: adhocracy4/dashboard/dashboard.py:43
 msgid "Basic information"
 msgstr "Grundeinstellungen"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:45
+#: adhocracy4/dashboard/dashboard.py:45
 msgid "Edit basic module information"
 msgstr "Moduleinstellungen bearbeiten"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:53
+#: adhocracy4/dashboard/dashboard.py:53
 msgid "Phases"
 msgstr "Phasen"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:55
+#: adhocracy4/dashboard/dashboard.py:55
 msgid "Edit phases information"
 msgstr "Phaseneinstellungen bearbeiten"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:64
+#: adhocracy4/dashboard/dashboard.py:64
 msgid "Area settings"
 msgstr "Karte"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/dashboard.py:65
+#: adhocracy4/dashboard/dashboard.py:65
 msgid "Edit area settings"
 msgstr "Kartenbereich bearbeiten"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/filter.py:15
+#: adhocracy4/dashboard/filter.py:15
 #: apps/budgeting/views.py:27
 msgid "Archived"
 msgstr "Archiviert"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/filter.py:19
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/filters/widgets.py:33
+#: adhocracy4/dashboard/filter.py:19
+#: adhocracy4/filters/widgets.py:33
 #: apps/budgeting/views.py:31
 msgid "All"
 msgstr "Alle"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/filter.py:20
+#: adhocracy4/dashboard/filter.py:20
 #: apps/budgeting/views.py:32
 msgid "No"
 msgstr "Nein"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/filter.py:21
+#: adhocracy4/dashboard/filter.py:21
 #: apps/budgeting/templates/a4_candy_budgeting/proposal_confirm_delete.html:15
 #: apps/budgeting/views.py:33
 #: apps/debate/templates/a4_candy_debate/subject_confirm_delete.html:16
@@ -633,21 +633,21 @@ msgstr "Nein"
 msgid "Yes"
 msgstr "Ja"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:80
+#: adhocracy4/dashboard/forms.py:80
 msgid "All users can participate (public)."
 msgstr "Alle Nutzerinnen und Nutzer können sich beteiligen (öffentlich)."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:83
+#: adhocracy4/dashboard/forms.py:83
 msgid "Only invited users can participate (private)."
 msgstr ""
 "Nur eingeladene Nutzerinnen und Nutzer können sich beteiligen (privat)."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:91
+#: adhocracy4/dashboard/forms.py:91
 #: apps/projects/templates/a4_candy_projects/project_detail.html:134
 msgid "Contact for questions"
 msgstr "Kontakt für Rückfragen"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:93
+#: adhocracy4/dashboard/forms.py:93
 msgid ""
 "Please name a contact person. The user will then know who is carrying out "
 "this project and to whom they can address possible questions. The contact "
@@ -657,89 +657,89 @@ msgstr ""
 "Projekt durchführt und an wen sie sich mit möglichen Fragen wenden können. "
 "Die Kontaktperson wird im Informationsreiter der Projektseite angezeigt."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:99
+#: adhocracy4/dashboard/forms.py:99
 msgid "More contact possibilities"
 msgstr "weitere Kontaktmöglichkeiten"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:144
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:66
+#: adhocracy4/dashboard/forms.py:144
+#: adhocracy4/phases/models.py:66
 msgid "End date"
 msgstr "Enddatum"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:144
+#: adhocracy4/dashboard/forms.py:144
 msgid "End time"
 msgstr "Endzeit"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:150
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:64
+#: adhocracy4/dashboard/forms.py:150
+#: adhocracy4/phases/models.py:64
 msgid "Start date"
 msgstr "Anfangsdatum"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/forms.py:150
+#: adhocracy4/dashboard/forms.py:150
 msgid "Start time"
 msgstr "Anfangszeit"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/mixins.py:209
+#: adhocracy4/dashboard/mixins.py:209
 msgid "Project successfully duplicated."
 msgstr "Projekt erfolgreich dupliziert."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:73
+#: adhocracy4/dashboard/views.py:73
 msgid "Project successfully created."
 msgstr "Projekt erfolgreich erstellt."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:164
+#: adhocracy4/dashboard/views.py:164
 #: apps/dashboard/views.py:133
 msgid "Invalid action"
 msgstr "Ungültige Aktion"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:181
+#: adhocracy4/dashboard/views.py:181
 msgid "Project is already published"
 msgstr "Das Projekt wurde bereits veröffentlicht"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:186
+#: adhocracy4/dashboard/views.py:186
 msgid "Project cannot be published. No module is added."
 msgstr "Das Projekt kann nicht veröffentlicht werden. Kein Modul hinzugefügt."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:202
+#: adhocracy4/dashboard/views.py:202
 msgid "Project cannot be published. Required fields are missing."
 msgstr ""
 "Das Projekt kann nicht veröffentlicht werden. Es fehlen benötigte Felder."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:211
+#: adhocracy4/dashboard/views.py:211
 msgid "Project cannot be published."
 msgstr "Das Projekt kann nicht veröffentlicht werden."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:221
+#: adhocracy4/dashboard/views.py:221
 msgid "the project has been published."
 msgstr "Das Projekt wurde veröffentlicht."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:226
+#: adhocracy4/dashboard/views.py:226
 msgid "Project is already unpublished"
 msgstr "Das Projekt wurde bereits depubliziert."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/dashboard/views.py:234
+#: adhocracy4/dashboard/views.py:234
 msgid "the project has been unpublished."
 msgstr "Das Projekt wurde depubliziert."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/comments.py:17
+#: adhocracy4/exports/mixins/comments.py:17
 msgid "Comment count"
 msgstr "Anzahl Kommentare"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/comments.py:80
+#: adhocracy4/exports/mixins/comments.py:80
 msgid "Reply to Comment"
 msgstr "Antwort auf den Kommentar"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/comments.py:99
+#: adhocracy4/exports/mixins/comments.py:99
 msgid "Reply to Reference"
 msgstr "Antwort auf Referenz"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/general.py:15
+#: adhocracy4/exports/mixins/general.py:15
 msgid "Creator"
 msgstr "Urheber"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/general.py:17
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/models/base.py:9
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/exports.py:41
+#: adhocracy4/exports/mixins/general.py:17
+#: adhocracy4/models/base.py:9
+#: adhocracy4/polls/exports.py:41
 #: apps/budgeting/exports.py:79 apps/debate/exports.py:79
 #: apps/debate_quality/exports.py:70 apps/debate_quality_random/exports.py:71
 #: apps/debate_stance/exports.py:70 apps/debate_stance_random/exports.py:69
@@ -749,75 +749,75 @@ msgstr "Urheber"
 msgid "Created"
 msgstr "Erstellt"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/general.py:36
+#: adhocracy4/exports/mixins/general.py:36
 msgid "Link"
 msgstr "Link"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/general.py:52
+#: adhocracy4/exports/mixins/general.py:52
 msgid "Location (Longitude)"
 msgstr "Ort (Längengrad)"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/general.py:54
+#: adhocracy4/exports/mixins/general.py:54
 msgid "Location (Latitude)"
 msgstr "Ort (Breitengrad)"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/general.py:56
+#: adhocracy4/exports/mixins/general.py:56
 msgid "Location label"
 msgstr "Ortsbezeichnung"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/items.py:43
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/dashboard.py:13
+#: adhocracy4/exports/mixins/items.py:43
+#: adhocracy4/labels/dashboard.py:13
 #: apps/ideas/models.py:46 apps/topicprio/models.py:50
 msgid "Labels"
 msgstr "Merkmale"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/items.py:61
+#: adhocracy4/exports/mixins/items.py:61
 #: apps/contrib/templates/a4_candy_contrib/item_detail.html:63
 msgid "Reference No."
 msgstr "Referenznr."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/items.py:81
+#: adhocracy4/exports/mixins/items.py:81
 msgid "Status"
 msgstr "Status"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/items.py:83
+#: adhocracy4/exports/mixins/items.py:83
 msgid "Feedback"
 msgstr "Feedback"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/items.py:107
+#: adhocracy4/exports/mixins/items.py:107
 #: apps/moderatorremark/models.py:14
 #: apps/moderatorremark/templates/a4_candy_moderatorremark/includes/popover_remark.html:5
 #: apps/moderatorremark/templates/a4_candy_moderatorremark/includes/popover_remark.html:21
 msgid "Remark"
 msgstr "Notiz"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/rates.py:16
+#: adhocracy4/exports/mixins/rates.py:16
 msgid "Positive ratings"
 msgstr "Positive Bewertungen"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/mixins/rates.py:18
+#: adhocracy4/exports/mixins/rates.py:18
 msgid "Negative ratings"
 msgstr "Negative Bewertungen"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/views.py:91
+#: adhocracy4/exports/views.py:91
 msgid "yes"
 msgstr "ja"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/exports/views.py:92
+#: adhocracy4/exports/views.py:92
 msgid "no"
 msgstr "nein"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/filters/widgets.py:76
+#: adhocracy4/filters/widgets.py:76
 #: apps/contrib/widgets.py:59
 msgid "Ordering"
 msgstr "Sortierung"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/forms/fields.py:19
+#: adhocracy4/forms/fields.py:19
 #, python-format
 msgid "Time of %(date_label)s"
 msgstr "Uhrzeit für %(date_label)s"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/fields.py:70
+#: adhocracy4/images/fields.py:70
 #, python-brace-format
 msgid ""
 "{help_prefix} It must be min. {min_resolution[0]} pixel wide and "
@@ -828,112 +828,112 @@ msgstr ""
 "{min_resolution[1]} Pixel hoch sein. Erlaubte Dateiformate: "
 "{fileformats_str}. Die maximale Dateigröße beträgt {max_size_mb} MB."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/fields.py:87
+#: adhocracy4/images/fields.py:87
 #, python-brace-format
 msgid "{image_name} copyright"
 msgstr "{image_name} Urheber*in"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/fields.py:90
+#: adhocracy4/images/fields.py:90
 #, python-brace-format
 msgid "Copyright shown in the {image_name}."
 msgstr "Urheber*in, die im {image_name} angezeigt wird."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/fields.py:103
+#: adhocracy4/images/fields.py:103
 #, python-brace-format
 msgid "{image_name} alt text"
 msgstr ""
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/fields.py:106
+#: adhocracy4/images/fields.py:106
 msgid ""
 "An alternate text serves as a textual description of the image content and "
 "is read out by screen readers. Describe the image in max. 80 characters. "
 "Example: A busy square with people in summer."
 msgstr ""
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/mixins.py:30
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/mixins.py:35
+#: adhocracy4/images/mixins.py:30
+#: adhocracy4/images/mixins.py:35
 msgid "Please add copyright information."
 msgstr ""
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/mixins.py:40
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/mixins.py:45
+#: adhocracy4/images/mixins.py:40
+#: adhocracy4/images/mixins.py:45
 msgid "Please add an alternative text for this image"
 msgstr ""
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:26
+#: adhocracy4/images/validators.py:26
 msgid "Unsupported file format. Supported formats are {}."
 msgstr "Dieses Dateiformat ist nicht unterstützt. Unterstützt werden: {}."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:33
+#: adhocracy4/images/validators.py:33
 #: apps/organisations/forms.py:362
 #, python-brace-format
 msgid "Image should be at most {max_size} MB"
 msgstr "Das Bild darf höchstens {max_size} MB groß sein."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:41
+#: adhocracy4/images/validators.py:41
 #: apps/organisations/forms.py:370
 #, python-brace-format
 msgid "Image must be at least {min_width} pixels wide"
 msgstr "Das Bild muss mindestens {min_width} Pixel breit sein."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:49
+#: adhocracy4/images/validators.py:49
 #: apps/organisations/forms.py:380
 #, python-brace-format
 msgid "Image must be at least {min_height} pixels high"
 msgstr "Das Bild muss mindestens {min_height} Pixel hoch sein."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:55
+#: adhocracy4/images/validators.py:55
 #, python-brace-format
 msgid "Image must be at most {max_width} pixels wide"
 msgstr "Das Bild darf höchstens {max_width} Pixel breit sein."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:58
+#: adhocracy4/images/validators.py:58
 #, python-brace-format
 msgid "Image must be at most {max_height} pixels high"
 msgstr "Das Bild darf höchstens {max_height} Pixel hoch sein."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/validators.py:67
+#: adhocracy4/images/validators.py:67
 #, python-brace-format
 msgid "Image aspect ratio should be {aspect_width}:{aspect_height}"
 msgstr "Das Seitenverhältnis muss {aspect_width}:{aspect_height} entsprechen."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/images/widgets.py:28
+#: adhocracy4/images/widgets.py:28
 msgid "Select a picture from your local folder."
 msgstr "Ein Bild aus einem lokalen Ordner auswählen."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/dashboard.py:15
+#: adhocracy4/labels/dashboard.py:15
 msgid "Edit labels"
 msgstr "Merkmale bearbeiten"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/filters.py:10
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/forms.py:25
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/models.py:10
+#: adhocracy4/labels/filters.py:10
+#: adhocracy4/labels/forms.py:25
+#: adhocracy4/labels/models.py:10
 msgid "Label"
 msgstr "Merkmal"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/models.py:12
+#: adhocracy4/labels/models.py:12
 msgid "Type of label"
 msgstr ""
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/models.py:14
+#: adhocracy4/labels/models.py:14
 msgid ""
 "You can individualise the term label. The character limit is max. 25 "
 "characters (with spaces)."
 msgstr ""
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/labels/models.py:22
+#: adhocracy4/labels/models.py:22
 msgid ""
 "Specify your proposal with one or more labels. These will automatically "
 "appear in the display of your proposal. In addition, the list of all "
 "proposals can be filtered by labels."
 msgstr ""
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/admin.py:15
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/models.py:11
+#: adhocracy4/maps/admin.py:15
+#: adhocracy4/maps/models.py:11
 msgid "Polygon"
 msgstr "Polygon"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/admin.py:19
+#: adhocracy4/maps/admin.py:19
 msgid ""
 "Enter a valid GeoJSON object. To initialize a new areasetting enter the "
 "string \"false\" without quotation marks."
@@ -941,35 +941,35 @@ msgstr ""
 "Ein valides GeoJSON Objekt eingeben. Zur Initialisierung \"false\" ohne "
 "Anführungszeichen eingeben."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/fields.py:16
+#: adhocracy4/maps/fields.py:16
 msgid "Geometry as GeoJSON"
 msgstr "GeoJSON kodierte Koordinaten"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/fields.py:34
+#: adhocracy4/maps/fields.py:34
 msgid "Please add a Marker on the map"
 msgstr "Bitte setzen Sie einen Punkt auf der Karte."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/fields.py:39
+#: adhocracy4/maps/fields.py:39
 msgid "Please draw a Polygon on the map"
 msgstr ""
 "Bitte zeichnen Sie einen Bereich auf der Karte ein oder wählen Sie einen "
 "vordefinierten Bereich aus"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/maps/models.py:11
+#: adhocracy4/maps/models.py:11
 msgid "Please draw an area on the map."
 msgstr ""
 "Bitte zeichnen Sie einen Bereich auf der Karte ein, in dem Ihr Projekt "
 "stattfindet und Ideen verortet werden sollen."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/models/base.py:14
+#: adhocracy4/models/base.py:14
 msgid "Modified"
 msgstr "Bearbeitet"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:74
+#: adhocracy4/modules/models.py:74
 msgid "Title of the module"
 msgstr "Modultitel"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:76
+#: adhocracy4/modules/models.py:76
 msgid ""
 "This title will appear in the timeline and the header on the module and "
 "project detail pages. It should be max. 512 characters long"
@@ -977,11 +977,11 @@ msgstr ""
 "Der Modultitel wird in der Zeitleiste und auf der Projektseite erscheinen. "
 "Er sollte maximal 512 Zeichen lang sein."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:85
+#: adhocracy4/modules/models.py:85
 msgid "Short description of the module"
 msgstr "Kurzbeschreibung des Moduls"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:87
+#: adhocracy4/modules/models.py:87
 msgid ""
 "This short description will appear on the header of the module and project "
 "detail pages. It should briefly state the goal of the module in max. 512 "
@@ -990,79 +990,79 @@ msgstr ""
 "Die Kurzbeschreibung des Moduls erscheint auf der Projektseite. Sie sollte "
 "in maximal 512 Zeichen das Ziel des Moduls beschreiben."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:224
+#: adhocracy4/modules/models.py:224
 msgid "day"
 msgstr "Tag"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:224
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:231
+#: adhocracy4/modules/models.py:224
+#: adhocracy4/modules/models.py:231
 msgid "days"
 msgstr "Tage"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:225
+#: adhocracy4/modules/models.py:225
 msgid "hour"
 msgstr "Stunde"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:225
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:232
+#: adhocracy4/modules/models.py:225
+#: adhocracy4/modules/models.py:232
 msgid "hours"
 msgstr "Stunden"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:226
+#: adhocracy4/modules/models.py:226
 msgid "minute"
 msgstr "Minute"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:226
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:233
+#: adhocracy4/modules/models.py:226
+#: adhocracy4/modules/models.py:233
 msgid "minutes"
 msgstr "Minuten"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:227
+#: adhocracy4/modules/models.py:227
 msgid "second"
 msgstr "Sekunde"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:227
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:234
+#: adhocracy4/modules/models.py:227
+#: adhocracy4/modules/models.py:234
 msgid "seconds"
 msgstr "Sekunden"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:231
+#: adhocracy4/modules/models.py:231
 msgctxt "abbreviation for day(s)"
 msgid "D"
 msgstr "T"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:232
+#: adhocracy4/modules/models.py:232
 msgctxt "abbreviation for hour(s)"
 msgid "H"
 msgstr "S"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:233
+#: adhocracy4/modules/models.py:233
 msgctxt "abbreviation for minute(s)"
 msgid "M"
 msgstr "M"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/modules/models.py:234
+#: adhocracy4/modules/models.py:234
 msgctxt "abbreviation for second(s)"
 msgid "S"
 msgstr "S"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/forms.py:24
+#: adhocracy4/phases/forms.py:24
 msgid "Phases cannot run at the same time and must follow after each other."
 msgstr "Phasen können nicht gleichzeitig laufen oder sich überschneiden."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/forms.py:31
+#: adhocracy4/phases/forms.py:31
 msgid "Phases need to be in same order as in form."
 msgstr ""
 "Die Phasen müssen in der gleichen Reihenfolge wie im Formular angeordnet "
 "sein."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:59
+#: adhocracy4/phases/models.py:59
 #: apps/newsletters/models.py:28
 #: apps/projects/templates/a4_candy_projects/includes/removeable_user_list.html:7
 msgid "Name"
 msgstr "Name"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:60
+#: adhocracy4/phases/models.py:60
 #: apps/activities/models.py:22 apps/debate/models.py:25
 #: apps/debate_quality/models.py:32 apps/debate_quality_random/models.py:32
 #: apps/debate_stance/models.py:31 apps/debate_stance_random/models.py:31
@@ -1072,47 +1072,47 @@ msgstr "Name"
 msgid "Description"
 msgstr "Beschreibung"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:84
+#: adhocracy4/phases/models.py:84
 msgid "End date can not be before start date."
 msgstr "Enddatum kann nicht vor dem Startdatum liegen."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:88
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/phases/models.py:92
+#: adhocracy4/phases/models.py:88
+#: adhocracy4/phases/models.py:92
 msgid "Either both or no date has to be set."
 msgstr ""
 "Entweder müssen Start- und Enddatum angegeben werden oder keines der beiden."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/api.py:155
+#: adhocracy4/polls/api.py:155
 #: apps/polls_react/api.py:157
 msgid "Please specify your answer."
 msgstr "Bitte geben Sie Ihre Antwort an."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/api.py:169
+#: adhocracy4/polls/api.py:169
 #: apps/polls_react/api.py:171
 msgid "Key error for {}"
 msgstr "Tastenfehler für {}"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/api.py:171
+#: adhocracy4/polls/api.py:171
 #: apps/polls_react/api.py:173
 msgid "Choice not found."
 msgstr "Auswahl nicht gefunden."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/api.py:190
+#: adhocracy4/polls/api.py:190
 #: apps/polls_react/api.py:192
 msgid "Duplicate choices detected."
 msgstr "Doppelte Auswahlmöglichkeiten entdeckt."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/api.py:193
+#: adhocracy4/polls/api.py:193
 #: apps/polls_react/api.py:195
 msgid "Multiple choice disabled for question."
 msgstr "Mehrfachauswahl ist für die Frage deaktiviert."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/dashboard.py:15
+#: adhocracy4/polls/dashboard.py:15
 #: apps/dashboard/blueprints.py:103 apps/polls_react/dashboard.py:15
 msgid "Poll"
 msgstr "Umfrage"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/dashboard.py:44
+#: adhocracy4/polls/dashboard.py:44
 #: apps/budgeting/dashboard.py:14 apps/debate/dashboard.py:65
 #: apps/debate_quality/dashboard.py:65
 #: apps/debate_quality_random/dashboard.py:65
@@ -1123,7 +1123,7 @@ msgstr "Umfrage"
 msgid "Export Excel"
 msgstr "Excel exportieren"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/exports.py:39
+#: adhocracy4/polls/exports.py:39
 #: apps/budgeting/exports.py:77 apps/debate/exports.py:77
 #: apps/debate_quality/exports.py:68 apps/debate_quality_random/exports.py:69
 #: apps/debate_stance/exports.py:68 apps/debate_stance_random/exports.py:67
@@ -1133,17 +1133,17 @@ msgstr "Excel exportieren"
 msgid "ID"
 msgstr "ID"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:41
+#: adhocracy4/polls/models.py:41
 #: apps/polls_react/models.py:41
 msgid "Explanation"
 msgstr "Erklärung"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:68
+#: adhocracy4/polls/models.py:68
 #: apps/polls_react/models.py:68
 msgid "Questions with open answers cannot have multiple choices."
 msgstr "Bei Fragen mit offenen Antworten sind keine Mehrfachauswahlen möglich."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:77
+#: adhocracy4/polls/models.py:77
 #: apps/polls_react/models.py:77
 msgid ""
 "Question with choices cannot become open question. Delete choices or add new "
@@ -1152,23 +1152,23 @@ msgstr ""
 "Fragen mit Auswahlmöglichkeiten können nicht zu offenen Fragen werden. "
 "Löschen Sie Auswahlmöglichkeiten oder fügen Sie eine neue offene Frage hinzu."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:140
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:258
+#: adhocracy4/polls/models.py:140
+#: adhocracy4/polls/models.py:258
 #: apps/polls_react/models.py:140 apps/polls_react/models.py:258
 msgid "Answer"
 msgstr "Antwort"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:151
+#: adhocracy4/polls/models.py:151
 #: apps/polls_react/models.py:151
 msgid "Only open questions can have answers."
 msgstr "Nur offene Fragen können Antworten haben."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:187
+#: adhocracy4/polls/models.py:187
 #: apps/polls_react/models.py:187
 msgid "Open questions cannot have choices."
 msgstr "Offene Fragen können keine Auswahlmöglichkeiten haben."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:193
+#: adhocracy4/polls/models.py:193
 #: apps/polls_react/models.py:193
 msgid ""
 "\"Other\" cannot be the only choice. Use open question or add more choices."
@@ -1176,12 +1176,12 @@ msgstr ""
 "\"Sonstige\" kann nicht die einzige Wahlmöglichkeit sein. Verwenden Sie "
 "offene Fragen oder fügen Sie weitere Auswahlmöglichkeiten hinzu."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:204
+#: adhocracy4/polls/models.py:204
 #: apps/polls_react/models.py:204
 msgid "Question already has \"other\" choice."
 msgstr "Die Frage hat bereits die Option \"Sonstige\"."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:265
+#: adhocracy4/polls/models.py:265
 #: apps/polls_react/models.py:265
 msgid "Other vote can only be created for vote on \"other\" choice."
 msgstr ""
@@ -1189,61 +1189,61 @@ msgstr ""
 "Auswahl erstellt werden."
 
 #. Translators: kosmo
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/models.py:287
+#: adhocracy4/polls/models.py:287
 #: apps/classifications/models.py:15 apps/polls_react/models.py:287
 msgid "other"
 msgstr "Sonstige"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/phases.py:16
+#: adhocracy4/polls/phases.py:16
 #: apps/polls_react/phases.py:16
 msgctxt "A4: voting phase name"
 msgid "Voting phase"
 msgstr "Abstimmungsphase"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/phases.py:18
+#: adhocracy4/polls/phases.py:18
 #: apps/polls_react/phases.py:18
 msgctxt "A4: voting phase description"
 msgid "Answer the questions and comment on the poll."
 msgstr "Beantworten Sie die Fragen und kommentieren Sie die Umfrage."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/phases.py:20
+#: adhocracy4/polls/phases.py:20
 #: apps/polls_react/phases.py:20
 msgid "polls"
 msgstr "Umfragen"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/validators.py:16
+#: adhocracy4/polls/validators.py:16
 #: apps/polls_react/validators.py:16
 #, python-format
 msgid "Item of type %(item)s for that module already exists"
 msgstr "Beitrag des Typs %(item)s für dieses Modul existiert bereits."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/validators.py:28
+#: adhocracy4/polls/validators.py:28
 #: apps/polls_react/validators.py:28
 msgid "Question has to belong to the poll set in the url."
 msgstr "Die Frage muss zu der in der Url angegebenen Umfrage gehören."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/validators.py:39
+#: adhocracy4/polls/validators.py:39
 #: apps/polls_react/validators.py:39
 msgid "Choice has to belong to the question set in the url."
 msgstr "Die Auswahl muss zu der richtigen Frage gehören."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/polls/validators.py:57
+#: adhocracy4/polls/validators.py:57
 #: apps/polls_react/validators.py:57
 msgid "Only one vote per choice is allowed per user."
 msgstr "Pro Nutzer ist nur eine Stimme pro Auswahl zulässig."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/admin.py:10
+#: adhocracy4/projects/admin.py:10
 #: apps/newsletters/forms.py:38
 #: adhocracy-plus/templates/includes/project_header_mobile_toggle.html:12
 msgid "Project"
 msgstr "Projekt"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/admin.py:63
+#: adhocracy4/projects/admin.py:63
 #: apps/projects/admin.py:38
 msgid "Information and result"
 msgstr "Informationen und Ergebnis"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/admin.py:69
+#: adhocracy4/projects/admin.py:69
 #: apps/organisations/templates/a4_candy_organisations/communication_form_social_media.html:4
 #: apps/organisations/templates/a4_candy_organisations/organisation_form.html:4
 #: apps/organisations/templates/a4_candy_organisations/organisation_form_legal_info.html:4
@@ -1251,22 +1251,22 @@ msgstr "Informationen und Ergebnis"
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/admin.py:81
+#: adhocracy4/projects/admin.py:81
 #: apps/projects/admin.py:58
 msgid "Images"
 msgstr "Bilder"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/admin.py:93
+#: adhocracy4/projects/admin.py:93
 #: apps/projects/admin.py:70 adhocracy-plus/templates/email_base.html:112
 #: adhocracy-plus/templates/footer.html:58
 msgid "Contact"
 msgstr "Kontakt"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/enums.py:13
+#: adhocracy4/projects/enums.py:13
 msgid "public"
 msgstr "öffentlich"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:42
+#: adhocracy4/projects/models.py:42
 msgid ""
 "Phone numbers can only contain digits, spaces and the following characters: "
 "-, +, (, ). It has to be between 8 and 20 characters long."
@@ -1274,34 +1274,34 @@ msgstr ""
 "Telefonnummern können nur Zahlen, Leerzeichen und die folgenden Zeichen "
 "enthalten: -, +, (, ). Sie müssen zwischen 8 und 20 Zeichen lang sein."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:49
+#: adhocracy4/projects/models.py:49
 msgid "Postal address"
 msgstr "Postanschrift"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:52
+#: adhocracy4/projects/models.py:52
 #: apps/projects/templates/a4_candy_projects/includes/removeable_invite_list.html:7
 #: apps/projects/templates/a4_candy_projects/project_detail.html:146
 msgid "Email"
 msgstr "E-Mail"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:55
+#: adhocracy4/projects/models.py:55
 msgid "Contact person"
 msgstr "Kontaktperson"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:59
+#: adhocracy4/projects/models.py:59
 msgid "Phone"
 msgstr "Telefon"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:62
+#: adhocracy4/projects/models.py:62
 #: apps/projects/templates/a4_candy_projects/project_detail.html:151
 msgid "Website"
 msgstr "Webseite"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:72
+#: adhocracy4/projects/models.py:72
 msgid "Can your project be located on the map?"
 msgstr "Kann Ihr Projekt auf der Karte verortet werden?"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:74
+#: adhocracy4/projects/models.py:74
 msgid ""
 "Locate your project. Click inside the marked area or type in an address to "
 "set the marker. A set marker can be dragged when pressed."
@@ -1311,15 +1311,15 @@ msgstr ""
 "klicken Sie innerhalb des markierten Bereichs oder geben Sie eine Adresse "
 "ein. Ein gesetzter Pin kann verschoben werden, wenn Sie ihn gedrückt halten."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:86
+#: adhocracy4/projects/models.py:86
 msgid "Administrative district"
 msgstr "Bezirk"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:174
+#: adhocracy4/projects/models.py:174
 msgid "Title of your project"
 msgstr "Titel Ihres Projekts"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:176
+#: adhocracy4/projects/models.py:176
 msgid ""
 "This title will appear on the teaser card and on top of the project detail "
 "page. It should be max. 120 characters long"
@@ -1327,11 +1327,11 @@ msgstr ""
 "Der Titel wird in Kacheln und im Kopf der Projektseite angezeigt werden. Er "
 "darf maximal 120 Zeichen lang sein."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:189
+#: adhocracy4/projects/models.py:189
 msgid "Short description of your project"
 msgstr "Kurzbeschreibung Ihres Projekts"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:191
+#: adhocracy4/projects/models.py:191
 msgid ""
 "This short description will appear on the header of the project and in the "
 "teaser. It should briefly state the goal of the project in max. 250 chars."
@@ -1339,11 +1339,11 @@ msgstr ""
 "Die Kurzbeschreibung wird in Kacheln und im Kopf der Projektseite angezeigt "
 "werden. Sie sollte das Ziel des Projekts in maximal 250 Zeichen beschreiben."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:200
+#: adhocracy4/projects/models.py:200
 msgid "Description of your project"
 msgstr "Beschreibung Ihres Projekts"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:202
+#: adhocracy4/projects/models.py:202
 msgid ""
 "This description should tell participants what the goal of the project is, "
 "how the project’s participation will look like. It will be always visible in "
@@ -1353,11 +1353,11 @@ msgstr ""
 "Projekts ist und wie die Beteiligung vonstatten gehen wird. Sie wird im Info-"
 "Tab der Projektseite angezeigt werden."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:211
+#: adhocracy4/projects/models.py:211
 msgid "Results of your project"
 msgstr "Ergebnisse Ihres Projekts"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:213
+#: adhocracy4/projects/models.py:213
 msgid ""
 "Here you should explain what the expected outcome of the project will be and "
 "how you are planning to use the results. If the project is finished you "
@@ -1367,37 +1367,37 @@ msgstr ""
 "wie die Ergebnisse weiterverarbeitet werden. Wenn das Projekt abgeschlossen "
 "ist, sollten Sie hier eine Zusammenfassung der Resultate hinzufügen."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:220
+#: adhocracy4/projects/models.py:220
 msgid "Access to the project"
 msgstr "Zugang zum Projekt"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:225
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:231
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:232
+#: adhocracy4/projects/models.py:225
+#: adhocracy4/projects/models.py:231
+#: adhocracy4/projects/models.py:232
 #: apps/organisations/models.py:97
 msgid "Header image"
 msgstr "Headerbild"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:226
+#: adhocracy4/projects/models.py:226
 #: apps/organisations/models.py:98
 msgid "The image will be shown as a decorative background image."
 msgstr "Das Bild wird als dekoratives Hintergrundbild angezeigt."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:235
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:241
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:242
+#: adhocracy4/projects/models.py:235
+#: adhocracy4/projects/models.py:241
+#: adhocracy4/projects/models.py:242
 msgid "Tile image"
 msgstr "Kachel-Bild"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:236
+#: adhocracy4/projects/models.py:236
 msgid "The image will be shown in the project tile."
 msgstr "Das Bild wird in der Projekt-Kachel angezeigt."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:255
+#: adhocracy4/projects/models.py:255
 msgid "Project is archived"
 msgstr "Projekt ist archiviert."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:257
+#: adhocracy4/projects/models.py:257
 msgid ""
 "Archived projects are not shown in the project overview. For project "
 "initiators they are still visible in the dashboard."
@@ -1405,25 +1405,25 @@ msgstr ""
 "Archivierte Projekte werden nicht in der Projektübersicht angezeigt. Für "
 "Projektinitiator*innen sind sie weiterhin im Dashboard einsehbar."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:263
+#: adhocracy4/projects/models.py:263
 msgid "Project topics"
 msgstr "Projektthemen"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/models.py:263
+#: adhocracy4/projects/models.py:263
 msgid "Add topics to your project."
 msgstr ""
 "Bitte ordnen Sie Ihrem Projekt 1-2 Themenfelder zu. Ihr Projekt kann in der "
 "Projektübersicht nach diesen Themen gefiltert werden."
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/utils.py:46
+#: adhocracy4/projects/utils.py:46
 msgid "{}. Online Participation"
 msgstr "{}. Online-Beteiligung"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/projects/utils.py:55
+#: adhocracy4/projects/utils.py:55
 msgid "Online Participation"
 msgstr "Online-Beteiligung"
 
-#: /home/maike/.virtualenvs/aplus/lib/python3.8/site-packages/adhocracy4/reports/templatetags/react_reports.py:28
+#: adhocracy4/reports/templatetags/react_reports.py:28
 #: apps/contrib/templates/a4_candy_contrib/item_detail.html:114
 msgid "Report"
 msgstr "Melden"
@@ -1546,9 +1546,8 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"                %(name)s hat einen <a href=\"%(comment_url)s\">Kommentar</a> zu Ihrem "
-"<a href=\"%(item_url)s\">Beitrag</a> hinterlassen"
-
+"                %(name)s hat einen <a href=\"%(comment_url)s\">Kommentar</a> "
+"zu Ihrem <a href=\"%(item_url)s\">Beitrag</a> hinterlassen"
 
 #: apps/actions/templates/a4_candy_actions/includes/reaction.html:23
 #, python-format
@@ -1559,8 +1558,8 @@ msgid ""
 "              "
 msgstr ""
 "\n"
-"              %(name)s hat eine <a href=\"%(comment_url)s\">Antwort</a> zu Ihrem "
-"<a href=\"%(parent_comment_url)s\">Kommentar</a> hinterlassen" 
+"              %(name)s hat eine <a href=\"%(comment_url)s\">Antwort</a> zu "
+"Ihrem <a href=\"%(parent_comment_url)s\">Kommentar</a> hinterlassen"
 
 #: apps/actions/templates/a4_candy_actions/includes/reaction.html:30
 #, python-format
@@ -1660,7 +1659,7 @@ msgstr "Vorschlagsphase"
 msgid "Post ideas with budget proposals, comment on them and rate them."
 msgstr "Ideen mit Budgetangabe einreichen, kommentieren und bewerten."
 
-#: apps/budgeting/phases.py:19 adhocracy-plus/config/settings/base.py:552
+#: apps/budgeting/phases.py:19 adhocracy-plus/config/settings/base.py:553
 msgid "participatory budgeting"
 msgstr "Bürgerhaushalt"
 
@@ -1904,6 +1903,49 @@ msgstr "Ihre Telefonnumer"
 #: apps/cms/contacts/models.py:178
 msgid "Your name"
 msgstr "Ihr Name"
+
+#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:4
+#, python-format
+msgid "We received your message on %(site_name)s"
+msgstr "Wir haben Ihre Nachricht auf %(site_name)s erhalten"
+
+#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:6
+msgid "We received your message"
+msgstr "Wir haben Ihre Nachricht erhalten"
+
+#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:10
+msgid "This is the data we received from you:"
+msgstr "Dies sind die Daten, die wir von Ihnen erhalten haben:"
+
+#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:13
+#, python-format
+msgid "Your email address: %(sender_mail)s"
+msgstr "Ihre E-Mail Adresse: %(sender_mail)s"
+
+#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:16
+#, python-format
+msgid "Your message: %(message)s"
+msgstr "Ihre Nachricht: %(message)s"
+
+#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:20
+#, python-format
+msgid "Your telephone number: %(sender_phone)s"
+msgstr "Ihre Telefonnummer: %(sender_phone)s"
+
+#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:25
+#, python-format
+msgid "Your Name: %(sender_name)s"
+msgstr "Ihr Name: %(sender_name)s"
+
+#: apps/cms/contacts/templates/a4_candy_cms_contacts/emails/answer_to_contact_form.en.email:30
+#, python-format
+msgid ""
+"This message was sent to %(receiver)s. It was sent because you wrote us a "
+"message via our contact form and asked us to send you a copy."
+msgstr ""
+"Diese E-Mail wurde an %(receiver)s gesendet. Sie wurde an Sie gesendet, da "
+"Sie uns über unser Kontaktformular kontaktiert haben und uns gebeten haben, "
+"Ihnen eine Kopie der Nachricht zu senden."
 
 #: apps/cms/contacts/templates/a4_candy_cms_contacts/includes/form.html:16
 #: apps/newsletters/templates/a4_candy_newsletters/restricted_newsletter_dashboard_form.html:30
@@ -3118,6 +3160,18 @@ msgstr "Senden"
 msgid "Receivers"
 msgstr "Empfänger*innen"
 
+#: apps/newsletters/templates/a4_candy_newsletters/emails/newsletter_email.en.email:10
+#, python-format
+msgid ""
+"This email was sent to %(receiver_mail)s. This email was sent to you because "
+"you are registered on %(site_name)s. If you don't want to receive "
+"newsletters anymore, you may disable them in your user account settings."
+msgstr ""
+"Diese E-Mail wurde an %(receiver_mail)s gesendet. Die E-Mail wurde an Sie "
+"gesendet, da Sie auf %(site_name)s registriert sind. Wenn Sie keine "
+"Newsletter mehr erhalten wollen, können Sie diese in Ihrem Benutzerkonto "
+"deaktivieren."
+
 #: apps/newsletters/templates/a4_candy_newsletters/restricted_newsletter_dashboard_form.html:4
 #: adhocracy-plus/templates/a4dashboard/communication_form_base.html:16
 msgid "Newsletter"
@@ -3131,6 +3185,417 @@ msgstr "Newsletter erstellen"
 msgid "Newsletter has been saved and will be sent to the recipients."
 msgstr ""
 "Der Newsletter wurde gespeichert und wird an die Empfänger*innen gesendet."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:4
+#, python-format
+msgid "Reaction to your contribution in project %(project_name)s"
+msgstr "Reaktion auf Ihren Beitrag im Projekt %(project_name)s"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:6
+msgid "Reaction to your contribution"
+msgstr "Reaktion auf Ihren Beitrag"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:9
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:17
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:9
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:9
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:9
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:9
+#, python-format
+msgid "Hello %(receiver_name)s,"
+msgstr "Hallo %(receiver_name)s,"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:13
+#, python-format
+msgid "%(actor_name)s commented on your post:"
+msgstr "%(actor_name)s hat Ihren Beitrag kommentiert:"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:21
+msgid "Would you like to answer?"
+msgstr "Möchten Sie antworten?"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:26
+msgid "View Post"
+msgstr "Beitrag anzeigen"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:26
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:31
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:55
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:57
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:59
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:61
+msgid "Visit the project"
+msgstr "Projekt anzeigen"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator.en.email:28
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:33
+#, python-format
+msgid ""
+"This email was sent to %(receiver_mail)s. You have received the e-mail "
+"because you added a contribution to the above project."
+msgstr ""
+"Diese E-Mail wurde an %(receiver_mail)s gesendet. Sie haben die E-Mail "
+"erhalten, weil Sie einen Beitrag in einem Projekt erstellt haben."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:5
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:9
+msgid "Your contribution was deleted"
+msgstr "Ihr Beitrag wurde gelöscht"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:18
+#, python-format
+msgid "Hello <strong>%(receiver_name)s</strong>,"
+msgstr "Hallo <strong>%(receiver_name)s</strong>,"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:22
+#, python-format
+msgid ""
+"Your contribution in the project <strong>\"%(project_name)s\"</strong> was "
+"deleted by the moderator."
+msgstr ""
+"Ihr Beitrag in dem Projekt <strong>\"%(project_name)s\"</strong> wurde von "
+"der Moderation gelöscht."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:22
+msgid ""
+"Please pay attention to the basic rules when writing contributions. In this "
+"way we create a pleasant atmosphere for an open exchange and achieve good "
+"results."
+msgstr ""
+"Bitte beachten Sie beim Verfassen von Beiträgen die Grundregeln. Auf diese "
+"Weise schaffen wir eine angenehme Atmosphäre für einen offenen Austausch und "
+"erzielen gute Ergebnisse."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:24
+msgid "Thank you very much!"
+msgstr "Vielen Dank!"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:27
+msgid "Your contribution:"
+msgstr "Ihr Beitrag:"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:40
+msgid "Show discussion"
+msgstr "Diskussion anzeigen"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_blocked.en.email:44
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:34
+#, python-format
+msgid ""
+"This email was sent to %(receiver_mail)s. This email was sent to you because "
+"of your participation in the project."
+msgstr ""
+"Diese E-Mail wurde an %(receiver_mail)s gesendet. Diese E-Mail wurde Ihnen "
+"aufgrund Ihrer Teilnahme an dem Projekt zugesandt."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:5
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:9
+msgid "Feedback of the moderation"
+msgstr "Feedback der Moderation"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:20
+#, python-format
+msgid ""
+"the moderator %(moderator_name)s of the project %(project_name)s gave "
+"feedback on your contribution:"
+msgstr ""
+"die Moderation %(moderator_name)s des Projekts %(project_name)s hat Ihnen "
+"Feedback zu Ihrem Beitrag gegeben:"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:24
+msgid "Here you can find your contribution:"
+msgstr "Hier können Sie Ihren Beitrag finden:"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_comment_feedback.en.email:30
+msgid "Show contribution"
+msgstr "Beitrag anzeigen"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:4
+#, python-format
+msgid "Feedback for your contribution on %(site_name)s"
+msgstr "Rückmeldung zu Ihrem Beitrag auf %(site_name)s"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:6
+msgid "Feedback for your contribution"
+msgstr "Rückmeldung zu Ihrem Beitrag"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:13
+#, python-format
+msgid "%(organisation_name)s reacted on your contribution."
+msgstr "%(organisation_name)s hat auf Ihren Beitrag reagiert."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:17
+#, python-format
+msgid "Your contribution is %(status)s."
+msgstr "Ihr Beitrag %(status)s."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:22
+#, python-format
+msgid "Official feedback: %(feedback)s"
+msgstr "Offizielle Rückmeldung: %(feedback)s"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:26
+msgid "Do you want to answer?"
+msgstr "Möchten Sie antworten?"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_creator_on_moderator_feedback.en.email:31
+msgid "Check your contribution"
+msgstr "Beitrag anzeigen"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:4
+#, python-format
+msgid "Event in project %(project_name)s"
+msgstr ""
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:6
+msgid "Event"
+msgstr "Veranstaltung"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:13
+#, python-format
+msgid "The following event takes place on %(date)s:"
+msgstr "Die folgende Veranstaltung findet statt am %(date)s:"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:19
+msgid "Further information about the event can be found in the project."
+msgstr ""
+"Weitere Informationen über die Veranstaltung finden Sie in dem Projekt."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:24
+msgid "Show Event"
+msgstr "Veranstaltung anzeigen"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_event_upcomming.en.email:26
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:23
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:23
+#, python-format
+msgid ""
+"This email was sent to %(receiver_mail)s. You have received the e-mail "
+"because you are following the above project."
+msgstr ""
+"Diese E-Mail wurde an %(receiver_mail)s gesendet. Sie haben die E-Mail "
+"erhalten, weil Sie oben genanntem Projekt folgen."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:4
+#, python-format
+msgid "Participation ends soon for %(project_name)s"
+msgstr "Beteiligung endet bald für %(project_name)s"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:6
+msgid "Participation ends soon!"
+msgstr "Beteiligung endet bald!"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:13
+msgid "the online participation in the above mentioned project will end soon."
+msgstr "die Online-Beteiligung an dem oben genannten Projekt endet in Kürze."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:16
+#, python-format
+msgid "You can still participate until %(end_date)s."
+msgstr "Sie können noch teilnehmen bis %(end_date)s."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_over_soon.en.email:21
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:21
+msgid "Join now"
+msgstr "Jetzt mitmachen"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:4
+#, python-format
+msgid "Here we go: %(project_name)s starts now!"
+msgstr "Los geht's: %(project_name)s startet jetzt!"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:6
+msgid "Here we go!"
+msgstr "Los geht’s!"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:13
+msgid "Online participation for the above project has started."
+msgstr "Die Online-Beteiligung für das oben genannte Projekt hat begonnen."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_followers_phase_started.en.email:16
+#, python-format
+msgid "You can participate until %(end_date)s."
+msgstr "Sie können teilnehmen bis %(end_date)s."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_created.en.email:4
+#, python-format
+msgid "New project %(project_name)s on %(site_name)s"
+msgstr "Neues Projekt %(project_name)s auf %(site_name)s"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_created.en.email:6
+#, python-format
+msgid "The new project %(project_name)s was created for %(organisation_name)s"
+msgstr "Neues Projekt %(project_name)s bei %(organisation_name)s"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_created.en.email:10
+#, python-format
+msgid ""
+"%(creator_name)s has created the project %(project_name)s for "
+"%(organisation_name)s."
+msgstr ""
+"%(creator_name)s hat ein neues Projekt %(project_name)s bei "
+"%(organisation_name)s erstellt."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_created.en.email:15
+msgid "Show project"
+msgstr "Projekt anzeigen"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_created.en.email:17
+#, python-format
+msgid ""
+"This email was sent to %(receiver_mail)s. This email was sent to you because "
+"you are an intiator of %(organisation_name)s."
+msgstr ""
+"Diese E-Mail wurde an %(receiver_mail)s gesendet. Die E-Mail wurde an Sie "
+"gesendet, da Sie Initiator*in der Organisation %(organisation_name)s sind."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_deleted.en.email:4
+msgid "Deletion of project"
+msgstr "Löschung eines Projekts"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_deleted.en.email:6
+#, python-format
+msgid "The project %(name)s was deleted."
+msgstr "Löschung des Projekts %(name)s"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_deleted.en.email:10
+#, python-format
+msgid ""
+"The project \"%(name)s\" on the participation platform %(site_name)s was "
+"deleted."
+msgstr ""
+"Das Projekt \"%(name)s\" auf der Beteiligungsplattform %(site_name)s wurde "
+"gelöscht."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_initiators_project_deleted.en.email:14
+#, python-format
+msgid ""
+"This email was sent to %(receiver)s. This email was sent to you because you "
+"are an initiator of the organisation '%(organisation_name)s', in which a "
+"project was deleted."
+msgstr ""
+"Diese E-Mail wurde an %(receiver)s gesendet. Die E-Mail wurde an Sie "
+"gesendet, da Sie Initiator*in der Organisation '%(organisation_name)s' sind, "
+"in der ein Projekt gelöscht wurde."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:7
+#, python-format
+msgid "A comment was added to the project %(project_name)s"
+msgstr "Neuer Kommentar im Projekt %(project_name)s"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:9
+#, python-format
+msgid "An idea was added to the project %(project_name)s"
+msgstr "Neue Idee im Projekt %(project_name)s"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:11
+#, python-format
+msgid "A proposal was added to the project %(project_name)s"
+msgstr "Neuer Vorschlag im Projekt %(project_name)s"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:13
+#, python-format
+msgid "A contribution was added to the project %(project_name)s"
+msgstr "Neuer Beitrag im Projekt %(project_name)s"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:21
+#, python-format
+msgid "%(actor_name)s created a comment on the project %(project_name)s"
+msgstr ""
+"%(actor_name)s hat im Projekt %(project_name)s einen neuen Kommentar erstellt"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:23
+#, python-format
+msgid "%(actor_name)s created an idea on the project %(project_name)s"
+msgstr "%(actor_name)s hat im Projekt %(project_name)s eine neue Idee angelegt"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:25
+#, python-format
+msgid "%(actor_name)s created a proposal on the project %(project_name)s"
+msgstr ""
+"%(actor_name)s hat im Projekt %(project_name)s einen neuen Vorschlag angelegt"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:27
+#, python-format
+msgid "%(actor_name)s created a contribution on the project %(project_name)s"
+msgstr ""
+"%(actor_name)s hat im Projekt %(project_name)s eine neuen Beitrag erstellt"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:36
+#, python-format
+msgid "on the project %(project_name)s a comment was added by %(actor_name)s."
+msgstr ""
+"im Projekt %(project_name)s wurde von %(actor_name)s ein Kommentar "
+"hinzugefügt."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:36
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:38
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:40
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:42
+#, python-format
+msgid ""
+"Checkout what happend on the project %(project_name)s on %(site_name)s by "
+"clicking the link below."
+msgstr ""
+"Schauen Sie nach, was in dem Projekt %(project_name)s auf %(site_name)s "
+"aktuell passiert, indem Sie auf den Link unten klicken."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:36
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:38
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:40
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:42
+#, python-format
+msgid ""
+"Checkout what happend on the project %(project_name)s on %(site_name)s by "
+"clicking the button below."
+msgstr ""
+"Schauen Sie nach, was in dem Projekt %(project_name)s auf %(site_name)s "
+"aktuell passiert, indem Sie auf den Button unten klicken."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:38
+#, python-format
+msgid "on the project %(project_name)s an idea was added by %(actor_name)s."
+msgstr ""
+"im Projekt %(project_name)s wurde von %(actor_name)s eine Idee hinzugefügt."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:40
+#, python-format
+msgid "on the project %(project_name)s a proposal was added by %(actor_name)s."
+msgstr ""
+"im Projekt %(project_name)s wurde von %(actor_name)s ein Vorschlag "
+"hinzugefügt."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:42
+#, python-format
+msgid ""
+"on the project %(project_name)s a contribution was added by %(actor_name)s."
+msgstr ""
+"im Projekt %(project_name)s wurde von %(actor_name)s ein Beitrag hinzugefügt."
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:55
+msgid "Check the comment"
+msgstr "Kommentar anzeigen"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:57
+msgid "Check the idea"
+msgstr "Idee anzeigen"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:59
+msgid "Check the proposal"
+msgstr "Vorschlag anzeigen"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:61
+msgid "Check the contribution"
+msgstr "Beitrag anzeigen"
+
+#: apps/notifications/templates/a4_candy_notifications/emails/notify_moderator.en.email:67
+#, python-format
+msgid ""
+"This email was sent to %(receiver_mail)s. This email was sent to you because "
+"you are a moderator in the project."
+msgstr ""
+"Diese E-Mail wurde an %(receiver_mail)s gesendet. Die E-Mail wurde an Sie "
+"gesendet, da Sie Moderator*in des Projekts sind."
 
 #: apps/offlineevents/dashboard.py:13
 #: apps/offlineevents/templates/a4_candy_offlineevents/offlineevent_list.html:9
@@ -3405,7 +3870,6 @@ msgstr ""
 #: apps/users/forms.py:36 apps/users/forms.py:190
 #: adhocracy-plus/templates/email_base.html:79
 #: adhocracy-plus/templates/email_base.html:109
-#: adhocracy-plus/templates/email_base.txt:18
 #: adhocracy-plus/templates/footer.html:43
 #: adhocracy-plus/templates/footer_upper.html:25
 msgid "Terms of use"
@@ -3667,6 +4131,137 @@ msgstr "beginnt in der Zukunft"
 msgid "completed"
 msgstr "abgeschlossen"
 
+#: apps/projects/templates/a4_candy_projects/emails/invite_moderator.en.email:4
+#, python-format
+msgid "Invitation to moderate the project: \"%(project_name)s\""
+msgstr "Einladung zum Moderieren des Projekts: \"%(project_name)s\""
+
+#: apps/projects/templates/a4_candy_projects/emails/invite_moderator.en.email:6
+#, python-format
+msgid "Invitation to moderate project: \"%(project_name)s\""
+msgstr "Einladung zum Moderieren des Projekts: \"%(project_name)s\""
+
+#: apps/projects/templates/a4_candy_projects/emails/invite_moderator.en.email:10
+#, python-format
+msgid ""
+"you are invited to moderate the project \"%(project_name)s\" on the "
+"participation platform %(site_name)s. To be able to moderate and change the "
+"project click on \"Accept invitation\"."
+msgstr ""
+"Sie wurden als Moderator*in im Projekt \"%(project_name)s\" auf der "
+"Beteiligungsplattform %(site_name)s eingeladen. Um das Projekt modifizieren "
+"zu können, klicken Sie auf \"Einladung annehmen\"."
+
+#: apps/projects/templates/a4_candy_projects/emails/invite_moderator.en.email:15
+#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:15
+msgid "Accept invitation"
+msgstr "Einladung annehmen"
+
+#: apps/projects/templates/a4_candy_projects/emails/invite_moderator.en.email:17
+#, python-format
+msgid ""
+"This email was sent to %(receiver_mail)s. This email was sent to you because "
+"you are invited to moderate a project."
+msgstr ""
+"Diese E-Mail wurde an %(receiver_mail)s gesendet. Die E-Mail wurde an Sie "
+"gesendet, da Sie als Moderator*in in einem Projekt eingeladen wurden."
+
+#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:4
+#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:6
+#, python-format
+msgid "Invitation to the semi-public project: \"%(project_name)s\""
+msgstr "Einladung zum halb-öffentlichen Projekt: \"%(project_name)s\""
+
+#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:4
+#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:6
+#, python-format
+msgid "Invitation to the private project: \"%(project_name)s\""
+msgstr "Einladung zum privaten Projekt: \"%(project_name)s\""
+
+#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:10
+#, python-format
+msgid ""
+"you are invited to participate in the semi-public project \"%(project_name)s"
+"\" on the participation platform  %(site_name)s. To participate click on "
+"\"Accept invitation\"."
+msgstr ""
+"Sie wurden zum halb-öffentlichen Projekt \"%(project_name)s\" auf der "
+"Beteiligungsplattform %(site_name)s eingeladen. Um an dem Projekt "
+"teilzunehmen, klicken Sie auf \"Einladung annehmen\"."
+
+#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:10
+#, python-format
+msgid ""
+"you are invited to participate in the private project \"%(project_name)s\" "
+"on the participation platform  %(site_name)s. To participate click on "
+"\"Accept invitation\"."
+msgstr ""
+"Sie wurden zum privaten Projekt \"%(project_name)s\" auf der "
+"Beteiligungsplattform %(site_name)s eingeladen. Um an dem Projekt "
+"teilzunehmen, klicken Sie auf \"Einladung annehmen\"."
+
+#: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:17
+#, python-format
+msgid ""
+"This email was sent to %(receiver_mail)s. This email was sent to you because "
+"you are invited to participate in a private project."
+msgstr ""
+"Diese E-Mail wurde an %(receiver_mail)s gesendet. Die E-Mail wurde an Sie "
+"gesendet, da Sie zu einem privaten Projekt eingeladen wurden."
+
+#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:4
+#, python-format
+msgid "Welcome to the semi-public project: \"%(project_name)s\""
+msgstr "Willkommen zum halb-öffentlichen Projekt: \"%(project_name)s\""
+
+#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:4
+#, python-format
+msgid "Welcome to the private project: \"%(project_name)s\""
+msgstr "Willkommen zum privaten Projekt: \"%(project_name)s\""
+
+#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:6
+#, python-format
+msgid "Link to semi-public project: \"%(project_name)s\""
+msgstr "Link zum halb-öffentlichen Projekt: \"%(project_name)s\""
+
+#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:6
+#, python-format
+msgid "Link to private project: \"%(project_name)s\""
+msgstr "Link zum privaten Projekt: \"%(project_name)s\""
+
+#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:10
+#, python-format
+msgid ""
+"you have accepted the invitation to the semi-public project "
+"\"%(project_name)s\". To participate click on \"Go to Project\"."
+msgstr ""
+"Sie haben die Einladung zu dem halb-öffentlichen Projekt \"%(project_name)s"
+"\" angenommen. Um an dem Projekt teilzunehmen, klicken Sie auf \"Zum Projekt"
+"\" "
+
+#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:10
+#, python-format
+msgid ""
+"you have accepted the invitation to the private project \"%(project_name)s"
+"\". To participate click on \"Go to Project\"."
+msgstr ""
+"Sie haben die Einladung zu dem privaten Projekt \"%(project_name)s\" "
+"angenommen. Um an dem Projekt teilzunehmen, klicken Sie auf \"Zum Projekt\" "
+
+#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:15
+msgid "Go to project"
+msgstr "Zum Projekt"
+
+#: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:17
+#, python-format
+msgid ""
+"This email was sent to %(receiver_mail)s. This email was sent to you because "
+"you accepted the invitation to participate in a private project."
+msgstr ""
+"Diese E-Mail wurde an %(receiver_mail)s gesendet. Diese E-Mail wurde an Sie "
+"gesendet, weil Sie die Einladung zur Teilnahme an einem privaten Projekt "
+"angenommen haben."
+
 #: apps/projects/templates/a4_candy_projects/includes/project_list_tile.html:18
 #: apps/projects/templates/a4_candy_projects/project_detail.html:62
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:13
@@ -3786,6 +4381,7 @@ msgstr "Weiter zur Anmeldung"
 #: apps/projects/templates/a4_candy_projects/moderatorinvite_detail.html:15
 #: apps/projects/templates/a4_candy_projects/participantinvite_detail.html:15
 #: apps/users/templates/a4_candy_users/indicator.html:60
+#: adhocracy-plus/templates/account/email/unknown_account.en.email:24
 #: adhocracy-plus/templates/account/signup.html:4
 #: adhocracy-plus/templates/account/signup.html:7
 #: adhocracy-plus/templates/account/signup.html:69
@@ -4413,7 +5009,6 @@ msgstr "Menü"
 
 #: apps/users/templates/a4_candy_users/indicator.html:29
 #: adhocracy-plus/templates/email_base.html:40
-#: adhocracy-plus/templates/email_base.txt:5
 msgid "Hello"
 msgstr "Guten Tag"
 
@@ -4469,140 +5064,140 @@ msgstr "Liste der letzten Aktivitäten ihres Nutzerkontos"
 msgid "Activities"
 msgstr "Aktivitäten"
 
-#: adhocracy-plus/config/settings/base.py:216
+#: adhocracy-plus/config/settings/base.py:217
 msgid "English"
 msgstr "Englisch"
 
-#: adhocracy-plus/config/settings/base.py:217
+#: adhocracy-plus/config/settings/base.py:218
 msgid "German"
 msgstr "Deutsch"
 
-#: adhocracy-plus/config/settings/base.py:218
+#: adhocracy-plus/config/settings/base.py:219
 msgid "Dutch"
 msgstr "Niederländisch"
 
-#: adhocracy-plus/config/settings/base.py:219
+#: adhocracy-plus/config/settings/base.py:220
 msgid "Kyrgyz"
 msgstr "Kirgisisch"
 
-#: adhocracy-plus/config/settings/base.py:220
+#: adhocracy-plus/config/settings/base.py:221
 msgid "Russian"
 msgstr "Russisch"
 
-#: adhocracy-plus/config/settings/base.py:363
-#: adhocracy-plus/config/settings/base.py:379
+#: adhocracy-plus/config/settings/base.py:364
+#: adhocracy-plus/config/settings/base.py:380
 msgid "Rich text editor"
 msgstr "Rich text Editor"
 
-#: adhocracy-plus/config/settings/base.py:485
+#: adhocracy-plus/config/settings/base.py:486
 msgid "suggestion"
 msgstr "Vorschlag"
 
-#: adhocracy-plus/config/settings/base.py:486
+#: adhocracy-plus/config/settings/base.py:487
 msgid "note"
 msgstr "Anmerkung"
 
-#: adhocracy-plus/config/settings/base.py:487
+#: adhocracy-plus/config/settings/base.py:488
 msgid "question"
 msgstr "Frage"
 
-#: adhocracy-plus/config/settings/base.py:528
+#: adhocracy-plus/config/settings/base.py:529
 msgid "Pin without icon"
 msgstr "Pin ohne Icon"
 
-#: adhocracy-plus/config/settings/base.py:529
+#: adhocracy-plus/config/settings/base.py:530
 msgid "Diamond"
 msgstr "Diamant"
 
-#: adhocracy-plus/config/settings/base.py:530
+#: adhocracy-plus/config/settings/base.py:531
 msgid "Triangle up"
 msgstr "Dreieck Spitze oben"
 
-#: adhocracy-plus/config/settings/base.py:531
+#: adhocracy-plus/config/settings/base.py:532
 msgid "Triangle down"
 msgstr "Dreieck Spitze unten"
 
-#: adhocracy-plus/config/settings/base.py:532
+#: adhocracy-plus/config/settings/base.py:533
 msgid "Ellipse"
 msgstr "Ellipse"
 
-#: adhocracy-plus/config/settings/base.py:533
+#: adhocracy-plus/config/settings/base.py:534
 msgid "Semi circle"
 msgstr "Halbkreis"
 
-#: adhocracy-plus/config/settings/base.py:534
+#: adhocracy-plus/config/settings/base.py:535
 msgid "Hexagon"
 msgstr "Sechseck"
 
-#: adhocracy-plus/config/settings/base.py:535
+#: adhocracy-plus/config/settings/base.py:536
 msgid "Rhomboid"
 msgstr "Parallelogramm"
 
-#: adhocracy-plus/config/settings/base.py:536
+#: adhocracy-plus/config/settings/base.py:537
 msgid "Star"
 msgstr "Stern"
 
-#: adhocracy-plus/config/settings/base.py:537
+#: adhocracy-plus/config/settings/base.py:538
 msgid "Square"
 msgstr "Quadrat"
 
-#: adhocracy-plus/config/settings/base.py:538
+#: adhocracy-plus/config/settings/base.py:539
 msgid "Octothorpe"
 msgstr "Raute"
 
-#: adhocracy-plus/config/settings/base.py:539
+#: adhocracy-plus/config/settings/base.py:540
 msgid "Rectangle"
 msgstr "Viereck"
 
-#: adhocracy-plus/config/settings/base.py:540
+#: adhocracy-plus/config/settings/base.py:541
 msgid "Circle"
 msgstr "Kreis"
 
-#: adhocracy-plus/config/settings/base.py:541
+#: adhocracy-plus/config/settings/base.py:542
 msgid "Right triangle"
 msgstr "Dreieck Spitze rechts"
 
-#: adhocracy-plus/config/settings/base.py:542
+#: adhocracy-plus/config/settings/base.py:543
 msgid "Zigzag"
 msgstr "ZickZack"
 
-#: adhocracy-plus/config/settings/base.py:546
+#: adhocracy-plus/config/settings/base.py:547
 msgid "brainstorming"
 msgstr "Brainstorming"
 
-#: adhocracy-plus/config/settings/base.py:547
+#: adhocracy-plus/config/settings/base.py:548
 msgid "spatial brainstorming"
 msgstr "Brainstorming mit Karte"
 
-#: adhocracy-plus/config/settings/base.py:548
+#: adhocracy-plus/config/settings/base.py:549
 msgid "idea challenge"
 msgstr "Ideenwettbewerb"
 
-#: adhocracy-plus/config/settings/base.py:549
+#: adhocracy-plus/config/settings/base.py:550
 msgid "spatial idea challenge"
 msgstr "Ideenwettbewerb mit Karte"
 
-#: adhocracy-plus/config/settings/base.py:550
+#: adhocracy-plus/config/settings/base.py:551
 msgid "text review"
 msgstr "Text diskutieren"
 
-#: adhocracy-plus/config/settings/base.py:551
+#: adhocracy-plus/config/settings/base.py:552
 msgid "poll"
 msgstr "Umfrage"
 
-#: adhocracy-plus/config/settings/base.py:553
+#: adhocracy-plus/config/settings/base.py:554
 msgid "interactive event"
 msgstr "Interaktive Veranstaltung"
 
-#: adhocracy-plus/config/settings/base.py:554
+#: adhocracy-plus/config/settings/base.py:555
 msgid "prioritization"
 msgstr "Priorisierung"
 
-#: adhocracy-plus/config/settings/base.py:555
+#: adhocracy-plus/config/settings/base.py:556
 msgid "debate"
 msgstr "Debatte"
 
-#: adhocracy-plus/config/settings/base.py:556
+#: adhocracy-plus/config/settings/base.py:557
 msgid "debateai"
 msgstr ""
 
@@ -4830,6 +5425,41 @@ msgstr "Nächste"
 msgid "More questions from this online participation"
 msgstr "Mehr Fragen aus dieser Online-Beteiligung"
 
+#: adhocracy-plus/templates/a4reports/emails/report_moderators.en.email:4
+#, python-format
+msgid "Moderation request in the project %(project_name)s on %(site_name)s"
+msgstr "Moderationsanfrage im Projekt %(project_name)s auf %(site_name)s"
+
+#: adhocracy-plus/templates/a4reports/emails/report_moderators.en.email:6
+#, python-format
+msgid "Moderation request in the project %(project_name)s"
+msgstr "Moderationsanfrage im Projekt %(project_name)s"
+
+#: adhocracy-plus/templates/a4reports/emails/report_moderators.en.email:10
+#, python-format
+msgid ""
+"User %(user_name)s reported a post in your project \"%(project_name)s\". It "
+"is possible, the message could also be spam. As a moderator, you can review "
+"the post and delete it if necessary. The following reasons were given:"
+msgstr ""
+"Benutzer*in %(user_name)s hat einen Beitrag in Ihrem Projekt "
+"\"%(project_name)s\" gemeldet. Gegebenenfalls könnte die Nachricht auch Spam "
+"sein. Als Moderator*in können Sie den Beitrag prüfen und ggf. löschen. Es "
+"wurde folgende Begründung angegeben:"
+
+#: adhocracy-plus/templates/a4reports/emails/report_moderators.en.email:18
+msgid "Review post"
+msgstr "Beitrag prüfen"
+
+#: adhocracy-plus/templates/a4reports/emails/report_moderators.en.email:20
+#, python-format
+msgid ""
+"This email has been sent to %(receiver_mail)s. The email was sent to you as "
+"you are the moderator of the project."
+msgstr ""
+"Diese E-Mail wurde an %(receiver_mail)s gesendet. Die E-Mail wurde an Sie "
+"gesendet, da Sie Moderator*in des Projekts sind."
+
 #: adhocracy-plus/templates/account/email.html:6
 #: adhocracy-plus/templates/account/email.html:9
 msgid "Email Addresses"
@@ -4871,6 +5501,188 @@ msgstr "E-Mail Adresse hinzufügen"
 #: adhocracy-plus/templates/account/email.html:67
 msgid "Add Email"
 msgstr "E-Mail Adresse hinzufügen"
+
+#: adhocracy-plus/templates/account/email/account_already_exists.en.email:4
+msgid "Account Already Exists"
+msgstr "Nutzerkonto existiert bereits"
+
+#: adhocracy-plus/templates/account/email/account_already_exists.en.email:8
+msgid ""
+"You are receiving this e-mail because you or someone else tried to signup "
+"for an\n"
+"    account using the e-mail address:"
+msgstr ""
+"Sie erhalten diese E-Mail, weil Sie oder jemand anderes versucht hat, sich "
+"für ein\n"
+"Konto mit dieser E-Mail-Adresse anzumelden:"
+
+#: adhocracy-plus/templates/account/email/account_already_exists.en.email:15
+msgid ""
+"However, an account using that e-mail address already exists.  In case you "
+"have\n"
+"    forgotten about this, please use the password forgotten procedure to "
+"recover\n"
+"    your account:"
+msgstr ""
+"Es existiert jedoch bereits ein Nutzerkonto mit dieser E-Mail-Adresse. Für "
+"den Fall, dass Sie dies\n"
+"vergessen haben, verwenden Sie bitte den Ablauf Passwort vergessen, um Ihr "
+"Nutzerkonto wiederherzustellen\n"
+"Ihr Nutzerkonto: "
+
+#: adhocracy-plus/templates/account/email/account_already_exists.en.email:21
+#: adhocracy-plus/templates/account/email/password_reset_key.en.email:15
+#: adhocracy-plus/templates/account/email/unknown_account.en.email:6
+msgid "Reset password"
+msgstr "Passwort zurücksetzen"
+
+#: adhocracy-plus/templates/account/email/email_confirmation.en.email:4
+#, python-format
+msgid "Please confirm your email address on %(current_site)s"
+msgstr "Bitte bestätigen Sie Ihre E-Mail Adresse auf %(current_site)s"
+
+#: adhocracy-plus/templates/account/email/email_confirmation.en.email:6
+#, python-format
+msgid "Your email address on %(current_site)s"
+msgstr "Ihre E-Mail Adresse auf %(current_site)s"
+
+#: adhocracy-plus/templates/account/email/email_confirmation.en.email:10
+#, python-format
+msgid ""
+"this email address has been added to the user account \"%(username)s\" on "
+"\"%(current_site)s\". Please confirm this address. If you did not add this "
+"email address, you can ignore this email. We will not send you any further "
+"emails."
+msgstr ""
+"diese E-Mail Adresse soll dem Benutzerkonto \"%(username)s\" auf der "
+"Beteiligungsplattform \"%(current_site)s\" hinzugefügt werden. Bitte "
+"bestätigen Sie dazu Ihre E-Mail Adresse. Wenn Sie diese E-Mail Adresse nicht "
+"angelegt haben, können Sie diese Nachricht ignorieren. Wir werden Ihnen "
+"keine weiteren E-Mails senden."
+
+#: adhocracy-plus/templates/account/email/email_confirmation.en.email:15
+msgid "Confirm your email address"
+msgstr "Bestätigen Sie Ihre E-Mail Adresse"
+
+#: adhocracy-plus/templates/account/email/email_confirmation.en.email:17
+#, python-format
+msgid ""
+"This email was sent to %(receiver)s. If you have any further questions, "
+"please contact us via %(contact_email)s"
+msgstr ""
+"Diese E-Mail wurde an %(receiver)s gesendet. Bei Fragen können Sie sich "
+"gerne unter %(contact_email)s an uns wenden"
+
+#: adhocracy-plus/templates/account/email/email_confirmation_signup.en.email:4
+#, python-format
+msgid "Please confirm your registration on %(current_site)s"
+msgstr "Bitte bestätigen Sie Ihre Registrierung auf %(current_site)s"
+
+#: adhocracy-plus/templates/account/email/email_confirmation_signup.en.email:6
+#, python-format
+msgid "Your registration on %(current_site)s"
+msgstr "Ihre Registrierung auf %(current_site)s"
+
+#: adhocracy-plus/templates/account/email/email_confirmation_signup.en.email:10
+#, python-format
+msgid ""
+"You have registered with the username \"%(username)s\" on the participation "
+"platform \"%(current_site)s\". Click \"Confirm email address\" to complete "
+"your registration. As soon as you are registered, you can participate on "
+"\"%(current_site)s\". If you haven't registered, you can ignore this message."
+msgstr ""
+"Sie haben sich mit dem Benutzernamen \"%(username)s\" auf der "
+"Beteiligungsplattform \"%(current_site)s\" registriert. Klicken Sie auf \"E-"
+"Mail-Adresse bestätigen\", um Ihre Registrierung abzuschließen. Sobald Sie "
+"registriert sind, können Sie sich auf \"%(current_site)s\" beteiligen. "
+"Sollten Sie sich nicht registriert haben, können Sie die Nachricht "
+"ignorieren."
+
+#: adhocracy-plus/templates/account/email/email_confirmation_signup.en.email:15
+msgid "Confirm email address"
+msgstr "E-Mail-Adresse bestätigen"
+
+#: adhocracy-plus/templates/account/email/email_confirmation_signup.en.email:17
+#, python-format
+msgid ""
+"This email was sent to %(useremail)s. If you have any further questions, "
+"please contact us via %(contact_email)s"
+msgstr ""
+"Diese E-Mail wurde an %(useremail)s gesendet. Bei Fragen können Sie sich "
+"gerne unter %(contact_email)s an uns wenden"
+
+#: adhocracy-plus/templates/account/email/password_reset_key.en.email:4
+#: adhocracy-plus/templates/account/email/unknown_account.en.email:4
+#, python-format
+msgid "Reset password request for %(current_site)s"
+msgstr "Passwort zurücksetzen auf %(current_site)s"
+
+#: adhocracy-plus/templates/account/email/password_reset_key.en.email:6
+#, python-format
+msgid "Password reset for your account %(username)s"
+msgstr "Passwort zurücksetzen für Ihr Benutzerkonto %(username)s"
+
+#: adhocracy-plus/templates/account/email/password_reset_key.en.email:10
+#, python-format
+msgid ""
+"you have requested a password reset. Please click on \"Reset password\" to "
+"set a new password. If you have not requested a password reset, you can "
+"ighnore this email and your %(current_site)s password stays unchanged."
+msgstr ""
+"Sie erhalten diese E-Mail, weil Sie Ihr Passwort zurücksetzen möchten. "
+"Klicken Sie dazu auf \"Passwort zurücksetzen\". Sollten Sie die "
+"Zurücksetzung Ihres Passworts nicht angefordert haben, können Sie diese E-"
+"Mail ignorieren. Ihr Passwort wird nicht verändert und Ihr Konto auf "
+"%(current_site)s ist nach wie vor geschützt."
+
+#: adhocracy-plus/templates/account/email/password_reset_key.en.email:17
+#, python-format
+msgid ""
+"This email was sent to %(useremail)s. You receive this email because your "
+"password on %(current_site)s has been reset."
+msgstr ""
+"Diese E-Mail wurde an %(useremail)s gesendet, weil über die "
+"Beteiligungsplattform %(current_site)s angefordert wurde, das Passwort "
+"zurückzusetzen."
+
+#: adhocracy-plus/templates/account/email/unknown_account.en.email:10
+#, python-format
+msgid ""
+"You are receiving this e-mail because you or someone else has requested a "
+"password for your user account. However, we do not have any record of a user "
+"with email %(email)s in our database."
+msgstr ""
+"Sie erhalten diese E-Mail, weil Sie oder jemand anderes ein Passwort für Ihr "
+"Benutzerkonto angefordert hat. Wir haben jedoch keine Aufzeichnungen über "
+"einen Benutzer mit der E-Mail %(email)s in unserer Datenbank."
+
+#: adhocracy-plus/templates/account/email/unknown_account.en.email:13
+msgid ""
+"This mail can be safely ignored if you did not request a password reset."
+msgstr ""
+"Sollten Sie kein neues Passwort angefordert haben, können Sie diese E-Mail "
+"ignorieren."
+
+#: adhocracy-plus/templates/account/email/unknown_account.en.email:16
+msgid "If it was you, you can sign up for an account using the link below."
+msgstr ""
+"Falls Sie ein neues Passwort angefordert haben, registrieren Sie sich bitte "
+"zunächst über den unten stehenden Link."
+
+#: adhocracy-plus/templates/account/email/unknown_account.en.email:19
+#, python-format
+msgid "If you need assistance, please contact %(contact_email)s."
+msgstr "Wenn Sie Hilfe benötigen, wenden Sie sich bitte an %(contact_email)s."
+
+#: adhocracy-plus/templates/account/email/unknown_account.en.email:26
+#, python-format
+msgid ""
+"This email was sent to %(email)s. You have received the e-mail because the "
+"reset of your password has been requested on %(current_site)s."
+msgstr ""
+"Diese E-Mail wurde an %(email)s gesendet. Sie haben die E-Mail erhalten, "
+"weil die Zurücksetzung Ihres Passwortes auf %(current_site)s angefordert "
+"wurde."
 
 #: adhocracy-plus/templates/account/email_confirm.html:4
 #: adhocracy-plus/templates/account/email_confirm.html:7
@@ -5068,7 +5880,6 @@ msgid "Responsible for the participation project:"
 msgstr "Verantwortlich für das Beteiligungsprojekt:"
 
 #: adhocracy-plus/templates/email_base.html:93
-#: adhocracy-plus/templates/email_base.txt:13
 #, python-format
 msgid "%(platformname)s is a participation platform operated by"
 msgstr "%(platformname)s ist eine Plattform für Beteiligung, betrieben durch "
@@ -5194,596 +6005,6 @@ msgstr "Einloggen mit "
 #~ "<a href=\"%(actor_profile)s\">%(name)s</a> hat eine <a href="
 #~ "\"%(comment_url)s\">Antwort</a> auf Ihren <a href=\"%(parent_comment_url)s"
 #~ "\">Kommentar</a> hinterlassen"
-
-#~ msgid "We received your message on %(site_name)s"
-#~ msgstr "Wir haben Ihre Nachricht auf %(site_name)s erhalten"
-
-#~ msgid "We received your message"
-#~ msgstr "Wir haben Ihre Nachricht erhalten"
-
-#~ msgid "This is the data we received from you:"
-#~ msgstr "Dies sind die Daten, die wir von Ihnen erhalten haben:"
-
-#~ msgid "Your email address: %(sender_mail)s"
-#~ msgstr "Ihre E-Mail Adresse: %(sender_mail)s"
-
-#~ msgid "Your message: %(message)s"
-#~ msgstr "Ihre Nachricht: %(message)s"
-
-#~ msgid "Your telephone number: %(sender_phone)s"
-#~ msgstr "Ihre Telefonnummer: %(sender_phone)s"
-
-#~ msgid "Your Name: %(sender_name)s"
-#~ msgstr "Ihr Name: %(sender_name)s"
-
-#~ msgid ""
-#~ "This message was sent to %(receiver)s. It was sent because you wrote us a "
-#~ "message via our contact form and asked us to send you a copy."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(receiver)s gesendet. Sie wurde an Sie gesendet, "
-#~ "da Sie uns über unser Kontaktformular kontaktiert haben und uns gebeten "
-#~ "haben, Ihnen eine Kopie der Nachricht zu senden."
-
-#~ msgid ""
-#~ "This email was sent to %(receiver_mail)s. This email was sent to you "
-#~ "because you are registered on %(site_name)s. If you don't want to receive "
-#~ "newsletters anymore, you may disable them in your user account settings."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(receiver_mail)s gesendet. Die E-Mail wurde an Sie "
-#~ "gesendet, da Sie auf %(site_name)s registriert sind. Wenn Sie keine "
-#~ "Newsletter mehr erhalten wollen, können Sie diese in Ihrem Benutzerkonto "
-#~ "deaktivieren."
-
-#~ msgid "Reaction to your contribution in project %(project_name)s"
-#~ msgstr "Reaktion auf Ihren Beitrag im Projekt %(project_name)s"
-
-#~ msgid "Reaction to your contribution"
-#~ msgstr "Reaktion auf Ihren Beitrag"
-
-#~ msgid "Hello %(receiver_name)s,"
-#~ msgstr "Hallo %(receiver_name)s,"
-
-#~ msgid "%(actor_name)s commented on your post:"
-#~ msgstr "%(actor_name)s hat Ihren Beitrag kommentiert:"
-
-#~ msgid "Would you like to answer?"
-#~ msgstr "Möchten Sie antworten?"
-
-#~ msgid "View Post"
-#~ msgstr "Beitrag anzeigen"
-
-#~ msgid "Visit the project"
-#~ msgstr "Projekt anzeigen"
-
-#~ msgid ""
-#~ "This email was sent to %(receiver_mail)s. You have received the e-mail "
-#~ "because you added a contribution to the above project."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(receiver_mail)s gesendet. Sie haben die E-Mail "
-#~ "erhalten, weil Sie einen Beitrag in einem Projekt erstellt haben."
-
-#~ msgid "Your contribution was deleted"
-#~ msgstr "Ihr Beitrag wurde gelöscht"
-
-#~ msgid "Hello <strong>%(receiver_name)s</strong>,"
-#~ msgstr "Hallo <strong>%(receiver_name)s</strong>,"
-
-#~ msgid ""
-#~ "Your contribution in the project <strong>\"%(project_name)s\"</strong> "
-#~ "was deleted by the moderator."
-#~ msgstr ""
-#~ "Ihr Beitrag in dem Projekt <strong>\"%(project_name)s\"</strong> wurde "
-#~ "von der Moderation gelöscht."
-
-#~ msgid ""
-#~ "Please pay attention to the basic rules when writing contributions. In "
-#~ "this way we create a pleasant atmosphere for an open exchange and achieve "
-#~ "good results."
-#~ msgstr ""
-#~ "Bitte beachten Sie beim Verfassen von Beiträgen die Grundregeln. Auf "
-#~ "diese Weise schaffen wir eine angenehme Atmosphäre für einen offenen "
-#~ "Austausch und erzielen gute Ergebnisse."
-
-#~ msgid "Thank you very much!"
-#~ msgstr "Vielen Dank!"
-
-#~ msgid "Your contribution:"
-#~ msgstr "Ihr Beitrag:"
-
-#~ msgid "Show discussion"
-#~ msgstr "Diskussion anzeigen"
-
-#~ msgid ""
-#~ "This email was sent to %(receiver_mail)s. This email was sent to you "
-#~ "because of your participation in the project."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(receiver_mail)s gesendet. Diese E-Mail wurde "
-#~ "Ihnen aufgrund Ihrer Teilnahme an dem Projekt zugesandt."
-
-#~ msgid "Feedback of the moderation"
-#~ msgstr "Feedback der Moderation"
-
-#~ msgid ""
-#~ "the moderator %(moderator_name)s of the project %(project_name)s gave "
-#~ "feedback on your contribution:"
-#~ msgstr ""
-#~ "die Moderation %(moderator_name)s des Projekts %(project_name)s hat Ihnen "
-#~ "Feedback zu Ihrem Beitrag gegeben:"
-
-#~ msgid "Here you can find your contribution:"
-#~ msgstr "Hier können Sie Ihren Beitrag finden:"
-
-#~ msgid "Show contribution"
-#~ msgstr "Beitrag anzeigen"
-
-#~ msgid "Feedback for your contribution on %(site_name)s"
-#~ msgstr "Rückmeldung zu Ihrem Beitrag auf %(site_name)s"
-
-#~ msgid "Feedback for your contribution"
-#~ msgstr "Rückmeldung zu Ihrem Beitrag"
-
-#~ msgid "%(organisation_name)s reacted on your contribution."
-#~ msgstr "%(organisation_name)s hat auf Ihren Beitrag reagiert."
-
-#~ msgid "Your contribution is %(status)s."
-#~ msgstr "Ihr Beitrag %(status)s."
-
-#~ msgid "Official feedback: %(feedback)s"
-#~ msgstr "Offizielle Rückmeldung: %(feedback)s"
-
-#~ msgid "Do you want to answer?"
-#~ msgstr "Möchten Sie antworten?"
-
-#~ msgid "Check your contribution"
-#~ msgstr "Beitrag anzeigen"
-
-#~ msgid "Event"
-#~ msgstr "Veranstaltung"
-
-#~ msgid "The following event takes place on %(date)s:"
-#~ msgstr "Die folgende Veranstaltung findet statt am %(date)s:"
-
-#~ msgid "Further information about the event can be found in the project."
-#~ msgstr ""
-#~ "Weitere Informationen über die Veranstaltung finden Sie in dem Projekt."
-
-#~ msgid "Show Event"
-#~ msgstr "Veranstaltung anzeigen"
-
-#~ msgid ""
-#~ "This email was sent to %(receiver_mail)s. You have received the e-mail "
-#~ "because you are following the above project."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(receiver_mail)s gesendet. Sie haben die E-Mail "
-#~ "erhalten, weil Sie oben genanntem Projekt folgen."
-
-#~ msgid "Participation ends soon for %(project_name)s"
-#~ msgstr "Beteiligung endet bald für %(project_name)s"
-
-#~ msgid "Participation ends soon!"
-#~ msgstr "Beteiligung endet bald!"
-
-#~ msgid ""
-#~ "the online participation in the above mentioned project will end soon."
-#~ msgstr ""
-#~ "die Online-Beteiligung an dem oben genannten Projekt endet in Kürze."
-
-#~ msgid "You can still participate until %(end_date)s."
-#~ msgstr "Sie können noch teilnehmen bis %(end_date)s."
-
-#~ msgid "Join now"
-#~ msgstr "Jetzt mitmachen"
-
-#~ msgid "Here we go: %(project_name)s starts now!"
-#~ msgstr "Los geht's: %(project_name)s startet jetzt!"
-
-#~ msgid "Here we go!"
-#~ msgstr "Los geht’s!"
-
-#~ msgid "Online participation for the above project has started."
-#~ msgstr "Die Online-Beteiligung für das oben genannte Projekt hat begonnen."
-
-#~ msgid "You can participate until %(end_date)s."
-#~ msgstr "Sie können teilnehmen bis %(end_date)s."
-
-#~ msgid "New project %(project_name)s on %(site_name)s"
-#~ msgstr "Neues Projekt %(project_name)s auf %(site_name)s"
-
-#~ msgid ""
-#~ "The new project %(project_name)s was created for %(organisation_name)s"
-#~ msgstr "Neues Projekt %(project_name)s bei %(organisation_name)s"
-
-#~ msgid ""
-#~ "%(creator_name)s has created the project %(project_name)s for "
-#~ "%(organisation_name)s."
-#~ msgstr ""
-#~ "%(creator_name)s hat ein neues Projekt %(project_name)s bei "
-#~ "%(organisation_name)s erstellt."
-
-#~ msgid "Show project"
-#~ msgstr "Projekt anzeigen"
-
-#~ msgid ""
-#~ "This email was sent to %(receiver_mail)s. This email was sent to you "
-#~ "because you are an intiator of %(organisation_name)s."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(receiver_mail)s gesendet. Die E-Mail wurde an Sie "
-#~ "gesendet, da Sie Initiator*in der Organisation %(organisation_name)s sind."
-
-#~ msgid "Deletion of project"
-#~ msgstr "Löschung eines Projekts"
-
-#~ msgid "The project %(name)s was deleted."
-#~ msgstr "Löschung des Projekts %(name)s"
-
-#~ msgid ""
-#~ "The project \"%(name)s\" on the participation platform %(site_name)s was "
-#~ "deleted."
-#~ msgstr ""
-#~ "Das Projekt \"%(name)s\" auf der Beteiligungsplattform %(site_name)s "
-#~ "wurde gelöscht."
-
-#~ msgid ""
-#~ "This email was sent to %(receiver)s. This email was sent to you because "
-#~ "you are an initiator of the organisation '%(organisation_name)s', in "
-#~ "which a project was deleted."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(receiver)s gesendet. Die E-Mail wurde an Sie "
-#~ "gesendet, da Sie Initiator*in der Organisation '%(organisation_name)s' "
-#~ "sind, in der ein Projekt gelöscht wurde."
-
-#~ msgid "A comment was added to the project %(project_name)s"
-#~ msgstr "Neuer Kommentar im Projekt %(project_name)s"
-
-#~ msgid "An idea was added to the project %(project_name)s"
-#~ msgstr "Neue Idee im Projekt %(project_name)s"
-
-#~ msgid "A proposal was added to the project %(project_name)s"
-#~ msgstr "Neuer Vorschlag im Projekt %(project_name)s"
-
-#~ msgid "A contribution was added to the project %(project_name)s"
-#~ msgstr "Neuer Beitrag im Projekt %(project_name)s"
-
-#~ msgid "%(actor_name)s created a comment on the project %(project_name)s"
-#~ msgstr ""
-#~ "%(actor_name)s hat im Projekt %(project_name)s einen neuen Kommentar "
-#~ "erstellt"
-
-#~ msgid "%(actor_name)s created an idea on the project %(project_name)s"
-#~ msgstr ""
-#~ "%(actor_name)s hat im Projekt %(project_name)s eine neue Idee angelegt"
-
-#~ msgid "%(actor_name)s created a proposal on the project %(project_name)s"
-#~ msgstr ""
-#~ "%(actor_name)s hat im Projekt %(project_name)s einen neuen Vorschlag "
-#~ "angelegt"
-
-#~ msgid ""
-#~ "%(actor_name)s created a contribution on the project %(project_name)s"
-#~ msgstr ""
-#~ "%(actor_name)s hat im Projekt %(project_name)s eine neuen Beitrag erstellt"
-
-#~ msgid ""
-#~ "on the project %(project_name)s a comment was added by %(actor_name)s."
-#~ msgstr ""
-#~ "im Projekt %(project_name)s wurde von %(actor_name)s ein Kommentar "
-#~ "hinzugefügt."
-
-#~ msgid ""
-#~ "Checkout what happend on the project %(project_name)s on %(site_name)s by "
-#~ "clicking the link below."
-#~ msgstr ""
-#~ "Schauen Sie nach, was in dem Projekt %(project_name)s auf %(site_name)s "
-#~ "aktuell passiert, indem Sie auf den Link unten klicken."
-
-#~ msgid ""
-#~ "Checkout what happend on the project %(project_name)s on %(site_name)s by "
-#~ "clicking the button below."
-#~ msgstr ""
-#~ "Schauen Sie nach, was in dem Projekt %(project_name)s auf %(site_name)s "
-#~ "aktuell passiert, indem Sie auf den Button unten klicken."
-
-#~ msgid "on the project %(project_name)s an idea was added by %(actor_name)s."
-#~ msgstr ""
-#~ "im Projekt %(project_name)s wurde von %(actor_name)s eine Idee "
-#~ "hinzugefügt."
-
-#~ msgid ""
-#~ "on the project %(project_name)s a proposal was added by %(actor_name)s."
-#~ msgstr ""
-#~ "im Projekt %(project_name)s wurde von %(actor_name)s ein Vorschlag "
-#~ "hinzugefügt."
-
-#~ msgid ""
-#~ "on the project %(project_name)s a contribution was added by "
-#~ "%(actor_name)s."
-#~ msgstr ""
-#~ "im Projekt %(project_name)s wurde von %(actor_name)s ein Beitrag "
-#~ "hinzugefügt."
-
-#~ msgid "Check the comment"
-#~ msgstr "Kommentar anzeigen"
-
-#~ msgid "Check the idea"
-#~ msgstr "Idee anzeigen"
-
-#~ msgid "Check the proposal"
-#~ msgstr "Vorschlag anzeigen"
-
-#~ msgid "Check the contribution"
-#~ msgstr "Beitrag anzeigen"
-
-#~ msgid ""
-#~ "This email was sent to %(receiver_mail)s. This email was sent to you "
-#~ "because you are a moderator in the project."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(receiver_mail)s gesendet. Die E-Mail wurde an Sie "
-#~ "gesendet, da Sie Moderator*in des Projekts sind."
-
-#~ msgid "Invitation to moderate the project: \"%(project_name)s\""
-#~ msgstr "Einladung zum Moderieren des Projekts: \"%(project_name)s\""
-
-#~ msgid "Invitation to moderate project: \"%(project_name)s\""
-#~ msgstr "Einladung zum Moderieren des Projekts: \"%(project_name)s\""
-
-#~ msgid ""
-#~ "you are invited to moderate the project \"%(project_name)s\" on the "
-#~ "participation platform %(site_name)s. To be able to moderate and change "
-#~ "the project click on \"Accept invitation\"."
-#~ msgstr ""
-#~ "Sie wurden als Moderator*in im Projekt \"%(project_name)s\" auf der "
-#~ "Beteiligungsplattform %(site_name)s eingeladen. Um das Projekt "
-#~ "modifizieren zu können, klicken Sie auf \"Einladung annehmen\"."
-
-#~ msgid "Accept invitation"
-#~ msgstr "Einladung annehmen"
-
-#~ msgid ""
-#~ "This email was sent to %(receiver_mail)s. This email was sent to you "
-#~ "because you are invited to moderate a project."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(receiver_mail)s gesendet. Die E-Mail wurde an Sie "
-#~ "gesendet, da Sie als Moderator*in in einem Projekt eingeladen wurden."
-
-#~ msgid "Invitation to the semi-public project: \"%(project_name)s\""
-#~ msgstr "Einladung zum halb-öffentlichen Projekt: \"%(project_name)s\""
-
-#~ msgid "Invitation to the private project: \"%(project_name)s\""
-#~ msgstr "Einladung zum privaten Projekt: \"%(project_name)s\""
-
-#~ msgid ""
-#~ "you are invited to participate in the semi-public project "
-#~ "\"%(project_name)s\" on the participation platform  %(site_name)s. To "
-#~ "participate click on \"Accept invitation\"."
-#~ msgstr ""
-#~ "Sie wurden zum halb-öffentlichen Projekt \"%(project_name)s\" auf der "
-#~ "Beteiligungsplattform %(site_name)s eingeladen. Um an dem Projekt "
-#~ "teilzunehmen, klicken Sie auf \"Einladung annehmen\"."
-
-#~ msgid ""
-#~ "you are invited to participate in the private project \"%(project_name)s"
-#~ "\" on the participation platform  %(site_name)s. To participate click on "
-#~ "\"Accept invitation\"."
-#~ msgstr ""
-#~ "Sie wurden zum privaten Projekt \"%(project_name)s\" auf der "
-#~ "Beteiligungsplattform %(site_name)s eingeladen. Um an dem Projekt "
-#~ "teilzunehmen, klicken Sie auf \"Einladung annehmen\"."
-
-#~ msgid ""
-#~ "This email was sent to %(receiver_mail)s. This email was sent to you "
-#~ "because you are invited to participate in a private project."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(receiver_mail)s gesendet. Die E-Mail wurde an Sie "
-#~ "gesendet, da Sie zu einem privaten Projekt eingeladen wurden."
-
-#~ msgid "Welcome to the semi-public project: \"%(project_name)s\""
-#~ msgstr "Willkommen zum halb-öffentlichen Projekt: \"%(project_name)s\""
-
-#~ msgid "Welcome to the private project: \"%(project_name)s\""
-#~ msgstr "Willkommen zum privaten Projekt: \"%(project_name)s\""
-
-#~ msgid "Link to semi-public project: \"%(project_name)s\""
-#~ msgstr "Link zum halb-öffentlichen Projekt: \"%(project_name)s\""
-
-#~ msgid "Link to private project: \"%(project_name)s\""
-#~ msgstr "Link zum privaten Projekt: \"%(project_name)s\""
-
-#~ msgid ""
-#~ "you have accepted the invitation to the semi-public project "
-#~ "\"%(project_name)s\". To participate click on \"Go to Project\"."
-#~ msgstr ""
-#~ "Sie haben die Einladung zu dem halb-öffentlichen Projekt "
-#~ "\"%(project_name)s\" angenommen. Um an dem Projekt teilzunehmen, klicken "
-#~ "Sie auf \"Zum Projekt\" "
-
-#~ msgid ""
-#~ "you have accepted the invitation to the private project \"%(project_name)s"
-#~ "\". To participate click on \"Go to Project\"."
-#~ msgstr ""
-#~ "Sie haben die Einladung zu dem privaten Projekt \"%(project_name)s\" "
-#~ "angenommen. Um an dem Projekt teilzunehmen, klicken Sie auf \"Zum Projekt"
-#~ "\" "
-
-#~ msgid "Go to project"
-#~ msgstr "Zum Projekt"
-
-#~ msgid ""
-#~ "This email was sent to %(receiver_mail)s. This email was sent to you "
-#~ "because you accepted the invitation to participate in a private project."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(receiver_mail)s gesendet. Diese E-Mail wurde an "
-#~ "Sie gesendet, weil Sie die Einladung zur Teilnahme an einem privaten "
-#~ "Projekt angenommen haben."
-
-#~ msgid "Moderation request in the project %(project_name)s on %(site_name)s"
-#~ msgstr "Moderationsanfrage im Projekt %(project_name)s auf %(site_name)s"
-
-#~ msgid "Moderation request in the project %(project_name)s"
-#~ msgstr "Moderationsanfrage im Projekt %(project_name)s"
-
-#~ msgid ""
-#~ "User %(user_name)s reported a post in your project \"%(project_name)s\". "
-#~ "It is possible, the message could also be spam. As a moderator, you can "
-#~ "review the post and delete it if necessary. The following reasons were "
-#~ "given:"
-#~ msgstr ""
-#~ "Benutzer*in %(user_name)s hat einen Beitrag in Ihrem Projekt "
-#~ "\"%(project_name)s\" gemeldet. Gegebenenfalls könnte die Nachricht auch "
-#~ "Spam sein. Als Moderator*in können Sie den Beitrag prüfen und ggf. "
-#~ "löschen. Es wurde folgende Begründung angegeben:"
-
-#~ msgid "Review post"
-#~ msgstr "Beitrag prüfen"
-
-#~ msgid ""
-#~ "This email has been sent to %(receiver_mail)s. The email was sent to you "
-#~ "as you are the moderator of the project."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(receiver_mail)s gesendet. Die E-Mail wurde an Sie "
-#~ "gesendet, da Sie Moderator*in des Projekts sind."
-
-#~ msgid "Account Already Exists"
-#~ msgstr "Nutzerkonto existiert bereits"
-
-#~ msgid ""
-#~ "You are receiving this e-mail because you or someone else tried to signup "
-#~ "for an\n"
-#~ "    account using the e-mail address:"
-#~ msgstr ""
-#~ "Sie erhalten diese E-Mail, weil Sie oder jemand anderes versucht hat, "
-#~ "sich für ein\n"
-#~ "Konto mit dieser E-Mail-Adresse anzumelden:"
-
-#~ msgid ""
-#~ "However, an account using that e-mail address already exists.  In case "
-#~ "you have\n"
-#~ "    forgotten about this, please use the password forgotten procedure to "
-#~ "recover\n"
-#~ "    your account:"
-#~ msgstr ""
-#~ "Es existiert jedoch bereits ein Nutzerkonto mit dieser E-Mail-Adresse. "
-#~ "Für den Fall, dass Sie dies\n"
-#~ "vergessen haben, verwenden Sie bitte den Ablauf Passwort vergessen, um "
-#~ "Ihr Nutzerkonto wiederherzustellen\n"
-#~ "Ihr Nutzerkonto: "
-
-#~ msgid "Reset password"
-#~ msgstr "Passwort zurücksetzen"
-
-#~ msgid "Please confirm your email address on %(current_site)s"
-#~ msgstr "Bitte bestätigen Sie Ihre E-Mail Adresse auf %(current_site)s"
-
-#~ msgid "Your email address on %(current_site)s"
-#~ msgstr "Ihre E-Mail Adresse auf %(current_site)s"
-
-#~ msgid ""
-#~ "this email address has been added to the user account \"%(username)s\" on "
-#~ "\"%(current_site)s\". Please confirm this address. If you did not add "
-#~ "this email address, you can ignore this email. We will not send you any "
-#~ "further emails."
-#~ msgstr ""
-#~ "diese E-Mail Adresse soll dem Benutzerkonto \"%(username)s\" auf der "
-#~ "Beteiligungsplattform \"%(current_site)s\" hinzugefügt werden. Bitte "
-#~ "bestätigen Sie dazu Ihre E-Mail Adresse. Wenn Sie diese E-Mail Adresse "
-#~ "nicht angelegt haben, können Sie diese Nachricht ignorieren. Wir werden "
-#~ "Ihnen keine weiteren E-Mails senden."
-
-#~ msgid "Confirm your email address"
-#~ msgstr "Bestätigen Sie Ihre E-Mail Adresse"
-
-#~ msgid ""
-#~ "This email was sent to %(receiver)s. If you have any further questions, "
-#~ "please contact us via %(contact_email)s"
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(receiver)s gesendet. Bei Fragen können Sie sich "
-#~ "gerne unter %(contact_email)s an uns wenden"
-
-#~ msgid "Please confirm your registration on %(current_site)s"
-#~ msgstr "Bitte bestätigen Sie Ihre Registrierung auf %(current_site)s"
-
-#~ msgid "Your registration on %(current_site)s"
-#~ msgstr "Ihre Registrierung auf %(current_site)s"
-
-#~ msgid ""
-#~ "You have registered with the username \"%(username)s\" on the "
-#~ "participation platform \"%(current_site)s\". Click \"Confirm email address"
-#~ "\" to complete your registration. As soon as you are registered, you can "
-#~ "participate on \"%(current_site)s\". If you haven't registered, you can "
-#~ "ignore this message."
-#~ msgstr ""
-#~ "Sie haben sich mit dem Benutzernamen \"%(username)s\" auf der "
-#~ "Beteiligungsplattform \"%(current_site)s\" registriert. Klicken Sie auf "
-#~ "\"E-Mail-Adresse bestätigen\", um Ihre Registrierung abzuschließen. "
-#~ "Sobald Sie registriert sind, können Sie sich auf \"%(current_site)s\" "
-#~ "beteiligen. Sollten Sie sich nicht registriert haben, können Sie die "
-#~ "Nachricht ignorieren."
-
-#~ msgid "Confirm email address"
-#~ msgstr "E-Mail-Adresse bestätigen"
-
-#~ msgid ""
-#~ "This email was sent to %(useremail)s. If you have any further questions, "
-#~ "please contact us via %(contact_email)s"
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(useremail)s gesendet. Bei Fragen können Sie sich "
-#~ "gerne unter %(contact_email)s an uns wenden"
-
-#~ msgid "Reset password request for %(current_site)s"
-#~ msgstr "Passwort zurücksetzen auf %(current_site)s"
-
-#~ msgid "Password reset for your account %(username)s"
-#~ msgstr "Passwort zurücksetzen für Ihr Benutzerkonto %(username)s"
-
-#~ msgid ""
-#~ "you have requested a password reset. Please click on \"Reset password\" "
-#~ "to set a new password. If you have not requested a password reset, you "
-#~ "can ighnore this email and your %(current_site)s password stays unchanged."
-#~ msgstr ""
-#~ "Sie erhalten diese E-Mail, weil Sie Ihr Passwort zurücksetzen möchten. "
-#~ "Klicken Sie dazu auf \"Passwort zurücksetzen\". Sollten Sie die "
-#~ "Zurücksetzung Ihres Passworts nicht angefordert haben, können Sie diese E-"
-#~ "Mail ignorieren. Ihr Passwort wird nicht verändert und Ihr Konto auf "
-#~ "%(current_site)s ist nach wie vor geschützt."
-
-#~ msgid ""
-#~ "This email was sent to %(useremail)s. You receive this email because your "
-#~ "password on %(current_site)s has been reset."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(useremail)s gesendet, weil über die "
-#~ "Beteiligungsplattform %(current_site)s angefordert wurde, das Passwort "
-#~ "zurückzusetzen."
-
-#~ msgid ""
-#~ "You are receiving this e-mail because you or someone else has requested a "
-#~ "password for your user account. However, we do not have any record of a "
-#~ "user with email %(email)s in our database."
-#~ msgstr ""
-#~ "Sie erhalten diese E-Mail, weil Sie oder jemand anderes ein Passwort für "
-#~ "Ihr Benutzerkonto angefordert hat. Wir haben jedoch keine Aufzeichnungen "
-#~ "über einen Benutzer mit der E-Mail %(email)s in unserer Datenbank."
-
-#~ msgid ""
-#~ "This mail can be safely ignored if you did not request a password reset."
-#~ msgstr ""
-#~ "Sollten Sie kein neues Passwort angefordert haben, können Sie diese E-"
-#~ "Mail ignorieren."
-
-#~ msgid "If it was you, you can sign up for an account using the link below."
-#~ msgstr ""
-#~ "Falls Sie ein neues Passwort angefordert haben, registrieren Sie sich "
-#~ "bitte zunächst über den unten stehenden Link."
-
-#~ msgid "If you need assistance, please contact %(contact_email)s."
-#~ msgstr ""
-#~ "Wenn Sie Hilfe benötigen, wenden Sie sich bitte an %(contact_email)s."
-
-#~ msgid ""
-#~ "This email was sent to %(email)s. You have received the e-mail because "
-#~ "the reset of your password has been requested on %(current_site)s."
-#~ msgstr ""
-#~ "Diese E-Mail wurde an %(email)s gesendet. Sie haben die E-Mail erhalten, "
-#~ "weil die Zurücksetzung Ihres Passwortes auf %(current_site)s angefordert "
-#~ "wurde."
 
 #~ msgid "AI Debate"
 #~ msgstr "KI Debatte"
