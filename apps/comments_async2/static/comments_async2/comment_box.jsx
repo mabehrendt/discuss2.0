@@ -778,7 +778,7 @@ function videoWatched(){
       {renderButtons()}
       {renderFaqModal()}
 
-      <IntroVideo path="https://mediathek.hhu.de/embed/f9219b16-96c3-4d27-8755-3886bb9abab9" modalQuestState={modalQuestState} showQuestModal={showQuestModal} />
+      <IntroVideo path="https://mediathek.hhu.de/embed/63ba34cd-e7b2-4a3b-942c-1a4d9f20fcfd" modalQuestState={modalQuestState} showQuestModal={showQuestModal} />
       <Spinner spinnerLoading={spinnerLoading} />
 
       <div className="a4-comments__commentbox__form">

@@ -725,7 +725,7 @@ export const CommentBox = (props) => {
         {renderButtons()}
         {renderFaqModal()}
 
-      <IntroVideo path="https://mediathek.hhu.de/embed/c6bfd97d-abe1-4364-bdf9-21aa8ca416a2" modalQuestState={modalQuestState} showQuestModal={showQuestModal} />
+      <IntroVideo path="https://mediathek.hhu.de/embed/1f629dd9-87e4-472d-a1f8-15bc7142c566" modalQuestState={modalQuestState} showQuestModal={showQuestModal} />
       <Spinner spinnerLoading={loading} />
 
       <div className="a4-comments__commentbox__form">
