@@ -1091,7 +1091,7 @@ export const CommentBox = (props) => {
                 paddingLeft: "0px",
                 marginTop: "10px"
               }}>
-                <div className="argumentText"> Sobald genügend Teilnehmer:innen an der Diskussion beteiligt sind, bekommen Sie hier einen Kommentar vorgeschlagen, auf den Sie eingehen können.
+                <div className="argumentText"> Momentan wurde noch kein passender Kommentar gefunden. Sobald ein passender Kommentar verfügbar wird, können Sie hier auf diesen eingehen.
                 </div>
               </div>
             </div>
