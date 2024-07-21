@@ -277,6 +277,7 @@ export const CommentBox = (props) => {
   }
 
   function showGuidelineModal(){
+    setTimeout(countDown, 15000, "", "")
     guidelineShown()
     setModalGuidelineState({isOpen: !modalGuidelineState.isOpen})
   }
@@ -398,10 +399,10 @@ export const CommentBox = (props) => {
       setModalGuidelineState({isOpen: true})
     }
     else{
+      setTimeout(countDown, 15000, _openQuestClicked, _userStance)
       setIsGuidelineShown({shown: true})
     }
 
-    setTimeout(countDown, 15000, _openQuestClicked, _userStance)
 
 
     // GET STANCES AND USED STANCES AND THEN CALL CHOOSE STANCE COMMENT
