@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-17 22:04+0200\n"
+"POT-Creation-Date: 2024-07-22 11:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,7 @@ msgstr ""
 
 #: adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:3
 #: adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:3
+#: adhocracy4/~ategories/templates/a4categories/includes/module_categories_form.html:3
 msgid ""
 "In this section, you can create\n"
 "categories. If you create any, each contribution has to be assigned\n"
@@ -28,11 +29,13 @@ msgstr ""
 
 #: adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:21
 #: adhocracy4/categories/templates/a4categories/includes/module_categories_form.html:21
+#: adhocracy4/~ategories/templates/a4categories/includes/module_categories_form.html:21
 msgid "Add category"
 msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/base_dashboard.html:4
 #: adhocracy4/dashboard/templates/a4dashboard/base_dashboard.html:4
+#: adhocracy4/~ashboard/templates/a4dashboard/base_dashboard.html:4
 #: adhocracy-plus/templates/a4dashboard/base_dashboard.html:55
 #: adhocracy-plus/templates/includes/userdashboard_mobile_toggle.html:30
 msgid "Dashboard"
@@ -40,6 +43,7 @@ msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:5
 #: adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:5
+#: adhocracy4/~ashboard/templates/a4dashboard/base_dashboard_project.html:5
 #: adhocracy-plus/templates/a4dashboard/base_dashboard_project.html:24
 msgid "Project Settings"
 msgstr ""
@@ -48,6 +52,8 @@ msgstr ""
 #: adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:33
 #: adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:15
 #: adhocracy4/dashboard/templates/a4dashboard/base_dashboard_project.html:33
+#: adhocracy4/~ashboard/templates/a4dashboard/base_dashboard_project.html:15
+#: adhocracy4/~ashboard/templates/a4dashboard/base_dashboard_project.html:33
 #: adhocracy-plus/templates/a4dashboard/base_dashboard_project.html:49
 #: adhocracy-plus/templates/a4dashboard/base_dashboard_project.html:103
 msgid "Missing fields for publication"
@@ -57,6 +63,8 @@ msgstr ""
 #: adhocracy4/dashboard/templates/a4dashboard/base_form_project.html:18
 #: adhocracy4/dashboard/templates/a4dashboard/base_form_module.html:18
 #: adhocracy4/dashboard/templates/a4dashboard/base_form_project.html:18
+#: adhocracy4/~ashboard/templates/a4dashboard/base_form_module.html:18
+#: adhocracy4/~ashboard/templates/a4dashboard/base_form_project.html:18
 #: apps/activities/templates/a4_candy_activities/activities_dashboard.html:19
 #: apps/budgeting/templates/a4_candy_budgeting/includes/proposal_form.html:32
 #: apps/budgeting/templates/a4_candy_budgeting/proposal_moderate_form.html:39
@@ -84,6 +92,9 @@ msgstr ""
 #: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:4
 #: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:7
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:9
+#: adhocracy4/~ashboard/templates/a4dashboard/blueprint_list.html:4
+#: adhocracy4/~ashboard/templates/a4dashboard/blueprint_list.html:7
+#: adhocracy4/~ashboard/templates/a4dashboard/project_list.html:9
 #: adhocracy-plus/templates/a4dashboard/blueprint_list.html:6
 #: adhocracy-plus/templates/a4dashboard/project_list.html:13
 msgid "New Project"
@@ -91,11 +102,13 @@ msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:17
 #: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:17
+#: adhocracy4/~ashboard/templates/a4dashboard/blueprint_list.html:17
 msgid "Phase"
 msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:23
 #: adhocracy4/dashboard/templates/a4dashboard/blueprint_list.html:23
+#: adhocracy4/~ashboard/templates/a4dashboard/blueprint_list.html:23
 #: apps/organisations/templates/a4_candy_organisations/communication_form_social_media.html:15
 #: adhocracy-plus/templates/a4dashboard/includes/blueprint_list_tile.html:17
 msgid "Select"
@@ -103,6 +116,7 @@ msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/includes/form_field.html:6
 #: adhocracy4/dashboard/templates/a4dashboard/includes/form_field.html:6
+#: adhocracy4/~ashboard/templates/a4dashboard/includes/form_field.html:6
 msgid "Missing field for publication"
 msgstr ""
 
@@ -110,6 +124,8 @@ msgstr ""
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:39
 #: adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:7
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:39
+#: adhocracy4/~ashboard/templates/a4dashboard/includes/preview.html:7
+#: adhocracy4/~ashboard/templates/a4dashboard/project_list.html:39
 #: apps/organisations/templates/a4_candy_organisations/communication_form_social_media.html:59
 #: adhocracy-plus/templates/a4dashboard/includes/preview.html:7
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:42
@@ -120,6 +136,8 @@ msgstr ""
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:41
 #: adhocracy4/dashboard/templates/a4dashboard/includes/preview.html:9
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:41
+#: adhocracy4/~ashboard/templates/a4dashboard/includes/preview.html:9
+#: adhocracy4/~ashboard/templates/a4dashboard/project_list.html:41
 #: apps/contrib/templates/a4_candy_contrib/includes/map_filter_and_sort.html:8
 #: apps/contrib/templates/a4_candy_contrib/includes/map_filter_and_sort.html:14
 #: apps/debate/templates/a4_candy_debate/includes/subject_dashboard_list_item.html:14
@@ -136,17 +154,20 @@ msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:16
 #: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:16
+#: adhocracy4/~ashboard/templates/a4dashboard/includes/progress.html:16
 #, python-format
 msgid "%(value)s from %(max)s"
 msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:17
 #: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:17
+#: adhocracy4/~ashboard/templates/a4dashboard/includes/progress.html:17
 msgid "required fields for publication"
 msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:27
 #: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:27
+#: adhocracy4/~ashboard/templates/a4dashboard/includes/progress.html:27
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:12
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:31
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:57
@@ -155,6 +176,7 @@ msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:31
 #: adhocracy4/dashboard/templates/a4dashboard/includes/progress.html:31
+#: adhocracy4/~ashboard/templates/a4dashboard/includes/progress.html:31
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:19
 #: apps/dashboard/templates/a4_candy_dashboard/includes/progress.html:35
 msgid "Unpublish"
@@ -164,11 +186,14 @@ msgstr ""
 #: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:7
 #: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:4
 #: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:7
+#: adhocracy4/~ashboard/templates/a4dashboard/project_create_form.html:4
+#: adhocracy4/~ashboard/templates/a4dashboard/project_create_form.html:7
 msgid "Create project based on"
 msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:23
 #: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:23
+#: adhocracy4/~ashboard/templates/a4dashboard/project_create_form.html:23
 #: adhocracy-plus/templates/a4dashboard/project_create_form.html:41
 msgid ""
 "After saving the draft project you can further customize and edit your "
@@ -177,12 +202,14 @@ msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:25
 #: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:25
+#: adhocracy4/~ashboard/templates/a4dashboard/project_create_form.html:25
 #: adhocracy-plus/templates/a4dashboard/project_create_form.html:46
 msgid "Create draft"
 msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:27
 #: adhocracy4/dashboard/templates/a4dashboard/project_create_form.html:27
+#: adhocracy4/~ashboard/templates/a4dashboard/project_create_form.html:27
 #: apps/budgeting/templates/a4_candy_budgeting/includes/proposal_form.html:31
 #: apps/budgeting/templates/a4_candy_budgeting/proposal_confirm_delete.html:14
 #: apps/budgeting/templates/a4_candy_budgeting/proposal_moderate_form.html:38
@@ -216,6 +243,8 @@ msgstr ""
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:7
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:4
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:7
+#: adhocracy4/~ashboard/templates/a4dashboard/project_list.html:4
+#: adhocracy4/~ashboard/templates/a4dashboard/project_list.html:7
 #: apps/projects/templates/a4_candy_projects/project_list.html:4
 #: adhocracy-plus/templates/a4dashboard/base_project_list.html:16
 #: adhocracy-plus/templates/a4dashboard/project_list.html:4
@@ -225,6 +254,7 @@ msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:24
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:24
+#: adhocracy4/~ashboard/templates/a4dashboard/project_list.html:24
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:25
 msgid "Finished"
 msgstr ""
@@ -232,6 +262,8 @@ msgstr ""
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:27
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:27
 #: adhocracy4/projects/enums.py:14
+#: adhocracy4/~ashboard/templates/a4dashboard/project_list.html:27
+#: adhocracy4/~rojects/enums.py:14
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:28
 msgid "semipublic"
 msgstr ""
@@ -239,12 +271,15 @@ msgstr ""
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:30
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:30
 #: adhocracy4/projects/enums.py:15
+#: adhocracy4/~ashboard/templates/a4dashboard/project_list.html:30
+#: adhocracy4/~rojects/enums.py:15
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:31
 msgid "private"
 msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:48
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:48
+#: adhocracy4/~ashboard/templates/a4dashboard/project_list.html:48
 #: apps/contrib/templates/a4_candy_contrib/item_detail.html:103
 #: apps/debate/templates/a4_candy_debate/includes/subject_dashboard_list_item.html:19
 #: apps/debate_quality/templates/a4_candy_debate_quality/includes/aiqualitysubject_dashboard_list_item.html:19
@@ -260,12 +295,14 @@ msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:57
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:57
+#: adhocracy4/~ashboard/templates/a4dashboard/project_list.html:57
 #: adhocracy-plus/templates/a4dashboard/includes/project_list_item.html:73
 msgid "Duplicate"
 msgstr ""
 
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:65
 #: adhocracy4/dashboard/templates/a4dashboard/project_list.html:65
+#: adhocracy4/~ashboard/templates/a4dashboard/project_list.html:65
 #: apps/projects/templates/a4_candy_projects/project_list.html:18
 #: adhocracy-plus/templates/a4dashboard/project_list.html:27
 msgid "We could not find any projects."
@@ -281,38 +318,50 @@ msgstr ""
 #: adhocracy4/exports/templates/a4exports/export_dashboard.html:35
 #: adhocracy4/exports/templates/a4exports/export_dashboard.html:47
 #: adhocracy4/exports/templates/a4exports/export_dashboard.html:59
+#: adhocracy4/~xports/templates/a4exports/export_dashboard.html:5
+#: adhocracy4/~xports/templates/a4exports/export_dashboard.html:23
+#: adhocracy4/~xports/templates/a4exports/export_dashboard.html:35
+#: adhocracy4/~xports/templates/a4exports/export_dashboard.html:47
+#: adhocracy4/~xports/templates/a4exports/export_dashboard.html:59
 msgid "Export"
 msgstr ""
 
 #: adhocracy4/exports/templates/a4exports/export_dashboard.html:7
 #: adhocracy4/exports/templates/a4exports/export_dashboard.html:7
+#: adhocracy4/~xports/templates/a4exports/export_dashboard.html:7
 msgid ""
 "You can export the results of your participation project as an excel file."
 msgstr ""
 
 #: adhocracy4/exports/templates/a4exports/export_dashboard.html:19
 #: adhocracy4/exports/templates/a4exports/export_dashboard.html:19
+#: adhocracy4/~xports/templates/a4exports/export_dashboard.html:19
 msgid "here you can export all ideas"
 msgstr ""
 
 #: adhocracy4/exports/templates/a4exports/export_dashboard.html:31
 #: adhocracy4/exports/templates/a4exports/export_dashboard.html:31
+#: adhocracy4/~xports/templates/a4exports/export_dashboard.html:31
 msgid "here you can export all subjects"
 msgstr ""
 
 #: adhocracy4/exports/templates/a4exports/export_dashboard.html:43
 #: adhocracy4/exports/templates/a4exports/export_dashboard.html:43
+#: adhocracy4/~xports/templates/a4exports/export_dashboard.html:43
 msgid "here you can export all answers"
 msgstr ""
 
 #: adhocracy4/exports/templates/a4exports/export_dashboard.html:55
 #: adhocracy4/exports/templates/a4exports/export_dashboard.html:55
+#: adhocracy4/~xports/templates/a4exports/export_dashboard.html:55
 msgid "here you can export all comments"
 msgstr ""
 
 #: adhocracy4/filters/templates/a4filters/widgets/free_text_filter.html:15
 #: adhocracy4/dashboard/filter.py:11
 #: adhocracy4/filters/templates/a4filters/widgets/free_text_filter.html:15
+#: adhocracy4/~ashboard/filter.py:11
+#: adhocracy4/~ilters/templates/a4filters/widgets/free_text_filter.html:15
 #: apps/debate/filters.py:12 apps/debate_quality/filters.py:12
 #: apps/debate_quality_random/filters.py:12 apps/debate_stance/filters.py:12
 #: apps/debate_stance_random/filters.py:12 apps/ideas/views.py:29
@@ -325,6 +374,7 @@ msgstr ""
 
 #: adhocracy4/forms/templates/a4forms/includes/form_field.html:5
 #: adhocracy4/forms/templates/a4forms/includes/form_field.html:5
+#: adhocracy4/~orms/templates/a4forms/includes/form_field.html:5
 #: apps/contrib/templates/a4_candy_contrib/includes/form_checkbox_field.html:6
 #: apps/contrib/templates/a4_candy_contrib/includes/form_field.html:5
 #: adhocracy-plus/templates/account/signup.html:27
@@ -341,11 +391,16 @@ msgstr ""
 #: adhocracy4/forms/templates/a4forms/includes/inline_form.html:15
 #: adhocracy4/forms/templates/a4forms/includes/inline_form.html:18
 #: adhocracy4/forms/templates/a4forms/includes/inline_form.html:19
+#: adhocracy4/~orms/templates/a4forms/includes/inline_form.html:14
+#: adhocracy4/~orms/templates/a4forms/includes/inline_form.html:15
+#: adhocracy4/~orms/templates/a4forms/includes/inline_form.html:18
+#: adhocracy4/~orms/templates/a4forms/includes/inline_form.html:19
 msgid "Remove category"
 msgstr ""
 
 #: adhocracy4/images/templates/a4images/image_upload_widget.html:8
 #: adhocracy4/images/templates/a4images/image_upload_widget.html:8
+#: adhocracy4/~mages/templates/a4images/image_upload_widget.html:8
 #: adhocracy-plus/templates/a4images/image_upload_widget.html:10
 #: adhocracy-plus/templates/a4images/image_upload_widget.html:11
 #: adhocracy-plus/templates/a4images/image_upload_widget_simple.html:10
@@ -355,6 +410,7 @@ msgstr ""
 
 #: adhocracy4/images/templates/a4images/image_upload_widget.html:12
 #: adhocracy4/images/templates/a4images/image_upload_widget.html:12
+#: adhocracy4/~mages/templates/a4images/image_upload_widget.html:12
 #: adhocracy-plus/templates/a4images/image_upload_widget.html:16
 #: adhocracy-plus/templates/a4images/image_upload_widget.html:17
 #: adhocracy-plus/templates/a4images/image_upload_widget_simple.html:16
@@ -364,6 +420,7 @@ msgstr ""
 
 #: adhocracy4/images/templates/a4images/image_upload_widget.html:19
 #: adhocracy4/images/templates/a4images/image_upload_widget.html:19
+#: adhocracy4/~mages/templates/a4images/image_upload_widget.html:19
 msgid ""
 "\n"
 "            Your image will be uploaded/removed once you save your changes\n"
@@ -373,6 +430,7 @@ msgstr ""
 
 #: adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:3
 #: adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:3
+#: adhocracy4/~abels/templates/a4labels/includes/module_labels_form.html:3
 msgid ""
 "In this section, you can create\n"
 "labels. If you create any, each contribution can be assigned\n"
@@ -381,11 +439,13 @@ msgstr ""
 
 #: adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:21
 #: adhocracy4/labels/templates/a4labels/includes/module_labels_form.html:21
+#: adhocracy4/~abels/templates/a4labels/includes/module_labels_form.html:21
 msgid "Add label"
 msgstr ""
 
 #: adhocracy4/polls/templates/a4polls/poll_404.html:8
 #: adhocracy4/polls/templates/a4polls/poll_404.html:8
+#: adhocracy4/~olls/templates/a4polls/poll_404.html:8
 #: apps/polls_react/templates/a4polls/poll_404.html:8
 msgid ""
 "Participation is not possible at the moment. The poll has not been set up "
@@ -394,22 +454,26 @@ msgstr ""
 
 #: adhocracy4/polls/templates/a4polls/poll_404.html:15
 #: adhocracy4/polls/templates/a4polls/poll_404.html:15
+#: adhocracy4/~olls/templates/a4polls/poll_404.html:15
 #: apps/polls_react/templates/a4polls/poll_404.html:15
 msgid "Setup the poll by adding questions and answers in the dashboard."
 msgstr ""
 
 #: adhocracy4/polls/templates/a4polls/poll_dashboard.html:5
 #: adhocracy4/polls/templates/a4polls/poll_dashboard.html:5
+#: adhocracy4/~olls/templates/a4polls/poll_dashboard.html:5
 #: apps/polls_react/templates/a4polls/poll_dashboard.html:5
 msgid "Edit poll"
 msgstr ""
 
 #: adhocracy4/categories/dashboard.py:13
+#: adhocracy4/~ategories/dashboard.py:13
 #: apps/exports/mixins.py:19
 msgid "Categories"
 msgstr ""
 
 #: adhocracy4/categories/dashboard.py:15
+#: adhocracy4/~ategories/dashboard.py:15
 msgid "Edit categories"
 msgstr ""
 
@@ -418,29 +482,40 @@ msgstr ""
 #: adhocracy4/categories/forms.py:52
 #: adhocracy4/categories/models.py:34
 #: adhocracy4/exports/mixins/items.py:24
+#: adhocracy4/~ategories/fields.py:11
+#: adhocracy4/~ategories/filters.py:16
+#: adhocracy4/~ategories/forms.py:52
+#: adhocracy4/~ategories/models.py:34
+#: adhocracy4/~xports/mixins/items.py:24
 msgid "Category"
 msgstr ""
 
 #: adhocracy4/categories/forms.py:46
 #: adhocracy4/labels/forms.py:23
+#: adhocracy4/~abels/forms.py:23
+#: adhocracy4/~ategories/forms.py:46
 msgid "Category name"
 msgstr ""
 
 #: adhocracy4/categories/forms.py:47
+#: adhocracy4/~ategories/forms.py:47
 msgid "Category icon"
 msgstr ""
 
 #: adhocracy4/categories/models.py:36
+#: adhocracy4/~ategories/models.py:36
 msgid "Type of category"
 msgstr ""
 
 #: adhocracy4/categories/models.py:38
+#: adhocracy4/~ategories/models.py:38
 msgid ""
 "You can individualise the term category. The character limit is max. 25 "
 "characters (with spaces)."
 msgstr ""
 
 #: adhocracy4/categories/models.py:46
+#: adhocracy4/~ategories/models.py:46
 msgid ""
 "Assign your proposal to a category. This automatically appears in the "
 "display of your proposal. The list of all proposals can be filtered by "
@@ -449,11 +524,15 @@ msgstr ""
 
 #: adhocracy4/categories/models.py:52
 #: adhocracy4/labels/models.py:29
+#: adhocracy4/~abels/models.py:29
+#: adhocracy4/~ategories/models.py:52
 msgid "Description/Helptext"
 msgstr ""
 
 #: adhocracy4/categories/models.py:54
 #: adhocracy4/labels/models.py:31
+#: adhocracy4/~abels/models.py:31
+#: adhocracy4/~ategories/models.py:54
 msgid ""
 "You can individualise the description text. The description text is "
 "displayed to the participants as help text when they have to assign their "
@@ -462,6 +541,7 @@ msgstr ""
 
 #: adhocracy4/comments/models.py:47
 #: adhocracy4/polls/exports.py:40
+#: adhocracy4/~olls/exports.py:40
 #: apps/budgeting/exports.py:78 apps/debate/exports.py:78
 #: apps/debate_quality/exports.py:69 apps/debate_quality_random/exports.py:70
 #: apps/debate_stance/exports.py:69 apps/debate_stance_random/exports.py:68
@@ -474,6 +554,7 @@ msgstr ""
 
 #: adhocracy4/comments/models.py:48
 #: adhocracy4/exports/mixins/comments.py:48
+#: adhocracy4/~xports/mixins/comments.py:48
 #: apps/budgeting/templates/a4_candy_budgeting/includes/proposal_list_item.html:16
 #: apps/budgeting/templates/a4_candy_budgeting/includes/proposal_list_item.html:17
 #: apps/ideas/templates/a4_candy_ideas/includes/idea_list_item.html:18
@@ -492,6 +573,7 @@ msgstr ""
 
 #: adhocracy4/comments/serializers.py:87
 #: adhocracy4/comments_async/serializers.py:92
+#: adhocracy4/~omments_async/serializers.py:92
 #: apps/comments_async0/serializers.py:92
 #: apps/comments_async1/serializers.py:92
 #: apps/comments_async2/serializers.py:92
@@ -502,6 +584,8 @@ msgstr ""
 
 #: adhocracy4/comments_async/api.py:139
 #: adhocracy4/polls/api.py:115
+#: adhocracy4/~olls/api.py:115
+#: adhocracy4/~omments_async/api.py:139
 #: apps/comments_async0/api.py:139 apps/comments_async1/api.py:139
 #: apps/comments_async2/api.py:139 apps/comments_async3/api.py:139
 #: apps/comments_async4/api.py:139 apps/polls_react/api.py:117
@@ -509,6 +593,7 @@ msgid "Please agree to the organisation's terms of use."
 msgstr ""
 
 #: adhocracy4/comments_async/serializers.py:15
+#: adhocracy4/~omments_async/serializers.py:15
 #: apps/comments_async0/serializers.py:15
 #: apps/comments_async1/serializers.py:15
 #: apps/comments_async2/serializers.py:15
@@ -518,22 +603,27 @@ msgid "Please choose one or more categories."
 msgstr ""
 
 #: adhocracy4/dashboard/components/forms/views.py:24
+#: adhocracy4/~ashboard/components/forms/views.py:24
 msgid "The project has been updated."
 msgstr ""
 
 #: adhocracy4/dashboard/components/forms/views.py:51
+#: adhocracy4/~ashboard/components/forms/views.py:51
 msgid "The module has been updated."
 msgstr ""
 
 #: adhocracy4/dashboard/dashboard.py:13
+#: adhocracy4/~ashboard/dashboard.py:13
 msgid "Basic settings"
 msgstr ""
 
 #: adhocracy4/dashboard/dashboard.py:15
+#: adhocracy4/~ashboard/dashboard.py:15
 msgid "Edit basic settings"
 msgstr ""
 
 #: adhocracy4/dashboard/dashboard.py:23
+#: adhocracy4/~ashboard/dashboard.py:23
 #: apps/organisations/templates/a4_candy_organisations/organisation_information.html:4
 #: apps/organisations/templates/a4_candy_organisations/organisation_information.html:19
 #: apps/projects/templates/a4_candy_projects/project_detail.html:87
@@ -542,60 +632,74 @@ msgid "Information"
 msgstr ""
 
 #: adhocracy4/dashboard/dashboard.py:25
+#: adhocracy4/~ashboard/dashboard.py:25
 msgid "Edit project information"
 msgstr ""
 
 #: adhocracy4/dashboard/dashboard.py:33
+#: adhocracy4/~ashboard/dashboard.py:33
 #: apps/projects/templates/a4_candy_projects/project_detail.html:107
 #: adhocracy-plus/templates/includes/project_header_mobile_toggle.html:41
 msgid "Result"
 msgstr ""
 
 #: adhocracy4/dashboard/dashboard.py:35
+#: adhocracy4/~ashboard/dashboard.py:35
 msgid "Edit project result"
 msgstr ""
 
 #: adhocracy4/dashboard/dashboard.py:43
+#: adhocracy4/~ashboard/dashboard.py:43
 msgid "Basic information"
 msgstr ""
 
 #: adhocracy4/dashboard/dashboard.py:45
+#: adhocracy4/~ashboard/dashboard.py:45
 msgid "Edit basic module information"
 msgstr ""
 
 #: adhocracy4/dashboard/dashboard.py:53
+#: adhocracy4/~ashboard/dashboard.py:53
 msgid "Phases"
 msgstr ""
 
 #: adhocracy4/dashboard/dashboard.py:55
+#: adhocracy4/~ashboard/dashboard.py:55
 msgid "Edit phases information"
 msgstr ""
 
 #: adhocracy4/dashboard/dashboard.py:64
+#: adhocracy4/~ashboard/dashboard.py:64
 msgid "Area settings"
 msgstr ""
 
 #: adhocracy4/dashboard/dashboard.py:65
+#: adhocracy4/~ashboard/dashboard.py:65
 msgid "Edit area settings"
 msgstr ""
 
 #: adhocracy4/dashboard/filter.py:15
+#: adhocracy4/~ashboard/filter.py:15
 #: apps/budgeting/views.py:27
 msgid "Archived"
 msgstr ""
 
 #: adhocracy4/dashboard/filter.py:19
 #: adhocracy4/filters/widgets.py:33
+#: adhocracy4/~ashboard/filter.py:19
+#: adhocracy4/~ilters/widgets.py:33
 #: apps/budgeting/views.py:31
 msgid "All"
 msgstr ""
 
 #: adhocracy4/dashboard/filter.py:20
+#: adhocracy4/~ashboard/filter.py:20
 #: apps/budgeting/views.py:32
 msgid "No"
 msgstr ""
 
 #: adhocracy4/dashboard/filter.py:21
+#: adhocracy4/~ashboard/filter.py:21
 #: apps/budgeting/templates/a4_candy_budgeting/proposal_confirm_delete.html:15
 #: apps/budgeting/views.py:33
 #: apps/debate/templates/a4_candy_debate/subject_confirm_delete.html:16
@@ -611,19 +715,23 @@ msgid "Yes"
 msgstr ""
 
 #: adhocracy4/dashboard/forms.py:80
+#: adhocracy4/~ashboard/forms.py:80
 msgid "All users can participate (public)."
 msgstr ""
 
 #: adhocracy4/dashboard/forms.py:83
+#: adhocracy4/~ashboard/forms.py:83
 msgid "Only invited users can participate (private)."
 msgstr ""
 
 #: adhocracy4/dashboard/forms.py:91
+#: adhocracy4/~ashboard/forms.py:91
 #: apps/projects/templates/a4_candy_projects/project_detail.html:134
 msgid "Contact for questions"
 msgstr ""
 
 #: adhocracy4/dashboard/forms.py:93
+#: adhocracy4/~ashboard/forms.py:93
 msgid ""
 "Please name a contact person. The user will then know who is carrying out "
 "this project and to whom they can address possible questions. The contact "
@@ -631,87 +739,111 @@ msgid ""
 msgstr ""
 
 #: adhocracy4/dashboard/forms.py:99
+#: adhocracy4/~ashboard/forms.py:99
 msgid "More contact possibilities"
 msgstr ""
 
 #: adhocracy4/dashboard/forms.py:144
 #: adhocracy4/phases/models.py:66
+#: adhocracy4/~ashboard/forms.py:144
+#: adhocracy4/~hases/models.py:66
 msgid "End date"
 msgstr ""
 
 #: adhocracy4/dashboard/forms.py:144
+#: adhocracy4/~ashboard/forms.py:144
 msgid "End time"
 msgstr ""
 
 #: adhocracy4/dashboard/forms.py:150
 #: adhocracy4/phases/models.py:64
+#: adhocracy4/~ashboard/forms.py:150
+#: adhocracy4/~hases/models.py:64
 msgid "Start date"
 msgstr ""
 
 #: adhocracy4/dashboard/forms.py:150
+#: adhocracy4/~ashboard/forms.py:150
 msgid "Start time"
 msgstr ""
 
 #: adhocracy4/dashboard/mixins.py:209
+#: adhocracy4/~ashboard/mixins.py:209
 msgid "Project successfully duplicated."
 msgstr ""
 
 #: adhocracy4/dashboard/views.py:73
+#: adhocracy4/~ashboard/views.py:73
 msgid "Project successfully created."
 msgstr ""
 
 #: adhocracy4/dashboard/views.py:164
+#: adhocracy4/~ashboard/views.py:164
 #: apps/dashboard/views.py:133
 msgid "Invalid action"
 msgstr ""
 
 #: adhocracy4/dashboard/views.py:181
+#: adhocracy4/~ashboard/views.py:181
 msgid "Project is already published"
 msgstr ""
 
 #: adhocracy4/dashboard/views.py:186
+#: adhocracy4/~ashboard/views.py:186
 msgid "Project cannot be published. No module is added."
 msgstr ""
 
 #: adhocracy4/dashboard/views.py:202
+#: adhocracy4/~ashboard/views.py:202
 msgid "Project cannot be published. Required fields are missing."
 msgstr ""
 
 #: adhocracy4/dashboard/views.py:211
+#: adhocracy4/~ashboard/views.py:211
 msgid "Project cannot be published."
 msgstr ""
 
 #: adhocracy4/dashboard/views.py:221
+#: adhocracy4/~ashboard/views.py:221
 msgid "the project has been published."
 msgstr ""
 
 #: adhocracy4/dashboard/views.py:226
+#: adhocracy4/~ashboard/views.py:226
 msgid "Project is already unpublished"
 msgstr ""
 
 #: adhocracy4/dashboard/views.py:234
+#: adhocracy4/~ashboard/views.py:234
 msgid "the project has been unpublished."
 msgstr ""
 
 #: adhocracy4/exports/mixins/comments.py:17
+#: adhocracy4/~xports/mixins/comments.py:17
 msgid "Comment count"
 msgstr ""
 
 #: adhocracy4/exports/mixins/comments.py:80
+#: adhocracy4/~xports/mixins/comments.py:80
 msgid "Reply to Comment"
 msgstr ""
 
 #: adhocracy4/exports/mixins/comments.py:99
+#: adhocracy4/~xports/mixins/comments.py:99
 msgid "Reply to Reference"
 msgstr ""
 
 #: adhocracy4/exports/mixins/general.py:15
+#: adhocracy4/~xports/mixins/general.py:15
 msgid "Creator"
 msgstr ""
 
 #: adhocracy4/exports/mixins/general.py:17
 #: adhocracy4/models/base.py:9
 #: adhocracy4/polls/exports.py:41
+#: adhocracy4/~odels/base.py:9
+#: adhocracy4/~olls/exports.py:41
+#: adhocracy4/~xports/mixins/general.py:17
 #: apps/budgeting/exports.py:79 apps/debate/exports.py:79
 #: apps/debate_quality/exports.py:70 apps/debate_quality_random/exports.py:71
 #: apps/debate_stance/exports.py:70 apps/debate_stance_random/exports.py:69
@@ -722,41 +854,51 @@ msgid "Created"
 msgstr ""
 
 #: adhocracy4/exports/mixins/general.py:36
+#: adhocracy4/~xports/mixins/general.py:36
 msgid "Link"
 msgstr ""
 
 #: adhocracy4/exports/mixins/general.py:52
+#: adhocracy4/~xports/mixins/general.py:52
 msgid "Location (Longitude)"
 msgstr ""
 
 #: adhocracy4/exports/mixins/general.py:54
+#: adhocracy4/~xports/mixins/general.py:54
 msgid "Location (Latitude)"
 msgstr ""
 
 #: adhocracy4/exports/mixins/general.py:56
+#: adhocracy4/~xports/mixins/general.py:56
 msgid "Location label"
 msgstr ""
 
 #: adhocracy4/exports/mixins/items.py:43
 #: adhocracy4/labels/dashboard.py:13
+#: adhocracy4/~abels/dashboard.py:13
+#: adhocracy4/~xports/mixins/items.py:43
 #: apps/ideas/models.py:46 apps/topicprio/models.py:50
 msgid "Labels"
 msgstr ""
 
 #: adhocracy4/exports/mixins/items.py:61
+#: adhocracy4/~xports/mixins/items.py:61
 #: apps/contrib/templates/a4_candy_contrib/item_detail.html:63
 msgid "Reference No."
 msgstr ""
 
 #: adhocracy4/exports/mixins/items.py:81
+#: adhocracy4/~xports/mixins/items.py:81
 msgid "Status"
 msgstr ""
 
 #: adhocracy4/exports/mixins/items.py:83
+#: adhocracy4/~xports/mixins/items.py:83
 msgid "Feedback"
 msgstr ""
 
 #: adhocracy4/exports/mixins/items.py:107
+#: adhocracy4/~xports/mixins/items.py:107
 #: apps/moderatorremark/models.py:14
 #: apps/moderatorremark/templates/a4_candy_moderatorremark/includes/popover_remark.html:5
 #: apps/moderatorremark/templates/a4_candy_moderatorremark/includes/popover_remark.html:21
@@ -764,32 +906,39 @@ msgid "Remark"
 msgstr ""
 
 #: adhocracy4/exports/mixins/rates.py:16
+#: adhocracy4/~xports/mixins/rates.py:16
 msgid "Positive ratings"
 msgstr ""
 
 #: adhocracy4/exports/mixins/rates.py:18
+#: adhocracy4/~xports/mixins/rates.py:18
 msgid "Negative ratings"
 msgstr ""
 
 #: adhocracy4/exports/views.py:91
+#: adhocracy4/~xports/views.py:91
 msgid "yes"
 msgstr ""
 
 #: adhocracy4/exports/views.py:92
+#: adhocracy4/~xports/views.py:92
 msgid "no"
 msgstr ""
 
 #: adhocracy4/filters/widgets.py:76
+#: adhocracy4/~ilters/widgets.py:76
 #: apps/contrib/widgets.py:59
 msgid "Ordering"
 msgstr ""
 
 #: adhocracy4/forms/fields.py:19
+#: adhocracy4/~orms/fields.py:19
 #, python-format
 msgid "Time of %(date_label)s"
 msgstr ""
 
 #: adhocracy4/images/fields.py:70
+#: adhocracy4/~mages/fields.py:70
 #, python-brace-format
 msgid ""
 "{help_prefix} It must be min. {min_resolution[0]} pixel wide and "
@@ -798,21 +947,25 @@ msgid ""
 msgstr ""
 
 #: adhocracy4/images/fields.py:87
+#: adhocracy4/~mages/fields.py:87
 #, python-brace-format
 msgid "{image_name} copyright"
 msgstr ""
 
 #: adhocracy4/images/fields.py:90
+#: adhocracy4/~mages/fields.py:90
 #, python-brace-format
 msgid "Copyright shown in the {image_name}."
 msgstr ""
 
 #: adhocracy4/images/fields.py:103
+#: adhocracy4/~mages/fields.py:103
 #, python-brace-format
 msgid "{image_name} alt text"
 msgstr ""
 
 #: adhocracy4/images/fields.py:106
+#: adhocracy4/~mages/fields.py:106
 msgid ""
 "An alternate text serves as a textual description of the image content and "
 "is read out by screen readers. Describe the image in max. 80 characters. "
@@ -821,76 +974,95 @@ msgstr ""
 
 #: adhocracy4/images/mixins.py:30
 #: adhocracy4/images/mixins.py:35
+#: adhocracy4/~mages/mixins.py:30
+#: adhocracy4/~mages/mixins.py:35
 msgid "Please add copyright information."
 msgstr ""
 
 #: adhocracy4/images/mixins.py:40
 #: adhocracy4/images/mixins.py:45
+#: adhocracy4/~mages/mixins.py:40
+#: adhocracy4/~mages/mixins.py:45
 msgid "Please add an alternative text for this image"
 msgstr ""
 
 #: adhocracy4/images/validators.py:26
+#: adhocracy4/~mages/validators.py:26
 msgid "Unsupported file format. Supported formats are {}."
 msgstr ""
 
 #: adhocracy4/images/validators.py:33
+#: adhocracy4/~mages/validators.py:33
 #: apps/organisations/forms.py:362
 #, python-brace-format
 msgid "Image should be at most {max_size} MB"
 msgstr ""
 
 #: adhocracy4/images/validators.py:41
+#: adhocracy4/~mages/validators.py:41
 #: apps/organisations/forms.py:370
 #, python-brace-format
 msgid "Image must be at least {min_width} pixels wide"
 msgstr ""
 
 #: adhocracy4/images/validators.py:49
+#: adhocracy4/~mages/validators.py:49
 #: apps/organisations/forms.py:380
 #, python-brace-format
 msgid "Image must be at least {min_height} pixels high"
 msgstr ""
 
 #: adhocracy4/images/validators.py:55
+#: adhocracy4/~mages/validators.py:55
 #, python-brace-format
 msgid "Image must be at most {max_width} pixels wide"
 msgstr ""
 
 #: adhocracy4/images/validators.py:58
+#: adhocracy4/~mages/validators.py:58
 #, python-brace-format
 msgid "Image must be at most {max_height} pixels high"
 msgstr ""
 
 #: adhocracy4/images/validators.py:67
+#: adhocracy4/~mages/validators.py:67
 #, python-brace-format
 msgid "Image aspect ratio should be {aspect_width}:{aspect_height}"
 msgstr ""
 
 #: adhocracy4/images/widgets.py:28
+#: adhocracy4/~mages/widgets.py:28
 msgid "Select a picture from your local folder."
 msgstr ""
 
 #: adhocracy4/labels/dashboard.py:15
+#: adhocracy4/~abels/dashboard.py:15
 msgid "Edit labels"
 msgstr ""
 
 #: adhocracy4/labels/filters.py:10
 #: adhocracy4/labels/forms.py:25
 #: adhocracy4/labels/models.py:10
+#: adhocracy4/~abels/filters.py:10
+#: adhocracy4/~abels/forms.py:25
+#: adhocracy4/~abels/models.py:10
 msgid "Label"
 msgstr ""
 
 #: adhocracy4/labels/models.py:12
+#: adhocracy4/~abels/models.py:12
 msgid "Type of label"
 msgstr ""
 
 #: adhocracy4/labels/models.py:14
+#: adhocracy4/~abels/models.py:14
 msgid ""
 "You can individualise the term label. The character limit is max. 25 "
 "characters (with spaces)."
 msgstr ""
 
 #: adhocracy4/labels/models.py:22
+#: adhocracy4/~abels/models.py:22
 msgid ""
 "Specify your proposal with one or more labels. These will automatically "
 "appear in the display of your proposal. In addition, the list of all "
@@ -899,50 +1071,62 @@ msgstr ""
 
 #: adhocracy4/maps/admin.py:15
 #: adhocracy4/maps/models.py:11
+#: adhocracy4/~aps/admin.py:15
+#: adhocracy4/~aps/models.py:11
 msgid "Polygon"
 msgstr ""
 
 #: adhocracy4/maps/admin.py:19
+#: adhocracy4/~aps/admin.py:19
 msgid ""
 "Enter a valid GeoJSON object. To initialize a new areasetting enter the "
 "string \"false\" without quotation marks."
 msgstr ""
 
 #: adhocracy4/maps/fields.py:16
+#: adhocracy4/~aps/fields.py:16
 msgid "Geometry as GeoJSON"
 msgstr ""
 
 #: adhocracy4/maps/fields.py:34
+#: adhocracy4/~aps/fields.py:34
 msgid "Please add a Marker on the map"
 msgstr ""
 
 #: adhocracy4/maps/fields.py:39
+#: adhocracy4/~aps/fields.py:39
 msgid "Please draw a Polygon on the map"
 msgstr ""
 
 #: adhocracy4/maps/models.py:11
+#: adhocracy4/~aps/models.py:11
 msgid "Please draw an area on the map."
 msgstr ""
 
 #: adhocracy4/models/base.py:14
+#: adhocracy4/~odels/base.py:14
 msgid "Modified"
 msgstr ""
 
 #: adhocracy4/modules/models.py:74
+#: adhocracy4/~odules/models.py:74
 msgid "Title of the module"
 msgstr ""
 
 #: adhocracy4/modules/models.py:76
+#: adhocracy4/~odules/models.py:76
 msgid ""
 "This title will appear in the timeline and the header on the module and "
 "project detail pages. It should be max. 512 characters long"
 msgstr ""
 
 #: adhocracy4/modules/models.py:85
+#: adhocracy4/~odules/models.py:85
 msgid "Short description of the module"
 msgstr ""
 
 #: adhocracy4/modules/models.py:87
+#: adhocracy4/~odules/models.py:87
 msgid ""
 "This short description will appear on the header of the module and project "
 "detail pages. It should briefly state the goal of the module in max. 512 "
@@ -950,76 +1134,96 @@ msgid ""
 msgstr ""
 
 #: adhocracy4/modules/models.py:224
+#: adhocracy4/~odules/models.py:224
 msgid "day"
 msgstr ""
 
 #: adhocracy4/modules/models.py:224
 #: adhocracy4/modules/models.py:231
+#: adhocracy4/~odules/models.py:224
+#: adhocracy4/~odules/models.py:231
 msgid "days"
 msgstr ""
 
 #: adhocracy4/modules/models.py:225
+#: adhocracy4/~odules/models.py:225
 msgid "hour"
 msgstr ""
 
 #: adhocracy4/modules/models.py:225
 #: adhocracy4/modules/models.py:232
+#: adhocracy4/~odules/models.py:225
+#: adhocracy4/~odules/models.py:232
 msgid "hours"
 msgstr ""
 
 #: adhocracy4/modules/models.py:226
+#: adhocracy4/~odules/models.py:226
 msgid "minute"
 msgstr ""
 
 #: adhocracy4/modules/models.py:226
 #: adhocracy4/modules/models.py:233
+#: adhocracy4/~odules/models.py:226
+#: adhocracy4/~odules/models.py:233
 msgid "minutes"
 msgstr ""
 
 #: adhocracy4/modules/models.py:227
+#: adhocracy4/~odules/models.py:227
 msgid "second"
 msgstr ""
 
 #: adhocracy4/modules/models.py:227
 #: adhocracy4/modules/models.py:234
+#: adhocracy4/~odules/models.py:227
+#: adhocracy4/~odules/models.py:234
 msgid "seconds"
 msgstr ""
 
 #: adhocracy4/modules/models.py:231
+#: adhocracy4/~odules/models.py:231
 msgctxt "abbreviation for day(s)"
 msgid "D"
 msgstr ""
 
 #: adhocracy4/modules/models.py:232
+#: adhocracy4/~odules/models.py:232
 msgctxt "abbreviation for hour(s)"
 msgid "H"
 msgstr ""
 
 #: adhocracy4/modules/models.py:233
+#: adhocracy4/~odules/models.py:233
 msgctxt "abbreviation for minute(s)"
 msgid "M"
 msgstr ""
 
 #: adhocracy4/modules/models.py:234
+#: adhocracy4/~odules/models.py:234
 msgctxt "abbreviation for second(s)"
 msgid "S"
 msgstr ""
 
 #: adhocracy4/phases/forms.py:24
+#: adhocracy4/~hases/forms.py:24
 msgid "Phases cannot run at the same time and must follow after each other."
 msgstr ""
 
 #: adhocracy4/phases/forms.py:31
+#: adhocracy4/~hases/forms.py:31
 msgid "Phases need to be in same order as in form."
 msgstr ""
 
 #: adhocracy4/phases/models.py:59
+#: adhocracy4/~hases/models.py:59
 #: apps/newsletters/models.py:28
 #: apps/projects/templates/a4_candy_projects/includes/removeable_user_list.html:7
 msgid "Name"
 msgstr ""
 
 #: adhocracy4/phases/models.py:60
+#: adhocracy4/~hases/models.py:60
 #: apps/activities/models.py:22 apps/debate/models.py:25
 #: apps/debate_quality/models.py:32 apps/debate_quality_random/models.py:32
 #: apps/debate_stance/models.py:31 apps/debate_stance_random/models.py:31
@@ -1030,45 +1234,55 @@ msgid "Description"
 msgstr ""
 
 #: adhocracy4/phases/models.py:84
+#: adhocracy4/~hases/models.py:84
 msgid "End date can not be before start date."
 msgstr ""
 
 #: adhocracy4/phases/models.py:88
 #: adhocracy4/phases/models.py:92
+#: adhocracy4/~hases/models.py:88
+#: adhocracy4/~hases/models.py:92
 msgid "Either both or no date has to be set."
 msgstr ""
 
 #: adhocracy4/polls/api.py:155
+#: adhocracy4/~olls/api.py:155
 #: apps/polls_react/api.py:157
 msgid "Please specify your answer."
 msgstr ""
 
 #: adhocracy4/polls/api.py:169
+#: adhocracy4/~olls/api.py:169
 #: apps/polls_react/api.py:171
 msgid "Key error for {}"
 msgstr ""
 
 #: adhocracy4/polls/api.py:171
+#: adhocracy4/~olls/api.py:171
 #: apps/polls_react/api.py:173
 msgid "Choice not found."
 msgstr ""
 
 #: adhocracy4/polls/api.py:190
+#: adhocracy4/~olls/api.py:190
 #: apps/polls_react/api.py:192
 msgid "Duplicate choices detected."
 msgstr ""
 
 #: adhocracy4/polls/api.py:193
+#: adhocracy4/~olls/api.py:193
 #: apps/polls_react/api.py:195
 msgid "Multiple choice disabled for question."
 msgstr ""
 
 #: adhocracy4/polls/dashboard.py:15
+#: adhocracy4/~olls/dashboard.py:15
 #: apps/dashboard/blueprints.py:103 apps/polls_react/dashboard.py:15
 msgid "Poll"
 msgstr ""
 
 #: adhocracy4/polls/dashboard.py:44
+#: adhocracy4/~olls/dashboard.py:44
 #: apps/budgeting/dashboard.py:14 apps/debate/dashboard.py:65
 #: apps/debate_quality/dashboard.py:65
 #: apps/debate_quality_random/dashboard.py:65
@@ -1080,6 +1294,7 @@ msgid "Export Excel"
 msgstr ""
 
 #: adhocracy4/polls/exports.py:39
+#: adhocracy4/~olls/exports.py:39
 #: apps/budgeting/exports.py:77 apps/debate/exports.py:77
 #: apps/debate_quality/exports.py:68 apps/debate_quality_random/exports.py:69
 #: apps/debate_stance/exports.py:68 apps/debate_stance_random/exports.py:67
@@ -1090,16 +1305,19 @@ msgid "ID"
 msgstr ""
 
 #: adhocracy4/polls/models.py:41
+#: adhocracy4/~olls/models.py:41
 #: apps/polls_react/models.py:41
 msgid "Explanation"
 msgstr ""
 
 #: adhocracy4/polls/models.py:68
+#: adhocracy4/~olls/models.py:68
 #: apps/polls_react/models.py:68
 msgid "Questions with open answers cannot have multiple choices."
 msgstr ""
 
 #: adhocracy4/polls/models.py:77
+#: adhocracy4/~olls/models.py:77
 #: apps/polls_react/models.py:77
 msgid ""
 "Question with choices cannot become open question. Delete choices or add new "
@@ -1108,92 +1326,110 @@ msgstr ""
 
 #: adhocracy4/polls/models.py:140
 #: adhocracy4/polls/models.py:258
+#: adhocracy4/~olls/models.py:140
+#: adhocracy4/~olls/models.py:258
 #: apps/polls_react/models.py:140 apps/polls_react/models.py:258
 msgid "Answer"
 msgstr ""
 
 #: adhocracy4/polls/models.py:151
+#: adhocracy4/~olls/models.py:151
 #: apps/polls_react/models.py:151
 msgid "Only open questions can have answers."
 msgstr ""
 
 #: adhocracy4/polls/models.py:187
+#: adhocracy4/~olls/models.py:187
 #: apps/polls_react/models.py:187
 msgid "Open questions cannot have choices."
 msgstr ""
 
 #: adhocracy4/polls/models.py:193
+#: adhocracy4/~olls/models.py:193
 #: apps/polls_react/models.py:193
 msgid ""
 "\"Other\" cannot be the only choice. Use open question or add more choices."
 msgstr ""
 
 #: adhocracy4/polls/models.py:204
+#: adhocracy4/~olls/models.py:204
 #: apps/polls_react/models.py:204
 msgid "Question already has \"other\" choice."
 msgstr ""
 
 #: adhocracy4/polls/models.py:265
+#: adhocracy4/~olls/models.py:265
 #: apps/polls_react/models.py:265
 msgid "Other vote can only be created for vote on \"other\" choice."
 msgstr ""
 
 #. Translators: kosmo
 #: adhocracy4/polls/models.py:287
+#: adhocracy4/~olls/models.py:287
 #: apps/classifications/models.py:15 apps/polls_react/models.py:287
 msgid "other"
 msgstr ""
 
 #: adhocracy4/polls/phases.py:16
+#: adhocracy4/~olls/phases.py:16
 #: apps/polls_react/phases.py:16
 msgctxt "A4: voting phase name"
 msgid "Voting phase"
 msgstr ""
 
 #: adhocracy4/polls/phases.py:18
+#: adhocracy4/~olls/phases.py:18
 #: apps/polls_react/phases.py:18
 msgctxt "A4: voting phase description"
 msgid "Answer the questions and comment on the poll."
 msgstr ""
 
 #: adhocracy4/polls/phases.py:20
+#: adhocracy4/~olls/phases.py:20
 #: apps/polls_react/phases.py:20
 msgid "polls"
 msgstr ""
 
 #: adhocracy4/polls/validators.py:16
+#: adhocracy4/~olls/validators.py:16
 #: apps/polls_react/validators.py:16
 #, python-format
 msgid "Item of type %(item)s for that module already exists"
 msgstr ""
 
 #: adhocracy4/polls/validators.py:28
+#: adhocracy4/~olls/validators.py:28
 #: apps/polls_react/validators.py:28
 msgid "Question has to belong to the poll set in the url."
 msgstr ""
 
 #: adhocracy4/polls/validators.py:39
+#: adhocracy4/~olls/validators.py:39
 #: apps/polls_react/validators.py:39
 msgid "Choice has to belong to the question set in the url."
 msgstr ""
 
 #: adhocracy4/polls/validators.py:57
+#: adhocracy4/~olls/validators.py:57
 #: apps/polls_react/validators.py:57
 msgid "Only one vote per choice is allowed per user."
 msgstr ""
 
 #: adhocracy4/projects/admin.py:10
+#: adhocracy4/~rojects/admin.py:10
 #: apps/newsletters/forms.py:38
 #: adhocracy-plus/templates/includes/project_header_mobile_toggle.html:12
 msgid "Project"
 msgstr ""
 
 #: adhocracy4/projects/admin.py:63
+#: adhocracy4/~rojects/admin.py:63
 #: apps/projects/admin.py:38
 msgid "Information and result"
 msgstr ""
 
 #: adhocracy4/projects/admin.py:69
+#: adhocracy4/~rojects/admin.py:69
 #: apps/organisations/templates/a4_candy_organisations/communication_form_social_media.html:4
 #: apps/organisations/templates/a4_candy_organisations/organisation_form.html:4
 #: apps/organisations/templates/a4_candy_organisations/organisation_form_legal_info.html:4
@@ -1202,88 +1438,106 @@ msgid "Settings"
 msgstr ""
 
 #: adhocracy4/projects/admin.py:81
+#: adhocracy4/~rojects/admin.py:81
 #: apps/projects/admin.py:58
 msgid "Images"
 msgstr ""
 
 #: adhocracy4/projects/admin.py:93
+#: adhocracy4/~rojects/admin.py:93
 #: apps/projects/admin.py:70 adhocracy-plus/templates/email_base.html:112
 #: adhocracy-plus/templates/footer.html:58
 msgid "Contact"
 msgstr ""
 
 #: adhocracy4/projects/enums.py:13
+#: adhocracy4/~rojects/enums.py:13
 msgid "public"
 msgstr ""
 
 #: adhocracy4/projects/models.py:42
+#: adhocracy4/~rojects/models.py:42
 msgid ""
 "Phone numbers can only contain digits, spaces and the following characters: "
 "-, +, (, ). It has to be between 8 and 20 characters long."
 msgstr ""
 
 #: adhocracy4/projects/models.py:49
+#: adhocracy4/~rojects/models.py:49
 msgid "Postal address"
 msgstr ""
 
 #: adhocracy4/projects/models.py:52
+#: adhocracy4/~rojects/models.py:52
 #: apps/projects/templates/a4_candy_projects/includes/removeable_invite_list.html:7
 #: apps/projects/templates/a4_candy_projects/project_detail.html:146
 msgid "Email"
 msgstr ""
 
 #: adhocracy4/projects/models.py:55
+#: adhocracy4/~rojects/models.py:55
 msgid "Contact person"
 msgstr ""
 
 #: adhocracy4/projects/models.py:59
+#: adhocracy4/~rojects/models.py:59
 msgid "Phone"
 msgstr ""
 
 #: adhocracy4/projects/models.py:62
+#: adhocracy4/~rojects/models.py:62
 #: apps/projects/templates/a4_candy_projects/project_detail.html:151
 msgid "Website"
 msgstr ""
 
 #: adhocracy4/projects/models.py:72
+#: adhocracy4/~rojects/models.py:72
 msgid "Can your project be located on the map?"
 msgstr ""
 
 #: adhocracy4/projects/models.py:74
+#: adhocracy4/~rojects/models.py:74
 msgid ""
 "Locate your project. Click inside the marked area or type in an address to "
 "set the marker. A set marker can be dragged when pressed."
 msgstr ""
 
 #: adhocracy4/projects/models.py:86
+#: adhocracy4/~rojects/models.py:86
 msgid "Administrative district"
 msgstr ""
 
 #: adhocracy4/projects/models.py:174
+#: adhocracy4/~rojects/models.py:174
 msgid "Title of your project"
 msgstr ""
 
 #: adhocracy4/projects/models.py:176
+#: adhocracy4/~rojects/models.py:176
 msgid ""
 "This title will appear on the teaser card and on top of the project detail "
 "page. It should be max. 120 characters long"
 msgstr ""
 
 #: adhocracy4/projects/models.py:189
+#: adhocracy4/~rojects/models.py:189
 msgid "Short description of your project"
 msgstr ""
 
 #: adhocracy4/projects/models.py:191
+#: adhocracy4/~rojects/models.py:191
 msgid ""
 "This short description will appear on the header of the project and in the "
 "teaser. It should briefly state the goal of the project in max. 250 chars."
 msgstr ""
 
 #: adhocracy4/projects/models.py:200
+#: adhocracy4/~rojects/models.py:200
 msgid "Description of your project"
 msgstr ""
 
 #: adhocracy4/projects/models.py:202
+#: adhocracy4/~rojects/models.py:202
 msgid ""
 "This description should tell participants what the goal of the project is, "
 "how the project’s participation will look like. It will be always visible in "
@@ -1291,10 +1545,12 @@ msgid ""
 msgstr ""
 
 #: adhocracy4/projects/models.py:211
+#: adhocracy4/~rojects/models.py:211
 msgid "Results of your project"
 msgstr ""
 
 #: adhocracy4/projects/models.py:213
+#: adhocracy4/~rojects/models.py:213
 msgid ""
 "Here you should explain what the expected outcome of the project will be and "
 "how you are planning to use the results. If the project is finished you "
@@ -1302,17 +1558,22 @@ msgid ""
 msgstr ""
 
 #: adhocracy4/projects/models.py:220
+#: adhocracy4/~rojects/models.py:220
 msgid "Access to the project"
 msgstr ""
 
 #: adhocracy4/projects/models.py:225
 #: adhocracy4/projects/models.py:231
 #: adhocracy4/projects/models.py:232
+#: adhocracy4/~rojects/models.py:225
+#: adhocracy4/~rojects/models.py:231
+#: adhocracy4/~rojects/models.py:232
 #: apps/organisations/models.py:97
 msgid "Header image"
 msgstr ""
 
 #: adhocracy4/projects/models.py:226
+#: adhocracy4/~rojects/models.py:226
 #: apps/organisations/models.py:98
 msgid "The image will be shown as a decorative background image."
 msgstr ""
@@ -1320,40 +1581,51 @@ msgstr ""
 #: adhocracy4/projects/models.py:235
 #: adhocracy4/projects/models.py:241
 #: adhocracy4/projects/models.py:242
+#: adhocracy4/~rojects/models.py:235
+#: adhocracy4/~rojects/models.py:241
+#: adhocracy4/~rojects/models.py:242
 msgid "Tile image"
 msgstr ""
 
 #: adhocracy4/projects/models.py:236
+#: adhocracy4/~rojects/models.py:236
 msgid "The image will be shown in the project tile."
 msgstr ""
 
 #: adhocracy4/projects/models.py:255
+#: adhocracy4/~rojects/models.py:255
 msgid "Project is archived"
 msgstr ""
 
 #: adhocracy4/projects/models.py:257
+#: adhocracy4/~rojects/models.py:257
 msgid ""
 "Archived projects are not shown in the project overview. For project "
 "initiators they are still visible in the dashboard."
 msgstr ""
 
 #: adhocracy4/projects/models.py:263
+#: adhocracy4/~rojects/models.py:263
 msgid "Project topics"
 msgstr ""
 
 #: adhocracy4/projects/models.py:263
+#: adhocracy4/~rojects/models.py:263
 msgid "Add topics to your project."
 msgstr ""
 
 #: adhocracy4/projects/utils.py:46
+#: adhocracy4/~rojects/utils.py:46
 msgid "{}. Online Participation"
 msgstr ""
 
 #: adhocracy4/projects/utils.py:55
+#: adhocracy4/~rojects/utils.py:55
 msgid "Online Participation"
 msgstr ""
 
 #: adhocracy4/reports/templatetags/react_reports.py:28
+#: adhocracy4/~eports/templatetags/react_reports.py:28
 #: apps/contrib/templates/a4_candy_contrib/item_detail.html:114
 msgid "Report"
 msgstr ""
@@ -1567,7 +1839,7 @@ msgstr ""
 msgid "Post ideas with budget proposals, comment on them and rate them."
 msgstr ""
 
-#: apps/budgeting/phases.py:19 adhocracy-plus/config/settings/base.py:553
+#: apps/budgeting/phases.py:19 adhocracy-plus/config/settings/base.py:552
 msgid "participatory budgeting"
 msgstr ""
 
@@ -3740,16 +4012,16 @@ msgstr ""
 #: apps/organisations/templates/a4_candy_organisations/organisation_landing_page.html:95
 #, python-format
 msgid ""
-"Currently, there are no public participation processes. Sign in <a href="
-"\"%(account_login_url)s?next=%(organisation_url)s\">here</a> or read more in "
-"<a href=\"%(organisation_information_url)s\">About</a>."
+"Currently, there are no public participation processes. Sign in <a "
+"href=\"%(account_login_url)s?next=%(organisation_url)s\">here</a> or read "
+"more in <a href=\"%(organisation_information_url)s\">About</a>."
 msgstr ""
 
 #: apps/organisations/templates/a4_candy_organisations/organisation_landing_page.html:99
 #, python-format
 msgid ""
-"Currently, there are no public participation processes. Sign in <a href="
-"\"%(account_login_url)s?next=%(organisation_url)s\">here</a>."
+"Currently, there are no public participation processes. Sign in <a "
+"href=\"%(account_login_url)s?next=%(organisation_url)s\">here</a>."
 msgstr ""
 
 #: apps/organisations/views.py:43
@@ -3889,9 +4161,9 @@ msgstr ""
 #: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:10
 #, python-format
 msgid ""
-"you are invited to participate in the semi-public project \"%(project_name)s"
-"\" on the participation platform  %(site_name)s. To participate click on "
-"\"Accept invitation\"."
+"you are invited to participate in the semi-public project "
+"\"%(project_name)s\" on the participation platform  %(site_name)s. To "
+"participate click on \"Accept invitation\"."
 msgstr ""
 
 #: apps/projects/templates/a4_candy_projects/emails/invite_participant.en.email:10
@@ -3939,8 +4211,8 @@ msgstr ""
 #: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:10
 #, python-format
 msgid ""
-"you have accepted the invitation to the private project \"%(project_name)s"
-"\". To participate click on \"Go to Project\"."
+"you have accepted the invitation to the private project "
+"\"%(project_name)s\". To participate click on \"Go to Project\"."
 msgstr ""
 
 #: apps/projects/templates/a4_candy_projects/emails/welcome_participant.en.email:15
@@ -4697,140 +4969,140 @@ msgstr ""
 msgid "Activities"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:217
+#: adhocracy-plus/config/settings/base.py:216
 msgid "English"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:218
+#: adhocracy-plus/config/settings/base.py:217
 msgid "German"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:219
+#: adhocracy-plus/config/settings/base.py:218
 msgid "Dutch"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:220
+#: adhocracy-plus/config/settings/base.py:219
 msgid "Kyrgyz"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:221
+#: adhocracy-plus/config/settings/base.py:220
 msgid "Russian"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:364
-#: adhocracy-plus/config/settings/base.py:380
+#: adhocracy-plus/config/settings/base.py:363
+#: adhocracy-plus/config/settings/base.py:379
 msgid "Rich text editor"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:486
+#: adhocracy-plus/config/settings/base.py:485
 msgid "suggestion"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:487
+#: adhocracy-plus/config/settings/base.py:486
 msgid "note"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:488
+#: adhocracy-plus/config/settings/base.py:487
 msgid "question"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:529
+#: adhocracy-plus/config/settings/base.py:528
 msgid "Pin without icon"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:530
+#: adhocracy-plus/config/settings/base.py:529
 msgid "Diamond"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:531
+#: adhocracy-plus/config/settings/base.py:530
 msgid "Triangle up"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:532
+#: adhocracy-plus/config/settings/base.py:531
 msgid "Triangle down"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:533
+#: adhocracy-plus/config/settings/base.py:532
 msgid "Ellipse"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:534
+#: adhocracy-plus/config/settings/base.py:533
 msgid "Semi circle"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:535
+#: adhocracy-plus/config/settings/base.py:534
 msgid "Hexagon"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:536
+#: adhocracy-plus/config/settings/base.py:535
 msgid "Rhomboid"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:537
+#: adhocracy-plus/config/settings/base.py:536
 msgid "Star"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:538
+#: adhocracy-plus/config/settings/base.py:537
 msgid "Square"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:539
+#: adhocracy-plus/config/settings/base.py:538
 msgid "Octothorpe"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:540
+#: adhocracy-plus/config/settings/base.py:539
 msgid "Rectangle"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:541
+#: adhocracy-plus/config/settings/base.py:540
 msgid "Circle"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:542
+#: adhocracy-plus/config/settings/base.py:541
 msgid "Right triangle"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:543
+#: adhocracy-plus/config/settings/base.py:542
 msgid "Zigzag"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:547
+#: adhocracy-plus/config/settings/base.py:546
 msgid "brainstorming"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:548
+#: adhocracy-plus/config/settings/base.py:547
 msgid "spatial brainstorming"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:549
+#: adhocracy-plus/config/settings/base.py:548
 msgid "idea challenge"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:550
+#: adhocracy-plus/config/settings/base.py:549
 msgid "spatial idea challenge"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:551
+#: adhocracy-plus/config/settings/base.py:550
 msgid "text review"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:552
+#: adhocracy-plus/config/settings/base.py:551
 msgid "poll"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:554
+#: adhocracy-plus/config/settings/base.py:553
 msgid "interactive event"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:555
+#: adhocracy-plus/config/settings/base.py:554
 msgid "prioritization"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:556
+#: adhocracy-plus/config/settings/base.py:555
 msgid "debate"
 msgstr ""
 
-#: adhocracy-plus/config/settings/base.py:557
+#: adhocracy-plus/config/settings/base.py:556
 msgid "debateai"
 msgstr ""
 
@@ -5291,8 +5563,8 @@ msgstr ""
 #: adhocracy-plus/templates/account/login_old.html:9
 #, python-format
 msgid ""
-"If you have not created an account yet, then please <a href=\"%(signup_url)s"
-"\">register</a> first."
+"If you have not created an account yet, then please <a "
+"href=\"%(signup_url)s\">register</a> first."
 msgstr ""
 
 #: adhocracy-plus/templates/account/login_old.html:30
@@ -5378,10 +5650,10 @@ msgstr ""
 #, python-format
 msgid ""
 "\n"
-"                I confirm that I have read and accepted the <a href="
-"\"%(terms_of_use_url)s\" target=\"_blank\">terms of use</a> and the <a href="
-"\"%(data_protection_policy)s\" target=\"_blank\">data protection policy</"
-"a>.\n"
+"                I confirm that I have read and accepted the <a "
+"href=\"%(terms_of_use_url)s\" target=\"_blank\">terms of use</a> and the <a "
+"href=\"%(data_protection_policy)s\" target=\"_blank\">data protection "
+"policy</a>.\n"
 "                "
 msgstr ""
 
@@ -5393,8 +5665,8 @@ msgid ""
 "every public participation project on this platform. This platform allows "
 "organisations initiatives to conduct digital participation projects.\n"
 "            If you have any questions regarding the data protection on this "
-"platform you can find <a href=\"%(data_protection_url)s\" target=\"_blank"
-"\">further information here</a>.\n"
+"platform you can find <a href=\"%(data_protection_url)s\" "
+"target=\"_blank\">further information here</a>.\n"
 "        "
 msgstr ""
 
@@ -5437,8 +5709,8 @@ msgstr ""
 #: adhocracy-plus/templates/footer.html:10
 #, python-format
 msgid ""
-"<a href=\"/\">%(platformname)s</a> is a platform provided by <a href="
-"\"https://liqd.net/de/\">Liquid Democracy e.V.</a> in Berlin."
+"<a href=\"/\">%(platformname)s</a> is a platform provided by <a "
+"href=\"https://liqd.net/de/\">Liquid Democracy e.V.</a> in Berlin."
 msgstr ""
 
 #: adhocracy-plus/templates/footer.html:10

@@ -23,7 +23,7 @@ import csv
 User = get_user_model()
 print(User)
 
-file = './scripts/import_users.csv'
+file = '.scripts/import_users.csv'
 
 data = csv.reader(open(file), delimiter=",")
 # skip header
