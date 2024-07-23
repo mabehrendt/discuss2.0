@@ -74,6 +74,7 @@ INSTALLED_APPS = (
     "apps.comments_async2",
     "apps.comments_async3",
     "apps.comments_async4",
+    "apps.duplicates",
     "adhocracy4.dashboard",
     "adhocracy4.exports",
     "adhocracy4.filters",
