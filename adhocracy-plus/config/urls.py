@@ -97,6 +97,9 @@ urlpatterns = [
     re_path(r"^admin/", include("wagtail.admin.urls")),
     re_path(r"^documents/", include(wagtaildocs_urls)),
     path('accounts/login/', CustomLoginView.as_view(), name='account_login'),
+    path('duplicates/', include('apps.duplicates.urls')),
+    path('duplicates/', include('apps.duplicates.urls')),
+    path('duplicates/', include('apps.duplicates.urls')),
     re_path(r"^accounts/", include("allauth.urls")),
     re_path(r"^account/", include("apps.account.urls")),
     re_path(r"^profile/", include("apps.users.urls")),
@@ -258,3 +261,4 @@ urlpatterns += [
     re_path(r"", include("apps.organisations.urls")),
     re_path(r"", include("wagtail.urls")),
 ]
+
