@@ -83,22 +83,22 @@ for row in df.index:
         link2 = voting + '-24&user='
     elif df.iloc[row]['gruppe'] == '25':
         link1 = plattform + 'qrsubjects/2024-00106/&user='
-        link2 = voting + '25-&user='
+        link2 = voting + '-25&user='
     elif df.iloc[row]['gruppe'] == '26':
         link1 = plattform + 'qrsubjects/2024-00107/&user='
-        link2 = voting + '26-&user='
+        link2 = voting + '-26&user='
     elif df.iloc[row]['gruppe'] == '27':
         link1 = plattform + 'qrsubjects/2024-00108/&user='
-        link2 = voting + '27-&user='
+        link2 = voting + '-27&user='
     elif df.iloc[row]['gruppe'] == '28':
         link1 = plattform + 'subjects/2024-00109/&user='
-        link2 = voting + '28-&user='
+        link2 = voting + '-28&user='
     elif df.iloc[row]['gruppe'] == '29':
         link1 = plattform + 'subjects/2024-00110/&user='
-        link2 = voting + '29-&user='
+        link2 = voting + '-29&user='
     elif df.iloc[row]['gruppe'] == '30':
         link1 = plattform + 'subjects/2024-00111/&user='
-        link2 = voting + '30-&user='
+        link2 = voting + '-30&user='
     
     link1+=df.iloc[row]['email']+'&pass='+df.iloc[row]['password']
     link2+=df.iloc[row]['email']+'&pass='+df.iloc[row]['password']
