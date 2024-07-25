@@ -691,7 +691,7 @@ export const CommentBox = (props) => {
               <button className="questButton" onClick={showQuestModal}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/video.png")} alt="Quest" /></button>
             </Badge>
             <Badge color="primary" badgeContent="Feed" invisible={false}>
-              <button className="feedButton" onClick={() => window.location.href = '/userdashboard/overview/'}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/rss-feed.png")} alt="Feed" /></button>
+              <button className="feedButton" onClick={() => {const currentPath = encodeURIComponent(window.location.pathname); window.location.href = `/userdashboard/overview/?from=${currentPath}`;}}><img className="sprechblase-button" src={require("../../../../adhocracy-plus/static/stance_icons/rss-feed.png")} alt="Feed" /></button>
             </Badge>
           </div>
           <div className="buttonBox2">
