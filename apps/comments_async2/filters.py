@@ -88,9 +88,9 @@ class CommentOrderingFilterBackend(BaseFilterBackend):
                 ).annotate(is_blocked=Subquery(Comment.objects.filter(id=OuterRef('comment_id')).values_list('is_blocked'),flat=True)).filter(is_blocked=False)
                 qualities = qualities.order_by('-created')
                 quality_ids = qualities.values_list("comment_id", flat=True)
-                if len(quality_ids) <= 6:
+                if len(quality_ids) <= 3:
                     queryset = Comment.objects.filter(id__in=quality_ids).order_by('-created')
-                elif len(quality_ids) > 6:
+                elif len(quality_ids) > 3:
                     rand_high_qualities = random.sample(list(qualities),3)
                     print(rand_high_qualities)
                     id_list = [rec.id for rec in rand_high_qualities]
