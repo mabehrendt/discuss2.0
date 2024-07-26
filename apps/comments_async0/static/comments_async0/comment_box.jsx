@@ -398,7 +398,7 @@ export const CommentBox = (props) => {
         comment.displayNotification = true
         addComment(parentIndex, comment)
         updateAgreedTOS()
-        setSpinnerLoading(false)
+        setTimeout(setSpinnerLoading(false), 2000)
       })
       .fail((xhr, status, err) => {
         const newErrorMessage = Object.values(xhr.responseJSON)[0]
@@ -726,7 +726,7 @@ export const CommentBox = (props) => {
         {renderFaqModal()}
 
       <IntroVideo path="https://mediathek.hhu.de/embed/1f629dd9-87e4-472d-a1f8-15bc7142c566" modalQuestState={modalQuestState} showQuestModal={showQuestModal} />
-      <Spinner spinnerLoading={loading} />
+      <Spinner spinnerLoading={spinnerLoading} />
 
       <div className="a4-comments__commentbox__form">
         <CommentForm

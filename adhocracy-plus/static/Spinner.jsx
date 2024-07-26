@@ -12,7 +12,7 @@ const override = {
 
   function Spinner({ spinnerLoading }) {
     return (
-      <div id="spinner" style={{backgroundColor:"black", position: "fixed", width:"100%", height:"100%", left:"0%", opacity:"0.5", top:"0%", display: spinnerLoading ? "block" : "none", zIndex:"9999"}}>
+      <div id="spinner" style={{backgroundColor:"black", position: "fixed", width:"100%", height:"100%", left:"0%", opacity:"0.5", top:"0%", display: spinnerLoading ? "block" : "none", zIndex:"9999999999999999999999"}}>
         <div style={{position: "fixed", width: "400px", top:"50%", left:"50%", transform: "translate(-50%, -50%)"}}>
           <ClockLoader
             color={"blue"}
