@@ -4,7 +4,7 @@ import django from 'django'
 import { ModerationNotification } from './ModerationNotification'
 import { Filter } from './Filter'
 
-const PACKET_COMMENT_SIZE = 15
+const PACKET_COMMENT_SIZE = 500
 
 const isReadFilterItems = [
   { label: django.gettext('Read'), value: 'True' },
@@ -40,7 +40,7 @@ export default class ModerationNotificationList extends Component {
 
   componentDidMount () {
     this.loadData()
-    this.timer = setInterval(() => !this.isLoading && this.loadData(), 3000)
+    //this.timer = setInterval(() => !this.isLoading && this.loadData(), 3000)
   }
 
   isReadFilterChangeHandle (value) {

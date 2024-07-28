@@ -32,7 +32,7 @@ class ModerationCommentFilterSet(DefaultsRestFilterSet):
 
 class ModerationCommentPagination(PageNumberPagination):
     page_size_query_param = "num_of_comments"
-    max_page_size = 1000
+    max_page_size = 5000
 
 
 class ModerationCommentViewSet(
