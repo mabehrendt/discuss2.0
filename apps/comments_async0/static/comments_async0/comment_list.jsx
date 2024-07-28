@@ -64,6 +64,7 @@ const CommentList = (props) => {
               orgTermsUrl={props.orgTermsUrl}
               quality={props.quality}
               topThreeCommentIds={props.topThreeCommentIds}
+              loading={props.loading}
             >{comment.comment}
             </Comment>
           )

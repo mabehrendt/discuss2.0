@@ -798,6 +798,7 @@ function videoWatched(){
           useTermsOfUse={useTermsOfUse}
           agreedTermsOfUse={agreedTermsOfUse}
           orgTermsUrl={orgTermsUrl}
+          loading={loading}
         />
       </div>
 
@@ -910,6 +911,7 @@ function videoWatched(){
             orgTermsUrl={orgTermsUrl}
             quality={qualities}
             topThreeCommentIds={topThreeCommentIds}
+            loading={loading}
           />
         </div>
       </div>

@@ -64,6 +64,7 @@ const CommentList = (props) => {
               orgTermsUrl={props.orgTermsUrl}
               stanceId={props.stanceId}
               stanceModal={props.stanceModal}
+              loading={props.loading}
             >{comment.comment}
             </Comment>
           )

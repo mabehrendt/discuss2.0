@@ -491,6 +491,7 @@ export default class Comment extends React.Component {
                         useTermsOfUse={this.props.useTermsOfUse}
                         agreedTermsOfUse={this.props.agreedTermsOfUse}
                         orgTermsUrl={this.props.orgTermsUrl}
+                        loading={this.props.loading}
                       />
                     </div>
                   </div>
@@ -516,6 +517,7 @@ export default class Comment extends React.Component {
                         agreedTermsOfUse={this.props.agreedTermsOfUse}
                         orgTermsUrl={this.props.orgTermsUrl}
                         stanceModal={false}
+                        loading={this.props.loading}
                       />
                     </div>
                   </div>

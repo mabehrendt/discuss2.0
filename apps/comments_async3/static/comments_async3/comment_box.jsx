@@ -1072,6 +1072,7 @@ export const CommentBox = (props) => {
                     agreedTermsOfUse={agreedTermsOfUse}
                     orgTermsUrl={orgTermsUrl}
                     stanceModal={true}
+                    loading={loaing}
                   />
                 </div>
               </div>
@@ -1261,6 +1262,7 @@ export const CommentBox = (props) => {
             stanceId={stanceParentId}
             prediction={props.prediction}
             stanceModal={commentFromStanceModal}
+            loading={loading}
           />
         </div>
       </div>

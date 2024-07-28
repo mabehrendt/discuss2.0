@@ -773,6 +773,7 @@ export const CommentBox = (props) => {
           useTermsOfUse={useTermsOfUse}
           agreedTermsOfUse={agreedTermsOfUse}
           orgTermsUrl={orgTermsUrl}
+          loading={loading}
         />
       </div>
 
@@ -885,6 +886,7 @@ export const CommentBox = (props) => {
             orgTermsUrl={orgTermsUrl}
             quality={qualities}
             topThreeCommentIds={topThreeCommentIds}
+            loading={loading}
           />
         </div>
       </div>
