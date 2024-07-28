@@ -10,6 +10,7 @@ from datetime import timedelta
 def display_same_users(request):
     # Step 1: Get the current date
     today = timezone.now().date()
+    print("TODAY:", timezone.now())
 
     # Step 2: Retrieve all comments for today
     comments = Comment.objects.filter(created__date=today)
@@ -31,7 +32,8 @@ def display_same_users(request):
                         'id': instance.id,
                         'created': instance.created,
                         'content_type': instance.content_type,
-                        'object_pk': instance.object_pk
+                        'object_pk': instance.object_pk,
+                        "is_blocked": instance.is_blocked
                     }
                     for instance in instances
                 ]
@@ -75,7 +77,9 @@ def display_diff_users(request):
                     'created': instance.created,
                     'user': instance.creator,
                     'content_type': instance.content_type,
-                    'object_pk': instance.object_pk
+                    'object_pk': instance.object_pk,
+                    "is_blocked": instance.is_blocked
+
                 }
                 for instance in duplicate_instances
             ]
@@ -114,7 +118,8 @@ def display_all_users(request):
                     'created': instance.created,
                     'creator': instance.creator,
                     'content_type': instance.content_type,
-                    'object_pk': instance.object_pk
+                    'object_pk': instance.object_pk,
+                    "is_blocked": instance.is_blocked
                 }
                 for instance in instances
             ]

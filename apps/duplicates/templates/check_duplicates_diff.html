@@ -18,7 +18,7 @@
                         {% for instance in duplicate.instances %}
                             <li>
                                 ID: {{ instance.id }}, Created: {{ instance.created }}, User: {{ instance.user }}, 
-                                CT: {{ instance.content_type }}, PK: {{ instance.object_pk }}
+                                CT: {{ instance.content_type }}, PK: {{ instance.object_pk }}, Blocked: {{instance.is_blocked}}
                             </li>
                         {% endfor %}
                     </ul>
