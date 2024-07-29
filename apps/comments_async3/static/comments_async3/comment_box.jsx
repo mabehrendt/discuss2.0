@@ -1072,7 +1072,7 @@ export const CommentBox = (props) => {
                     agreedTermsOfUse={agreedTermsOfUse}
                     orgTermsUrl={orgTermsUrl}
                     stanceModal={true}
-                    loading={loaing}
+                    loading={loading}
                   />
                 </div>
               </div>
