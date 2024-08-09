@@ -60,13 +60,18 @@ class SubjectCommentExportView(
         return self.module
 
     def get_queryset(self):
-       comments = (Comment.objects.filter(aiqualitysubject__module=self.module) |
-                   Comment.objects.filter(
-                   parent_comment__aiqualitysubject__module=self.module)).annotate(
-                   bilendi_id=Subquery(User.objects.filter(id=OuterRef('creator_id')).values_list('bilendi_id',flat=True))
-                   ).annotate(days_logged_in=Subquery(User.objects.filter(id=OuterRef('creator_id')).annotate(num_logins=Count('userlogins')).values_list('num_logins',flat=True)
-       ))
-       return comments
+        comments = (Comment.objects.filter(
+            subject__module=self.module
+        ) | Comment.objects.filter(parent_comment__subject__module=self.module)).annotate(
+            bilendi_id=Subquery(
+                User.objects.filter(id=OuterRef('creator_id')).values_list('bilendi_id',
+                                                                           flat=True))
+        ).annotate(days_logged_in=Subquery(
+            User.objects.filter(id=OuterRef('creator_id')).annotate(
+                num_logins=Count('userlogins')).values_list('num_logins', flat=True)
+            ))
+
+        return comments
 
     def get_virtual_fields(self, virtual):
         virtual.setdefault("id", _("ID"))
