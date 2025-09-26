@@ -1,4 +1,28 @@
-# adhocracy+
+# discuss2.0
+discuss2.0 is forked from adhocracy+. We extended the platform with two additional AI-supported debate modules:
+
+1. **Comment Recommendation Module**: To encourage user interaction and expose participants to opposing viewpoints, we developed a comment recommendation module based on a stance detection model.
+2. **Deliberative Quality Module:** To enhance user engagement and improve the quality of contributed comments, we implemented a debate module that automatically detects and highlights the most deliberative comments.
+
+When 
+
+## BibTeX Citation
+If you use the `AQuA 🌊` score in a scientific publication, we would appreciate using the following citations:
+
+```
+@inproceedings{
+anonymous2025supporting,
+title={Supporting Online Discussions: Integrating {AI} Into the adhocracy+ Participation Platform To Enhance Deliberation},
+author={Anonymous},
+booktitle={Fourth Workshop on Bridging Human-Computer Interaction and Natural Language Processing},
+year={2025},
+url={https://openreview.net/forum?id=mGXj8991px}
+}
+```
+
+See information on the installation of adhocracy+ below.
+
+## adhocracy+
 
 [adhocracy.plus](https://adhocracy.plus/) is a free Open-Source participation platform maintained and primarily developed by Liquid Democracy e.V.. It is based on [adhocracy 4](https://github.com/liqd/adhocracy4) and [Django](https://github.com/django/django).
 
