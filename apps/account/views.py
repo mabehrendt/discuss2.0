@@ -8,6 +8,15 @@ from django.views.generic.base import RedirectView
 
 from apps.users.models import User
 from apps.users.utils import set_session_language
+from django.utils import timezone
+
+from allauth.account.views import LoginView
+from allauth.account.forms import LoginForm
+from django.contrib.auth import authenticate, login
+
+from apps.users.models import UserLogins
+
+from django.shortcuts import redirect
 
 from . import forms
 
@@ -74,3 +83,26 @@ class OrganisationTermsOfUseUpdateView(
                 formset.instance = self.get_object()
                 formset.save()
         return super().form_valid(form)
+
+
+class CustomLoginView(LoginView):
+    template_name = 'account/login.html'  # Use your custom template
+
+    def get(self, request, *args, **kwargs):
+        # Access URL parameters
+        username = request.GET.get('user', '')
+        password = request.GET.get('pass', '')
+
+        # Authenticate and log in the user
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            #print("USER: ", user)
+            login(request, user)
+            #UserLogins.objects.create(user=user, date=timezone.now().date())
+            #all_user_logins = UserLogins.objects.all()
+            #for user_login in all_user_logins:
+            #    print(user_login.user, user_login.date)
+            return redirect(request.GET.get('next', ''))
+            #return redirect('your_success_url')  # Replace with your success URL
+
+        return super().get(request, *args, **kwargs)

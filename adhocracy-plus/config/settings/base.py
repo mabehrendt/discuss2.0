@@ -15,6 +15,8 @@ CONTACT_EMAIL = "contact@domain"
 
 # Application definition
 
+ALLOWED_HOSTS=["3090.ddns.net", "192.168.2.101", "127.0.0.1", "discuss20.de"]
+
 INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.admin",
@@ -67,6 +69,12 @@ INSTALLED_APPS = (
     "adhocracy4.ckeditor",
     "adhocracy4.comments",
     "adhocracy4.comments_async",
+    "apps.comments_async0",
+    "apps.comments_async1",
+    "apps.comments_async2",
+    "apps.comments_async3",
+    "apps.comments_async4",
+    "apps.duplicates",
     "adhocracy4.dashboard",
     "adhocracy4.exports",
     "adhocracy4.filters",
@@ -78,7 +86,7 @@ INSTALLED_APPS = (
     "adhocracy4.modules",
     "adhocracy4.organisations",
     "adhocracy4.phases",
-    "adhocracy4.polls",
+    #"adhocracy4.polls",
     "adhocracy4.projects",
     "adhocracy4.ratings",
     "adhocracy4.reports",
@@ -112,9 +120,13 @@ INSTALLED_APPS = (
     "apps.ideas",
     "apps.mapideas",
     "apps.polls",
+    "apps.polls_react",
     "apps.topicprio",
     "apps.debate",
-    "apps.debateai"
+    "apps.debate_quality_random",
+    "apps.debate_quality",
+    "apps.debate_stance",
+    "apps.debate_stance_random"
 )
 
 MIDDLEWARE = (
@@ -137,8 +149,8 @@ ROOT_URLCONF = "adhocracy-plus.config.urls"
 LOCALE_PATHS = [
     # use the first line in branches and forks to keep the original translations
     # from main branch and overwrite or add extra translations in fork
-    # os.path.join(BASE_DIR, 'locale-fork/locale'),
-    os.path.join(BASE_DIR, "locale-source/locale")
+    os.path.join(BASE_DIR, 'locale-fork/locale'),
+    #os.path.join(BASE_DIR, "locale-source/locale")
 ]
 
 TEMPLATES = [
@@ -156,6 +168,16 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "wagtail.contrib.settings.context_processors.settings",
             ],
+
+            'libraries':{
+            'react_comments_async0': 'apps.comments_async0.templatetags.react_comments_async0',
+            'react_comments_async1': 'apps.comments_async1.templatetags.react_comments_async1',
+            'react_comments_async2': 'apps.comments_async2.templatetags.react_comments_async2',
+            'react_comments_async3': 'apps.comments_async3.templatetags.react_comments_async3',
+            'react_comments_async4': 'apps.comments_async4.templatetags.react_comments_async4',
+            'react_polls': 'apps.polls_react.templatetags.react_polls2'
+
+            }
         },
     },
 ]
@@ -446,7 +468,7 @@ A4_RATEABLES = (
 
 A4_COMMENTABLES = (
     ("a4comments", "comment"),
-    ("a4polls", "poll"),
+    ("a4pollsreact", "poll"),
     ("a4_candy_ideas", "idea"),
     ("a4_candy_documents", "chapter"),
     ("a4_candy_documents", "paragraph"),
@@ -454,7 +476,10 @@ A4_COMMENTABLES = (
     ("a4_candy_budgeting", "proposal"),
     ("a4_candy_topicprio", "topic"),
     ("a4_candy_debate", "subject"),
-    ("a4_candy_debateai", "aisubject")
+    ("a4_candy_debate_stance", "aistancesubject"),
+    ("a4_candy_debate_stance_random", "stancerandomsubject"),
+    ("a4_candy_debate_quality", "aiqualitysubject"),
+    ("a4_candy_debate_quality_random", "qualityrandomsubject")
 )
 
 A4_COMMENT_CATEGORIES = (
@@ -480,7 +505,7 @@ A4_ACTIONABLES = (
 
 A4_AUTO_FOLLOWABLES = (
     ("a4comments", "comment"),
-    ("a4polls", "vote"),
+    ("a4pollsreact", "vote"),
     ("a4_candy_ideas", "idea"),
     ("a4_candy_mapideas", "mapidea"),
     ("a4_candy_budgeting", "proposal"),
@@ -545,7 +570,7 @@ A4_DASHBOARD = {
 
 A4_ACTIONS_PHASE_ENDS_HOURS = 48
 
-A4_USE_ORGANISATION_TERMS_OF_USE = True
+A4_USE_ORGANISATION_TERMS_OF_USE = False
 
 # Disable CSP by default
 CSP_REPORT_ONLY = True

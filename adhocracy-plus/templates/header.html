@@ -1,4 +1,4 @@
-{% load userindicator static i18n thumbnail %}
+{% load rules userindicator static i18n thumbnail %}
 {% get_current_language as LANGUAGE_CODE %}
 
 <header class="header-upper" aria-label="{% translate 'Header' %}">
@@ -6,14 +6,17 @@
 
     <nav class="navbar navbar-expand-md">
         <div class="container position-relative">
+            {% has_perm 'a4_candy_userdashboard.view_moderation_dashboard' user as user_is_moderator %}
+            {% if user_is_moderator %}
             <a class="navbar-brand header-upper__brand" href="/">
                 <img src="/static/images/logo.svg" alt="{{ settings.a4_candy_cms_settings.OrganisationSettings.platform_name }}" class="header-upper__brand-img" />
             </a>
+            {% endif %}
 
             <ul class="header-upper__nav navbar-nav ms-auto">
-                <li class="nav-item header-upper__lang">
+            <!--    <li class="nav-item header-upper__lang">
                     {% include 'includes/header_language_switch.html' %}
-                </li>
+                </li> -->
 
                 <li class="nav-item header-upper__user" >
                     {% userindicator %}

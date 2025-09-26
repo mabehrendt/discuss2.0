@@ -1,0 +1,30 @@
+<!-- templates/check_duplicates.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Duplicate Comments</title>
+</head>
+<body>
+    <h1>Duplicate Comments Report</h1>
+
+    {% if no_duplicates %}
+        <p>No duplicate comments found for today from different users.</p>
+    {% else %}
+        <ul>
+            {% for duplicate in duplicates %}
+                <li>
+                    <strong>"{{ duplicate.text }}"</strong> appears by {{ duplicate.users_count }} different users:
+                    <ul>
+                        {% for instance in duplicate.instances %}
+                            <li>
+                                ID: {{ instance.id }}, Created: {{ instance.created }}, User: {{ instance.user }}, 
+                                CT: {{ instance.content_type }}, PK: {{ instance.object_pk }}, Blocked: {{instance.is_blocked}}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

@@ -8,7 +8,7 @@ from . import models
 
 class ProfileView(DetailView):
     model = models.User
-    slug_field = "username"
+    slug_field = "email"
 
     @property
     def projects_carousel(self):

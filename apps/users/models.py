@@ -17,11 +17,12 @@ from . import USERNAME_INVALID_MESSAGE
 from . import USERNAME_REGEX
 
 
+
 class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
     username = models.CharField(
         _("username"),
         max_length=60,
-        unique=True,
+        unique=False,
         help_text=_(
             "Required. 60 characters or fewer. Letters, digits, spaces and "
             "@/./+/-/_ only."
@@ -35,6 +36,13 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
             "unique": _("A user with that username already exists."),
             "used_as_email": _("This username is invalid."),
         },
+    )
+
+    bilendi_id = models.CharField(
+        _("bilendi id"),
+        unique=False,
+        blank=True,
+        max_length=100,
     )
 
     email = models.EmailField(
@@ -188,9 +196,14 @@ class User(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
         return full_name.strip()
 
     def get_absolute_url(self):
-        return reverse("profile", args=[str(self.username)])
+        return reverse("profile", args=[str(self.email)])
 
     def has_agreed_on_org_terms(self, organisation):
         return OrganisationTermsOfUse.objects.filter(
             user=self, organisation=organisation, has_agreed=True
         ).exists()
+
+class UserLogins(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateField(auto_now_add=True)
+    email_intern = models.CharField(max_length=200,blank=True)

@@ -10,7 +10,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ("username", "user_image", "user_image_fallback", "is_self")
+        fields = ("username", "email", "user_image", "user_image_fallback", "is_self")
 
     def get_is_self(self, instance):
         request = self.context.get("request")

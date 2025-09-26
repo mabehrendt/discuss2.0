@@ -4,10 +4,10 @@ from django.contrib.contenttypes.models import ContentType
 from django.db.models import Count
 from django.db.models import Q
 from django.utils import timezone
+from django.db.models import OuterRef, Subquery
 
 from adhocracy4.comments.models import Comment
 from adhocracy4.reports.models import Report
-
 
 def get_all_comments_project(project):
     return Comment.objects.filter(
@@ -25,7 +25,6 @@ def get_num_reports(project):
     return Report.objects.filter(
         content_type=comment_ct, object_pk__in=comment_ids_project
     ).count()
-
 
 def get_num_latest_comments(project, until={"days": 7}):
     all_comments_project = get_all_comments_project(project)

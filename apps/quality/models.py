@@ -2,26 +2,38 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from adhocracy4.comments.models import Comment
+from django.contrib.contenttypes.models import ContentType
 from adhocracy4.models import base
 
-QUALITY_CHOICES = (
-    # Translators: kosmo
-    ('ENHANCING', _('enhancing')),
-    # Translators: kosmo
-    ('NOT ENHANCING', _('notenhancing')),
-)
+from django.contrib.contenttypes.fields import GenericForeignKey
 
-
-class Quality(models.Model):
-
-    quality = models.CharField(max_length=50,
-                              choices=QUALITY_CHOICES)
+class Quality(base.TimeStampedModel):
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    prediction = models.FloatField()
+    labels = models.TextField(max_length=25)
+    quality = models.TextField(max_length=4, choices=[('high', 'high'), ('low', 'low')])
 
     comment_text = models.TextField(max_length=4000)
+    comment_id = models.PositiveIntegerField()
+    creator = models.TextField(max_length=200)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-
     @property
     def project(self):
         return self.comment.module.project
+
+
+class UserQuality(models.Model):
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    content_object = GenericForeignKey(ct_field="content_type", fk_field="object_id")
+    
+    guideline_shown = models.BooleanField(default=False)
+
+    creator = models.TextField(max_length=200)
+    creator_id = models.CharField(max_length=500)
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)

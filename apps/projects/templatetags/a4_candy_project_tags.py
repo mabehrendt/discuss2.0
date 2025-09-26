@@ -1,7 +1,7 @@
 from django import template
 
 from adhocracy4.comments.models import Comment
-from adhocracy4.polls.models import Vote
+from apps.polls_react.models import Vote
 from apps.budgeting.models import Proposal as budget_proposal
 from apps.ideas.models import Idea
 from apps.interactiveevents.models import Like
@@ -36,6 +36,8 @@ def get_num_entries(module):
         + Comment.objects.filter(poll__module=module).count()
         + Comment.objects.filter(topic__module=module).count()
         + Comment.objects.filter(subject__module=module).count()
+        + Comment.objects.filter(aistancesubject__module=module).count()
+        + Comment.objects.filter(aiqualitysubject__module=module).count()
         + Vote.objects.filter(choice__question__poll__module=module).count()
         + LiveQuestion.objects.filter(module=module).count()
         + Like.objects.filter(livequestion__module=module).count()

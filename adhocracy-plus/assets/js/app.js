@@ -19,6 +19,14 @@ import {
 } from 'adhocracy4'
 
 import { renderLanguageChoice } from '../../../apps/organisations/assets/react_language_choice.jsx'
+import { initialise2 } from '../../static/widget.js'
+import { renderComment0 } from '../../../apps/comments_async0/static/comments_async0/react_comments_async0.jsx'
+import { renderComment1 } from '../../../apps/comments_async1/static/comments_async1/react_comments_async1.jsx'
+import { renderComment2 } from '../../../apps/comments_async2/static/comments_async2/react_comments_async2.jsx'
+import { renderComment3 } from '../../../apps/comments_async3/static/comments_async3/react_comments_async3.jsx'
+import { renderComment4 } from '../../../apps/comments_async4/static/comments_async4/react_comments_async4.jsx'
+import { renderPolls } from '../../../apps/polls_react/static/react_polls.jsx'
+import { renderPollManagement } from '../../../apps/polls_react/static/react_poll_management.jsx'
 
 function init () {
   ReactWidget.initialise('a4', 'comment_async', ReactCommentsAsync.renderComment)
@@ -27,6 +35,14 @@ function init () {
   ReactWidget.initialise('a4', 'reports', ReactReports.renderReports)
 
   ReactWidget.initialise('euth', 'language-choice', renderLanguageChoice)
+
+  initialise2('a4', 'comment_async0', renderComment0)
+  initialise2('a4', 'comment_async1', renderComment1)
+  initialise2('a4', 'comment_async2', renderComment2)
+  initialise2('a4', 'comment_async3', renderComment3)
+  initialise2('a4', 'comment_async4', renderComment4)
+  initialise2('a4', 'react_polls2', renderPolls)
+  initialise2('a4', 'react_poll_management', renderPollManagement)
 
   $('.timeline-carousel__item').slick({
     initialSlide: parseInt($('#timeline-carousel').attr('data-initial-slide')),

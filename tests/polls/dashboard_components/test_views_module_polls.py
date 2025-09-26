@@ -2,7 +2,7 @@ import pytest
 from django.urls import reverse
 
 from adhocracy4.dashboard import components
-from adhocracy4.polls.phases import VotingPhase
+from apps.polls_react.phases import VotingPhase
 from adhocracy4.test.helpers import assert_template_response
 from adhocracy4.test.helpers import setup_phase
 

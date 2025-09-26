@@ -1,0 +1,10 @@
+- Ganze Box highlighten / prominentes grün
+- Stern mit "Top Kommentar" als Überschrift -> Stern mit Tooltip
+- Wichtig: Anpassen wenn der Kommentar bearbeitet wird.
+- Standardmäßig nach Highlights sortieren
+
+- Stance: vorschlag um Kommentar up- /downzuvoten
+- Popup
+- Folgender Kommentar wurde bereits zur Diskussion beigetragen. Möchten Sie darauf antworten? 
+- Button bleibt -> Icon nehme -> Icon nehmen / Sprechblase
+- Gleiche Farben nehmen wie für Deliberativitätsdetektor

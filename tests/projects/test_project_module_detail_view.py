@@ -4,7 +4,7 @@ import pytest
 from dateutil.parser import parse
 from django.urls import reverse
 
-from adhocracy4.polls import phases
+from apps.polls_react import phases
 from adhocracy4.test.helpers import assert_template_response
 
 

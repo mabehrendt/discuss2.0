@@ -21,11 +21,14 @@ const translated = {
   notificationRead: django.gettext('Notification successfully marked as read.'),
   notificationUnread: django.gettext('Notification successfully marked as unread.'),
   aiClassified: django.gettext('AI'),
-  postedComment: django.gettext('posted a {}comment{}')
+  postedComment: django.gettext('posted a {}comment{}'),
+  reportMessage: django.gettext('With the following message: ')
 }
 
 export const ModerationNotification = (props) => {
   const { notification } = props
+  console.log('props')
+  console.log(props.notification)
   const [showFeedbackForm, setShowFeedbackForm] = useState(false)
   const [isEditing, setIsEditing] = useState(false)
   const [alert, setAlert] = useState()
@@ -231,6 +234,7 @@ export const ModerationNotification = (props) => {
     comment: commentText,
     comment_url: commentUrl,
     last_edit: created,
+    report_description = report_description,
     is_modified: isModified,
     user_image: userImage,
     user_name: userName,
@@ -302,6 +306,8 @@ export const ModerationNotification = (props) => {
           </div>}
 
         <p>{commentText}</p>
+        {report_description != null &&
+          <p>{translated.reportMessage}{report_description}</p>}
         <ModerationNotificationActionsBar
           itemPk={notification.pk}
           isEditing={notification.moderator_feedback}

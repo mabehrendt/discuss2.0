@@ -1,7 +1,7 @@
 from django.utils.translation import gettext_lazy as _
 
 from adhocracy4.dashboard.blueprints import ProjectBlueprint
-from adhocracy4.polls import phases as poll_phases
+from apps.polls_react import phases as poll_phases
 from apps.budgeting import phases as budgeting_phases
 from apps.debate import phases as debate_phases
 from apps.documents import phases as documents_phases
@@ -9,7 +9,11 @@ from apps.ideas import phases as ideas_phases
 from apps.interactiveevents import phases as interactiveevent_phases
 from apps.mapideas import phases as mapideas_phases
 from apps.topicprio import phases as topicprio_phases
-from apps.debateai import phases as debateai_phases
+from apps.debate_stance import phases as debate_stance_phases
+from apps.debate_stance_random import phases as debate_stance_random_phases
+from apps.debate_quality import phases as debate_quality_phases
+from apps.debate_quality_random import phases as debate_quality_random_phases
+
 
 blueprints = [
     (
@@ -178,22 +182,79 @@ blueprints = [
         ),
     ),
 (
-        "debateai",
+        "debatestance",
         ProjectBlueprint(
-            title=_("AI Debate"),
+            title=_("AI Stance Debate"),
             description=_(
-                "Participants can discuss posted topics or questions"
+                "Participants can discuss posted topics or questions "
                 "supported by an AI. "
                 "To do this, the participants comment on posted "
                 "topics / questions as well as on contributions from other "
                 "users."
             ),
             content=[
-                debateai_phases.DebateAIPhase(),
+                debate_stance_phases.DebateStancePhase(),
             ],
             image="images/debateai.svg",
             settings_model=None,
-            type="DBAI",
+            type="SDB",
+        ),
+    ),
+(
+        "debatestancerandom",
+        ProjectBlueprint(
+            title=_("Stance Debate Random"),
+            description=_(
+                "Participants can discuss posted topics or questions "
+                "supported by an AI. "
+                "To do this, the participants comment on posted "
+                "topics / questions as well as on contributions from other "
+                "users."
+            ),
+            content=[
+                debate_stance_random_phases.DebateStanceRandomPhase(),
+            ],
+            image="images/debateai.svg",
+            settings_model=None,
+            type="SRDB",
+        ),
+    ),
+(
+        "debatequality",
+        ProjectBlueprint(
+            title=_("AI Quality Debate"),
+            description=_(
+                "Participants can discuss posted topics or questions "
+                "supported by an AI. "
+                "To do this, the participants comment on posted "
+                "topics / questions as well as on contributions from other "
+                "users."
+            ),
+            content=[
+                debate_quality_phases.DebateQualityPhase(),
+            ],
+            image="images/debateai.svg",
+            settings_model=None,
+            type="QDB",
+        ),
+    ),
+(
+        "debatequalityrandom",
+        ProjectBlueprint(
+            title=_("Quality Random Debate"),
+            description=_(
+                "Participants can discuss posted topics or questions "
+                "supported by an AI. "
+                "To do this, the participants comment on posted "
+                "topics / questions as well as on contributions from other "
+                "users."
+            ),
+            content=[
+                debate_quality_random_phases.DebateQualityRandomPhase(),
+            ],
+            image="images/debateai.svg",
+            settings_model=None,
+            type="QRDB",
         ),
     ),
 ]

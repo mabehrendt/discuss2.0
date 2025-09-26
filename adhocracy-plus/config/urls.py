@@ -19,7 +19,7 @@ from wagtail.documents import urls as wagtaildocs_urls
 from adhocracy4.api import routers as a4routers
 from adhocracy4.comments.api import CommentModerateSet
 from adhocracy4.follows.api import FollowViewSet
-from adhocracy4.polls.api import PollViewSet
+from apps.polls_react.api import PollViewSet
 from adhocracy4.ratings.api import RatingViewSet
 from adhocracy4.reports.api import ReportViewSet
 from apps.account.api import AccountViewSet
@@ -33,6 +33,8 @@ from apps.interactiveevents.routers import LikesDefaultRouter
 from apps.moderatorfeedback.api import CommentWithFeedbackViewSet
 from apps.moderatorfeedback.api import ModeratorCommentFeedbackViewSet
 from apps.moderatorremark.api import ModeratorRemarkViewSet
+from apps.quality.api import QualityViewSet, UserQualityViewSet
+from apps.stance.api import UserStanceViewSet, UsedStanceViewSet, StanceViewSet
 from apps.organisations.sitemaps import organisations_sitemap_index
 from apps.projects.api import AppModuleViewSet
 from apps.projects.api import AppProjectsViewSet
@@ -41,6 +43,7 @@ from apps.userdashboard.api import ModerationCommentViewSet
 from apps.userdashboard.routers import ModerationDetailDefaultRouter
 from apps.users.api import UserViewSet
 from apps.users.decorators import user_is_project_admin
+from apps.account.views import CustomLoginView
 
 router = routers.DefaultRouter()
 router.register(r"follows", FollowViewSet, basename="follows")
@@ -52,6 +55,7 @@ router.register(r"users", UserViewSet, basename="users")
 router.register(
     r"moderationprojects", ModerationProjectsViewSet, basename="moderationprojects"
 )
+#router.register(r"quality", QualityViewSet, basename="quality")
 
 
 module_router = a4routers.ModuleDefaultRouter()
@@ -92,12 +96,22 @@ urlpatterns = [
     re_path(r"^django-admin/", admin.site.urls),
     re_path(r"^admin/", include("wagtail.admin.urls")),
     re_path(r"^documents/", include(wagtaildocs_urls)),
+    path('accounts/login/', CustomLoginView.as_view(), name='account_login'),
+    path('duplicates/', include('apps.duplicates.urls')),
+    path('duplicates/', include('apps.duplicates.urls')),
+    path('duplicates/', include('apps.duplicates.urls')),
     re_path(r"^accounts/", include("allauth.urls")),
     re_path(r"^account/", include("apps.account.urls")),
     re_path(r"^profile/", include("apps.users.urls")),
     re_path(r"^userdashboard/", include("apps.userdashboard.urls")),
     re_path(r"^i18n/", include(i18n)),
     # API urls
+    re_path(r"^api/contenttypes/(?P<ct_id>[\d]+)/objects/(?P<object_pk>[\d]+)/qualities", QualityViewSet.quality_list),
+    re_path(r"^api/contenttypes/(?P<ct_id>[\d]+)/objects/(?P<object_pk>[\d]+)/userqualities", UserQualityViewSet.userquality_list),
+    re_path(r"^api/contenttypes/(?P<ct_id>[\d]+)/objects/(?P<object_pk>[\d]+)/stances", StanceViewSet.stance_list),
+    re_path(r"^api/contenttypes/(?P<ct_id>[\d]+)/objects/(?P<object_pk>[\d]+)/userstances", UserStanceViewSet.userstance_list),
+    re_path(r"^api/contenttypes/(?P<ct_id>[\d]+)/objects/(?P<object_pk>[\d]+)/usedstances", UsedStanceViewSet.usedstance_list),
+
     re_path(r"^api/", include(ct_router.urls)),
     re_path(r"^api/", include(module_router.urls)),
     re_path(r"^api/", include(orga_router.urls)),
@@ -174,10 +188,31 @@ urlpatterns = [
                     ),
                 ),
                 path(
-                    "aisubjects/",
+                    "ssubjects/",
                     include(
-                        ("apps.debateai.urls", "a4_candy_debateai"),
-                        namespace="a4_candy_debateai",
+                        ("apps.debate_stance.urls", "a4_candy_debate_stance"),
+                        namespace="a4_candy_debate_stance",
+                    ),
+                ),
+                path(
+                    "qsubjects/",
+                    include(
+                        ("apps.debate_quality.urls", "a4_candy_debate_quality"),
+                        namespace="a4_candy_debate_quality",
+                    ),
+                ),
+                path(
+                    "srsubjects/",
+                    include(
+                        ("apps.debate_stance_random.urls", "a4_candy_debate_stance_random"),
+                        namespace="a4_candy_debate_stance_random",
+                    ),
+                ),
+                path(
+                    "qrsubjects/",
+                    include(
+                        ("apps.debate_quality_random.urls", "a4_candy_debate_quality_random"),
+                        namespace="a4_candy_debate_quality_random",
                     ),
                 ),
             ]
@@ -226,3 +261,4 @@ urlpatterns += [
     re_path(r"", include("apps.organisations.urls")),
     re_path(r"", include("wagtail.urls")),
 ]
+

@@ -1,0 +1,24 @@
+{% extends extends %}
+{% load static react_polls2 react_comments_async %}
+
+
+{% block phase_content %}
+<p>TEST</p>
+    <div class="module-content--light">
+        <div class="l-wrapper">
+            <div class="l-center-8">
+                {% react_polls2 poll %}
+            </div>
+        </div>
+    </div>
+    <div class="l-wrapper">
+        <div class="l-center-8">
+            {% react_comments_async object %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+  {{ block.super }}
+    <script type="text/javascript" src="{% static 'polls.js' %}"></script>
+{% endblock %}

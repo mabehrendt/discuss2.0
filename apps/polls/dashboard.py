@@ -1,8 +1,8 @@
 from django.urls import reverse
 
 from adhocracy4.dashboard import components
-from adhocracy4.polls import dashboard as a4_poll_dashboard
-from adhocracy4.polls import exports as a4_poll_exports
+from apps.polls_react import dashboard as a4_poll_dashboard
+from apps.polls_react import exports as a4_poll_exports
 
 from . import views
 
