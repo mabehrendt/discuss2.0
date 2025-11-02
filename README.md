@@ -1,13 +1,22 @@
 # discuss2.0
-discuss2.0 is forked from adhocracy+. We extended the platform with two additional AI-supported debate modules:
+discuss2.0 is forked from adhocracy+. We expanded the platform with two additional AI-supported debate modules:
 
 1. **Comment Recommendation Module**: To encourage user interaction and expose participants to opposing viewpoints, we developed a comment recommendation module based on a stance detection model.
 2. **Deliberative Quality Module:** To enhance user engagement and improve the quality of contributed comments, we implemented a debate module that automatically detects and highlights the most deliberative comments.
 
-When 
+The instructions to install and setup the platform can be found below. Please ensure that you download the AI models separately and place them in the following folders: 
+
+1. [German BERT Base uncased Model](https://huggingface.co/dbmdz/bert-base-german-uncased) fine-tuned on the [X-Stance Dataset](https://huggingface.co/datasets/ZurichNLP/x_stance) (Vamvas & Sennrich, 2020) for the **Comment Recommendation Module**:
+
+      ```ai/model/stance```
+   
+2. Adapters to calculate the AQuA score for the **Deliberative Quality Module** (you find them [here](https://github.com/mabehrendt/AQuA/tree/master/trained%20adapters)):
+
+      ```ai/model/quality_adapers```
 
 ## BibTeX Citation
-If you use the `AQuA 🌊` score in a scientific publication, we would appreciate using the following citations:
+The paper describing the expanded platform and a conducted user study has been presented at the 2025 Bridging Human-Computer Interaction and Natural Language Processing Workshop at the EMNLP 2025 in Suzhou, China.
+If you use the platform, we would appreciate a citation of the following paper: 
 
 ```
 @inproceedings{
@@ -20,7 +29,48 @@ url={https://openreview.net/forum?id=mGXj8991px}
 }
 ```
 
-See information on the installation of adhocracy+ below.
+## References
+X-Stance Dataset:
+
+```
+@inproceedings{vamvas2020x,
+  title={X-stance: A Multilingual Multi-Target Dataset for Stance Detection},
+  author={Vamvas, Jannis and Sennrich, Rico},
+  booktitle={5th SwissText \& 16th KONVENS Joint Conference 2020},
+  pages={9},
+  year={2020},
+  organization={CEUR-WS. org}
+}
+```
+AQuA Score:
+```
+@inproceedings{behrendt-etal-2024-aqua,
+    title = "{AQ}u{A} {--} Combining Experts' and Non-Experts' Views To Assess Deliberation Quality in Online Discussions Using {LLM}s",
+    author = "Behrendt, Maike  and
+      Wagner, Stefan Sylvius  and
+      Ziegele, Marc  and
+      Wilms, Lena  and
+      Stoll, Anke  and
+      Heinbach, Dominique  and
+      Harmeling, Stefan",
+    editor = "Hautli-Janisz, Annette  and
+      Lapesa, Gabriella  and
+      Anastasiou, Lucas  and
+      Gold, Valentin  and
+      Liddo, Anna De  and
+      Reed, Chris",
+    booktitle = "Proceedings of the First Workshop on Language-driven Deliberation Technology (DELITE) @ LREC-COLING 2024",
+    month = may,
+    year = "2024",
+    address = "Torino, Italia",
+    publisher = "ELRA and ICCL",
+    url = "https://aclanthology.org/2024.delite-1.1/",
+    pages = "1--12",
+    abstract = "Measuring the quality of contributions in political online discussions is crucial in deliberation research and computer science. Research has identified various indicators to assess online discussion quality, and with deep learning advancements, automating these measures has become feasible. While some studies focus on analyzing specific quality indicators, a comprehensive quality score incorporating various deliberative aspects is often preferred. In this work, we introduce AQuA, an additive score that calculates a unified deliberative quality score from multiple indices for each discussion post. Unlike other singular scores, AQuA preserves information on the deliberative aspects present in comments, enhancing model transparency. We develop adapter models for 20 deliberative indices, and calculate correlation coefficients between experts' annotations and the perceived deliberativeness by non-experts to weigh the individual indices into a single deliberative score. We demonstrate that the AQuA score can be computed easily from pre-trained adapters and aligns well with annotations on other datasets that have not be seen during training. The analysis of experts' vs. non-experts' annotations confirms theoretical findings in the social science literature."
+}
+```
+
+See information on the installation and setup of adhocracy+ below.
 
 ## adhocracy+
 
