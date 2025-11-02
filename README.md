@@ -10,7 +10,7 @@ The instructions to install and setup the platform can be found below. Please en
 
       ```ai/model/stance```
    
-2. Adapters to calculate the AQuA score for the **Deliberative Quality Module** (you find them [here](https://github.com/mabehrendt/AQuA/tree/master/trained%20adapters)):
+2. Adapters to calculate the AQuA score (Behrendt et al., 2024) for the **Deliberative Quality Module** (you find them [here](https://github.com/mabehrendt/AQuA/tree/master/trained%20adapters)):
 
       ```ai/model/quality_adapers```
 
@@ -65,8 +65,7 @@ AQuA Score:
     address = "Torino, Italia",
     publisher = "ELRA and ICCL",
     url = "https://aclanthology.org/2024.delite-1.1/",
-    pages = "1--12",
-    abstract = "Measuring the quality of contributions in political online discussions is crucial in deliberation research and computer science. Research has identified various indicators to assess online discussion quality, and with deep learning advancements, automating these measures has become feasible. While some studies focus on analyzing specific quality indicators, a comprehensive quality score incorporating various deliberative aspects is often preferred. In this work, we introduce AQuA, an additive score that calculates a unified deliberative quality score from multiple indices for each discussion post. Unlike other singular scores, AQuA preserves information on the deliberative aspects present in comments, enhancing model transparency. We develop adapter models for 20 deliberative indices, and calculate correlation coefficients between experts' annotations and the perceived deliberativeness by non-experts to weigh the individual indices into a single deliberative score. We demonstrate that the AQuA score can be computed easily from pre-trained adapters and aligns well with annotations on other datasets that have not be seen during training. The analysis of experts' vs. non-experts' annotations confirms theoretical findings in the social science literature."
+    pages = "1--12"
 }
 ```
 
