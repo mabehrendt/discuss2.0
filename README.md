@@ -19,14 +19,32 @@ The paper describing the expanded platform and a conducted user study has been p
 If you use the platform, we would appreciate a citation of the following paper: 
 
 ```
-@inproceedings{
-anonymous2025supporting,
-title={Supporting Online Discussions: Integrating {AI} Into the adhocracy+ Participation Platform To Enhance Deliberation},
-author={Anonymous},
-booktitle={Fourth Workshop on Bridging Human-Computer Interaction and Natural Language Processing},
-year={2025},
-url={https://openreview.net/forum?id=mGXj8991px}
-}
+@inproceedings{behrendt-etal-2025-supporting,
+    title = "Supporting Online Discussions: Integrating {AI} Into the adhocracy+ Participation Platform To Enhance Deliberation",
+    author = "Behrendt, Maike  and
+      Wagner, Stefan Sylvius  and
+      Warne, Mira  and
+      Peters, Jana Leonie  and
+      Ziegele, Marc  and
+      Harmeling, Stefan",
+    editor = "Blodgett, Su Lin  and
+      Curry, Amanda Cercas  and
+      Dev, Sunipa  and
+      Li, Siyan  and
+      Madaio, Michael  and
+      Wang, Jack  and
+      Wu, Sherry Tongshuang  and
+      Xiao, Ziang  and
+      Yang, Diyi",
+    booktitle = "Proceedings of the Fourth Workshop on Bridging Human-Computer Interaction and Natural Language Processing (HCI+NLP)",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.hcinlp-1.2/",
+    pages = "7--16",
+    ISBN = "979-8-89176-353-1",
+    }
 ```
 
 ## References
